@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Animation</title>
+	
+	<style>
+		body > * {margin: 30px;}
+		.o1 {width: 50px; height: 80px; background: #ccc;}
+	</style>
+	
+	<style>
+		.animated {animation-fill-mode: both;}
+		.animated.slow {animation-duration: 2s;}
+		.animated.infinite {animation-iteration-count: infinite;}
+		.animated.swing {animation-name: swing;}
+		.animated.swing_top {animation-name: swing; transform-origin: bottom center;}
+		.animated.doodoong {animation-name: doodoong;}
+		
+		@keyframes swing {
+			from {
+				-webkit-transform: rotate3d(0, 0, 1, -11deg);
+				transform: rotate3d(0, 0, 1, -11deg);
+			}
+			50% {
+				-webkit-transform: rotate3d(0, 0, 1, 11deg);
+				transform: rotate3d(0, 0, 1, 11deg);
+			}
+			
+			to {
+				-webkit-transform: rotate3d(0, 0, 1, -11deg);
+				transform: rotate3d(0, 0, 1, -11deg);
+			}
+		}
+		
+		@keyframes doodoong {
+			from,
+			20%,
+			40%,
+			60%,
+			80%,
+			to {
+				-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+				animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+			
+			0% {
+				-webkit-transform: translate3d(0, 10px, 0);
+				transform: translate3d(0, 10px, 0);
+				
+			}
+			
+			50% {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+				
+			}
+			
+			to {
+				-webkit-transform: translate3d(0, 10px, 0);
+				transform: translate3d(0, 10px, 0);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="o1 animated swing slow infinite">o1</div>
+<div class="o1 animated swing_top slow infinite">o1</div>
+<div class="o1 animated doodoong slow infinite">o1</div>
+</body>
+</html>
