@@ -7,6 +7,8 @@
 	<title>iframe resizeIframe</title>
 </head>
 <body>
+<!--iframe 안의 내용이 quirks모드일때는 body height가 100%로 잡혀서 커지는건 잡지만 작아지는건 못잡음-->
+
 <iframe width="30%" onload="resizeIframe(this);" id="iframe-main-banner" src="banner.html" frameborder="no" scrolling="no"></iframe>
 
 <script src="/js/jquery/jquery-1.8.3.min.js"></script>
