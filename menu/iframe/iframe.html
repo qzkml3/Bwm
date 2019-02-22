@@ -7,25 +7,32 @@
 	<title>iframe resizeIframe</title>
 </head>
 <body>
-<!--iframe ¾ÈÀÇ ³»¿ëÀÌ quirks¸ğµåÀÏ¶§´Â body height°¡ 100%·Î ÀâÇô¼­ Ä¿Áö´Â°Ç ÀâÁö¸¸ ÀÛ¾ÆÁö´Â°Ç ¸øÀâÀ½-->
 
 <iframe width="30%" onload="resizeIframe(this);" id="iframe-main-banner" src="banner.html" frameborder="no" scrolling="no"></iframe>
-
 <script src="/js/jquery/jquery-1.8.3.min.js"></script>
 <script src="/js/jquery/jquery.bxslider.min.js"></script>
 <script>
-	function resizeIframe(ifm) {
-		resizeIframe_trigger();
+function resizeIframe(ifm) {
+		resizeIframe_trigger(ifm);
+		$(ifm).css("transition", "all 1s");
 		$(window).on("resize", function () {
-			resizeIframe_trigger();
+			setTimeout(function () {
+				resizeIframe_trigger(ifm);
+			}, 500);
 		});
-
-		function resizeIframe_trigger() {
+		function resizeIframe_trigger(ifm) {
 			var $ifm = $(ifm);
 			var content_height = $ifm.contents().find("body").outerHeight(true);
+			
 			$ifm.height(content_height);
 		}
 	}
 </script>
+
+<div style="white-space: pre-line;">
+	- iframe ì•ˆì˜ ë‚´ìš©ì´ quirksëª¨ë“œì¼ë•ŒëŠ” body heightê°€ 100%ë¡œ ì¡í˜€ì„œ ì»¤ì§€ëŠ”ê±´ ì¡ì§€ë§Œ ì‘ì•„ì§€ëŠ”ê±´ ëª»ì¡ìŒ
+	
+	- ê°€ë”ê°€ë‹¤ ì ìš© ì•ˆë ë•Œê°€ ìˆëŠ”ë° setTimeout ì£¼ê³  transitionì„ ì¤˜ì„œ ìˆ¨ê¸°ì§€ ë§ê³  ì˜¤íˆë ¤ ë“œëŸ¬ë‚´ë©´ì„œ íš¨ê³¼ë¥¼ ì£¼ë©´ ë” ì¢‹ì€ ë°©í–¥ì¸ê²ƒ ê°™ë‹¤.
+</div>
 </body>
 </html>
