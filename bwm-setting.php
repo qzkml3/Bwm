@@ -1,18 +1,42 @@
 <?php
-	//require_once BWMSet::$path_res . "/inc/A.php";
-	require_once $_SERVER['DOCUMENT_ROOT'] . "/bwm/res/inc/A.php";
+	require_once BwmSet::getPathComm() . '/class/IncludeMgr.php';
+	IncludeMgr::getCommInclude();
+	CodeMgr::exePreCode();
 	
-	class BWMSet {
-		$doc_root = $_SERVER['DOCUMENT_ROOT'];
-		//db
-		static $db_host = "db_host";
-		static $db_name = "db_name";
-		static $db_id = "db_id";
-		static $db_pwd = "db_pwd";
+	class BwmSet {
+		//site
+		static function getSiteTitle() {
+			return "site_title";
+		}
 		
-		//web path
-		static $path_front = $doc_root . "/bwm/menu";
-		static $path_admin = "/bwm/admin";
-		static $path_res = "/bwm/res";
+		//db
+		static function getDbHost() {
+			return "db_host";
+		}
+		
+		static function getDbName() {
+			return "db_name";
+		}
+		
+		static function getDbId() {
+			return "db_id";
+		}
+		
+		static function getDbPwd() {
+			return "db_pwd";
+		}
+		
+		//doc path
+		static function getPathFront() {
+			return $_SERVER['DOCUMENT_ROOT'] . '/bwm/menu';
+		}
+		
+		static function getPathAdmin() {
+			return $_SERVER['DOCUMENT_ROOT'] . '/bwm/admin';
+		}
+		
+		static function getPathComm() {
+			return $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm';
+		}
 	}
 ?>
