@@ -1,0 +1,4 @@
+body {margin: 4%; background: #eee;}
+
+#wrap {max-width: 1100px; margin: 1% auto; background: white; min-height: 500px; padding: 4%;
+	box-shadow: #ccc 2px 2px 2px;}
