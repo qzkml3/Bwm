@@ -1,5 +1,5 @@
 body {font-family: malgun gothic, arial; margin: 4%; background: #eee; line-height: 1.6; color: #333;
-text-shadow: #ccc 1px 1px 4px;}
+text-shadow: #ccc 1px 1px 1px;}
 
 #wrap {max-width: 1100px; margin: 1% auto; background: white; min-height: 500px; padding: 4%;
 	box-shadow: #ccc 2px 2px 2px;}

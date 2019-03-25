@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>cookie</title>
+	<style>
+		li {margin: 10px 0;}
+		button {margin-left: 50px;}
+	</style>
+</head>
+<body>
+<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/comm-res/js/Cookie.js"></script>
+<ul>
+	<li>
+		<label>cookie name:
+			<input type="text" id="name">
+		</label>
+	</li>
+	<li>
+		<label>cookie value:
+			<input type="text" id="value">
+		</label>
+	</li>
+	<li>
+		<label>expires by day:
+			<input type="text" id="expires">
+		</label>
+	</li>
+</ul>
+
+<button type="button" id="set-cookie">set cookie</button>
+<button type="button" id="del-cookie">del cookie</button>
+
+<script>
+	$("#set-cookie").on("click", function() {
+		var name = $("#name").val();
+		var value = $("#value").val();
+		var expires = $("#expires").val();
+		Cookie.setCookie(name, value, expires);
+	});
+	$("#del-cookie").on("click", function() {
+		var name = $("#name").val();
+		Cookie.delCookie(name);
+	});
+</script>
+
+<section style="margin-top: 100px;">
+	<ul>
+		<li>
+			<p>expires를 넣지 않으면 세션쿠기가 됨</p>
+			
+			<h2>세션쿠키</h2>
+			<p>익스는 브라우저를 닫으면 사라지고 크폼, 파폭은 브라우저를 닫았다가 열어도 세션이 복구되어 사라지지 않는다.</p>
+		</li>
+		<li>
+			<p>파폭 개발자도구에서 테스트하면 새로고침을 하지 않아도 쿠기가 생성 삭제됨을 확인할 수 있어서 편함.</p>
+		</li>
+	</ul>
+</section>
+</body>
+</html>

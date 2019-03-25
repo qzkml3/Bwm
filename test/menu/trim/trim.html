@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>trim</title>
+	<style>
+		span {background: skyblue;}
+	</style>
+</head>
+<body>
+<script src="/comm-res/js/StringUtil.js"></script>
+<pre><script>
+		var str = '         kkk           ';
+		document.writeln('<span>' + str + '</span>');
+		document.writeln('<span>' + StringUtil.trim(str) + '</span>');
+	</script>
+</pre>
+</body>
+</html>
