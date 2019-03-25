@@ -16,17 +16,17 @@
 <ul>
 	<li>
 		<label>cookie name:
-			<input type="text" id="name">
+			<input type="text" id="name" value="a">
 		</label>
 	</li>
 	<li>
 		<label>cookie value:
-			<input type="text" id="value">
+			<input type="text" id="value" value="가">
 		</label>
 	</li>
 	<li>
 		<label>expires by day:
-			<input type="text" id="expires">
+			<input type="text" id="expires" value="1">
 		</label>
 	</li>
 </ul>
@@ -59,6 +59,12 @@
 		var name = $("#name").val();
 		Cookie.delCookie(name);
 	});
+	
+	var v = "a";
+	console.log(v + ": " + Cookie.getVal(v));
+	
+	var v = "a2";
+	console.log(v + ": " + Cookie.getVal(v));
 </script>
 
 <section style="margin-top: 100px;">
