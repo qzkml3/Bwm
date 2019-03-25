@@ -7,7 +7,7 @@
 	<title>cookie</title>
 	<style>
 		li {margin: 10px 0;}
-		button {margin-left: 50px;}
+		button {margin-left: 25px;}
 	</style>
 </head>
 <body>
@@ -32,6 +32,8 @@
 </ul>
 
 <button type="button" id="set-cookie">set cookie</button>
+<button type="button" id="set-cookie-by-date">set cookie by date</button>
+<button type="button" id="set-cookie-by-hour">set cookie by hour</button>
 <button type="button" id="del-cookie">del cookie</button>
 
 <script>
@@ -40,6 +42,18 @@
 		var value = $("#value").val();
 		var expires = $("#expires").val();
 		Cookie.setCookie(name, value, expires);
+	});
+	$("#set-cookie-by-date").on("click", function() {
+		var name = $("#name").val();
+		var value = $("#value").val();
+		var expires = $("#expires").val();
+		Cookie.setCookieByDate(name, value, expires);
+	});
+	$("#set-cookie-by-hour").on("click", function() {
+		var name = $("#name").val();
+		var value = $("#value").val();
+		var expires = $("#expires").val();
+		Cookie.setCookieByHour(name, value, expires);
 	});
 	$("#del-cookie").on("click", function() {
 		var name = $("#name").val();

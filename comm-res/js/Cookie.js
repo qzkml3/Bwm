@@ -1,7 +1,15 @@
 Cookie = {
-	setCookie: function (name, value, expiredays) {
+	setCookie: function (name, value) {
+		this.setCookieByDate(name, value, null);
+	},
+	setCookieByDate: function (name, value, expireDay) {
 		var todayDate = new Date();
-		todayDate.setDate(todayDate.getDate() + parseInt(expiredays));
+		todayDate.setDate(todayDate.getDate() + parseInt(expireDay));
+		document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	},
+	setCookieByHour: function (name, value, expireTime) {
+		var todayDate = new Date();
+		todayDate.setHours(todayDate.getHours() + parseInt(expireTime));
 		document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
 	},
 	getCookie: function (name) {
@@ -19,7 +27,7 @@ Cookie = {
 		return null;
 	},
 	delCookie: function(name) {
-		this.setCookie(name, null, -1);
+		this.setCookieByDate(name, null, -1);
 	},
 	getCookieVal: function (offset) {
 		var endstr = document.cookie.indexOf(";", offset);
