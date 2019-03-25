@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>field</title>
+	<style>
+		button {margin-left: 100px;}
+		li {margin: 15px 0;}
+	</style>
+</head>
+<body style="height: 5000px;">
+<form name="f">
+	<ul>
+		<li>
+			<input type="text" name="text">
+		</li>
+		<li>
+			<input type="password" name="password">
+		</li>
+		<li>
+			<textarea name="textarea"></textarea>
+		</li>
+		<li>
+			<label>
+				<input type="radio" name="radio">a
+			</label>
+			<label>
+				<input type="radio" name="radio">b
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" name="checkbox">a
+			</label>
+			<label>
+				<input type="checkbox" name="checkbox">b
+			</label>
+		</li>
+		<li>
+			<label>
+				<select name="select_one">
+					<option value="">select</option>
+					<option value="a">a</option>
+					<option value="b">b</option>
+				</select>
+			</label>
+		</li>
+		<li>
+			<label>
+				<select name="select_multiple" multiple>
+					<option value="">select</option>
+					<option value="a">a</option>
+					<option value="b">b</option>
+				</select>
+			</label>
+		</li>
+	</ul>
+	<button type="button" id="submit">submit</button>
+</form>
+<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/comm-res/js/Field.js"></script>
+<script>
+	$("#submit").on("click", function () {
+		if (Field.isEmpty(f.text, 'text')) return;
+		if (Field.isEmpty(f.password, 'password')) return;
+		if (Field.isEmpty(f.textarea, 'textarea')) return;
+		if (Field.isEmpty(f.radio, 'radio')) return;
+		if (Field.isEmpty(f.checkbox, 'checkbox')) return;
+		if (Field.isEmpty(f.select_one, 'select-one')) return;
+		if (Field.isEmpty(f.select_multiple, 'select-multiple')) return;
+		
+		alert('submitted !');
+	});
+</script>
+</body>
+</html>
