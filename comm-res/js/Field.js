@@ -13,22 +13,22 @@ Field = {
 				}
 			}
 			if (! chkCnt) {
-				return this.isEmptyTrigger(field[0], fieldName, work_flag);
+				return this.chkEmptyTrigger(field[0], fieldName, work_flag);
 			}
 		} else if (field.tagName.toLowerCase() == 'select') {
 			if ($.trim(field.value) == "") {
 				work_flag = '선택';
-				return this.isEmptyTrigger(field, fieldName, work_flag);
+				return this.chkEmptyTrigger(field, fieldName, work_flag);
 			}
 		} else {
 			if ($.trim(field.value) == "") {
 				work_flag = '입력';
-				return this.isEmptyTrigger(field, fieldName, work_flag);
+				return this.chkEmptyTrigger(field, fieldName, work_flag);
 			}
 		}
 	}
 	,
-	isEmptyTrigger: function (field, fieldName, work_type) {
+	chkEmptyTrigger: function (field, fieldName, work_type) {
 		alert(fieldName + '을(를) ' + work_type + ' 해주세요.');
 		return this.fieldChkHandler(field);
 	}
