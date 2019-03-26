@@ -82,6 +82,8 @@
 <script src="/comm-res/js/Valid.js"></script>
 <script>
 	$("#submit").on("click", function () {
+		var f = document.f;
+		
 		if (Field.chkEmpty(f.text, 'text')) return;
 		if (Field.chkEmpty(f.password, 'password')) return;
 		if (Field.chkEmpty(f.textarea, 'textarea')) return;
