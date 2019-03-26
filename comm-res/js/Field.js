@@ -1,5 +1,5 @@
 Field = {
-	isEmpty: function (field, fieldName) {
+	chkEmpty: function (field, fieldName) {
 		var work_flag = '';
 		if (
 			field[0] && field[0].type == 'checkbox' ||
@@ -26,13 +26,30 @@ Field = {
 				return this.isEmptyTrigger(field, fieldName, work_flag);
 			}
 		}
-
-
-
 	}
 	,
 	isEmptyTrigger: function (field, fieldName, work_type) {
 		alert(fieldName + '을(를) ' + work_type + ' 해주세요.');
+		return this.fieldChkHandler(field);
+	}
+	,
+	chkTel: function (field, fieldName) {
+		var fieldValue = $.trim(field.value);
+		if (!Valid.isTel(fieldValue)) {
+			alert(fieldName + " 형식이 틀립니다.");
+			return this.fieldChkHandler(field);
+		}
+	}
+	,
+	chkTelOrNum: function (field, fieldName) {
+		var fieldValue = $.trim(field.value);
+		if (!Valid.isTel(fieldValue) && !Valid.isNum(fieldValue)) {
+			alert(fieldName + " 형식이 틀립니다.");
+			return this.fieldChkHandler(field);
+		}
+	}
+	,
+	fieldChkHandler: function(field) {
 		field.focus();
 		return true;
 	}
