@@ -27,6 +27,8 @@ Ui = {
 		var $tabBtn = $(btnWrap).children("*");
 		var $tabCont = $(contWrap).children("*");;
 
+		$tabBtn.eq(0).addClass('on');
+
 		$tabBtn.each(function (i) {
 
 			$(this).on("click", function () {
