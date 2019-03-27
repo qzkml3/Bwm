@@ -4,19 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>placeholder</title>
+	<title>get-percent-width</title>
 </head>
 <body>
-
-<input type="text" placeholder="placehoder">
+<div class="w" style="width: 300px;">
+</div>
 <script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/comm-res/js/UserAgent.js"></script>
-<script src="/comm-res/js/StringUtil.js"></script>
 <script src="/comm-res/js/Ui.js"></script>
-<script src="/comm-res/js/patch/Placeholder.js"></script>
 <script>
-	Placeholder.setPlaceholder();
+	document.write(Ui.getPercentWidth('.w'));
 </script>
-
 </body>
 </html>

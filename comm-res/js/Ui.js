@@ -42,4 +42,10 @@ Ui = {
 			});
 		});
 	}
+	,
+	getPercentWidth: function (el) {
+		var $el = $(el);
+		var width = parseFloat($el.css('width')) / parseFloat($el.parent().css('width'));
+		return Math.round(100 * width) + '%';
+	},
 };

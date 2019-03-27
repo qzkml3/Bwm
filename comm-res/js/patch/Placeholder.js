@@ -19,7 +19,7 @@ Placeholder = {
 				//Set CSS
 				$el_w.css({position: "relative"});
 
-				if ($el.getPercentWidth() == "100%" || $el.getPercentWidth() == "NaN%") {
+				if (Ui.getPercentWidth($el) == "100%" || Ui.getPercentWidth($el) == "NaN%") {
 					$el_w.css({display: "block"});
 				} else {
 					$el_w.css({display: "inline-block"});
