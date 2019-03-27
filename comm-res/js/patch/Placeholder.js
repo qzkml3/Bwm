@@ -1,7 +1,7 @@
 Placeholder = {
 	/* IE9 이하 placeholder 사용가능하게 */
 	setPlaceholder: function () {
-		if (Client.isIE9() || Client.isIE9() || Client.isIE7() || Client.isIE6() || Client.isQuirks()) {
+		if (UserAgent.isIE9() || UserAgent.isIE9() || UserAgent.isIE7() || UserAgent.isIE6() || UserAgent.isQuirks()) {
 			var target = 'input[placeholder], textarea[placeholder]';
 			$(target).each(function (i) {
 				//Set Html
