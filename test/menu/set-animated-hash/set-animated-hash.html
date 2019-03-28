@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>set-animated-hash</title>
+	<!--[if lte IE 8]>
+	<script src="/comm-res/js/patch/ie9.min.js?v=<?=$res_ver?>"></script>
+	<script>document.createElement('main');</script>
+	<![endif]-->
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<a>no href</a>
+<a href="#" onclick="">#</a>
+<a href="#top" onclick="">#top</a>
+<a href="#" onclick="alert(1); return false;">#</a>
+<a href="#top" onclick="alert(1); return false;">#top</a>
+<a href="#a">a</a>
+<a href="#b">b</a>
+<a href="http://www.naver.com">naver</a>
+<section style="height: 800px;">
+	<h2 id="a">a</h2>
+	<ul>
+		<li>#은 미적용</li>
+		<li>#top 최상위로</li>
+		
+	</ul>
+</section>
+<section style="height: 800px;">
+	<h2 id="b">b</h2>
+	asfadfa dfafsf
+</section>
+<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/comm-res/js/StringUtil.js"></script>
+<script src="/comm-res/js/Ui.js"></script>
+<script>
+	Ui.setAnimatedHash();
+</script>
+</body>
+</html>

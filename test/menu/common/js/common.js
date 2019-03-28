@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	OldPatcher.fixFontPos();
+	//OldPatcher.fixFontPos();
 	OldPatcher.setPlaceholder();
 	OldPatcher.setYoutubeInfo();
+	Ui.responsiveImgMap();
+	Ui.setAnimatedHash();
 });

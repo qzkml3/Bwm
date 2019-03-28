@@ -5,7 +5,7 @@
  * */
 StringUtil = {
 	/*구분자 뒤에 문자열을 리턴*/
-	strAfter: function (scope, sep) {
+	afterStr: function (scope, sep) {
 		scope = scope.toString();
 		sep = sep.toString();
 
