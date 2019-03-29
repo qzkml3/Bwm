@@ -151,4 +151,21 @@ Ui = {
 			console.log($text.text());*/
 		});
 	}
+	,
+	resizeIframe: function (ifm) {
+		resizeIframe_trigger(ifm);
+		$(ifm).css("transition", "all 1s");
+		$(window).on("resize", function () {
+			setTimeout(function () {
+				resizeIframe_trigger(ifm);
+			}, 500);
+		});
+
+		function resizeIframe_trigger(ifm) {
+			var $ifm = $(ifm);
+			var content_height = $ifm.contents().find("body").outerHeight(true);
+
+			$ifm.height(content_height);
+		}
+	}
 };
