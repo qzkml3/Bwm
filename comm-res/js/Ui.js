@@ -92,4 +92,63 @@ Ui = {
 			location.hash = href;
 		}
 	}
+	,
+	/*제목 길때 쩜쩜으로*/
+	cutStrToWidth: function (wrap, separ, customGap) {
+		$(wrap).each(function () {
+			var $wrap = $(this);
+			var wrapWidth = $wrap.width();
+
+			var $text = $wrap.find("span");
+			var textWidth = 0;
+			var text_cache = "";
+
+			var $btns = $wrap.find("img");
+			var hasBtn = false;
+
+			//css
+			$text.css("white-space", "nowrap");
+
+			//text to cache
+			text_cache = $text.text();
+			$text.text("");
+
+			//calc wrapWidth
+			$btns.each(function () {
+				var $btn = $(this);
+				var btnWidth = $btn.width();
+				var btnOuterWidth = $btn.outerWidth(true);
+
+				if (btnWidth == btnOuterWidth) { //no margin (auto margin)
+					hasBtn = true;
+					btnWidth += 4; //set default margin
+				} else { //has margin
+					btnWidth = btnOuterWidth;
+				}
+
+				wrapWidth -= btnWidth;
+			});
+
+			if (hasBtn) {
+				wrapWidth -= 7;
+			}
+
+			wrapWidth -= customGap;
+
+			//proc
+			for (var i = 0; i <= text_cache.length; i++) {
+				$text.text($text.text() + text_cache.charAt(i));
+				textWidth = $text.outerWidth(true);
+				if (textWidth >= wrapWidth) {
+					$text.text($text.text().substring(0, $text.text().length - 2));
+					$text.text($text.text() + separ);
+					break;
+				}
+			}
+
+			//debug
+			/*console.log(textWidth + " : " + wrapWidth);
+			console.log($text.text());*/
+		});
+	}
 };

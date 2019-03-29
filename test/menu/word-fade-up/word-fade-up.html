@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>word-fade-up</title>
+	<style>
+		.fade_up {overflow: hidden; height: 1.5em;}
+		.fade_up > span {position: relative; top: 1.5em; transition: all 300ms; opacity: 0;}
+		.fade_up > span.on {top: 0; opacity: 1;}
+	</style>
+</head>
+<body>
+
+<button class="btn_on">btn_on</button>
+<button class="btn_off">btn_off</button>
+
+<div class="fade_up">
+	<span>a</span>
+	<span>b</span>
+	<span>c</span>
+	<span>가</span>
+</div>
+<div class="fade_up">
+	<span>a</span>
+	<span>b</span>
+	<span>c</span>
+	<span>가</span>
+</div>
+
+<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+
+
+<script>
+	$(document).ready(function () {
+		$.fadeUp(".fade_up");
+	});
+</script>
+
+<script>
+	$(".btn_off").on("click", function () {
+		$(".fade_up").find("span").removeClass("on");
+	});
+	$(".btn_on").on("click", function () {
+		$.fadeUp(".fade_up");
+	});
+</script>
+
+
+<script>
+	$.fadeUp = function (el) {
+
+		$(el).each(function () {
+			var $wrap = $(this);
+			var $texts = $wrap.find("span");
+			var init_time = 0;
+			var period_time = 100;
+
+			$texts.each(function () {
+				$text = $(this);
+				init_time = init_time + period_time;
+				fadeUpText($text, init_time);
+			});
+
+			function fadeUpText($text, init_time) {
+				setTimeout(function () {
+					$text.addClass("on");
+				}, init_time);
+			}
+		});
+
+	};
+
+</script>
+
+<ul>
+	<li>multil-line 구현 필요</li>
+</ul>
+</body>
+</html>

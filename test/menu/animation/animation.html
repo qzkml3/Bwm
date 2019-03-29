@@ -8,17 +8,25 @@
 	
 	<style>
 		body > * {margin: 30px;}
-		.o1 {width: 50px; height: 80px; background: #ccc;}
+		
+		section {float: left;}
+		hr {clear: both;}
+		.obj {width: 50px; height: 80px; background: #ccc;}
 	</style>
 	
 	<style>
-		.animated {animation-fill-mode: both;}
+		.animated {animation-duration: 1s;}
 		.animated.slow {animation-duration: 2s;}
+		.animated.fast {animation-duration: 0.5s;}
 		.animated.infinite {animation-iteration-count: infinite;}
-		.animated.swing {animation-name: swing;}
-		.animated.swing_top {animation-name: swing; transform-origin: bottom center;}
-		.animated.doodoong {animation-name: doodoong;}
 		
+		
+		
+		.animated.swing {animation-name: swing;}
+		.animated.swing-top {animation-name: swing; transform-origin: bottom center;}
+		.animated.swing-btm {animation-name: swing; transform-origin: top center;}
+		.animated.swing-left {animation-name: swing; transform-origin: right center;}
+		.animated.swing-right {animation-name: swing; transform-origin: left center;}
 		@keyframes swing {
 			from {
 				-webkit-transform: rotate3d(0, 0, 1, -11deg);
@@ -28,46 +36,103 @@
 				-webkit-transform: rotate3d(0, 0, 1, 11deg);
 				transform: rotate3d(0, 0, 1, 11deg);
 			}
-			
 			to {
 				-webkit-transform: rotate3d(0, 0, 1, -11deg);
 				transform: rotate3d(0, 0, 1, -11deg);
 			}
 		}
 		
-		@keyframes doodoong {
-			from,
-			20%,
-			40%,
-			60%,
-			80%,
-			to {
-				-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-				animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-			}
-			
+		.animated.up-down {animation-name: up-down;}
+		@keyframes up-down {
 			0% {
 				-webkit-transform: translate3d(0, 10px, 0);
 				transform: translate3d(0, 10px, 0);
 				
 			}
-			
 			50% {
 				-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
 				
 			}
-			
 			to {
 				-webkit-transform: translate3d(0, 10px, 0);
 				transform: translate3d(0, 10px, 0);
 			}
 		}
+		
+		
+		.animated.down-up2 {position: relative; animation: down-up2 1s alternate infinite;}
+		@keyframes down-up2 {
+			0% {
+				top: 0px;
+			}
+
+			100% {
+				top: 10px;
+			}
+		}
+		
+		.animated.shake2 {animation-name: shake2;}
+		@keyframes shake2 {
+			0% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+			}
+			6.5% {
+				-webkit-transform: translateX(-6px) rotateY(-9deg);
+				transform: translateX(-6px) rotateY(-9deg);
+			}
+			18.5% {
+				-webkit-transform: translateX(5px) rotateY(7deg);
+				transform: translateX(5px) rotateY(7deg);
+			}
+			31.5% {
+				-webkit-transform: translateX(-3px) rotateY(-5deg);
+				transform: translateX(-3px) rotateY(-5deg);
+			}
+			43.5% {
+				-webkit-transform: translateX(2px) rotateY(3deg);
+				transform: translateX(2px) rotateY(3deg);
+			}
+			50% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+			}
+		}
 	</style>
 </head>
 <body>
-<div class="o1 animated swing slow infinite">o1</div>
-<div class="o1 animated swing_top slow infinite">o1</div>
-<div class="o1 animated doodoong slow infinite">o1</div>
+<section><h2>up-down</h2>
+	<div class="obj animated up-down slow infinite">obj</div>
+</section>
+<hr>
+<section><h2>down-up2</h2>
+	<div class="obj animated down-up2 slow infinite">obj</div>
+	<p>infinite? 다름</p>
+</section>
+<hr>
+<section><h2>shake2</h2>
+	<div class="obj animated shake2 slow infinite">obj</div>
+</section>
+<hr>
+<section>
+	<h2>swing</h2>
+	<div class="obj animated swing slow infinite">obj</div>
+</section>
+<section>
+	<h2>swing-top</h2>
+	<div class="obj animated swing-top slow infinite">obj</div>
+</section>
+<section>
+	<h2>swing-btm</h2>
+	<div class="obj animated swing-btm slow infinite">obj</div>
+</section>
+<section>
+	<h2>swing-left</h2>
+	<div class="obj animated swing-left slow infinite">obj</div>
+</section>
+<section><h2>swing-right</h2>
+	<div class="obj animated swing-right slow infinite">obj</div>
+</section>
 </body>
 </html>
