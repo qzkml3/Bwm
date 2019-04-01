@@ -6,25 +6,23 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title></title>
 	<style>
-		#wrap {font-size: 18px;}
-		p {font-size: 1em;}
+	
 	</style>
 	<!--[if lte IE 8]>
 		abcaaaaaaaaaaaa
 	<![endif]-->
 </head>
 <body>
-<ul>
-	<li>
-		li start
-		<div>kkk</div>
-		li end
-	</li>
-</ul>
+
 <script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/comm-res/js/Debug.js"></script>
+<script class="code">
+	var d = new Date();
+	document.write(d);
+</script>
+
 <script>
-	var v = $("li").text('kkk');
-	alert(v);
+	Debug.showJsCode();
 </script>
 </body>
 </html>
