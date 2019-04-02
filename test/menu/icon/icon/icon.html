@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>icon</title>
+	<style>
+		hr {margin: 50px 0 30px;}
+	</style>
+</head>
+<body>
+<h2>prev-next</h2>
+<style>
+	button {box-sizing: border-box; cursor: pointer;}
+	.btn_arrow {width: 30px; height: 30px; background: dodgerblue center / 30% 40% no-repeat; border-radius: 50%;}
+	.btn_arrow.prev {background-image: url(img/icon/arr-prev.png);}
+	.btn_arrow.next {background-image: url(img/icon/arr-next.png);}
+</style>
+<button type="button" class="btn_arrow prev"></button>
+<button type="button" class="btn_arrow next"></button>
+
+<hr>
+<h2>dot</h2>
+<style>
+	ul {border: solid 1px blue;}
+	li {border: solid 1px #ccc;}
+	
+	.list1 {padding: 0;}
+	.list1 > li {list-style: none; padding-left: 2em; background: url(img/icon/dot.png) no-repeat 12px 8px / 5px 5px;}
+</style>
+<ul>
+	<li>가
+		<br>
+		가
+		<br>
+		가
+	</li>
+	<li>가</li>
+	<li>가</li>
+</ul>
+<ul class="list1">
+	<li>가
+		<br>
+		가
+		<br>
+		가
+	</li>
+	<li>가</li>
+	<li>가</li>
+</ul>
+</body>
+</html>
