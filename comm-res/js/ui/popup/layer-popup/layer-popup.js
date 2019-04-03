@@ -1,4 +1,4 @@
-var LayerPopup = {
+LayerPopup = {
 	isCssAttached: false,
 
 	open: function (param) {
