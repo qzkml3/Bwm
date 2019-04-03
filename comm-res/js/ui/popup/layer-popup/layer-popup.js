@@ -36,7 +36,7 @@ var LayerPopup = {
 
 			$($btnClose).on("click", function () {
 				if ($chkBox.prop("checked")) {
-					Cookie.setCookie(cookieName, "closed", 1);
+					Cookie.setCookByDate(cookieName, "closed", 1);
 				}
 				$pop.hide();
 			});
@@ -52,9 +52,10 @@ var LayerPopup = {
 			}
 
 			//draggable pop
-			try {
+			if ('undefined' != typeof $pop.draggable) {
 				$pop.draggable();
-			} catch (e) {}
+			}
+
 
 			//console.log($pop);
 			//console.log($pop.get(0).outerHTML);
