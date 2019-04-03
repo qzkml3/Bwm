@@ -1,19 +1,21 @@
-/*
-* encodeURI 나 encodeURIComponent 를 쓰면 Uncaught URIError: URI malformed 가 나므로
-* deprecated 지만 escape을 쓴다...
+/**
+- encodeURI 나 encodeURIComponent 를 쓰면 Uncaught URIError: URI malformed 가 나므로 deprecated 지만 escape을 쓴다...
+- expires 설정안하면 세션쿠키 설정하면 영구쿠키
+- 세션쿠키: 익스는 브라우저를 닫으면 사라지고 크폼, 파폭은 브라우저를 닫았다가 열어도 세션이 복구되어 사라지지 않는다.
+- 파폭 개발자도구에서 테스트하면 새로고침을 하지 않아도 쿠키가 생성 삭제됨을 확인할 수 있어서 편함.
 * */
 Cookie = {
-	setCookie: function (name, value) {
-		this.setCookieByDate(name, value, null);
+	setSessCook: function (name, value) {
+		this.setCookByDate(name, value, null);
 	}
 	,
-	setCookieByDate: function (name, value, expireDay) {
+	setCookByDate: function (name, value, expireDay) {
 		var todayDate = new Date();
 		todayDate.setDate(todayDate.getDate() + parseInt(expireDay));
 		document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
 	}
 	,
-	setCookieByHour: function (name, value, expireTime) {
+	setCookByHour: function (name, value, expireTime) {
 		var todayDate = new Date();
 		todayDate.setHours(todayDate.getHours() + parseInt(expireTime));
 		document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
@@ -42,7 +44,7 @@ Cookie = {
 		}
 	}
 	,
-	delCookie: function(name) {
-		this.setCookieByDate(name, null, -1);
+	delCook: function(name) {
+		this.setCookByDate(name, null, -1);
 	}
 };

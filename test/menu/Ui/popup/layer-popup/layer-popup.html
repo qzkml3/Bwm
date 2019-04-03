@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>layer-popup</title>
+</head>
+<body>
+<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/comm-res/js/ui/popup/layer-popup/layer-popup.js"></script>
+<script src="/comm-res/js/Cookie.js"></script>
+<script>
+	<?php
+	//$popup_end_time = "2018-07-26 24"; //팝업종료시간은 서버시간으로 체크
+	$popup_end_time = "";
+	if ($popup_end_time == "" || date("Y-m-d H") < $popup_end_time) {
+	?>
+	LayerPopup.open({
+		linkId: "#mktis_db",
+		id: "layer-popup1",
+		width: "300px", left: "20px", top: "20px", //leftFromCenter: "-500px",
+		src: "img/popup.jpg?v=0"
+	});
+	LayerPopup.open({
+		//linkId: "#mktis_db",
+		id: "layer-popup2",
+		width: "350px", left: "400px", top: "20px", //leftFromCenter: "-500px",
+		src: "img/popup.jpg?v=0"
+	});
+	LayerPopup.open({
+		//linkId: "#mktis_db",
+		id: "layer-popup3",
+		width: "400px", left: "800px", top: "20px", //leftFromCenter: "-500px",
+		src: "img/popup.jpg?v=0"
+	});
+	<?}?>
+</script>
+</body>
+</html>

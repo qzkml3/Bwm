@@ -12,7 +12,7 @@
 </head>
 <body>
 <script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/comm-res/js/Cookie.js"></script>
+<script src="/comm-res/js/Cookie.js" charset="UTF-8"></script>
 <ul>
 	<li>
 		<label>cookie name:
@@ -31,33 +31,33 @@
 	</li>
 </ul>
 
-<button type="button" id="set-cookie">set cookie</button>
-<button type="button" id="set-cookie-by-date">set cookie by date</button>
-<button type="button" id="set-cookie-by-hour">set cookie by hour</button>
-<button type="button" id="del-cookie">del cookie</button>
+<button type="button" id="set-sess-cook">set session cookie</button>
+<button type="button" id="set-cook-by-date">set cookie by date</button>
+<button type="button" id="set-cook-by-hour">set cookie by hour</button>
+<button type="button" id="del-cook">del cookie</button>
 
 <script>
-	$("#set-cookie").on("click", function() {
+	$("#set-sess-cook").on("click", function() {
 		var name = $("#name").val();
 		var value = $("#value").val();
 		var expires = $("#expires").val();
-		Cookie.setCookie(name, value, expires);
+		Cookie.setSessCook(name, value, expires);
 	});
-	$("#set-cookie-by-date").on("click", function() {
+	$("#set-cook-by-date").on("click", function() {
 		var name = $("#name").val();
 		var value = $("#value").val();
 		var expires = $("#expires").val();
-		Cookie.setCookieByDate(name, value, expires);
+		Cookie.setCookByDate(name, value, expires);
 	});
-	$("#set-cookie-by-hour").on("click", function() {
+	$("#set-cook-by-hour").on("click", function() {
 		var name = $("#name").val();
 		var value = $("#value").val();
 		var expires = $("#expires").val();
-		Cookie.setCookieByHour(name, value, expires);
+		Cookie.setCookByHour(name, value, expires);
 	});
-	$("#del-cookie").on("click", function() {
+	$("#del-cook").on("click", function() {
 		var name = $("#name").val();
-		Cookie.delCookie(name);
+		Cookie.delCook(name);
 	});
 	
 	var v = "a";
@@ -66,19 +66,5 @@
 	var v = "a2";
 	console.log(v + ": " + Cookie.getVal(v));
 </script>
-
-<section style="margin-top: 100px;">
-	<ul>
-		<li>
-			<p>expires를 넣지 않으면 세션쿠기가 됨</p>
-			
-			<h2>세션쿠키</h2>
-			<p>익스는 브라우저를 닫으면 사라지고 크폼, 파폭은 브라우저를 닫았다가 열어도 세션이 복구되어 사라지지 않는다.</p>
-		</li>
-		<li>
-			<p>파폭 개발자도구에서 테스트하면 새로고침을 하지 않아도 쿠기가 생성 삭제됨을 확인할 수 있어서 편함.</p>
-		</li>
-	</ul>
-</section>
 </body>
 </html>
