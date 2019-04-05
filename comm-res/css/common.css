@@ -5,6 +5,7 @@ body {font-family: malgun gothic, arial; margin: 4%; background: #eee; line-heig
 	box-shadow: #ccc 2px 2px 2px;}
 
 a {color: #0089d6; text-decoration: none;}
+a:hover {text-decoration: underline;}
 
 
 /* patch old browser */
