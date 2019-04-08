@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>font-size</title>
+	<!--[if lte IE 8]>
+	<script src="/comm-res/js/patch/ie9.min.js?v=<?=$res_ver?>"></script>
+	<script>document.createElement('main');</script>
+	<![endif]-->
+	<style>
+		body {font-size: 62.5%; font-family: 맑은 고딕;}
+		body * {font-size: 1em;}
+		
+		header {font-size: 1.6em;}
+		main {font-size: 1.6em;}
+		footer {font-size: 1.6em;}
+		
+		
+		@media (max-width: 800px) {
+			body {font-size: 50%;}
+		}
+		
+		@media (max-width: 400px) {
+			body {font-size: 40%;}
+		}
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<main>
+		main
+		<input type="text" value="main">
+	</main>
+	<footer>footer</footer>
+</body>
+</html>

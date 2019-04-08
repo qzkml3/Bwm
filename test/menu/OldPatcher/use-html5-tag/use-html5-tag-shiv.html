@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>use-html5-tag-shiv</title>
+	<style>
+		main,
+		header,
+		footer,
+		nav,
+		aside,
+		section
+		{background: #ccc; border: solid 1px black;}
+	</style>
+	
+	<!--[if lte IE 8]>
+	<script src="/comm-res/js/patch/html5shiv-printshiv.min.js?v=<?=$res_ver?>"></script>
+	<![endif]-->
+</head>
+<body>
+<header>
+	header
+</header>
+<nav>
+	nav
+</nav>
+<main>
+	main
+</main>
+<aside>
+	aside
+</aside>
+<footer>
+	footer
+</footer>
+<ul>
+	<li>css 추가 불필요</li>
+	<li>main태그 생성 불필요</li>
+	<li>css 추가 기능은 없음</li>
+	<li>printshiv는 html5shiv를 포함하면서 프린트 이슈를 추가한 버전</li>
+</ul>
+</body>
+</html>
