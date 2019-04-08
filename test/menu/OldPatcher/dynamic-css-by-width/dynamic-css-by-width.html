@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>add-css-by-width</title>
+</head>
+<body>
+반응형 화면 크기에 따라서 .css 파일을 동적으로 추가
+<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+<script>
+	$(window).on("resize", function() {
+		var winWidth = $(window).width();
+		var tablet_css = '<link class="tablet_css" rel="stylesheet" href="a.css">';
+		var $tablet_css = $("head ." + $(tablet_css).attr("class"));
+
+		if (winWidth < 720) {
+			if ( $tablet_css.length == 0 ) {
+				$("head").append(tablet_css);
+			}
+		} else {
+			$tablet_css.remove();
+		}
+	});
+</script>
+</body>
+</html>
