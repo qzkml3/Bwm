@@ -1,4 +1,15 @@
 Ui = {
+	//현재 경로에 포함되어있는 링크를 on 시킨다.
+	onLinkCurPage: function (sel) {
+		var $links = $(sel).find('a');
+		$links.each(function() {
+			var $link = $(this);
+			if (StringUtil.hasString(location.href, $link.attr('href'))) {
+				$link.addClass('on');
+			}
+		});
+	}
+	,
 	//todo 모듈화 필요 체크와 뒷배경 on
 	chkAll: function (btnAllChk, btnChk) {
 		$(btnAllChk).on("click", function () {
