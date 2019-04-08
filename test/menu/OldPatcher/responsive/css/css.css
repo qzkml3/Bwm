@@ -1,0 +1,5 @@
+
+		.a {background: #ccc;}
+		@media screen and (min-width: 600px) {
+			.a {background: #fcc;}
+		}

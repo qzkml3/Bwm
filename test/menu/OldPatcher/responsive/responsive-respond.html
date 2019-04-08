@@ -4,16 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>respond</title>
-	<style>
-		.a {background: #ccc;}
-		@media screen and (min-width: 600px) {
-			.a {background: #fcc;}
-		}
-	</style>
+	<title>responsive-respond</title>
+	<link rel="stylesheet" href="css/css.css">
+	<!--[if lte IE 8]>
 	<script src="/comm-res/js/patch/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
-	<div class="a">a</div>
+<div class="a">a</div>
+<ul>
+	<li>style태그로 직접 써주면 안되고 link로 호출해야 함.</li>
+	<li>link로 호출한 후 js를 불러와야 됨</li>
+</ul>
 </body>
 </html>
