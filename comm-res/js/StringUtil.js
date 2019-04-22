@@ -13,7 +13,7 @@ StringUtil = {
 	},
 	/*숫자앞에 0추가 후 문자열 리턴*/
 	addZero: function (str, wish_size) {
-		str =  str.toString();
+		var str =  str.toString();
 		var rtnStr = str;
 
 		if (str.length < wish_size) {
