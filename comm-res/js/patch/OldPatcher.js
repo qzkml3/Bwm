@@ -13,7 +13,7 @@ OldPatcher = {
 				$img = $(this);
 				var type;
 
-				if ($img.width() > $img.height()) {
+				if ($img.width() >= $img.height()) {
 					type = "hori";
 				} else {
 					type = "verti";
