@@ -1,6 +1,6 @@
 Ui = {
 	//현재 경로에 포함되어있는 링크를 on 시킨다.
-	onLinkCurPage: function (sel) {
+	chkMenuCurPage: function (sel) {
 		var $links = $(sel).find('a');
 		$links.each(function() {
 			var $link = $(this);
