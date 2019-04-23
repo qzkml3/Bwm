@@ -1,4 +1,19 @@
 Ui = {
+	chkStarPoint: function (wrap) {
+		$(wrap).find('button').on('click', function() {
+			var $btn = $(this);
+			var idx = $btn.index();
+			var $btns = $(this).parent().find('button');
+			$btns.removeClass('on');
+			$btns.each(function (i) {
+				$(this).addClass('on');
+				if (i == idx) {
+					return false;
+				}
+			});
+		});
+	}
+	,
 	//현재 경로에 포함되어있는 링크를 on 시킨다.
 	chkMenuCurPage: function (sel) {
 		var $links = $(sel).find('a');

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>star-point</title>
+	<style>
+		button {cursor: pointer;}
+		
+		.star {}
+		.star button {width: 22px; height: 20px; background: url(img/star-point.jpg) no-repeat center / 100% 100%;
+			text-indent: -9999999px; display: inline-block; border: none;}
+		.star button.on {background-image: url(img/star-point-on.jpg);}
+	</style>
+</head>
+<body>
+	<div class="star">
+		<button type="button">별점1</button>
+		<button type="button">별점2</button>
+		<button type="button">별점3</button>
+		<button type="button">별점4</button>
+		<button type="button">별점5</button>
+	</div>
+	<script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
+	<script src="/comm-res/js/Ui.js"></script>
+	<script>
+		Ui.chkStarPoint('.star');
+	</script>
+</body>
+</html>
