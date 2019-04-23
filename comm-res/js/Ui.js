@@ -1,5 +1,5 @@
 Ui = {
-	chkStarPoint: function (wrap) {
+	chkStarPoint: function (wrap, field) {
 		$(wrap).find('button').on('click', function() {
 			var $btn = $(this);
 			var idx = $btn.index();
@@ -8,6 +8,7 @@ Ui = {
 			$btns.each(function (i) {
 				$(this).addClass('on');
 				if (i == idx) {
+					$(field).val(idx+1);
 					return false;
 				}
 			});
