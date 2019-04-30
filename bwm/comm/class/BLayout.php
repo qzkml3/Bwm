@@ -6,6 +6,5 @@
 			require_once B_FRONT. '/inc/header.html';
 		}
 		static function getFrontFooter() {
-			require_once B_FRONT . '/inc/footer.html';
-		}
+			require_once B_FRONT . '/inc/footer.html';}
 	}
