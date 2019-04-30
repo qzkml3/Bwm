@@ -7,7 +7,7 @@
 	define('B_FRONT', B_SITE_ROOT  . '/front');
 	define('B_ADMIN', B_SITE_ROOT  . '/admin');
 
-	require_once B_SITE_ROOT . '/comm/class/BConf.php';
-	require_once B_SITE_ROOT . '/comm/class/BLayout.php';
-	require_once B_SITE_ROOT . '/comm/class/BRes.php';
+	require_once B_COMM . '/class/BConf.php';
+	require_once B_COMM . '/class/BLayout.php';
+	require_once B_COMM . '/class/BRes.php';
 ?>
