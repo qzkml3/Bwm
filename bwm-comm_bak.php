@@ -2,6 +2,8 @@
 	require_once Config::getPath('comm-res') . '/class/Layout.php';
 	
 	class Config {
+		static $var = 'var';
+
 		//document
 		static function getSiteTitle() {
 			return 'site_title';
