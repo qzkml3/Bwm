@@ -1,11 +1,14 @@
 <?php
-	define('BWM_TITLE', '가나다');
-	define('BWM_DESCRIPTION', '');
-
-	require_once $_SERVER['DOCUMENT_ROOT'] . "/bwm-comm_bak.php";
-	Layout::getHeader("front");
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm-setting.php';
+	define('B_TITLE', 'title');
+	define('B_DESC', '');
+	BLayout::getFrontHeader();
 ?>
-가나다
+	<p>index</p>
+	<div>
+		<img src=<?=BRes::getRes(B_FRONT . '/img/a.jpg')?> alt="">
+		<img src=<?=BRes::getRes(B_FRONT . '/img/b.jpg')?> alt="">
+	</div>
 <?php
-	Layout::getFooter("front");
+	BLayout::getFrontFooter();
 ?>
