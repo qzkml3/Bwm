@@ -9,5 +9,3 @@
 			require_once B_FRONT . '/inc/footer.html';
 		}
 	}
-
-?>
