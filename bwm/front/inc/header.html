@@ -1,12 +1,24 @@
+<?
+	header('Cache-Control: must-revalidate, max-age=30');
+	header('Pragma: no-cache');
+?>
 <!doctype html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
-			content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	      content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title><?=B_TITLE?></title>
-	<meta name="description" content="<?=B_DESC?>">
+	<title>
+		<?
+			if (B_TITLE) {
+				echo B_TITLE . BConf::$site_delimeter . BConf::$site_name;
+			} else {
+				echo BConf::$site_name;
+			}
+		?>
+	</title>
+	<meta name="description" content="<?= B_DESC ?>">
 </head>
 <body>
 header

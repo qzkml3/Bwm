@@ -2,6 +2,8 @@
 
 	class BConf
 	{
+		static $site_name = 'bwm';
+		static $site_delimeter = ' : ';
 		/*db*/
 		static $db_host = 'host';
 		static $db_name = 'name';
