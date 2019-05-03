@@ -4,7 +4,44 @@
 	define('B_DESC', '');
 	BLayout::getFrontHeader();
 ?>
-	<p>test index</p>
+	<link rel="stylesheet" href="/-bwm/css/util.css">
+	<link rel="stylesheet" href="/-bwm/css/common.css">
+	<main id="main" class="page">
+		<a href="/" title="back">&lt;&lt;</a>
+		<h1>Boulder's <span style="display: inline-block;">testpage</span></h1>
+
+		<ul>
+			<?php
+				$files = array();
+
+				BFile::getRecurFileList('menu');
+
+				class BFile
+				{
+					static function getRecurFileList($dir) {
+						if (is_dir($dir)) {
+							if ($dh = opendir($dir)) {
+								while (($entry = readdir($dh)) !== false) {
+									if ($entry == '.' || $entry == '..')
+										continue;
+									$subdir = $dir . '/' . $entry;
+
+									if (is_dir($subdir)) {
+										self::getRecurFileList($subdir);
+									} else {
+										$v = $dir . '/' . $entry;
+										echo '<li><a href="' . $v . '">' . $v . '</a></li>';
+									}
+								}
+								closedir($dh);
+							}
+						}
+					}
+				}
+
+			?>
+		</ul>
+	</main>
 <?php
 	BLayout::getFrontFooter();
 ?>

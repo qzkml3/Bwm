@@ -1,6 +1,6 @@
 <?php
 	/*site identity*/
-	define('B_SITE_NAME', 'test');
+	define('B_SITE_NAME', 'Boulder\'s testpage');
 	define('B_SITE_DELIMETER', ' : ');
 
 	/*root*/
