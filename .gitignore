@@ -1,0 +1,12 @@
+# 인텔리제이
+.idea
+*.iml
+
+# 이클립스
+.buildpath
+.project
+.settings
+.externalToolBuilders
+
+# 워드프레스
+wordpress
