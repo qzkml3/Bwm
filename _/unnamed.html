@@ -6,17 +6,40 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>unnamed</title>
 	<link rel="stylesheet" href="a.css">
+	<style>
+		body {line-height: 1.6;}
+	</style>
 </head>
 <body>
 
-<button onclick="openWin();">pop</button>
-
-<script>
-	openWin();
-	function openWin() {
-		window.open('http://www.naver.com', '', '');
+<?php
+	
+	BFile::getRecurFileList('../test/menu');
+	
+	class BFile {
+		static function getRecurFileList($dir) {
+			if (is_dir($dir)) {
+				if ($dh = opendir($dir)) {
+					while (($entry = readdir($dh)) !== false) {
+						if ($entry == '.' || $entry == '..')
+							continue;
+						$subdir = $dir . '/' . $entry;
+						
+						if (is_dir($subdir)) {
+							self::getRecurFileList($subdir);
+						} else {
+							$v = $dir . '/' . $entry;
+							echo '<a href="' . $v . '">' . $v . '</a><br>';
+						}
+					}
+					closedir($dh);
+				}
+			}
+		}
 	}
-</script>
+?>
+<hr>
+
 <script src="/comm-res/js/jquery/jquery-1.8.3.min.js"></script>
 </body>
 </html>

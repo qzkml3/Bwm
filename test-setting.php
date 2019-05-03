@@ -1,6 +1,6 @@
 <?php
 	define('B_ROOT_PATH', $_SERVER['DOCUMENT_ROOT']);
-	define('B_SITE_ROOT_PATH', B_ROOT_PATH  . '/bwm');
+	define('B_SITE_ROOT_PATH', B_ROOT_PATH  . '/test');
 	
 	define('B_FRONT_PATH', B_SITE_ROOT_PATH  . '/front');
 	define('B_ADMIN_PATH', B_SITE_ROOT_PATH  . '/admin');
