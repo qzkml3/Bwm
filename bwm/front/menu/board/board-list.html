@@ -1,8 +1,10 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
 	define('B_TITLE', '게시판 목록');
 	define('B_DESC', '');
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm/class/control/CrudControl.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
+	$tbl = "board";
+	$work_flag = "getList";
+	require_once B_COMM_PATH. '/class/control/CrudControl.php';
 	BLayout::getFrontHeader();
 ?>
 	<p>index</p>
