@@ -1,29 +1,5 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-home.php';
-	define('B_TITLE', 'test-backend');
-	define('B_DESC', '');
-	BLayout::getFrontHeader();
-?>
-	<link rel="stylesheet" href="/-bwm/css/util.css">
-	<link rel="stylesheet" href="/-bwm/css/common.css">
-	<div id="wrap">
-		<main id="main" class="page">
-			<a href="/" title="back">&lt;&lt;</a>
-			<h1>Boulder's <span style="display: inline-block;">test-backend</span></h1>
-			<ul>
-				<?php	BFile::getRecurFileList('menu');?>
-			</ul>
-		</main>
-		<aside id="aside-right" class="page">
-			<ul>
-				<?php BFile::getFileList('menu');?>
-			</ul>
-		</aside>
-	</div>
-<?php
-	BLayout::getFrontFooter();
-?>
-<?php
+
 	class BFile
 	{
 		static function getFileList($dir) {
@@ -36,7 +12,7 @@
 
 						if (is_dir($subdir)) {
 							$v = $dir . '/' . $entry;
-							echo '<li>' . BStr::removeStr($v, 'menu/') . '</li>';
+							echo '<li><a href="' . $v . '">' . BStr::removeStr($v, 'menu/') . '</a></li>';
 						}
 					}
 					closedir($dh);

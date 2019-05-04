@@ -2,10 +2,10 @@ require.config({
 	paths: {
 		"jquery": "/_test/js/jquery/jquery-1.8.3.min",
 		"common": "/_test/js/common",
-        "inner": "/test-frontend/menu/language/requirejs/js/inner",
-        "inner2": "/test-frontend/menu/language/requirejs/js/inner2",
-        "outer": "/test-frontend/menu/language/requirejs/js/outer",
-        "outer2": "/test-frontend/menu/language/requirejs/js/outer2"
+        "inner": "/test-front-end/menu/language/requirejs/js/inner",
+        "inner2": "/test-front-end/menu/language/requirejs/js/inner2",
+        "outer": "/test-front-end/menu/language/requirejs/js/outer",
+        "outer2": "/test-front-end/menu/language/requirejs/js/outer2"
 	},
 	shim: {
         "common": {

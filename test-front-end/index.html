@@ -1,0 +1,29 @@
+<?php
+	define('B_TITLE', 'test-front-end');
+	define('B_DESC', '');
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-home.php';
+	require_once B_SITE_ROOT_PATH . '/class/BFile.php';
+	BLayout::getFrontHeader();
+?>
+	<link rel="stylesheet" href="/-bwm/css/util.css">
+	<link rel="stylesheet" href="/-bwm/css/common.css">
+	<div id="wrap">
+		<main id="main" class="page">
+			<a href="/" title="back">&lt;&lt;</a>
+			<h1><?=B_TITLE?></h1>
+			<ul>
+				<?php BFile::getRecurFileList('menu'); ?>
+			</ul>
+		</main>
+		<aside id="aside-right" class="page">
+			<ul>
+				<?php BFile::getFileList('menu'); ?>
+			</ul>
+		</aside>
+	</div>
+	<script src="/-bwm/js/StringUtil.js"></script>
+	<script src="/home/js/common.js"></script>
+<?php
+	BLayout::getFrontFooter();
+?>
+<?php
