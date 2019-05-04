@@ -1,14 +1,14 @@
 <?php
 	/*site identity*/
-	define('B_SITE_NAME', 'Boulder\'s testpage');
-	define('B_SITE_DELIMETER', ' : ');
+	define('B_SITE_NAME', 'Boulder\'s homepage');
+	define('B_TITLE_DELIMETER', ' : ');
 
 	/*root*/
 	define('B_ROOT_PATH', $_SERVER['DOCUMENT_ROOT']);
 
 	/*BWM*/
 	define('B_BWM_PATH', B_ROOT_PATH  . '/-bwm');
-	define('B_SITE_ROOT_PATH', B_ROOT_PATH . '/test');
+	define('B_SITE_ROOT_PATH', B_ROOT_PATH . '/home');
 
 	/*front layout*/
 	define('B_FRONT_HEADER_FILE',  B_SITE_ROOT_PATH . '/inc/header.html');
@@ -30,5 +30,5 @@
 	define('B_DB_USER', 'B_DB_USER');
 	define('B_DB_PWD', 'B_DB_PWD');
 
-	require_once B_BWM_PATH . '/class/BPreProc.php';
+	require_once B_BWM_PATH . '/class/proc/BPreProc.php';
 ?>

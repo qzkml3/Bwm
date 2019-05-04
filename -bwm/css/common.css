@@ -1,4 +1,12 @@
+body {padding: 4%;}
+/**/
+#wrap {overflow: hidden;}
+/**/
+#main {float: left; width: 70%; box-sizing: border-box;}
+/**/
+#aside-right {float: right; width: 28%; box-sizing: border-box;}
+
+
 .page {box-shadow: #ccc 2px 2px 2px; background: white;
 	margin: 0 auto; padding: 4%; max-width: 1000px; min-height: 400px;
 }
-

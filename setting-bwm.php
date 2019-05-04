@@ -32,5 +32,5 @@
 	define('B_DB_USER', 'B_DB_USER');
 	define('B_DB_PWD', 'B_DB_PWD');
 
-	require_once B_BWM_PATH . '/class/BPreProc.php';
+	require_once B_BWM_PATH . '/class/proc/BPreProc.php';
 ?>

@@ -1,0 +1,13 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
+	define('B_TITLE', 'BStr::removeStr();');
+	define('B_DESC', '');
+	BLayout::getFrontHeader();
+?>
+<?php
+	$v = 'abc-aaa-aaa-aaa';
+	echo BStr::removeStr($v, 'aaa');
+?>
+<?php
+	BLayout::getFrontFooter();
+?>
