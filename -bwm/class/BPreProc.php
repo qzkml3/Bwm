@@ -1,6 +1,6 @@
 <?php
-	require_once B_BWM_PATH . '/class/BLayout.php';
-	require_once B_BWM_PATH . '/class/BHtml.php';
+	require_once B_BWM_PATH . '/class/layout/BLayout.php';
+	require_once B_BWM_PATH . '/class/html/BHtml.php';
 
 	BPreProc::setHttpCache();
 	
