@@ -1,4 +1,27 @@
 </main>
+
+<!--#aside-right-->
+<?php if (BStr::hasStr(B_LAYOUT, 'right')) { ?>
+	<aside id="aside-right" class="page">
+		<ul>
+			<?php BFile::getFileList('menu'); ?>
+		</ul>
+	</aside>
+<?php } ?>
+<!--/#aside-right-->
+</div>
+<!--/#middle-->
+
+<!--#footer-->
+<footer id="footer" class="page">
+	<address id="address">Address: oooo oooo oooo</address>
+	<p id="copy">Copy: oooo oooo oooo</p>
+	<div id="family">
+		<a href="/">Boulder' homepage</a>
+	</div>
+</footer>
+<!--/#footer-->
+
 </div>
 <!--/#wrap-->
 </body>

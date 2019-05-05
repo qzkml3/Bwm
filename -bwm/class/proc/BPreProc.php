@@ -1,9 +1,12 @@
 <?php
 	require_once B_BWM_PATH . '/class/layout/BLayout.php';
 	require_once B_BWM_PATH . '/class/html/BHtml.php';
-	require_once B_BWM_PATH . '/class/BStr.php';
+	require_once B_BWM_PATH . '/class/string/BStr.php';
+	require_once B_BWM_PATH . '/class/db/BDb.php';
+	require_once B_BWM_PATH . '/class/test/BFile.php';
 
 	BPreProc::setHttpCache();
+	$req = '';
 	
 	class BPreProc
 	{

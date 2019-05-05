@@ -3,7 +3,11 @@
 
 	class CrudService {
 		public static function getList($tbl) {
-			CrudDao::getList($tbl);
+			$data = CrudDao::getList($tbl);
+			while ($row = $data->fetch_assoc()) {
+				$list[] = $row;
+			}
+			return $list;
 		}
 
 		public static function getData($tbl) {

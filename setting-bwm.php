@@ -11,6 +11,7 @@
 
 	/*site root*/
 	define('B_SITE_ROOT_PATH', B_ROOT_PATH . '/bwm');
+	define('B_SITE_ROOT_URL', '/bwm');
 	define('B_ADMIN_PATH', B_SITE_ROOT_PATH . '/admin');
 	define('B_COMM_PATH', B_SITE_ROOT_PATH . '/comm');
 	define('B_FRONT_PATH', B_SITE_ROOT_PATH . '/front');
@@ -30,10 +31,10 @@
 	define('B_LOG_PATH', B_SITE_ROOT_PATH  . '/log');
 
 	/*Db*/
-	define('B_DB_HOST', 'B_DB_HOST');
-	define('B_DB_NAME', 'B_DB_NAME');
-	define('B_DB_USER', 'B_DB_USER');
-	define('B_DB_PWD', 'B_DB_PWD');
+	define('B_DB_HOST', 'localhost');
+	define('B_DB_USER', 'root');
+	define('B_DB_PWD', 'pwd');
+	define('B_DB_NAME', 'bwm');
 
 	require_once B_BWM_PATH . '/class/proc/BPreProc.php';
 ?>

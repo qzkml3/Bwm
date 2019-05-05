@@ -1,16 +1,21 @@
 <?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
+	define('B_LAYOUT', 'left');
 	define('B_TITLE', '게시판 목록');
 	define('B_DESC', '');
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
-	$tbl = "board";
 	$work_flag = "getList";
-	require_once B_COMM_PATH. '/class/control/CrudControl.php';
+	require_once B_COMM_PATH . '/class/control/BoardControl.php';
 	BLayout::getFrontHeader();
 ?>
-	<p>index</p>
 	<div>
 
-
+<?php
+		foreach ($list as $data) {
+			echo ($data['id']);
+			echo ($data['cont']);
+			echo ('<hr>');
+		}
+?>
 	</div>
 <?php
 	BLayout::getFrontFooter();
