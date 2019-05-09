@@ -4,6 +4,7 @@
 	require_once B_BWM_PATH . '/class/string/BStr.php';
 	require_once B_BWM_PATH . '/class/db/BDb.php';
 	require_once B_BWM_PATH . '/class/test/BFile.php';
+	require_once B_BWM_PATH . '/class/date/BDate.php';
 
 	BPreProc::setHttpCache();
 	$req = '';

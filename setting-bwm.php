@@ -33,7 +33,7 @@
 	/*Db*/
 	define('B_DB_HOST', 'localhost');
 	define('B_DB_USER', 'root');
-	define('B_DB_PWD', 'pwd');
+	define('B_DB_PWD', 'password');
 	define('B_DB_NAME', 'bwm');
 
 	require_once B_BWM_PATH . '/class/proc/BPreProc.php';

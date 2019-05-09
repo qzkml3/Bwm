@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>form-design</title>
+</head>
+<body>
+<h1>form-design</h1>
+<p>
+	폼 필드에 -webkit-appearance가 먹는것을 제거 후 background로 처리
+</p>
+<hr>
+<style>
+	input, textarea, select { border-radius: 0; -webkit-appearance: none; border: solid 1px #aaa; background: white;}
+	input[type=image] {border: none;}
+	select { padding-right: 2em; background: url(img/select.png) no-repeat right 0.3em center; box-sizing: border-box;}
+	
+	input[type=checkbox], input[type=radio]
+	{width: 13px; height: 13px; vertical-align: middle;}
+	input[type=radio] { border-radius: 50%;}
+	
+	input[type=checkbox] + span, input[type=radio] + span { vertical-align: middle;}
+	
+	input[type=checkbox]:checked, input[type=radio]:checked
+	{background: center no-repeat / 90% 90%;}
+	
+	input[type=checkbox]:checked {background-image: url(img/check.png);}
+	input[type=radio]:checked {background-image: url(img/radio.png);}
+	
+</style>
+<select name="" id=""></select>
+<input type="text">
+<label>
+	<input type="checkbox" name="chk">
+	<span>가나다</span>
+</label>
+<label>
+	<input type="checkbox" name="chk">
+	<span>가나다</span>
+</label>
+
+<label>
+	<input type="radio" name="rdo">
+	<span>가나다</span>
+</label>
+
+<label>
+	<input type="radio" name="rdo">
+	<span>가나다</span>
+</label>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+</body>
+</html>
