@@ -12,7 +12,7 @@
 
 						if (is_dir($subdir)) {
 							$v = $dir . '/' . $entry;
-							echo '<li><a href="' . $v . '">' . BStr::removeStr($v, 'menu/') . '</a></li>';
+							echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
 						}
 					}
 					closedir($dh);
@@ -32,7 +32,7 @@
 							self::getRecurFileList($subdir);
 						} else {
 							$v = $dir . '/' . $entry;
-							echo '<li><a href="' . $v . '">' . BStr::removeStr($v, 'menu/') . '</a></li>';
+							echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
 						}
 					}
 					closedir($dh);

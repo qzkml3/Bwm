@@ -1,5 +1,5 @@
 <?php
-	define('B_SITE_NAME', 'Boulder\'s homepage');
+	define('B_SITE_NAME', 'BWM');
 	define('B_TITLE_DELIMITER', ' : ');
 	
 	class BSite {

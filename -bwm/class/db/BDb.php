@@ -3,7 +3,12 @@
 	class BDb
 	{
 		static function getDB() {
-			$db = new mysqli(B_DB_HOST, B_DB_USER, B_DB_PWD, B_DB_NAME);
+			$db_host = 'localhost';
+			$db_user = 'root';
+			$db_pwd = 'password';
+			$db_name = 'bwm';
+			
+			$db = new mysqli($db_host, $db_user, $db_pwd, $db_name);
 			$db->set_charset("UTF8");
 
 			return $db;

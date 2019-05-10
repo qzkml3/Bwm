@@ -1,5 +1,5 @@
 <?php
-	require_once B_COMM_PATH . '/class/service/BoardService.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm/class/service/BoardService.php';
 
 	switch ($work_flag) {
 		default:

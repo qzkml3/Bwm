@@ -1,14 +1,13 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm/class/bwm/BPreProc.php';
 	define('B_LAYOUT', 'left');
 	define('B_TITLE', '게시판 목록');
 	define('B_DESC', '');
 	$work_flag = "getList";
-	require_once B_COMM_PATH . '/class/control/BoardControl.php';
-	BLayout::getFrontHeader();
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm/class/control/BoardControl.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/front/inc/header.html';
 ?>
 	<div>
-		
 		<?php
 			if (is_array($list)) {
 				foreach ($list as $data) {
@@ -22,5 +21,5 @@
 		?>
 	</div>
 <?php
-	BLayout::getFrontFooter();
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/front/inc/footer.html';
 ?>

@@ -1,10 +1,11 @@
 <?php
-	require_once B_COMM_PATH . '/class/dao/BoardDao.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm/class/dao/BoardDao.php';
 
 	class BoardService {
 		public static function getList($req) {
 			$row = BoardDao::getList($req);
 			while ($data = $row->fetch_assoc()) {
+				//$data['id'] = $data['id'] . '[id]';
 				$list[] = $data;
 			}
 			return $list;

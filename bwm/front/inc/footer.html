@@ -1,10 +1,26 @@
 </main>
 
-<?php if (BStr::hasStr(B_LAYOUT, 'right')) { ?>
+<?php if (strstr(B_LAYOUT, 'right')) { ?>
 	<!--#aside-right-->
 	<aside id="aside-right" class="page">
 		<ul>
-			<?php BFile::getFileList('menu'); ?>
+			<li>
+				<a href="test-back-end">test-back-end</a>
+			</li>
+			<li>
+				<a href="test-front-end">test-front-end</a>
+			</li>
+			<li>
+				<a href="bwm">BWM</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://github.com/qzkml3/BWM">
+					BWM Source in Github
+				</a>
+			</li>
+			<li>
+				<a href="wordpress">wordpress</a>
+			</li>
 		</ul>
 	</aside>
 	<!--/#aside-right-->

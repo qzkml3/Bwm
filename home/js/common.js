@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 function asideToCont() {
-	$('#aside-right a').on('click', function () {
+	$('#aside-left a').on('click', function () {
 		var cateText = $(this).text();
 		$('#main li').each(function () {
 			if (StringUtil.hasString($(this).text(), cateText)) {

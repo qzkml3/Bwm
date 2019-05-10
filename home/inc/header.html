@@ -3,40 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
-			content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	      content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title><?=BSite::getPageTitle();?></title>
+	<title><?= BSite::getPageTitle(); ?></title>
 	<meta name="description" content="<?= B_DESC ?>">
 	<link rel="stylesheet" href="/-bwm/css/util.css">
 	<link rel="stylesheet" href="/-bwm/css/common.css">
 	<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
 </head>
-<body class="<?=B_LAYOUT?>">
+<body class="<?= B_LAYOUT ?>">
 <div id="wrap">
 	<header id="header">
 		<h1 id="logo">
-			<a href="<?=B_SITE_ROOT_URL?>"><?=B_SITE_NAME?></a>
+			<a href="/"><?= B_SITE_NAME ?></a>
 		</h1>
 		<nav id="gnb">
-			<a href="">게시판</a>
-			<a href="">게시판</a>
-			<a href="">게시판</a>
-			<a href="">게시판</a>
-			<a href="">게시판</a>
+			<a href="/test/test-back-end">test-back-end</a>
+			<a href="/test/test-front-end">test-front-end</a>
 		</nav>
 		<nav id="mnb">
 			<a href="">로그인</a>
-			| <a href="">회원가입</a>
+			|
+			<a href="">회원가입</a>
 		</nav>
 	</header>
-
+	
 	<div id="middle">
-		<!--#aside-left-->
 		<?php if (strstr(B_LAYOUT, 'left')) { ?>
+			<!--#aside-left-->
 			<aside id="aside-left" class="page">
-				<a href="/bwm/front/menu/board/board-list.html">board</a>
+		<ul>
+			<?php BFile::getFileList('./menu'); ?>
+		</ul>
 			</aside>
+			<!--/#aside-left-->
 		<?php } ?>
-		<!--/#aside-left-->
-
+		
 		<main id="main" class="page">

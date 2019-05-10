@@ -24,7 +24,7 @@ body {margin: 0 4% 4%;}
 body.left #main, body.right #main { float: right; width: 78%; }
 body.right #main { float: left;}
 /**/
-#aside-left, #aside-right { width: 20%; box-sizing: border-box; float: left;}
+#aside-left, #aside-right { width: 20%; box-sizing: border-box; float: left; padding: 0 20px;}
 #aside-right {float: right;}
 /**/
 .page {box-shadow: #ccc 2px 2px 2px; background: white;

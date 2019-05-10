@@ -1,5 +1,4 @@
 <?php
-	require_once B_COMM_PATH . '/class/BTable.php';
 
 	class BoardDao {
 		static function getList($req) {

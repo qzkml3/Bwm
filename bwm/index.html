@@ -1,11 +1,11 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-bwm.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/comm/class/bwm/BPreProc.php';
 	define('B_LAYOUT', 'left');
 	define('B_TITLE', '');
 	define('B_DESC', '');
-	BLayout::getFrontHeader();
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/front/inc/header.html';
 ?>
 	<h1>Main</h1>
 <?php
-	BLayout::getFrontFooter();
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/front/inc/footer.html';
 ?>
