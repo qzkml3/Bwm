@@ -1,6 +1,6 @@
 body {margin: 0 4% 4%;}
 /**/
-#wrap { overflow: visible; /*max-width: 1000px;*/ margin: 0 auto;}
+#wrap { overflow: visible; max-width: 1500px; margin: 0 auto;}
 #wrap:after { content: ""; clear: both; display: table; }
 /**/
 #header:after { content: ""; clear: both; display: table; }
@@ -20,13 +20,12 @@ body {margin: 0 4% 4%;}
 #middle {}
 #middle:after { content: ""; clear: both; display: table; }
 /**/
-#main { box-sizing: border-box; }
-body.left #main { float: right; width: 70%; }
-body.right #main { float: left; width: 70%; }
+#main { box-sizing: border-box;}
+body.left #main, body.right #main { float: right; width: 78%; }
+body.right #main { float: left;}
 /**/
-#aside-left {float: left; width: 28%; box-sizing: border-box;}
-/**/
-#aside-right {float: right; width: 28%; box-sizing: border-box;}
+#aside-left, #aside-right { width: 20%; box-sizing: border-box; float: left;}
+#aside-right {float: right;}
 /**/
 .page {box-shadow: #ccc 2px 2px 2px; background: white;
 	margin: 0 auto; padding: 4%; min-height: 100px;

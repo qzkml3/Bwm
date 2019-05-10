@@ -1,9 +1,9 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-home.php';
-	define('B_LAYOUT', '');
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/bwm/BPreProc.php';
+	define('B_LAYOUT', 'right');
 	define('B_TITLE', '');
 	define('B_DESC', '');
-	BLayout::getFrontHeader();
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/inc/header.html';
 ?>
 	<h1>Boulder's <span style="display: inline-block;">homepage</span></h1>
 	<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -30,5 +30,5 @@
 		</li>
 	</ul>
 <?php
-	BLayout::getFrontFooter();
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/inc/footer.html';
 ?>
