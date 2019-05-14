@@ -33,6 +33,11 @@ body.right #main { float: left;}
 /**/
 #footer { margin-top: 20px; position: relative; overflow: hidden;}
 #footer:after { content: ""; clear: both; display: table; }
+.left #footer, .right #footer
+{width: 70%;}
+.left #footer {float: right;}
+.right #footer {float: left;}
+/**/
 #address { float: left; }
 #family {float: right;}
 

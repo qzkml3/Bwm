@@ -1,26 +1,18 @@
 <?php
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
-	define('B_LAYOUT', '');
+	define('B_LAYOUT', 'right back title');
 	define('B_TITLE', 'BDate::getLastDate();');
 	define('B_DESC', '');
 	BLayout::getHeader();
 ?>
-	<a href="javascript:history.back();" title="back">&lt;&lt;</a>
-	<h1><?= B_TITLE ?></h1>
-	<xmp>
-	echo BDate::getNowYear();
-	echo '<br>';
-	echo BDate::getNowMonth();
-	echo '<br>';
-	echo BDate::getNowLastDate();
-	</xmp>
-<?php
-	echo BDate::getNowYear();
-	echo '<br>';
-	echo BDate::getNowMonth();
-	echo '<br>';
-	echo BDate::getNowLastDate();
-?>
+	<h2>BDate::getNowYear();</h2>
+	<?=BDate::getNowYear();?>
+	
+	<h2>BDate::getNowMonth();</h2>
+	<?=BDate::getNowMonth();?>
+	
+	<h2>BDate::getNowLastDate();</h2>
+	<?=BDate::getNowLastDate();?>
 <?php
 	BLayout::getFooter();
 ?>

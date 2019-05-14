@@ -1,0 +1,43 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
+	define('B_LAYOUT', 'right back title');
+	define('B_TITLE', 'file-list');
+	define('B_DESC', '');
+	BLayout::getHeader();
+?>
+	
+
+<?php
+	getFileList2('../');
+		function getFileList2($dir) {
+			if (is_dir($dir)) {
+				if ($dh = opendir($dir)) {
+					while (($entry = readdir($dh)) !== false) {
+						if ($entry == '.' || $entry == '..')
+							continue;
+						$subdir = $dir . '/' . $entry;
+						
+						if (is_dir($subdir)) {
+							$v = $dir . '/' . $entry;
+							echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
+						}
+					}
+					closedir($dh);
+				}
+			}
+		}
+	
+?>
+	<?php
+	
+/*$directory = '../../';
+$scanned_directory = array_diff(scandir($directory), array('..', '.'));
+print_r($scanned_directory);*/
+
+?>
+	
+	<h2></h2>
+	<p>가나다</p>
+<?php
+	BLayout::getFooter();
+?>
