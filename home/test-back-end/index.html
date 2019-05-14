@@ -1,9 +1,9 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/class/bwm/BPreProc.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
 	define('B_LAYOUT', 'left');
 	define('B_TITLE', 'test-back-end');
 	define('B_DESC', '');
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/inc/header.html';
+	BLayout::getHeader();
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BFile.php';
 ?>
 	<a href="/" title="back">&lt;&lt;</a>
@@ -14,5 +14,5 @@
 	<script src="/-bwm/js/StringUtil.js"></script>
 	<script src="/home/comm/js/common.js"></script>
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/inc/footer.html';
+	BLayout::getFooter();
 ?>

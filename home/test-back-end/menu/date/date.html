@@ -1,9 +1,9 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/setting-home.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
 	define('B_LAYOUT', '');
 	define('B_TITLE', 'BDate::getLastDate();');
 	define('B_DESC', '');
-	BLayout::getFrontHeader();
+	BLayout::getHeader();
 ?>
 	<a href="javascript:history.back();" title="back">&lt;&lt;</a>
 	<h1><?= B_TITLE ?></h1>
@@ -22,5 +22,5 @@
 	echo BDate::getNowLastDate();
 ?>
 <?php
-	BLayout::getFrontFooter();
+	BLayout::getFooter();
 ?>
