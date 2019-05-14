@@ -8,12 +8,9 @@
 ?>
 	<a href="/" title="back">&lt;&lt;</a>
 	<h1><?= B_TITLE ?></h1>
-
-<?php
-	$file = new BFile();
-	$file->getRecurFileList('./menu');
-?>
-	
+	<ul>
+		<?php BFile::getRecurFileList('./menu'); ?>
+	</ul>
 	<script src="/-bwm/js/StringUtil.js"></script>
 	<script src="/home/comm/js/common.js"></script>
 <?php
