@@ -5,30 +5,8 @@
 	define('B_DESC', '');
 	BLayout::getHeader();
 ?>
-	
 
 <?php
-	getFileList2('../');
-		function getFileList2($dir) {
-			if (is_dir($dir)) {
-				if ($dh = opendir($dir)) {
-					while (($entry = readdir($dh)) !== false) {
-						if ($entry == '.' || $entry == '..')
-							continue;
-						$subdir = $dir . '/' . $entry;
-						
-						if (is_dir($subdir)) {
-							$v = $dir . '/' . $entry;
-							echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
-						}
-					}
-					closedir($dh);
-				}
-			}
-		}
-	
-?>
-	<?php
 	
 /*$directory = '../../';
 $scanned_directory = array_diff(scandir($directory), array('..', '.'));

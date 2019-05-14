@@ -2,7 +2,7 @@
 
 	class BFile
 	{
-		static function getFileList($dir) {
+		static function getFolderList($dir) {
 			if (is_dir($dir)) {
 				if ($dh = opendir($dir)) {
 					while (($entry = readdir($dh)) !== false) {
@@ -12,15 +12,31 @@
 
 						if (is_dir($subdir)) {
 							$v = $dir . '/' . $entry;
-							echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
+							$files[] = $v;
 						}
+					}
+					sort($files);
+					foreach ($files as $v) {
+						echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
 					}
 					closedir($dh);
 				}
 			}
 		}
-
-		static function getRecurFileList($dir) {
+		
+		
+		private $files = array();
+		function getRecurFileList($dir) {
+			$this->getFileList($dir);
+			sort($this->files);
+			echo '<ul>';
+			foreach ($this->files as $v) {
+				echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
+			}
+			echo '</ul>';
+		}
+		
+		function getFileList($dir) {
 			if (is_dir($dir)) {
 				if ($dh = opendir($dir)) {
 					while (($entry = readdir($dh)) !== false) {
@@ -29,10 +45,12 @@
 						$subdir = $dir . '/' . $entry;
 
 						if (is_dir($subdir)) {
-							self::getRecurFileList($subdir);
+							$this->getFileList($subdir);
+							echo $subdir . ' @ folder<br>';
 						} else {
+							echo $subdir . ' @ file<br>';
 							$v = $dir . '/' . $entry;
-							echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
+							$this->files[] = $v;
 						}
 					}
 					closedir($dh);
