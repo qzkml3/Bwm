@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>cut-str-by-width</title>
+</head>
+<body>
+
+<style>
+	* {font-family: "맑은 고딕"}
+	S
+	.wrap {background: #cccccc; display: inline-block; width: 231px;}
+	.wrap span {background: #c6f0ff;}
+	.wrap img {display: inline-block; margin: 0;}
+	.wrap a {display: inline-block; margin: 0;}
+</style>
+
+<div class="wrap">
+	<span>가가가 나나나 다다다</span>
+</div>
+
+<br>
+
+<div class="wrap">
+	<span>가가가 나나나 다다다 라라라 마마마</span>
+</div>
+
+<br>
+
+<div class="wrap">
+	<span>가가가 나나나 다다다</span>
+	<a href="">
+		<img src="img/icon_new.png">
+	</a>
+</div>
+
+<br>
+
+<div class="wrap">
+	<span>가가가 나나나 다다다 라라라</span>
+	<a href="">
+		<img src="img/icon_new.png">
+	</a>
+</div>
+
+<br>
+
+<div class="wrap">
+	<span>가가가 나나나 다다다 라라라 마마마</span>
+	<a href="">
+		<img src="img/icon_new.png">
+	</a>
+	<a href="">
+		<img src="img/icon_new.png">
+	</a>
+</div>
+
+<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/-bwm/js/Ui.js"></script>
+
+<script>
+	$(window).on('resize', function () {
+		Ui.cutStrToWidth(".wrap", "..", 10);
+	});
+</script>
+
+<ul>
+	<li>폰트마다 간격이 다르므로 customGap으로 간격 조정</li>
+	<li>PC에서만 쓰기때문에 window.resize까지 쓸 필욘 없음</li>
+	<li>혹시 반응형이 되어야 한다면 줄어들때는 되나 늘릴때에 대한 구현 필요</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>use-html5-tag-mixed</title>
+	<style>
+		main,
+		header,
+		footer,
+		nav,
+		aside,
+		section
+		{background: #ccc;  border: solid 1px black;}
+	</style>
+	
+	<!--[if lte IE 8]>
+	<script src="/-bwm/js/patch/html5shiv-printshiv.min.js?v=<?=$res_ver?>"></script>
+	<script src="/-bwm/js/patch/ie9.min.js?v=<?=$res_ver?>"></script>
+	<![endif]-->
+</head>
+<body>
+<header>
+	header
+</header>
+<nav>
+	nav
+</nav>
+<main>
+	main
+</main>
+<aside>
+	aside
+</aside>
+<footer>
+	footer
+</footer>
+<ul>
+	<li>ie9.js와 html5shiv-printshiv를 같이쓴다면?</li>
+	<li>css margin값을 추가해줘야하며</li>
+	<li>main 태그는 만들어진다.</li>
+	<li>에러는 안남</li>
+</ul>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 	class BoardDao {
 		static function getList($req) {
-			$query = 'select * from' . BTable::$board . 'order by id desc';
+			$query = 'select * from' . BTable::$page . 'order by id desc';
 			return BDb::execute($query);
 		}
 

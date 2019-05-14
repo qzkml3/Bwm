@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tab</title>
+	<style>
+		.show-first > * {display: none;}
+		.show-first > *:first-child {display: block;}
+	</style>
+</head>
+<body>
+<div class="tab-btn-w">
+	<a href="">tab-btn</a>
+	<a href="">tab-btn</a>
+	<a href="">tab-btn</a>
+</div>
+<div class="tab-cont-w show-first">
+	<div>tab-cont1</div>
+	<div>tab-cont2</div>
+	<div>tab-cont3</div>
+</div>
+
+<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/-bwm/js/Ui.js"></script>
+<script>
+	Ui.tab('.tab-btn-w', '.tab-cont-w');
+</script>
+</body>
+</html>

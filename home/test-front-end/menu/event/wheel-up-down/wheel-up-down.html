@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>마우스휠 위 아래 판단</title>
+</head>
+<body>
+
+짠거는 휠 사용시 여러번 호출 되니 플러그인을 찾아본다.
+
+a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>
+
+
+<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+<script>
+	var wheeplUpDown = "";
+	var iScrollPos = 0;
+
+	$(window).on("scroll", function () {
+		var iCurScrollPos = $(this).scrollTop();
+		if (iCurScrollPos > iScrollPos) {
+			wheeplUpDown = "down";
+		} else {
+			wheeplUpDown = "up";
+		}
+		iScrollPos = iCurScrollPos;
+
+		//console.log(wheeplUpDown);
+	});
+
+	$(window).on("scroll", function () {
+
+
+		console.log(wheeplUpDown);
+	});
+</script>
+
+
+</body>
+</html>

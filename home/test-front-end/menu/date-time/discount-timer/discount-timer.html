@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>discount-timer</title>
+</head>
+<body>
+
+<div>
+	<span id="showTime_Hours_1"></span>
+	<span id="showTime_Hours_2"></span>
+	:
+	<span id="showTime_Minutes_1"></span>
+	<span id="showTime_Minutes_2"></span>
+	:
+	<span id="showTime_Seconds_1"></span>
+	<span id="showTime_Seconds_2"></span>
+</div>
+
+<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+<script src="/-bwm/js/Cookie.js"></script>
+<script src="/-bwm/js/StringUtil.js"></script>
+<script>
+	discountTimer();
+	setInterval(discountTimer, 1000);
+
+	function discountTimer() {
+		/*
+		보여지는시간 = 보여지는시간 + 최초접속시간 - 현재시간
+		최초접속시간은 쿠키에 365일담음 (일년짜리가 먹을지 모르겠지만...)
+		if 보여지는시 > 10 = 보여지는시 - 14 (24-14=10)
+		*/
+		var showTime = new Date();
+		var firstVisitedTime = new Date();
+		var currentTime = new Date();
+
+		//showTime 10시 설정
+		showTime.setHours(10);
+		showTime.setMinutes(0);
+		showTime.setSeconds(0);
+
+		var cookie_firstVisitedTime = Cookie.getVal("cookie_firstVisitedTime");
+
+		if (cookie_firstVisitedTime == null) { //쿠키값이 없으면 현재시간을 쿠키에 저장
+			Cookie.setCookie("cookie_firstVisitedTime", firstVisitedTime, 365);
+		} else { //쿠키값이 있으면 가져옴
+			firstVisitedTime = new Date(cookie_firstVisitedTime);
+		}
+		firstVisitedTime.setHours(firstVisitedTime.getHours());
+		firstVisitedTime.setMinutes(firstVisitedTime.getMinutes());
+		firstVisitedTime.setSeconds(firstVisitedTime.getSeconds());
+
+		//showTime calurate
+		showTime.setTime(showTime.getTime() + firstVisitedTime.getTime() - currentTime.getTime());
+
+		if (showTime.getHours() > 10) {
+			showTime.setHours(showTime.getHours() - 14);
+		}
+
+		//showTime presentation
+		var showTime_Hours = StringUtil.addZero(showTime.getHours(), 2);
+		var showTime_Minutes = StringUtil.addZero(showTime.getMinutes(), 2);
+		var showTime_Seconds = StringUtil.addZero(showTime.getSeconds(), 2);
+
+		var showTime_Hours_1 = showTime_Hours.charAt(0);
+		var showTime_Hours_2 = showTime_Hours.charAt(1);
+		var showTime_Minutes_1 = showTime_Minutes.charAt(0);
+		var showTime_Minutes_2 = showTime_Minutes.charAt(1);
+		var showTime_Seconds_1 = showTime_Seconds.charAt(0);
+		var showTime_Seconds_2 = showTime_Seconds.charAt(1);
+
+		$("#showTime_Hours_1").text(showTime_Hours_1);
+		$("#showTime_Hours_2").text(showTime_Hours_2);
+		$("#showTime_Minutes_1").text(showTime_Minutes_1);
+		$("#showTime_Minutes_2").text(showTime_Minutes_2);
+		$("#showTime_Seconds_1").text(showTime_Seconds_1);
+		$("#showTime_Seconds_2").text(showTime_Seconds_2);
+
+		//console.log(cookie_firstVisitedTime);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/class/bwm/BPreProc.php';
+	define('B_LAYOUT', 'left');
+	define('B_TITLE', 'test-back-end');
+	define('B_DESC', '');
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/inc/header.html';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BFile.php';
+?>
+	<a href="/" title="back">&lt;&lt;</a>
+	<h1><?= B_TITLE ?></h1>
+	<ul>
+		<?php BFile::getRecurFileList('./menu'); ?>
+	</ul>
+	<script src="/-bwm/js/StringUtil.js"></script>
+	<script src="/home/comm/js/common.js"></script>
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/inc/footer.html';
+?>

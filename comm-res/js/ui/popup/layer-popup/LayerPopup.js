@@ -2,8 +2,8 @@ LayerPopup = {
 	isCssAttached: false,
 
 	open: function (param) {
-		var cssPath = '/comm-res/js/ui/popup/layer-popup/layer-popup.css';
-		var htmlPath = '/comm-res/js/ui/popup/layer-popup/layer-popup.html';
+		var cssPath = '/-bwm/js/ui/popup/layer-popup/layer-popup.css';
+		var htmlPath = '/-bwm/js/ui/popup/layer-popup/layer-popup.html';
 
 		//inc css
 		if (!this.isCssAttached) {
