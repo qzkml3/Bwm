@@ -15,7 +15,7 @@
 							$files[] = $v;
 						}
 					}
-					sort($files);
+					natcasesort($files);
 					foreach ($files as $v) {
 						echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
 					}
@@ -28,7 +28,7 @@
 		private $files = array();
 		function getRecurFileList($dir) {
 			$this->getFileList($dir);
-			sort($this->files);
+			natcasesort($this->files);
 			echo '<ul>';
 			foreach ($this->files as $v) {
 				echo '<li><a href="' . $v . '">' . str_replace('./menu/', '', $v) . '</a></li>';
@@ -46,9 +46,7 @@
 
 						if (is_dir($subdir)) {
 							$this->getFileList($subdir);
-							echo $subdir . ' @ folder<br>';
 						} else {
-							echo $subdir . ' @ file<br>';
 							$v = $dir . '/' . $entry;
 							$this->files[] = $v;
 						}
