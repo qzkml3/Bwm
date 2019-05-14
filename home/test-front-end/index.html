@@ -8,9 +8,11 @@
 ?>
 	<a href="javascript:history.back();" title="back">&lt;&lt;</a>
 	<h1><?= B_TITLE ?></h1>
-	<ul>
-		<?php BFile::getRecurFileList('./menu'); ?>
-	</ul>
+
+<?php
+	$file = new BFile();
+	$file->getRecurFileList('./menu');
+?>
 
 	<script src="/-bwm/js/StringUtil.js"></script>
 	<script src="/home/comm/js/common.js"></script>
