@@ -1,14 +1,11 @@
 <?php
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
-	define('B_LAYOUT', 'left');
+	define('B_LAYOUT', 'left back title');
 	define('B_TITLE', 'test-back-end');
 	define('B_DESC', '');
 	BLayout::getHeader();
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BFile.php';
 ?>
-	<a href="/" title="back">&lt;&lt;</a>
-	<h1><?= B_TITLE ?></h1>
-
 <?php
 	$file = new BFile();
 	$file->getRecurFileList('./menu');

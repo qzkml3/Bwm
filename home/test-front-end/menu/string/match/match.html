@@ -1,0 +1,21 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
+	define('B_LAYOUT', 'empty');
+	define('B_TITLE', '');
+	define('B_DESC', '');
+	BLayout::getHeader();
+?>
+<script>
+	var v = '$^.a\\ /^$.b';
+	
+	if (v.match('$')) {
+		document.write('has');
+	} else {
+		document.write('don\'t has');
+	}
+	
+	
+</script>
+<?php
+	BLayout::getFooter();
+?>
