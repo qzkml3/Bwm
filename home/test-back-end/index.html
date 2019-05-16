@@ -6,13 +6,11 @@
 	BLayout::getHeader();
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BFile.php';
 ?>
+    <script src="/home/comm/js/aside-control.js"></script>
 <?php
 	$file = new BFile();
 	$file->getRecurFileList('./menu');
 ?>
-	
-	<script src="/-bwm/js/StringUtil.js"></script>
-	<script src="/home/comm/js/common.js"></script>
 <?php
 	BLayout::getFooter();
 ?>
