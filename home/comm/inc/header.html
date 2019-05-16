@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/-bwm/css/common.css">
     <?php } ?>
     <script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+    <script src="/-bwm/js/Debug.js"></script>
     <script src="/home/comm/js/common.js"></script>
 </head>
 <body class="<?= B_LAYOUT ?>">
@@ -44,10 +45,6 @@
         <?php } ?>
 
         <main id="main" class="page">
-            <?php if (strstr(B_LAYOUT, 'back')) { ?>
-                <a href="javascript:history.back();" title="go back">&lt;&lt;</a>
-            <?php } ?>
-
             <?php if (strstr(B_LAYOUT, 'title')) { ?>
                 <h1><?= B_TITLE ?></h1>
             <?php } ?>
