@@ -1,16 +1,17 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
-	define('B_LAYOUT', 'right title');
-	define('B_TITLE', 'variable');
-	define('B_DESC', '');
-	BLayout::getHeader();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/start-home.php';
+define('B_LAYOUT', 'test-back-end-sub');
+define('B_TITLE', 'variable');
+define('B_DESC', '');
+BLayout::getHeader();
 ?>
-	<code>
-		$v = 'abc-aaa-aaa-aaa';
-		echo BStr::hasStr($v, 'b');
-	</code>
 	<h2>$_SERVER['REQUEST_URI'];</h2>
 <?= $_SERVER['REQUEST_URI']; ?>
+	<p>파라미터 포함</p>
+
+	<h2>$_SERVER['PHP_SELF'];</h2>
+<?= $_SERVER['PHP_SELF']; ?>
+
 <?php
-	BLayout::getFooter();
+BLayout::getFooter();
 ?>

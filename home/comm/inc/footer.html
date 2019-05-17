@@ -1,7 +1,19 @@
-<?php if (!strstr(B_LAYOUT, 'empty')) { ?>
+<?php
+if (
+	 (B_LAYOUT == 'main')
+	 || (B_LAYOUT == 'test-back-end-main')
+	 || (B_LAYOUT == 'test-front-end-main')
+	 || (B_LAYOUT == 'test-back-end-sub')
+	 || (B_LAYOUT == 'test-front-end-sub')
+) { ?>
 	</main>
-	
-	<?php if (strstr(B_LAYOUT, 'right')) { ?>
+
+	<?php
+	if (
+		 (B_LAYOUT == 'main')
+		 || (B_LAYOUT == 'test-front-end-sub')
+		 || (B_LAYOUT == 'test-back-end-sub')
+	) { ?>
 		<!--#aside-right-->
 		<aside id="aside-right" class="page">
 			<ul>
@@ -31,7 +43,7 @@
 	<?php } ?>
 	</div>
 	<!--/#middle-->
-	
+
 	<!--#footer-->
 	<footer id="footer" class="page">
 		<address id="address">Address: oooo oooo oooo</address>
@@ -41,7 +53,7 @@
 		</div>
 	</footer>
 	<!--/#footer-->
-	
+
 	</div>
 	<!--/#wrap-->
 <?php } ?>

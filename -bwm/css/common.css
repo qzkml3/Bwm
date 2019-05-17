@@ -19,24 +19,36 @@ body {margin: 0 4% 4%;}
 /**/
 #middle {}
 #middle:after { content: ""; clear: both; display: table; }
-/**/
-#main { box-sizing: border-box;}
-body.left #main, body.right #main { float: right; width: 78%; }
-body.right #main { float: left;}
-/**/
+/*main*/
+#main { box-sizing: border-box; width: 78%; position: relative;}
+body.main #main
+, body.test-front-end-main #main
+, body.test-back-end-main #main
+{ float: right;}
+body.main #main
+, body.test-front-end-sub #main
+, body.test-back-end-sub #main
+{ float: left;}
+/*aside*/
 #aside-left, #aside-right { width: 20%; box-sizing: border-box; float: left; padding: 0 20px;}
 #aside-right {float: right;}
 /**/
 .page {box-shadow: #ccc 2px 2px 2px; background: white;
 	margin: 0 auto; padding: 4%; min-height: 100px;
 }
-/**/
-#footer { margin-top: 20px; position: relative; overflow: hidden;}
+/*footer*/
+#footer { margin-top: 20px; position: relative; overflow: hidden; width: 70%;}
 #footer:after { content: ""; clear: both; display: table; }
-.left #footer, .right #footer
-{width: 70%;}
-.left #footer {float: right;}
-.right #footer {float: left;}
+
+body.main #footer
+, body.test-font-end-sub #footer
+, body.test-back-end-sub #footer
+{float: left;}
+
+body.test-font-end-main #footer
+, body.test-back-end-main #footer
+{float: right;}
+
 /**/
 #address { float: left; }
 #family {float: right;}
@@ -50,3 +62,5 @@ body.right #main { float: left;}
 	#aside-left, #aside-right
 	{float: none !important; width: auto !important; padding: 4% !important; margin: 20px 0 0;}
 }
+
+.view-source {position: absolute; top: 10px; right: 15px; font-size: 13px;}
