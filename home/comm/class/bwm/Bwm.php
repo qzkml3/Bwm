@@ -1,5 +1,10 @@
 <?php
-	class BLoader {
+	class Bwm {
+		static function main() {
+			//cache();
+			//auth()
+		}
+
 		static function load() {
 			self::loadPrivate();
 			self::loadShare();
