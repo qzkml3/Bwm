@@ -1,19 +1,20 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>after-str</title>
-</head>
-<body>
-<script src="/-bwm/js/StringUtil.js"></script>
-<p>
-	StringUtil.afterStr("aaaxyxbbb", "xyx");
-</p>
-<script>
-	var v = StringUtil.afterStr("aaaxyxbbb", "xyx");
-	document.write(v);
-</script>
-</body>
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'after-str');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<script src="/-bwm/js/StringUtil.js"></script>
+
+	<script class="code">
+		var v = StringUtil.afterStr("aaaxyxbbb", "xyx");
+		document.write(v);
+	</script>
+
+	<ul>
+		<li>지정한 문자 뒤의 문자를 리턴</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

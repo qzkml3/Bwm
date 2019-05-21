@@ -1,5 +1,7 @@
 <?php
-	class BLayout {
+
+	class BLayout
+	{
 		static function getHeader() {
 			switch (B_LAYOUT) {
 				default:
@@ -9,7 +11,7 @@
 					break;
 			}
 		}
-		
+
 		static function getFooter() {
 			switch (B_LAYOUT) {
 				default:

@@ -1,17 +1,23 @@
 Debug = {
 	showJsCode: function () {
 		$("script.code").each(function() {
-			$code = $(this);
+			var $script = $(this);
+			$script.after('<code/>');
 
-			$code.before("<xmp/>");
-			$code.prev().css({
-				'font-family': 'ubuntu mono'
+			var $code = $script.next();
+			$code.append('<xmp/>');
+
+			var $xmp = $code.children('xmp');
+			$xmp.html($script.html())
+
+			$xmp.css({
+				'font-family': 'ubuntu mono, consolas, monoco, source code pro'
 				, 'background': '#eee'
-				, 'padding-bottom': '1.5em'
 				, 'line-height': '1.5'
 				, 'overflow-x': 'auto'
+				, 'tab-size': '3'
+				, 'display': 'block'
 			});
-			$code.prev().html($code.html())
 		});
 	}
 };

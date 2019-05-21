@@ -1,18 +1,16 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>add-zero</title>
-</head>
-<body>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'add-zero');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 <script src="/-bwm/js/StringUtil.js"></script>
 
 <p>StringUtil.addZero("338", 5)</p>
 <script>
 	document.write(StringUtil.addZero("338", 5));
 </script>
-
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

@@ -1,109 +1,110 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>field</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'field');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		button {margin-left: 100px;}
+
 		li {margin: 15px 0;}
 	</style>
-</head>
-<body style="height: 5000px;">
-<h2>empty chk</h2>
-<form name="f">
-	<ul>
-		<li>
-			<input type="text" name="text">
-		</li>
-		<li>
-			<input type="password" name="password">
-		</li>
-		<li>
-			<textarea name="textarea"></textarea>
-		</li>
-		<li>
-			<label>
-				<input type="radio" name="radio">a
-			</label>
-			<label>
-				<input type="radio" name="radio">b
-			</label>
-		</li>
-		<li>
-			<label>
-				<input type="checkbox" name="checkbox">a
-			</label>
-			<label>
-				<input type="checkbox" name="checkbox">b
-			</label>
-		</li>
-		<li>
-			<label>
-				<select name="select_one">
-					<option value="">select</option>
-					<option value="a">a</option>
-					<option value="b">b</option>
-				</select>
-			</label>
-		</li>
-		<li>
-			<label>
-				<select name="select_multiple" multiple>
-					<option value="">select</option>
-					<option value="a">a</option>
-					<option value="b">b</option>
-				</select>
-			</label>
-		</li>
-	</ul>
-	<button type="button" id="submit">submit</button>
-</form>
 
-<h2>value chk</h2>
-<form name="f2">
-	<ul>
-		<li>
-			<label>전화번호 형식:
-				<input type="text" name="tel">
-			</label>
-		</li>
-		<li>
-			<label>전화번호나 숫자 형식:
-				<input type="text" name="tel2">
-			</label>
-		</li>
-	</ul>
-	<button type="button" id="submit2">submit2</button>
-</form>
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/-bwm/js/Field.js"></script>
-<script src="/-bwm/js/Valid.js"></script>
-<script>
-	$("#submit").on("click", function () {
-		var f = document.f;
-		
-		if (Field.chkEmpty(f.text, 'text')) return;
-		if (Field.chkEmpty(f.password, 'password')) return;
-		if (Field.chkEmpty(f.textarea, 'textarea')) return;
-		if (Field.chkEmpty(f.radio, 'radio')) return;
-		if (Field.chkEmpty(f.checkbox, 'checkbox')) return;
-		if (Field.chkEmpty(f.select_one, 'select-one')) return;
-		if (Field.chkEmpty(f.select_multiple, 'select-multiple')) return;
-		
-		alert('submitted !');
-	});
-</script>
-<script>
-	$("#submit2").on("click", function () {
-		var f = document.f2;
-		
-		if (Field.chkTel(f.tel, "휴대폰")) return;
-		if (Field.chkTelOrNum(f.tel2, "핸드폰2")) return;
-		
-		alert('sumit2');
-	});
-</script>
-</body>
-</html>
+	<h2>empty chk</h2>
+	<form name="f">
+		<ul>
+			<li>
+				<input type="text" name="text">
+			</li>
+			<li>
+				<input type="password" name="password">
+			</li>
+			<li>
+				<textarea name="textarea"></textarea>
+			</li>
+			<li>
+				<label>
+					<input type="radio" name="radio">a
+				</label>
+				<label>
+					<input type="radio" name="radio">b
+				</label>
+			</li>
+			<li>
+				<label>
+					<input type="checkbox" name="checkbox">a
+				</label>
+				<label>
+					<input type="checkbox" name="checkbox">b
+				</label>
+			</li>
+			<li>
+				<label>
+					<select name="select_one">
+						<option value="">select</option>
+						<option value="a">a</option>
+						<option value="b">b</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>
+					<select name="select_multiple" multiple>
+						<option value="">select</option>
+						<option value="a">a</option>
+						<option value="b">b</option>
+					</select>
+				</label>
+			</li>
+		</ul>
+		<button type="button" id="submit">submit</button>
+	</form>
+
+	<h2>value chk</h2>
+	<form name="f2">
+		<ul>
+			<li>
+				<label>전화번호 형식:
+					<input type="text" name="tel">
+				</label>
+			</li>
+			<li>
+				<label>전화번호나 숫자 형식:
+					<input type="text" name="tel2">
+				</label>
+			</li>
+		</ul>
+		<button type="button" id="submit2">submit2</button>
+	</form>
+	<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+	<script src="/-bwm/js/Field.js"></script>
+	<script src="/-bwm/js/Valid.js"></script>
+	<script>
+		$("#submit").on("click", function () {
+			var f = document.f;
+
+			if (Field.chkEmpty(f.text, 'text')) return;
+			if (Field.chkEmpty(f.password, 'password')) return;
+			if (Field.chkEmpty(f.textarea, 'textarea')) return;
+			if (Field.chkEmpty(f.radio, 'radio')) return;
+			if (Field.chkEmpty(f.checkbox, 'checkbox')) return;
+			if (Field.chkEmpty(f.select_one, 'select-one')) return;
+			if (Field.chkEmpty(f.select_multiple, 'select-multiple')) return;
+
+			alert('submitted !');
+		});
+	</script>
+	<script>
+		$("#submit2").on("click", function () {
+			var f = document.f2;
+
+			if (Field.chkTel(f.tel, "휴대폰")) return;
+			if (Field.chkTelOrNum(f.tel2, "핸드폰2")) return;
+
+			alert('sumit2');
+		});
+	</script>
+<?php
+BLayout::getFooter();
+?>

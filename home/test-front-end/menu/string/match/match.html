@@ -1,19 +1,22 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
-	define('B_LAYOUT', 'empty');
-	define('B_TITLE', '');
-	define('B_DESC', '');
-	BLayout::getHeader();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'match');
+define('B_DESC', '');
+BLayout::getHeader();
 ?>
-<script class="code">
-	var v = '$^.a\\ /^$.b';
-	
-	if (v.match('$')) {
-		document.write('has');
-	} else {
-		document.write('don\'t has');
-	}
-</script>
+	<script class="code">
+		var v = '$^.a\\ /^$.b';
+
+		if (v.match('$')) {
+			document.write('has');
+		} else {
+			document.write('don\'t has');
+		}
+	</script>
+	<ul>
+		<li>php strstr 같은 역활 indexOf로 부터 벗어나고 싶었다... ^^ 아직까진 잘 됨.</li>
+	</ul>
 <?php
-	BLayout::getFooter();
+BLayout::getFooter();
 ?>

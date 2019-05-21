@@ -1,12 +1,11 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>null-undefined</title>
-</head>
-<body>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'null-undefined');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+
 <p>(null == undefined)</p>
 <script>
 	document.write(null == undefined);
@@ -30,5 +29,6 @@
 	document.write(false == null);
 </script>
 <hr>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

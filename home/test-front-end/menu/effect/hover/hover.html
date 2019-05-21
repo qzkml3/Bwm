@@ -1,20 +1,22 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>hover</title>
-	
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'hover');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		button {cursor: pointer;}
+
 		.hover.expand {transition: all 0.5s;}
+
 		.hover.expand:hover {transform: scale(1.1);}
+
 		.hover.slow {transition: all 1s;}
 	</style>
-</head>
-<body>
+
 	<button class="hover expand">버튼</button>
 	<button class="hover expand slow">버튼</button>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

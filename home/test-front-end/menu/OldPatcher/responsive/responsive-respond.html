@@ -1,20 +1,20 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>responsive-respond</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'responsive-respond');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<link rel="stylesheet" href="css/css.css">
 	<!--[if lte IE 8]>
 	<script src="/-bwm/js/patch/respond.min.js"></script>
 	<![endif]-->
-</head>
-<body>
-<div class="a">a</div>
-<ul>
-	<li>style태그로 직접 써주면 안되고 link로 호출해야 함.</li>
-	<li>link로 호출한 후 js를 불러와야 됨</li>
-</ul>
-</body>
-</html>
+
+	<div class="a">a</div>
+	<ul>
+		<li>style태그로 직접 써주면 안되고 link로 호출해야 함.</li>
+		<li>link로 호출한 후 js를 불러와야 됨</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

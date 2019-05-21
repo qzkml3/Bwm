@@ -1,33 +1,38 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>falling-snow</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'falling-snow');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		body {background: #888;}
+
 		.falling-snow {position: relative; overflow: hidden;}
+
 		.falling-snow:after {background-image: url('img/snow1.png'); content: ""; display: block;position: absolute;top: 0;left: -50%;width: 200%;height: 100%;z-index: 200;opacity: 1;background-size: 40rem 40rem;-webkit-background-size: 40rem 40rem;-moz-background-size: 40rem 40rem;animation: snow 18s linear infinite;-webkit-animation: snow 18s linear infinite;-moz-animation: snow 18s linear infinite;-o-animation: snow 18s linear infinite;-ms-animation: snow 18s linear infinite;transition: opacity 5s;-webkit-transition: opacity 5s;-moz-transition: opacity 5s;-o-transition: opacity 5s;-ms-transition: opacity 5s;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0)}
+
 		.falling-snow:before {background-image: url('img/snow2.png'); content: ""; display: block;position: absolute;top: 0;left: -50%;width: 200%;height: 100%;z-index: 100;opacity: 1;background-size: 40rem 40rem;-webkit-background-size: 40rem 40rem;-moz-background-size: 40rem 40rem;animation: snow 28s linear infinite;-webkit-animation: snow 28s linear infinite;-moz-animation: snow 28s linear infinite;-o-animation: snow 28s linear infinite;-ms-animation: snow 28s linear infinite;transition: opacity 10s;-webkit-transition: opacity 10s;-moz-transition: opacity 10s;-o-transition: opacity 10s;-ms-transition: opacity 10s;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0)}
+
 		@keyframes snow {
 			0% {background-position-x: 0;background-position-y: 0}
 			50% {background-position-y: 40rem}
 			100% {background-position-x: 40rem;background-position-y: 80rem}
 		}
 	</style>
-	
-	
+
+
 	<style>
 		.canvas {border: solid 5px gold;}
+
 		.a {width: 200px;height: 200px;}
+
 		.b {width: 500px;height: 500px;}
 	</style>
-</head>
-<body>
-	
+
 	<div class="canvas a falling-snow"></div>
-	
+
 	<div class="canvas b falling-snow"></div>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

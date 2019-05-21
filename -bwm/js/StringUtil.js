@@ -27,28 +27,34 @@ StringUtil = {
 	//todo 소수자리
 	toMoney: function (str) {
 		str = str.toString();
-		str = StringUtil.removeStr(str, ",");
+		str = str.replace(/,/g, '');
 		str = str.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 		return str;
 	},
-	/*문자열이 포함되어 있는지*/
-	hasString: function (scope, search) {
+	/**
+	 * 문자열이 포함되어 있는지
+	 * 사용 비추 (모듈화) match 추천
+	 */
+	/*hasString: function (scope, search) {
 		scope = scope.toString();
 		search = search.toString();
 
 		if (search.length) {
-			if (scope.indexOf(search) > -1) { //String.search 를 안쓴느 이유는 정규식 문자가 들어갈 시 오작동
+			if (scope.indexOf(search) > -1) {
 				return true;
 			}
 		}
-	},
-	/*좌우 공백제거*/
-	trim: function (str) {
+	},*/
+	/**좌우 공백제거 단어만 된다. $.trim 추천*/
+	/*trim: function (str) {
 		str = str.toString();
 		return str.split(" ").join("");
-	},
-	/*해당 문자열 제거*/
-	removeStr: function (scope, remove_str) {
+	},*/
+	/**
+	 * 해당 문자열 제거
+	 * 사용비추 (모듈화) replace 추천
+	 * */
+	/*removeStr: function (scope, remove_str) {
 		return scope.split(remove_str).join("");
-	}
+	}*/
 };

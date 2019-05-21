@@ -1,8 +1,10 @@
 <?php
-	define("LAYOUT", "");
-	define("DOC_TITLE", "requirejs_jquery1");
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'requirejs-final');
+define('B_DESC', '');
+BLayout::getHeader();
 ?>
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/_test/inc/layout_top.php"; ?>
 
 	<script src="/_test/js/jquery/jquery-1.8.3.min.js"></script>
 	<script>
@@ -34,4 +36,6 @@
 			console.log("2 document.ready" + $.fn.jquery);
 		});
 	</script>
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/_test/inc/layout_btm.php" ?>
+<?php
+BLayout::getFooter();
+?>

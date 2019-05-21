@@ -1,26 +1,26 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>before-after</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'before-after');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		.b1:before {content: "a"; }
+
 		.b2::before {content: "a"; }
 	</style>
-</head>
-<body>
-<div class="b1">
-	:before
-</div>
-<div class="b2">
-	::before
-</div>
+	<div class="b1">
+		:before
+	</div>
+	<div class="b2">
+		::before
+	</div>
 
-<ul>
-	<li>:before는 css2 모든 브라우저에서 작동 (구버전 포함)</li>
-	<li>::before는 css3 ie9부터 작동</li>
-</ul>
-</body>
-</html>
+	<ul>
+		<li>:before는 css2 모든 브라우저에서 작동 (구버전 포함)</li>
+		<li>::before는 css3 ie9부터 작동</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

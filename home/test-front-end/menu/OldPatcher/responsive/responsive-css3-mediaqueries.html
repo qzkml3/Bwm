@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>responsive-css3-mediaqueries</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'responsive-css3-mediaqueries');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<!--[if lte IE 8]>
 	<script src="/-bwm/js/patch/css3-mediaqueries.min.js"></script>
 	<![endif]-->
@@ -15,8 +15,7 @@
 			.a {background: #fcc;}
 		}
 	</style>
-</head>
-<body>
+
 <div class="a">a</div>
 <ul>
 	<li>반응속도가 respod 에 비해 느림</li>
@@ -24,5 +23,6 @@
 	<li>page 내 style 태그도 먹음</li>
 	<li>느리지만 호환성이 좋은 이게 더 나은듯해 보임.</li>
 </ul>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

@@ -1,13 +1,19 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
 define('B_LAYOUT', 'test-front-end-sub');
-define('B_TITLE', 'to-money');
+define('B_TITLE', 'replace');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<script src="/-bwm/js/StringUtil.js"></script>
 	<script class="code">
-		var v = StringUtil.toMoney("333333333");
+		var str = 'aa##bb##cc##';
+
+		var v = str.replace('##', '');
+		document.write(v);
+	</script>
+
+	<script class="code">
+		var v = str.replace(/##/g, '');
 		document.write(v);
 	</script>
 <?php

@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>vertical-align-radio</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'vertical-align-radio');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
         *{margin:0;padding:0;vertical-align:middle;
         font-size:16px;line-height:1.5em;font-family:"맑은 고딕";}
@@ -15,8 +15,6 @@
 		
 			label > span {vertical-align: middle; position: relative; top: -2px; left: -2px;}
 	</style>
-</head>
-<body>
     <div>
         가나다라
     </div>
@@ -30,5 +28,6 @@
             <input type="radio" name="" id=""> <span style="vertical-align:middle;">가나다라</span>
         </label>
     </div>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

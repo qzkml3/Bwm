@@ -1,23 +1,21 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>to-money-field</title>
-</head>
-<body>
-<br>
-<input type="text" class="to-money">
-<br>
-<input type="text" class="to-money">
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'to-money-field');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<br>
+	<input type="text" class="to-money">
+	<br>
+	<input type="text" class="to-money">
 
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/-bwm/js/StringUtil.js"></script>
-<script src="/-bwm/js/Field.js"></script>
+	<script src="/-bwm/js/StringUtil.js"></script>
+	<script src="/-bwm/js/Field.js"></script>
 
-<script>
-	Field.toMoney($(".to-money"));
-</script>
-</body>
-</html>
+	<script class="code">
+		Field.toMoney($(".to-money"));
+	</script>
+<?php
+BLayout::getFooter();
+?>

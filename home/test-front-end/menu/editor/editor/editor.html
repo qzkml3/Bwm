@@ -1,15 +1,15 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>에디터</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', '에디터');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		.editor {border: solid 1px #ccc; width: 800px; height: 500px; margin: 100px auto; display: block;}
 	</style>
-</head>
-<body>
-<iframe class="editor" src="editor_inner.html"></iframe>
-</body>
-</html>
+
+	<iframe class="editor" src="editor_inner.html"></iframe>
+<?php
+BLayout::getFooter();
+?>

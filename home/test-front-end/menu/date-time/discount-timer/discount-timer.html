@@ -1,12 +1,10 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>discount-timer</title>
-</head>
-<body>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'discount-timer');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 
 <div>
 	<span id="showTime_Hours_1"></span>
@@ -44,7 +42,7 @@
 		var cookie_firstVisitedTime = Cookie.getVal("cookie_firstVisitedTime");
 
 		if (cookie_firstVisitedTime == null) { //쿠키값이 없으면 현재시간을 쿠키에 저장
-			Cookie.setCookie("cookie_firstVisitedTime", firstVisitedTime, 365);
+			Cookie.setCookByDate("cookie_firstVisitedTime", firstVisitedTime, 365);
 		} else { //쿠키값이 있으면 가져옴
 			firstVisitedTime = new Date(cookie_firstVisitedTime);
 		}
@@ -81,5 +79,6 @@
 		//console.log(cookie_firstVisitedTime);
 	}
 </script>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

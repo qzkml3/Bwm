@@ -128,7 +128,7 @@ OldPatcher = {
 			$(target).each(function (i) {
 				$iframe = $(this);
 
-				if (StringUtil.hasString($iframe.attr("src"), ("youtube"))) {
+				if ($iframe.attr("src").match("youtube")) {
 
 					//Set Html
 					var $el = $(this);

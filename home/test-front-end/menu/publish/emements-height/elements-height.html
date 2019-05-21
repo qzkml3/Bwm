@@ -1,26 +1,26 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>엘리먼트들의 높이값 테스트</title>
-</head>
-<body>
-<style>
-	input {height: 40px; vertical-align: baseline;}
-	img {width: 50px; height: 25px; background: #ccc; vertical-align: middle;}
-</style>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'elements-height');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		input {height: 40px; vertical-align: baseline;}
 
-<section>
-	<span>W</span>
-	<label>
-		<input type="text">
-	</label>
-	<span style="vertical-align: middle;">W</span>
-	<img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
-		  alt="">
-	<span>W</span>
-</section>
-</body>
-</html>
+		img {width: 50px; height: 25px; background: #ccc; vertical-align: middle;}
+	</style>
+
+	<section>
+		<span>W</span>
+		<label>
+			<input type="text">
+		</label>
+		<span style="vertical-align: middle;">W</span>
+		<img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+			  alt="">
+		<span>W</span>
+	</section>
+<?php
+BLayout::getFooter();
+?>

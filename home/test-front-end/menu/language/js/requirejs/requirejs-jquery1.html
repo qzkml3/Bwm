@@ -1,8 +1,10 @@
 <?php
-	define("LAYOUT", "");
-	define("DOC_TITLE", "requirejs_jquery1");
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'requirejs-jquery1');
+define('B_DESC', '');
+BLayout::getHeader();
 ?>
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/_test/inc/layout_top.php"; ?>
 
 	<script src="/_test/js/jquery/jquery-1.8.3.min.js"></script>
 	<script>
@@ -10,10 +12,10 @@
 
 	<script src="/_test/js/jquery/jquery-3.3.1.min.js"></script>
 	<script>
-		$(window).on("load", function() {
+		$(window).on("load", function () {
 			console.log("1 window.load" + $.fn.jquery);
 		});
-		$(document).ready(function() {
+		$(document).ready(function () {
 			console.log("1 document.ready" + $.fn.jquery);
 		});
 	</script>
@@ -23,14 +25,16 @@
 	<script>
 		require(["common"], function () {
 			console.log("front");
-			$(window).on("load", function() {
+			$(window).on("load", function () {
 				console.log("2 window.load" + $.fn.jquery);
 			});
-			$(document).ready(function() {
+			$(document).ready(function () {
 				console.log("2 document.ready" + $.fn.jquery);
 			});
 
 			console.log("end");
 		});
 	</script>
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/_test/inc/layout_btm.php" ?>
+<?php
+BLayout::getFooter();
+?>

@@ -1,53 +1,66 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>browser-width</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'browser-width');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		body {margin: 0;}
+
 		.bar {border: solid 10px navy; box-sizing: border-box; margin: 5px 0; padding: 5px 10px;}
-		.w320{width: 320px;}
+
+		.w320 {width: 320px;}
+
 		.w360 {width: 360px;}
+
 		.w375 {width: 375px;}
+
 		.w400 {width: 400px;}
+
 		.w412 {width: 412px;}
+
 		.w414 {width: 414px;}
+
 		.w720 {width: 720px;}
-		
-		
-		@media(min-width: 320px) {
+
+
+		@media (min-width: 320px) {
 			.w320 {background: yellow;}
 		}
-		@media(min-width: 360px) {
+
+		@media (min-width: 360px) {
 			.w360 {background: yellow;}
 		}
-		@media(min-width: 375px) {
+
+		@media (min-width: 375px) {
 			.w375 {background: yellow;}
 		}
-		@media(min-width: 400px) {
+
+		@media (min-width: 400px) {
 			.w400 {background: yellow;}
 		}
-		@media(min-width: 412px) {
+
+		@media (min-width: 412px) {
 			.w412 {background: yellow;}
 		}
-		@media(min-width: 414px) {
+
+		@media (min-width: 414px) {
 			.w414 {background: yellow;}
 		}
-		@media(min-width: 720px) {
+
+		@media (min-width: 720px) {
 			.w720 {background: yellow;}
 		}
 	</style>
-</head>
-<body>
 
-<div class="bar w320">w320 i4/i5</div>
-<div class="bar w360">w360 note2/g3/g4</div>
-<div class="bar w375">w375 i6</div>
-<div class="bar w400">w400 note</div>
-<div class="bar w412">w412 nexus6</div>
-<div class="bar w414">w414 i6+</div>
-<div class="bar w720">w720 note4</div>
-</body>
-</html>
+	<div class="bar w320">w320 i4/i5</div>
+	<div class="bar w360">w360 note2/g3/g4</div>
+	<div class="bar w375">w375 i6</div>
+	<div class="bar w400">w400 note</div>
+	<div class="bar w412">w412 nexus6</div>
+	<div class="bar w414">w414 i6+</div>
+	<div class="bar w720">w720 note4</div>
+<?php
+BLayout::getFooter();
+?>
