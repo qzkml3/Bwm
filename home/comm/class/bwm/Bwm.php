@@ -1,19 +1,15 @@
 <?php
 	class Bwm {
-		static function main() {
-			//cache();
-			//auth()
-		}
 
 		static function load() {
-			self::loadEashSiteClass();
+			self::loadPrivateSiteClass();
 			self::loadCommSiteClass();
 		}
 
 		/**
-		 * indivisual site setting
+		 * private site setting
 		 */
-		static function loadEashSiteClass() {
+		static function loadPrivateSiteClass() {
 			require_once 'BSite.php';
 			require_once 'BDb.php';
 			require_once 'BLayout.php';
