@@ -2,96 +2,120 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>user-agent</title>
 </head>
 <body>
+<style>
+	body {line-height: 1.6;}
+	span {margin-right: 0.5em;}
+	span:after {content: ' : '}
+</style>
 <script src="/-bwm/js/UserAgent.js"></script>
-<script src="/-bwm/js/StringUtil.js"></script>
-
-<hr>
-<p>IOS</p>
 <script>
-	var v = UserAgent.isIOS();
-	document.write(v);
+	document.write(navigator.userAgent);
 </script>
-
-<hr>
-<p>chrome</p>
-<script>
-	var v = UserAgent.isChrome();
-	document.write(v);
-</script>
-
-<hr>
-<p>firefox</p>
-<script>
-	var v = UserAgent.isFireFox();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE</p>
-<script>
-	var v = UserAgent.isIE();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE11</p>
-<script>
-	var v = UserAgent.isIE11();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE10</p>
-<script>
-	var v = UserAgent.isIE10();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE9</p>
-<script>
-	var v = UserAgent.isIE9();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE8</p>
-<script>
-	var v = UserAgent.isIE8();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE7</p>
-<script>
-	var v = UserAgent.isIE7();
-	document.write(v);
-</script>
-
-<hr>
-<p>IE6</p>
-<script>
-	var v = UserAgent.isIE6();
-	document.write(v);
-</script>
-
-<hr>
-<p>quirks</p>
-<script>
-	var v = UserAgent.isQuirks();
-	document.write(v);
-</script>
-
-<hr>
-<p>win7</p>
-<script>
-	var v = UserAgent.isWin7();
-	document.write(v);
-</script>
+<ul>
+	<li>
+		<span>IOS</span>
+		<script>
+			var v = UserAgent.isIOS();
+			document.write(v);
+		</script>
+	</li>
+</ul>
+<ul>
+	<li>windows
+		<ul>
+			<li>
+				<span>win7</span>
+				<script>
+					var v = UserAgent.isWin7();
+					document.write(v);
+				</script>
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul>
+	<li>browser
+		<ul>
+			<li>
+				<span>chrome</span>
+				<script>
+					var v = UserAgent.isChrome();
+					document.write(v);
+				</script>
+			</li>
+			<li>
+				<span>firefox</span>
+				<script>
+					var v = UserAgent.isFireFox();
+					document.write(v);
+				</script>
+			</li>
+			<li>
+				<span>IE</span>
+				<script>
+					var v = UserAgent.isIE();
+					document.write(v);
+				</script>
+				<ul>
+					<li>
+						<span>IE11</span>
+						<script>
+							var v = UserAgent.isIE11();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE10</span>
+						<script>
+							var v = UserAgent.isIE10();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE9</span>
+						<script>
+							var v = UserAgent.isIE9();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE8</span>
+						<script>
+							var v = UserAgent.isIE8();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE7</span>
+						<script>
+							var v = UserAgent.isIE7();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE6</span>
+						<script>
+							var v = UserAgent.isIE6();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>quirks</span>
+						<script>
+							var v = UserAgent.isQuirks();
+							document.write(v);
+						</script>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
 </body>
 </html>
