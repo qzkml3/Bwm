@@ -9,6 +9,7 @@ Debug = {
 				, 'background': '#eee'
 				, 'padding-bottom': '1.5em'
 				, 'line-height': '1.5'
+				, 'overflow-x': 'auto'
 			});
 			$code.prev().html($code.html())
 		});
