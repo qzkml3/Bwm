@@ -34,10 +34,10 @@ body.main #main
 #aside-right {float: right;}
 /**/
 .page {box-shadow: #ccc 2px 2px 2px; background: white;
-	margin: 0 auto; padding: 4%; min-height: 100px;
+	margin: 0 auto 20px; padding: 4%; min-height: 100px;
 }
 /*footer*/
-#footer { margin-top: 20px; position: relative; overflow: hidden; width: 78%; box-sizing: border-box;}
+#footer { position: relative; overflow: hidden; width: 78%; box-sizing: border-box;}
 #footer:after { content: ""; clear: both; display: table; }
 
 body.main #footer
@@ -55,12 +55,13 @@ body.test-font-end-main #footer
 
 @media (max-width: 1000px) {
 	body {margin-bottom: 20px;}
+	.page { margin: 0 0 20px;}
 	#logo {float: none;}
 	#gnb {margin: 20px 0 30px 0px;}
 	#gnb a {margin-left: 10px;}
 	#main {float: none !important; width: auto !important;}
 	#aside-left, #aside-right
-	{float: none !important; width: auto !important; padding: 4% !important; margin: 20px 0 0;}
+	{float: none !important; width: auto !important; padding: 4% !important;}
 	#footer {width: 100%;}
 }
 
