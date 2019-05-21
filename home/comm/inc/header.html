@@ -8,11 +8,11 @@
 	<title><?= BSite::getPageTitle(); ?></title>
 	<meta name="description" content="<?= B_DESC ?>">
     <?php if (
-        (B_LAYOUT == 'main') ||
-        (B_LAYOUT == 'test-front-end-main') ||
-        (B_LAYOUT == 'test-front-end-sub') ||
-        (B_LAYOUT == 'test-back-end-main') ||
-        (B_LAYOUT == 'test-back-end-sub')
+        (B_LAYOUT == 'main')
+        || (B_LAYOUT == 'test-front-end-main')
+        || (B_LAYOUT == 'test-front-end-sub')
+        || (B_LAYOUT == 'test-back-end-main')
+        || (B_LAYOUT == 'test-back-end-sub')
     ) { ?>
 		 <link rel="stylesheet" href="/-bwm/css/util.css">
 		 <link rel="stylesheet" href="/-bwm/css/common.css">
@@ -23,11 +23,11 @@
 </head>
 <body class="<?= B_LAYOUT ?>">
 <?php if (
-(B_LAYOUT == 'main') ||
-(B_LAYOUT == 'test-front-end-main') ||
-(B_LAYOUT == 'test-front-end-sub') ||
-(B_LAYOUT == 'test-back-end-main') ||
-(B_LAYOUT == 'test-back-end-sub')
+(B_LAYOUT == 'main')
+|| (B_LAYOUT == 'test-front-end-main')
+|| (B_LAYOUT == 'test-front-end-sub')
+|| (B_LAYOUT == 'test-back-end-main')
+||(B_LAYOUT == 'test-back-end-sub')
 ) { ?>
 <div id="wrap" class="clfix">
 	<header id="header">
@@ -62,11 +62,11 @@
 		<main id="main" class="page">
 			<?php
 			$v = str_replace($_SERVER['SERVER_NAME']
-				 , 'https://github.com/qzkml3/BWM/blob/master/bwm'
+				 , 'https://github.com/qzkml3/BWM/tree/master'
 				 , $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
 			);
 			?>
-			<!--<a class="view-source" href="<?/*=$v*/?>" target="_blank">view source this page in GiuHub</a>-->
+			<a class="view-source" href="<?= $v ?>" target="_blank">view source this page in GiuHub</a>
           <?php if (
               (B_LAYOUT == 'main')
               || (B_LAYOUT == 'test-front-end-main')
