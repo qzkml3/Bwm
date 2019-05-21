@@ -37,7 +37,7 @@ body.main #main
 	margin: 0 auto; padding: 4%; min-height: 100px;
 }
 /*footer*/
-#footer { margin-top: 20px; position: relative; overflow: hidden; width: 70%;}
+#footer { margin-top: 20px; position: relative; overflow: hidden; width: 78%; box-sizing: border-box;}
 #footer:after { content: ""; clear: both; display: table; }
 
 body.main #footer
@@ -61,6 +61,7 @@ body.test-font-end-main #footer
 	#main {float: none !important; width: auto !important;}
 	#aside-left, #aside-right
 	{float: none !important; width: auto !important; padding: 4% !important; margin: 20px 0 0;}
+	#footer {width: 100%;}
 }
 
 .view-source {position: absolute; top: 10px; right: 15px; font-size: 13px;}
