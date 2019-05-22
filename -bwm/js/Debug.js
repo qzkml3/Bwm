@@ -1,6 +1,6 @@
 Debug = {
 	showJsCode: function () {
-		$("script.code").each(function() {
+		$("script.code, style.code").each(function() {
 			var $script = $(this);
 			$script.after('<code/>');
 

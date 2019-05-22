@@ -6,7 +6,7 @@ define('B_DESC', '');
 BLayout::getHeader();
 ?>
 	<script class="code">
-		var v = '$^.a\\ /^$.b';
+		var v = '$^.a\\ /^$.b가나 다';
 
 		if (v.match('$')) {
 			document.write('has');
@@ -14,6 +14,17 @@ BLayout::getHeader();
 			document.write('don\'t has');
 		}
 	</script>
+
+	<script class="code">
+		var v = '$^.a\\ /^$.b가나 다';
+
+		if (v.match('가나 ')) {
+			document.write('has');
+		} else {
+			document.write('don\'t has');
+		}
+	</script>
+
 	<ul>
 		<li>php strstr 같은 역활 indexOf로 부터 벗어나고 싶었다... ^^ 아직까진 잘 됨.</li>
 	</ul>

@@ -1,0 +1,19 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', '');
+define('B_TITLE', 'iframe-overflow');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		html, body {height: 100%;}
+
+		body {margin: 0; background: green; overflow: hidden;}
+
+		html {overflow: hidden;}
+	</style>
+
+	<iframe src="iframe-overflow-inner.html" frameborder="0" style="height: 100%;"></iframe>
+<?php
+BLayout::getFooter();
+?>

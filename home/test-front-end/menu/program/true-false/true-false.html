@@ -5,50 +5,39 @@ define('B_TITLE', 'true-false');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-<h2>true</h2>
-<script>
-	document.writeln('true == 1');
-	document.writeln(true == 1);
-	
-	document.writeln('<hr>');
-	document.writeln('true == 0');
-	document.writeln(true == 0);
-	
-	document.writeln('<hr>');
-	document.writeln('true == -1');
-	document.writeln(true == -1);
-	
-	document.writeln('<hr>');
-	document.writeln('true == "true"');
-	document.writeln(true == "true");
-	
-	document.writeln('<hr>');
-	document.writeln('true == null');
-	document.writeln(true == null);
-</script>
+	<h2>true</h2>
+	<script class="code">
+		document.writeln(true == 1);
+	</script>
+	<script class="code">
+		document.writeln(true == 0);
+	</script>
+	<script class="code">
+		document.writeln(true == -1);
+	</script>
+	<script class="code">
+		document.writeln(true == "true");
+	</script>
+	<script class="code">
+		document.writeln(true == null);
+	</script>
 
-
-<h2>false</h2>
-<script>
-	document.writeln('false == 1');
-	document.writeln(false == 1);
-	
-	document.writeln('<hr>');
-	document.writeln('false == 0');
-	document.writeln(false == 0);
-	
-	document.writeln('<hr>');
-	document.writeln('false == -1');
-	document.writeln(false == -1);
-	
-	document.writeln('<hr>');
-	document.writeln('false == "true"');
-	document.writeln(false == "true");
-
-	document.writeln('<hr>');
-	document.writeln('false == null');
-	document.writeln(false == null);
-</script>
+	<h2>false</h2>
+	<script class="code">
+		document.writeln(false == 1);
+	</script>
+	<script class="code">
+		document.writeln(false == 0);
+	</script>
+	<script class="code">
+		document.writeln(false == -1);
+	</script>
+	<script class="code">
+		document.writeln(false == "true");
+	</script>
+	<script class="code">
+		document.writeln(false == null);
+	</script>
 <?php
 BLayout::getFooter();
 ?>

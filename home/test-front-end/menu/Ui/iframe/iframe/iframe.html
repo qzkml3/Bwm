@@ -1,0 +1,19 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'iframe');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<h2>deprecated</h2>
+	<iframe src="iframe-inner.html" frameborder="no" scrolling="no"></iframe>
+	<h2>use css</h2>
+	<iframe src="iframe-inner.html" style="border: none;" scrolling="no"></iframe>
+	<ul>
+		<li>frameborder는 css로 대체 가능하지만</li>
+		<li>scrolling도 css로 대체 하라고 만 나와있고 예제는 없다 w3cschools.com</li>
+		<li>기본적으로 scrolling="yes"</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

@@ -1,16 +1,14 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>bx-slider-m</title>
-	<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'bxslider-m');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<script src="/-bwm/js/ui/slider/bxslider/jquery.bxslider.min.js"></script>
-</head>
-<body>
+
 	<!-- common css -->
-	<style>
+	<style class="code">
 		.bx-wrapper {margin: auto;}
 		.bx-controls {text-align: center;}
 		.bx-pager-item {display: inline-block;}
@@ -19,7 +17,7 @@
 	</style>
 
 	<!-- slider2 -->
-	<style>
+	<style class="code">
 		.slider2_w {width: 90%; margin: auto;}
 	</style>
 	<div class="slider2_w">
@@ -31,7 +29,7 @@
 		</ul>
 	</div>
 
-	<script>
+	<script class="code">
 		$(".slider2").bxSlider({
 			auto: true,
 			slideWidth: 400,
@@ -42,7 +40,7 @@
 	</script>
 
 	<!-- slider1 -->
-	<style>
+	<style class="code">
 		.slider1_w {width: 90%; margin: auto;}
 	</style>
 	<div class="slider1_w">
@@ -52,10 +50,11 @@
 		</ul>
 	</div>
 
-	<script>
+	<script class="code">
 		$(".slider1").bxSlider({
 			auto: true
 		});
 	</script>
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

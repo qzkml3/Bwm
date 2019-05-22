@@ -1,54 +1,54 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>background-size</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'background-size');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 	<style>
 		.thumb-list {overflow: hidden;}
+
 		.thumb-list li {width: 50px; height: 50px; border: solid 1px #ccc; list-style: none; float: left; margin-right: 10px;
 		}
-		
+
 		.thumb-list-cover li {background: url(/-bwm/img/horizontal-img.jpg) center / cover no-repeat;}
-		
+
 		.thumb-list-contain li {background: url(/-bwm/img/horizontal-img.jpg) center / contain no-repeat;}
-		
+
 		.thumb-list img {width: 2px;}
 	</style>
-</head>
-<body>
-<h2>css background-size: cover;</h2>
-<ul class="thumb-list thumb-list-cover">
-	<li></li>
-	<li></li>
-	<li></li>
-</ul>
 
-<h2>css background-size: contain;</h2>
-<ul class="thumb-list thumb-list-contain">
-	<li></li>
-	<li></li>
-	<li></li>
-</ul>
+	<h2>css background-size: cover;</h2>
+	<ul class="thumb-list thumb-list-cover">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
 
-<h2>js</h2>
-<ul class="thumb-list thumb-list3">
-	<li>
-		<img src="/-bwm/img/horizontal-img.jpg" alt="">
-	</li>
-	<li>
-		<img src="/-bwm/img/horizontal-img.jpg" alt="">
-	</li>
-	<li>
-		<img src="/-bwm/img/horizontal-img.jpg" alt="">
-	</li>
-</ul>
+	<h2>css background-size: contain;</h2>
+	<ul class="thumb-list thumb-list-contain">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
 
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/-bwm/js/patch/OldPatcher.js"></script>
-<script>
-	OldPatcher.containImg('.thumb-list3 img');
-</script>
-</body>
-</html>
+	<h2>js</h2>
+	<ul class="thumb-list thumb-list3">
+		<li>
+			<img src="/-bwm/img/horizontal-img.jpg" alt="">
+		</li>
+		<li>
+			<img src="/-bwm/img/horizontal-img.jpg" alt="">
+		</li>
+		<li>
+			<img src="/-bwm/img/horizontal-img.jpg" alt="">
+		</li>
+	</ul>
+
+	<script src="/-bwm/js/patch/OldPatcher.js"></script>
+	<script class="code">
+		OldPatcher.containImg('.thumb-list3 img');
+	</script>
+<?php
+BLayout::getFooter();
+?>

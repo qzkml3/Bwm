@@ -5,14 +5,20 @@ define('B_TITLE', 'set-youtube-info');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-<iframe width="400" height="220" src="https://www.youtube.com/embed/lw258XsJ5vY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="400" height="220" src="https://www.youtube.com/embed/lw258XsJ5vY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="400" height="220" src="https://www.youtube.com/embed/lw258XsJ5vY" frameborder="0"
+			  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="400" height="220" src="https://www.youtube.com/embed/lw258XsJ5vY" frameborder="0"
+			  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<script src="/-bwm/js/UserAgent.js"></script>
-<script src="/-bwm/js/patch/OldPatcher.js"></script>
-<script>
-	OldPatcher.setYoutubeInfo();
-</script>
+	<script src="/-bwm/js/UserAgent.js"></script>
+	<script src="/-bwm/js/patch/OldPatcher.js"></script>
+	<script class="code">
+		OldPatcher.setYoutubeInfo();
+	</script>
+
+	<ul>
+		<li>ie8 이하에서 유튜브 안나온다고 안내하는 페이지</li>
+	</ul>
 <?php
 BLayout::getFooter();
 ?>

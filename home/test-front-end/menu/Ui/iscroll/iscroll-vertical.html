@@ -1,51 +1,52 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>iscroll-vertical</title>
-</head>
-<body>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'iscroll-vertical');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
 
-<style>
-	/*reset*/
-	* {matgin: 0; padding: 0;}
-	li {list-style: none;}
-	/*custom*/
-	
-	#gnb_wrap {position: relative;}
-	#gnb {width: 2000px; position: absolute; overflow: hidden;}
-	#gnb li {float: left; margin-right: 100px; border: solid 1px black;}
-</style>
-<section>
-	<div id="gnb_wrap">
-		<ul id="gnb">
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-			<li>가나다</li>
-		</ul>
-	</div>
-</section>
-<br>
-<br>
-<br>
-<br>
-본문
+	<style class="code">
+		/*reset*/
+		* {matgin: 0; padding: 0;}
+
+		li {list-style: none;}
+
+		/*custom*/
+
+		#gnb_wrap {position: relative;}
+
+		#gnb {width: 2000px; position: absolute; overflow: hidden;}
+
+		#gnb li {float: left; margin-right: 100px; border: solid 1px black;}
+	</style>
+	<section>
+		<div id="gnb_wrap">
+			<ul id="gnb">
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+				<li>가나다</li>
+			</ul>
+		</div>
+	</section>
+	<br>
+	<br>
+	<br>
+	<br>
+	본문
 
 
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/-bwm/js/ui/scroll/iscroll/iscroll.js"></script>
-<script>
-	$("#kkk").css({"background": "red"});
-	myScroll = new IScroll('#gnb_wrap', {scrollX: true});
-</script>
-
-</body>
-</html>
+	<script src="/-bwm/js/ui/scroll/iscroll/iscroll.js"></script>
+	<script class="code">
+		$("#kkk").css({"background": "red"});
+		myScroll = new IScroll('#gnb_wrap', {scrollX: true});
+	</script>
+<?php
+BLayout::getFooter();
+?>

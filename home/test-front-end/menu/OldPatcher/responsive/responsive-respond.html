@@ -5,12 +5,15 @@ define('B_TITLE', 'responsive-respond');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<link rel="stylesheet" href="css/css.css">
-	<!--[if lte IE 8]>
-	<script src="/-bwm/js/patch/respond.min.js"></script>
-	<![endif]-->
+	<div class="code">
+		<link rel="stylesheet" href="css/css.css">
+		<!--[if lte IE 8]>
+		<script src="/-bwm/js/patch/respond.min.js"></script>
+		<![endif]-->
 
-	<div class="a">a</div>
+		<div class="a">a</div>
+	</div>
+
 	<ul>
 		<li>style태그로 직접 써주면 안되고 link로 호출해야 함.</li>
 		<li>link로 호출한 후 js를 불러와야 됨</li>

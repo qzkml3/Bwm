@@ -51,8 +51,8 @@ OldPatcher = {
 				var $el = $(this);
 
 				if (
-					StringUtil.hasString($el.css("font-family"), "맑은 고딕") ||
-					StringUtil.hasString($el.css("font-family").toLowerCase(), "malgun gothic")
+					$el.css("font-family").match("맑은 고딕") ||
+					$el.css("font-family").toLowerCase().match("malgun gothic")
 				) {
 					$el.css({
 						"top": "-0.15em",

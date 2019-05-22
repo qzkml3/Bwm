@@ -1,14 +1,11 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>bpopup test</title>
-</head>
-<body>
-
-<style>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'bpopup-2-popup');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+<style class="code">
 	.s {background: white; position: absolute; display: none;}
 </style>
 
@@ -25,15 +22,14 @@
 	bbbbbbbbbbbbbbbbbb
 </div>
 
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
 <script src="/-bwm/js/ui/popup/bpopup/jquery.bpopup.min.js"></script>
-<script>
+<script class="code">
 	$("#a").bPopup({
 		onClose: function () {
 			$("#b").bPopup();
 		}
 	});
 </script>
-
-</body>
-</html>
+<?php
+BLayout::getFooter();
+?>

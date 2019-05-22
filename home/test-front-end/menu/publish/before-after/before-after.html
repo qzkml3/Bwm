@@ -5,10 +5,10 @@ define('B_TITLE', 'before-after');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<style>
-		.b1:before {content: "a"; }
+	<style class="code">
+		.b1:before {content: "&lt;before&gt"; }
 
-		.b2::before {content: "a"; }
+		.b2::before {content: "&lt;before&gt"; }
 	</style>
 	<div class="b1">
 		:before

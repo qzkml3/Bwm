@@ -5,77 +5,69 @@ define('B_TITLE', 'if-condition');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-<p>(1)</p>
-<script>
+
+<script class="code">
 	if (1) {
 		document.write(1);
 	}
 </script>
 <hr>
 
-<p>(0)</p>
-<script>
+<script class="code">
 	if (0) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(-1)</p>
-<script>
+<script class="code">
 	if (-1) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(undefined)</p>
-<script>
+<script class="code">
 	if (undefined) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(!undefined)</p>
-<script>
+<script class="code">
 	if (!undefined) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(false)</p>
-<script>
+<script class="code">
 	if (false) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(!false)</p>
-<script>
+<script class="code">
 	if (!false) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(null)</p>
-<script>
+<script class="code">
 	if (null) {
 		document.write(true);
 	}
 </script>
 <hr>
 
-<p>(!null)</p>
-<script>
+<script class="code">
 	if (!null) {
 		document.write(true);
 	}
 </script>
-<hr>
+
 <?php
 BLayout::getFooter();
 ?>

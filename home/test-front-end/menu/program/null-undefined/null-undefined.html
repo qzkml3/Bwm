@@ -5,30 +5,21 @@ define('B_TITLE', 'null-undefined');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-
-<p>(null == undefined)</p>
-<script>
-	document.write(null == undefined);
-</script>
-<hr>
-
-<p>(null === undefined)</p>
-<script>
-	document.write(null === undefined);
-</script>
-<hr>
-
-<p>(false == undefined)</p>
-<script>
-	document.write(false == undefined);
-</script>
-<hr>
-
-<p>(false == null)</p>
-<script>
-	document.write(false == null);
-</script>
-<hr>
+	<script class="code">
+		document.write(null == undefined);
+	</script>
+	<hr>
+	<script class="code">
+		document.write(null === undefined);
+	</script>
+	<hr>
+	<script class="code">
+		document.write(false == undefined);
+	</script>
+	<hr>
+	<script class="code">
+		document.write(false == null);
+	</script>
 <?php
 BLayout::getFooter();
 ?>

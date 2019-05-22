@@ -5,16 +5,17 @@ define('B_TITLE', 'placeholder');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-<input type="text" placeholder="placehoder">
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/-bwm/js/UserAgent.js"></script>
-<script src="/-bwm/js/StringUtil.js"></script>
-<script src="/-bwm/js/Ui.js"></script>
-<script src="/-bwm/js/patch/OldPatcher.js"></script>
-<script>
-	OldPatcher.setPlaceholder();
-</script>
+	<input type="text" placeholder="placehoder">
+	<script src="/-bwm/js/UserAgent.js"></script>
+	<script src="/-bwm/js/Ui.js"></script>
+	<script src="/-bwm/js/patch/OldPatcher.js"></script>
+	<script class="code">
+		OldPatcher.setPlaceholder();
+	</script>
 
+	<ul>
+		<li>ie8 에서의 placeholder사용</li>
+	</ul>
 <?php
 BLayout::getFooter();
 ?>

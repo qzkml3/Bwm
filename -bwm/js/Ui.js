@@ -1,6 +1,15 @@
 Ui = {
+	addCss: function (id, file) {
+		if (!$('#' + id).length) {
+			$css = '<link id="' + id + '" rel="stylesheet" href="' + file + '">';
+			$('head').append($css);
+		}
+	},
+	removeCss: function (id) {
+		$('#' + id).remove();
+	},
 	chkStarPoint: function (wrap, field) {
-		$(wrap).find('button').on('click', function() {
+		$(wrap).find('button').on('click', function () {
 			var $btn = $(this);
 			var idx = $btn.index();
 			var $btns = $(this).parent().find('button');
@@ -8,7 +17,7 @@ Ui = {
 			$btns.each(function (i) {
 				$(this).addClass('on');
 				if (i == idx) {
-					$(field).val(idx+1);
+					$(field).val(idx + 1);
 					return false;
 				}
 			});
@@ -18,9 +27,9 @@ Ui = {
 	//현재 경로에 포함되어있는 링크를 on 시킨다.
 	chkMenuCurPage: function (sel) {
 		var $links = $(sel).find('a');
-		$links.each(function() {
+		$links.each(function () {
 			var $link = $(this);
-			if (StringUtil.hasString(location.href, $link.attr('href'))) {
+			if (location.href.match($link.attr('href'))) {
 				$link.addClass('on');
 			}
 		});
@@ -86,7 +95,7 @@ Ui = {
 			var $link = $(this);
 			var href = $link.attr("href");
 
-			if (href && href != "#" && StringUtil.hasString(href, "#")) {
+			if (href && href != "#" && href.match("#")) {
 				e.preventDefault();
 				Ui.goAnimatedHash(href);
 			}
@@ -104,7 +113,7 @@ Ui = {
 		var doc = window.document;
 		var gotoScroll;
 
-		if (href == "#top") {
+		if (href == "#_top") {
 			gotoScroll = 0;
 			href = "";
 		} else { //sub 일때

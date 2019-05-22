@@ -1,15 +1,20 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
 define('B_LAYOUT', 'test-front-end-sub');
-define('B_TITLE', 'add-zero');
+define('B_TITLE', 'iframe-jquery-inner');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<script src="/-bwm/js/StringUtil.js"></script>
+set parent in child
+<div>aaa</div>
+<div>bbb</div>
 
-	<script class="code">
-		document.write(StringUtil.addZero("338", 5));
-	</script>
+
+<script class="code">
+	$('div', parent.document).css('background', 'green');
+
+</script>
 <?php
 BLayout::getFooter();
 ?>
+

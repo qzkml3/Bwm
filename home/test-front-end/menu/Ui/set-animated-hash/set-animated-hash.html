@@ -1,42 +1,41 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>set-animated-hash</title>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'set-animated-hash');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+
 	<!--[if lte IE 8]>
 	<script src="/-bwm/js/patch/ie9.min.js?v=<?=$res_ver?>"></script>
 	<script>document.createElement('main');</script>
 	<![endif]-->
-</head>
-<body>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<a>no href</a>
-<a href="#" onclick="">#</a>
-<a href="#top" onclick="">#top</a>
-<a href="#" onclick="alert(1); return false;">#</a>
-<a href="#top" onclick="alert(1); return false;">#top</a>
-<a href="#a">a</a>
-<a href="#b">b</a>
-<a href="http://www.naver.com">naver</a>
-<section style="height: 800px;">
-	<h2 id="a">a</h2>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+
 	<ul>
-		<li>#은 미적용</li>
-		<li>#top 최상위로</li>
-		
+		<li><a href="#" onclick="">#</a></li>
+		<li><a href="#_top" onclick="">#_top</a></li>
+		<li><a href="#a">a</a></li>
+		<li><a href="#b">b</a></li>
+		<li><a href="http://www.naver.com" target="_blank">naver</a></li>
 	</ul>
-</section>
-<section style="height: 800px;">
-	<h2 id="b">b</h2>
-	asfadfa dfafsf
-</section>
-<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-<script src="/-bwm/js/StringUtil.js"></script>
-<script src="/-bwm/js/Ui.js"></script>
-<script>
-	Ui.setAnimatedHash();
-</script>
-</body>
-</html>
+	<section style="height: 800px;">
+		<h2 id="a">a</h2>
+		<ul>
+			<li>#은 미적용</li>
+			<li>#top 최상위로</li>
+
+		</ul>
+	</section>
+	<section style="height: 800px;">
+		<h2 id="b">b</h2>
+		asfadfa dfafsf
+	</section>
+	<script src="/-bwm/js/Ui.js"></script>
+	<script class="code">
+		Ui.setAnimatedHash();
+	</script>
+<?php
+BLayout::getFooter();
+?>
