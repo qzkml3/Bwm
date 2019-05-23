@@ -5,28 +5,37 @@ define('B_TITLE', 'Animation');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	
+
 	<style>
 		body > * {margin: 30px;}
-		
-		section {float: left;}
+
+		section {float: left; margin: 1em;}
+
 		hr {clear: both;}
+
 		.obj {width: 50px; height: 80px; background: #ccc;}
 	</style>
-	
+
 	<style>
 		.animated {animation-duration: 1s;}
+
 		.animated.slow {animation-duration: 2s;}
+
 		.animated.fast {animation-duration: 0.5s;}
+
 		.animated.infinite {animation-iteration-count: infinite;}
-		
-		
-		
+
+
 		.animated.swing {animation-name: swing;}
+
 		.animated.swing-top {animation-name: swing; transform-origin: bottom center;}
+
 		.animated.swing-btm {animation-name: swing; transform-origin: top center;}
+
 		.animated.swing-left {animation-name: swing; transform-origin: right center;}
+
 		.animated.swing-right {animation-name: swing; transform-origin: left center;}
+
 		@keyframes swing {
 			from {
 				-webkit-transform: rotate3d(0, 0, 1, -11deg);
@@ -41,27 +50,29 @@ BLayout::getHeader();
 				transform: rotate3d(0, 0, 1, -11deg);
 			}
 		}
-		
+
 		.animated.up-down {animation-name: up-down;}
+
 		@keyframes up-down {
 			0% {
 				-webkit-transform: translate3d(0, 10px, 0);
 				transform: translate3d(0, 10px, 0);
-				
+
 			}
 			50% {
 				-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
-				
+
 			}
 			to {
 				-webkit-transform: translate3d(0, 10px, 0);
 				transform: translate3d(0, 10px, 0);
 			}
 		}
-		
-		
+
+
 		.animated.down-up2 {position: relative; animation: down-up2 1s alternate infinite;}
+
 		@keyframes down-up2 {
 			0% {
 				top: 0px;
@@ -71,8 +82,9 @@ BLayout::getHeader();
 				top: 10px;
 			}
 		}
-		
+
 		.animated.shake2 {animation-name: shake2;}
+
 		@keyframes shake2 {
 			0% {
 				-webkit-transform: translateX(0);
@@ -100,40 +112,38 @@ BLayout::getHeader();
 			}
 		}
 	</style>
-</head>
-<body>
-<section><h2>up-down</h2>
-	<div class="obj animated up-down slow infinite">obj</div>
-</section>
-<hr>
-<section><h2>down-up2</h2>
-	<div class="obj animated down-up2 slow infinite">obj</div>
-	<p>infinite? 다름</p>
-</section>
-<hr>
-<section><h2>shake2</h2>
-	<div class="obj animated shake2 slow infinite">obj</div>
-</section>
-<hr>
-<section>
-	<h2>swing</h2>
-	<div class="obj animated swing slow infinite">obj</div>
-</section>
-<section>
-	<h2>swing-top</h2>
-	<div class="obj animated swing-top slow infinite">obj</div>
-</section>
-<section>
-	<h2>swing-btm</h2>
-	<div class="obj animated swing-btm slow infinite">obj</div>
-</section>
-<section>
-	<h2>swing-left</h2>
-	<div class="obj animated swing-left slow infinite">obj</div>
-</section>
-<section><h2>swing-right</h2>
-	<div class="obj animated swing-right slow infinite">obj</div>
-</section>
+	<section><h2>up-down</h2>
+		<div class="obj animated up-down slow infinite">obj</div>
+	</section>
+	<hr>
+	<section><h2>down-up2</h2>
+		<div class="obj animated down-up2 slow infinite">obj</div>
+		<p>infinite? 다름</p>
+	</section>
+	<hr>
+	<section><h2>shake2</h2>
+		<div class="obj animated shake2 slow infinite">obj</div>
+	</section>
+	<hr>
+	<section>
+		<h2>swing</h2>
+		<div class="obj animated swing slow infinite">obj</div>
+	</section>
+	<section>
+		<h2>swing-top</h2>
+		<div class="obj animated swing-top slow infinite">obj</div>
+	</section>
+	<section>
+		<h2>swing-btm</h2>
+		<div class="obj animated swing-btm slow infinite">obj</div>
+	</section>
+	<section>
+		<h2>swing-left</h2>
+		<div class="obj animated swing-left slow infinite">obj</div>
+	</section>
+	<section><h2>swing-right</h2>
+		<div class="obj animated swing-right slow infinite">obj</div>
+	</section>
 <?php
 BLayout::getFooter();
 ?>

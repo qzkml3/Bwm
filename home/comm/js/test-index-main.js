@@ -1,9 +1,10 @@
 $(document).ready(function () {
-    asideToCont();
+    catetoryClickToCont();
+    highHtml();
 });
 
-/** aside를 클릭하면 해당 cont로 이동한다. **/
-function asideToCont() {
+/** catetory를 클릭하면 해당 cont로 이동한다. **/
+function catetoryClickToCont() {
     $('#aside-left a').on('click', function (e) {
         e.preventDefault();
         var cateText = $(this).text();
@@ -20,4 +21,17 @@ function asideToCont() {
         });
         return false;
     });
+}
+
+//html 파일에는 하이라트 한다.
+function highHtml() {
+    $('#main ul a').each(function () {
+        var $a = $(this);
+        if (!$a.text().match('.html')) {
+            $a.css({
+                'background': '#ccc'
+            });
+        }
+    });
+
 }
