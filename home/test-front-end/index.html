@@ -1,15 +1,15 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
-	define('B_LAYOUT', 'test-front-end-main');
-	define('B_TITLE', 'test-front-end');
-	define('B_DESC', '');
-	BLayout::getHeader();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-main');
+define('B_TITLE', 'test-front-end');
+define('B_DESC', '');
+BLayout::getHeader();
 ?>
-    <script src="/home/comm/js/aside-control.js"></script>
+	<script src="/home/comm/js/aside-control.js"></script>
 <?php
-	$file = new BFile();
-	$file->getRecurFileList('./menu');
+$file = new BFile();
+$file->getRecurFileList('./menu');
 ?>
 <?php
-	BLayout::getFooter();
+BLayout::getFooter();
 ?>

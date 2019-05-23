@@ -14,7 +14,7 @@ function asideToCont() {
 
                 history.pushState(null, '#' + v, '#' + v);
 
-                $('html, body').animate({scrollTop: $(this).offset().top - 10});
+                $('html, body').animate({scrollTop: $(this).offset().top - 5});
                 return false;
             }
         });
