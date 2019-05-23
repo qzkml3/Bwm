@@ -10,7 +10,11 @@ function asideToCont() {
         $('#main li').each(function () {
             if ($(this).text().match(cateText)) {
                 var v = $(this).text();
-                $('html, body').animate({scrollTop: $(this).position().top});
+                v = v.substring(0, v.indexOf('/'));
+
+                history.pushState(null, '#' + v, '#' + v);
+
+                $('html, body').animate({scrollTop: $(this).offset().top - 10});
                 return false;
             }
         });
