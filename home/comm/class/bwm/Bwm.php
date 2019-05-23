@@ -18,5 +18,6 @@
 		static function loadCommSiteClass() {
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BDate.php';
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BFile.php';
+			require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/BPage.php';
 		}
 	}

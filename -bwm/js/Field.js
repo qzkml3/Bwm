@@ -40,7 +40,7 @@ Field = {
 			return this.fieldChkHandler(field);
 		}
 	}
-	,
+	,//todo tel과 num 분리 필요
 	chkTelOrNum: function (field, fieldName) {
 		var fieldValue = $.trim(field.value);
 		if (!Valid.isTel(fieldValue) && !Valid.isNum(fieldValue)) {

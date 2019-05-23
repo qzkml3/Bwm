@@ -6,43 +6,43 @@ define('B_DESC', '');
 BLayout::getHeader();
 ?>
 
-<script src="/-bwm/js/StringUtil.js"></script>
+	<script src="/-bwm/js/StringUtil.js"></script>
 
-<h2>date</h2>
-<script class="code">
-	var d = new Date();
-	document.write(d);
-</script>
+	<h2>date</h2>
+	<script class="code">
+		var d = new Date();
+		document.write(d);
+	</script>
 
-<h2>date time</h2>
-<script class="code">
-	var d = new Date();
-	v = d.getFullYear() + '-' +
-		StringUtil.addZero(d.getMonth() + 1, 2) + '-' +
-		StringUtil.addZero(d.getDate(), 2) + ' ' +
-		StringUtil.addZero(d.getHours(), 2) + ':' +
-		StringUtil.addZero(d.getMinutes(), 2) + ':' +
-		StringUtil.addZero(d.getSeconds(), 2);
-	document.write(v);
-</script>
+	<h2>date time</h2>
+	<script class="code">
+		var d = new Date();
+		v = d.getFullYear() + '-' +
+			StringUtil.addZero(d.getMonth() + 1, 2) + '-' +
+			StringUtil.addZero(d.getDate(), 2) + ' ' +
+			StringUtil.addZero(d.getHours(), 2) + ':' +
+			StringUtil.addZero(d.getMinutes(), 2) + ':' +
+			StringUtil.addZero(d.getSeconds(), 2);
+		document.write(v);
+	</script>
 
-<h2>date time (UTC)</h2>
-<script class="code">
-	var d = new Date();
-	v = d.getUTCFullYear() + '-' +
-		StringUtil.addZero(d.getUTCMonth() + 1, 2) + '-' +
-		StringUtil.addZero(d.getUTCDate(), 2) + ' ' +
-		StringUtil.addZero(d.getUTCHours(), 2) + ':' +
-		StringUtil.addZero(d.getUTCMinutes(), 2) + ':' +
-		StringUtil.addZero(d.getUTCSeconds(), 2);
-	document.write(v);
-</script>
+	<h2>date time (UTC)</h2>
+	<script class="code">
+		var d = new Date();
+		v = d.getUTCFullYear() + '-' +
+			StringUtil.addZero(d.getUTCMonth() + 1, 2) + '-' +
+			StringUtil.addZero(d.getUTCDate(), 2) + ' ' +
+			StringUtil.addZero(d.getUTCHours(), 2) + ':' +
+			StringUtil.addZero(d.getUTCMinutes(), 2) + ':' +
+			StringUtil.addZero(d.getUTCSeconds(), 2);
+		document.write(v);
+	</script>
 
-<h2>Date.now()</h2>
-<script class="code">
-	var d = Date.now();
-	document.write(d);
-</script>
+	<h2>Date.now()</h2>
+	<script class="code">
+		var d = Date.now();
+		document.write(d);
+	</script>
 <?php
 BLayout::getFooter();
 ?>

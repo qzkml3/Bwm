@@ -11,6 +11,9 @@ BLayout::getHeader();
 		li {margin: 15px 0;}
 	</style>
 
+	<script src="/-bwm/js/Field.js"></script>
+	<script src="/-bwm/js/Valid.js"></script>
+
 	<h2>empty chk</h2>
 	<form name="f">
 		<ul>
@@ -60,6 +63,21 @@ BLayout::getHeader();
 		</ul>
 		<button type="button" id="submit">submit</button>
 	</form>
+	<script class="code">
+		$("#submit").on("click", function () {
+			var f = document.f;
+
+			if (Field.chkEmpty(f.text, 'text')) return;
+			if (Field.chkEmpty(f.password, 'password')) return;
+			if (Field.chkEmpty(f.textarea, 'textarea')) return;
+			if (Field.chkEmpty(f.radio, 'radio')) return;
+			if (Field.chkEmpty(f.checkbox, 'checkbox')) return;
+			if (Field.chkEmpty(f.select_one, 'select-one')) return;
+			if (Field.chkEmpty(f.select_multiple, 'select-multiple')) return;
+
+			alert('submitted !');
+		});
+	</script>
 
 	<h2>value chk</h2>
 	<form name="f2">
@@ -77,25 +95,7 @@ BLayout::getHeader();
 		</ul>
 		<button type="button" id="submit2">submit2</button>
 	</form>
-	<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
-	<script src="/-bwm/js/Field.js"></script>
-	<script src="/-bwm/js/Valid.js"></script>
-	<script>
-		$("#submit").on("click", function () {
-			var f = document.f;
-
-			if (Field.chkEmpty(f.text, 'text')) return;
-			if (Field.chkEmpty(f.password, 'password')) return;
-			if (Field.chkEmpty(f.textarea, 'textarea')) return;
-			if (Field.chkEmpty(f.radio, 'radio')) return;
-			if (Field.chkEmpty(f.checkbox, 'checkbox')) return;
-			if (Field.chkEmpty(f.select_one, 'select-one')) return;
-			if (Field.chkEmpty(f.select_multiple, 'select-multiple')) return;
-
-			alert('submitted !');
-		});
-	</script>
-	<script>
+	<script class="code">
 		$("#submit2").on("click", function () {
 			var f = document.f2;
 
