@@ -16,4 +16,8 @@ class BSite
 	static function getGaCode() {
 		require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/inc/code-ga.html';
 	}
+
+	static function getNaCode() {
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/home/comm/inc/code-na.html';
+	}
 }
