@@ -1,14 +1,16 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
 define('B_LAYOUT', 'test-front-end-sub');
-define('B_TITLE', 'after-str');
+define('B_TITLE', BPage::getTitleByFileName());
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<script src="/-bwm/js/StringUtil.js"></script>
-
+	<h2>찾는단어 뒷문자 가져오기</h2>
 	<script class="code">
-		var v = StringUtil.afterStr("aaaxyxbbb", "xyx");
+		var v = "aaaxyxbbb";
+		var sep = 'xyx';
+
+		v = v.substring(v.indexOf(sep) + sep.length);
 		document.write(v);
 	</script>
 

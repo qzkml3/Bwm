@@ -4,13 +4,15 @@
  * - 다른 언어와의 문법적 동일성
  * */
 StringUtil = {
-	/*구분자 뒤에 문자열을 리턴*/
-	afterStr: function (scope, sep) {
+	/*구분자 뒤에 문자열을 리턴
+	비추 substr이나 substring 추천
+	* */
+	/*afterStr: function (scope, sep) {
 		scope = scope.toString();
 		sep = sep.toString();
 
 		return scope.substring(scope.indexOf(sep) + sep.length);
-	},
+	},*/
 	/*숫자앞에 0추가 후 문자열 리턴*/
 	addZero: function (str, wish_size) {
 		var str =  str.toString();

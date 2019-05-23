@@ -8,19 +8,19 @@ BLayout::getHeader();
 	<style class="code">
 		a.on {background: #3baae3;}
 	</style>
-	<nav id="gnb">
+	<nav id="gnb-nav">
 		<a href="chk-menu-cur-page.html">a</a>
 		<a href="x.html">b</a>
 	</nav>
-	<nav id="lnb">
+	<nav id="lnb-nav">
 		<a href="x.html">a</a>
 		<a href="chk-menu-cur-page.html?menu=a">b</a>
 	</nav>
 
 	<script src="/-bwm/js/Ui.js"></script>
 	<script class="code">
-		Ui.chkMenuCurPage('#gnb');
-		Ui.chkMenuCurPage('#lnb');
+		Ui.chkMenuCurPage('#gnb-nav');
+		Ui.chkMenuCurPage('#lnb-nav');
 	</script>
 <?php
 BLayout::getFooter();

@@ -5,11 +5,29 @@ define('B_TITLE', 'get-percent-width');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<div class="w" style="width: 300px;">
-	</div>
 	<script src="/-bwm/js/Ui.js"></script>
+	<div class="w" style="width: 300px; background: #fcc;">
+		.w
+	</div>
+	this div width by parent <span></span>
 	<script class="code">
-		document.write(Ui.getPercentWidth('.w'));
+		$(document).ready(function () {
+			getPercentWidth();
+		});
+
+		function getPercentWidth() {
+			$(document).ready(function() {
+				getPercentWidth_trigger();
+			});
+			$(window).on('resize', function () {
+				getPercentWidth_trigger();
+			});
+			function getPercentWidth_trigger() {
+				var v = Ui.getPercentWidth('.w');
+				$('span').text(v);
+			}
+		}
+
 	</script>
 <?php
 BLayout::getFooter();
