@@ -41,11 +41,11 @@ body.main #main
 #footer:after { content: ""; clear: both; display: table; }
 
 body.main #footer
-, body.test-font-end-sub #footer
+, body.test-front-end-sub #footer
 , body.test-back-end-sub #footer
 {float: left;}
 
-body.test-font-end-main #footer
+body.test-front-end-main #footer
 , body.test-back-end-main #footer
 {float: right;}
 

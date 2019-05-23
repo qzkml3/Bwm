@@ -40,7 +40,8 @@ section {display: block; margin: 0;}
 }
 
 .code {
-	white-space: pre-wrap; line-height: 1.5;
+	white-space: pre; line-height: 1.5; tab-size: 3;
 	font-family:"Ubuntu Mono", Consolas, "Source Code Pro";
-	background: #eee; display: block; border: solid 1px silver;
+	background: #eee; display: block; /*border: solid 1px #ddd;*/ overflow-x: auto; box-sizing: border-box;
+	margin: 1em 0;
 }

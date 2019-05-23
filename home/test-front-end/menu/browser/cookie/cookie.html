@@ -5,60 +5,59 @@ define('B_TITLE', 'cookie');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-<style>
-	li {margin: 10px 0;}
-	button {margin-left: 25px;}
-</style>
-<script src="/-bwm/js/Cookie.js"></script>
-<ul>
-	<li>
-		<label>cookie name:
-			<input type="text" id="name" value="a">
-		</label>
-	</li>
-	<li>
-		<label>cookie value:
-			<input type="text" id="value" value="가">
-		</label>
-	</li>
-	<li>
-		<label>expires by day:
-			<input type="text" id="expires" value="1">
-		</label>
-	</li>
-</ul>
+	<style>
+		li {margin: 10px 0;}
 
-<button type="button" id="set-sess-cook">set session cookie</button>
-<button type="button" id="set-cook-by-date">set cookie by date</button>
-<button type="button" id="set-cook-by-hour">set cookie by hour</button>
-<button type="button" id="del-cook">del cookie</button>
+		button {margin-left: 25px;}
+	</style>
+	<script src="/-bwm/js/Cookie.js"></script>
+	<ul>
+		<li>
+			<label>cookie name:
+				<input type="text" id="name" value="a">
+			</label>
+		</li>
+		<li>
+			<label>cookie value:
+				<input type="text" id="value" value="가">
+			</label>
+		</li>
+		<li>
+			<label>expires by day:
+				<input type="text" id="expires" value="1">
+			</label>
+		</li>
+	</ul>
 
-<script class="code">
-	$("#set-sess-cook").on("click", function() {
-		var name = $("#name").val();
-		var value = $("#value").val();
-		var expires = $("#expires").val();
-		Cookie.setSessCook(name, value, expires);
-	});
-	$("#set-cook-by-date").on("click", function() {
-		var name = $("#name").val();
-		var value = $("#value").val();
-		var expires = $("#expires").val();
-		Cookie.setCookByDate(name, value, expires);
-	});
-	$("#set-cook-by-hour").on("click", function() {
-		var name = $("#name").val();
-		var value = $("#value").val();
-		var expires = $("#expires").val();
-		Cookie.setCookByHour(name, value, expires);
-	});
-	$("#del-cook").on("click", function() {
-		var name = $("#name").val();
-		Cookie.delCook(name);
-	});
-</script>
+	<button type="button" id="set-sess-cook">set session cookie</button>
+	<button type="button" id="set-cook-by-date">set cookie by date</button>
+	<button type="button" id="set-cook-by-hour">set cookie by hour</button>
+	<button type="button" id="del-cook">del cookie</button>
+
+	<script class="code">
+		$("#set-sess-cook").on("click", function () {
+			var name = $("#name").val();
+			var value = $("#value").val();
+			var expires = $("#expires").val();
+			Cookie.setSessCook(name, value, expires);
+		});
+		$("#set-cook-by-date").on("click", function () {
+			var name = $("#name").val();
+			var value = $("#value").val();
+			var expires = $("#expires").val();
+			Cookie.setCookByDate(name, value, expires);
+		});
+		$("#set-cook-by-hour").on("click", function () {
+			var name = $("#name").val();
+			var value = $("#value").val();
+			var expires = $("#expires").val();
+			Cookie.setCookByHour(name, value, expires);
+		});
+		$("#del-cook").on("click", function () {
+			var name = $("#name").val();
+			Cookie.delCook(name);
+		});
+	</script>
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
-
 BLayout::getFooter();
 ?>
