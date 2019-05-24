@@ -14,15 +14,15 @@ BLayout::getHeader();
 
 		/*custom*/
 
-		#gnb_wrap {position: relative;}
+		.gnb_wrap {position: relative;}
 
-		#gnb {width: 2000px; position: absolute; overflow: hidden;}
+		.gnb {width: 2000px; position: absolute; overflow: hidden;}
 
-		#gnb li {float: left; margin-right: 100px; border: solid 1px black;}
+		.gnb li {float: left; margin-right: 100px; border: solid 1px black;}
 	</style>
 	<section>
-		<div id="gnb_wrap">
-			<ul id="gnb">
+		<div class="gnb_wrap">
+			<ul class="gnb">
 				<li>가나다</li>
 				<li>가나다</li>
 				<li>가나다</li>
@@ -44,7 +44,7 @@ BLayout::getHeader();
 
 	<script src="/-bwm/js/ui/scroll/iscroll/iscroll.js"></script>
 	<script class="code">
-		myScroll = new IScroll('#gnb_wrap', {scrollX: true, freeScroll: false});
+		myScroll = new IScroll('.gnb_wrap', {scrollX: true, freeScroll: false});
 	</script>
 <?php
 BLayout::getFooter();

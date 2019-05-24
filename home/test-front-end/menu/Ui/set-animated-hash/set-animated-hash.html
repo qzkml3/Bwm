@@ -5,6 +5,9 @@ define('B_TITLE', 'set-animated-hash');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
+	<style>
+		#remocon {position: fixed; left: 10px; top: 100px;}
+	</style>
 
 	<!--[if lte IE 8]>
 	<script src="/-bwm/js/patch/ie9.min.js?v=<?=$res_ver?>"></script>
@@ -13,7 +16,7 @@ BLayout::getHeader();
 
 	<br><br><br><br><br><br><br><br><br><br><br><br>
 
-	<ul>
+	<ul id="remocon">
 		<li><a href="#" onclick="">#</a></li>
 		<li><a href="#_top" onclick="">#_top</a></li>
 		<li><a href="#a">a</a></li>

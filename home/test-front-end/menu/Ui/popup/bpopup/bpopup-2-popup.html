@@ -5,31 +5,31 @@ define('B_TITLE', 'bpopup-2-popup');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-<style class="code">
-	.s {background: white; position: absolute; display: none;}
-</style>
+	<style class="code">
+		.s {background: white; position: absolute; display: none;}
+	</style>
 
-<div id="a" class="s">
-	<button type="button" class="b-close">close</button>
-	aaaaaaaaa
-	<br>
-	aaaaaaaaaaaaaaa
-</div>
-<div id="b" class="s">
-	<button type="button" class="b-close">close</button>
-	bbbbbbbbbbb
-	<br>
-	bbbbbbbbbbbbbbbbbb
-</div>
+	<div id="a" class="s">
+		<button type="button" class="b-close">close</button>
+		aaaaaaaaa
+		<br>
+		aaaaaaaaaaaaaaa
+	</div>
+	<div id="b" class="s">
+		<button type="button" class="b-close">close</button>
+		bbbbbbbbbbb
+		<br>
+		bbbbbbbbbbbbbbbbbb
+	</div>
 
-<script src="/-bwm/js/ui/popup/bpopup/jquery.bpopup.min.js"></script>
-<script class="code">
-	$("#a").bPopup({
-		onClose: function () {
-			$("#b").bPopup();
-		}
-	});
-</script>
+	<script src="/-bwm/js/ui/popup/bpopup/jquery.bpopup.min.js"></script>
+	<script class="code">
+		$("#a").bPopup({
+			onClose: function () {
+				$("#b").bPopup();
+			}
+		});
+	</script>
 <?php
 BLayout::getFooter();
 ?>

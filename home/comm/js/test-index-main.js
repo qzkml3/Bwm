@@ -27,7 +27,8 @@ function catetoryClickToCont() {
 function highHtml() {
     $('#main ul a').each(function () {
         var $a = $(this);
-        if (!$a.text().match('.html')) {
+        var b_except_file = !$a.text().match('.html') || $a.text().match('-inner.html');
+        if (b_except_file) {
             $a.css({
                 'background': '#ccc'
             });
