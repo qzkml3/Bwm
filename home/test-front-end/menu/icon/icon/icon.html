@@ -22,11 +22,13 @@ BLayout::getHeader();
 	<style>
 		button {box-sizing: border-box; cursor: pointer;}
 
-		.btn_arrow {width: 30px; height: 30px; background: dodgerblue center / 30% 40% no-repeat; border-radius: 50%;}
+		.btn_arrow {width: 30px; height: 30px; background: dodgerblue center / 30% 40% no-repeat;
+			border-radius: 50%; display: inline-block; text-indent: -9999999px;
+		}
 
-		.btn_arrow.prev {background-image: url(img/icon/arr-prev.png);}
+		.btn_arrow.prev {background-image: url(img/icon/arr-prev.png) !important;}
 
-		.btn_arrow.next {background-image: url(img/icon/arr-next.png);}
+		.btn_arrow.next {background-image: url(img/icon/arr-next.png) !important;}
 	</style>
 	<button type="button" class="btn_arrow prev"></button>
 	<button type="button" class="btn_arrow next"></button>
