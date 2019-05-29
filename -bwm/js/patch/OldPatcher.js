@@ -46,7 +46,7 @@ OldPatcher = {
 	,
 	/* WIN7 IE11 맑은 고딕 상하 정렬 문제 패치*/
 	fixFontPos: function () {
-		if (UserAgent.WIN7) {
+		if (UserAgent.isWin7) {
 			$("a > span, button > span").each(function () {
 				var $el = $(this);
 
