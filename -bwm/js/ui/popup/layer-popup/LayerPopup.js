@@ -5,13 +5,6 @@ LayerPopup = {
 		var cssPath = '/-bwm/js/ui/popup/layer-popup/layer-popup.css';
 		var htmlPath = '/-bwm/js/ui/popup/layer-popup/layer-popup.html';
 
-		//inc css
-		if (!this.isCssAttached) {
-			var css = '<link rel="stylesheet" href="' + cssPath + '">';
-			$("body").append(css);
-			this.isCssAttached = true;
-		}
-
 		$.get(htmlPath, function (data) {
 			var $pop = $(data);
 
@@ -59,6 +52,13 @@ LayerPopup = {
 			//draggable pop
 			if ('undefined' != typeof $pop.draggable) {
 				$pop.draggable();
+			}
+
+			//inc css
+			if (!LayerPopup.isCssAttached) {
+				var css = '<link rel="stylesheet" href="' + cssPath + '">';
+				$("head").prepend(css);
+				LayerPopup.isCssAttached = true;
 			}
 
 			//console.log($pop);
