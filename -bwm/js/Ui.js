@@ -62,7 +62,6 @@ Ui = {
 	tab: function (btnWrap, contWrap) {
 		var $tabBtn = $(btnWrap).children("*");
 		var $tabCont = $(contWrap).children("*");
-		;
 
 		$tabBtn.eq(0).addClass('on');
 
@@ -91,7 +90,7 @@ Ui = {
 	}
 	,
 	setAnimatedHash: function () {
-		$("a, area").on("click", function (e) {
+		$('body').on("click", 'a, area', function (e) {
 			var $link = $(this);
 			var href = $link.attr("href");
 
