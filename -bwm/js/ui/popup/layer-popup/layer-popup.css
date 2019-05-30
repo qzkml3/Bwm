@@ -1,4 +1,4 @@
-.layer_popup {position: fixed; left: 20px; top: 20px;}
+.layer_popup {position: fixed; left: 20px; top: 20px; z-index: 10000;}
 .layer_popup * {color: white; font-size: 12px; font-family: "Malgun Gothic";}
 .layer_popup_img_w img {width: 100%; vertical-align: middle;}
 .layer_popup_control {background: black; overflow: hidden; box-sizing: border-box; padding: 3px;}

@@ -1,6 +1,6 @@
 LayerPopup = {
-	isCssAttached: false,
-
+	isCssAttached: false
+	,
 	open: function (param) {
 		var cssPath = '/-bwm/js/ui/popup/layer-popup/layer-popup.css';
 		var htmlPath = '/-bwm/js/ui/popup/layer-popup/layer-popup.html';
@@ -53,7 +53,7 @@ LayerPopup = {
 
 			//append pop
 			if (Cookie.getVal(cookieName) == null) {
-				$("body").append($pop);
+				$("body").prepend($pop);
 			}
 
 			//draggable pop
