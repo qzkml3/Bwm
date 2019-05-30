@@ -5,16 +5,37 @@ define('B_TITLE', 'date-time');
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-
 	<script src="/-bwm/js/StringUtil.js"></script>
 
-	<h2>date</h2>
+	<script class="code">
+		var d = new Date();
+		document.write('<br>' + d);
+		document.write('<br>' + d.toUTCString());
+		document.write('<br>' + d.toGMTString()); //deprecated
+	</script>
+
+	<h2>set today</h2>
+	<script class="code">
+		var d = new Date();
+		d.setHours(24); //날짜가 다음날로 바뀜
+		d.setMinutes(0);
+		d.setSeconds(0);
+		document.write('<br>' + d);
+
+		var d = new Date();
+		d.setHours(1);
+		d.setMinutes(59);
+		d.setSeconds(59); //오늘 1초동안 누락이 발생 59로 코딩이 어려움
+		document.write('<br>' + d);
+	</script>
+
+	<h2>basic</h2>
 	<script class="code">
 		var d = new Date();
 		document.write(d);
 	</script>
 
-	<h2>date time</h2>
+	<h2>get</h2>
 	<script class="code">
 		var d = new Date();
 		v = d.getFullYear() + '-' +
@@ -26,7 +47,7 @@ BLayout::getHeader();
 		document.write(v);
 	</script>
 
-	<h2>date time (UTC)</h2>
+	<h2>get (UTC)</h2>
 	<script class="code">
 		var d = new Date();
 		v = d.getUTCFullYear() + '-' +
