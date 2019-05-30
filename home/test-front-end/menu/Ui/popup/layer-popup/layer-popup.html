@@ -15,22 +15,22 @@ BLayout::getHeader();
 	if ($popup_end_time == "" || date("Y-m-d H") < $popup_end_time) {
 	?>
 	LayerPopup.open({
-		linkId: "#mktis_db",
-		id: "layer-popup1",
-		width: "300px", left: "20px", top: "20px", //leftFromCenter: "-500px",
-		src: "img/popup.jpg?v=0"
+		id: 'layer-popup1'
+		, src: 'img/popup.jpg?v=0'
+		, href: '#mktis_db', target:'_self'
+		, width: '300px', left: '20px', top: '20px' //, leftFromCenter: '-100px'
 	});
 	LayerPopup.open({
-		//linkId: "#mktis_db",
-		id: "layer-popup2",
-		width: "350px", left: "400px", top: "20px", //leftFromCenter: "-500px",
-		src: "img/popup.jpg?v=0"
+		id: 'layer-popup2'
+		, src: 'img/popup.jpg?v=0'
+		//, href: '/', target:'_self'
+		, width: '350px', left: '400px', top: '20px' //, leftFromCenter: '-500px'
 	});
 	LayerPopup.open({
-		//linkId: "#mktis_db",
-		id: "layer-popup3",
-		width: "400px", left: "800px", top: "20px", //leftFromCenter: "-500px",
-		src: "img/popup.jpg?v=0"
+		id: 'layer-popup3'
+		, src: 'img/popup.jpg?v=0'
+		, href: 'http://www.naver.com', target: '_blank'
+		, width: '400px', left: '20px', top: '400px' //, leftFromCenter: '-500px'
 	});
 	<?}?>
 </script>

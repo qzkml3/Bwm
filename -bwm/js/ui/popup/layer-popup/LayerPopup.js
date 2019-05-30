@@ -36,14 +36,19 @@ LayerPopup = {
 
 			$($btnClose).on("click", function () {
 				if ($chkBox.prop("checked")) {
-					Cookie.setCookByDate(cookieName, "closed", 1);
+					Cookie.setCookOnlyToday(cookieName, "closed");
 				}
 				$pop.hide();
 			});
 
-			//add link
-			if (param.linkId) {
-				$pop.find(".layer_popup_img_w img").wrap('<a href="' + param.linkId + '"></a>');
+			//add href
+			if (param.href) {
+				$pop.find(".layer_popup_img_w a").attr('href', param.href);
+			}
+
+			//add target
+			if (param.target) {
+				$pop.find(".layer_popup_img_w a").attr('target', param.target);
 			}
 
 			//append pop
@@ -55,7 +60,6 @@ LayerPopup = {
 			if ('undefined' != typeof $pop.draggable) {
 				$pop.draggable();
 			}
-
 
 			//console.log($pop);
 			//console.log($pop.get(0).outerHTML);
