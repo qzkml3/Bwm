@@ -1,0 +1,13 @@
+/*tinymce custom*/
+#tinymce {font-size: 15px; line-height: 1.6;}
+
+#tinymce h2 {
+	margin: 3em 0 1em; padding-bottom: 0.3em;
+	color: #555; font-size: 24px; font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}
+#tinymce h2:first-child {margin-top: 0;}
+
+#tinymce p {margin: 1em 0 2em;}
+
+#tinymce li { margin: 10px 0;}

@@ -1,8 +1,8 @@
 /* 주석 한글이 잘 되는지 */
 
-$color_red: blue;
+$color_red: gold;
 
-.a {background: $color_red;}
+.a { background: $color_red; font-weight: bold; }
 .b {background: $color_red;}
 
 #header {
