@@ -1,0 +1,38 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'font_size');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		#main p {font-size: 40px;}
+		/*body {font-size: 40px;}*/
+		.xx_large {font-size: xx-large !important;}
+		.x_large {font-size: x-large !important;}
+		.larger {font-size: larger !important;}
+		.large {font-size: large !important;}
+		.smaller {font-size: smaller !important;}
+		.small {font-size: small !important;}
+		.x_small {font-size: x-small !important;}
+		.xx_small {font-size: xx-small !important;}
+	</style>
+	<p class="xx_large">abc : xx-large</p>
+	<p class="x_large">abc : x-large</p>
+	<p class="larger">abc : larger</p>
+	<p class="large">abc : large</p>
+	<hr>
+	<p>abc * </p>
+	<hr>
+	<p class="smaller">abc : smaller</p>
+	<p class="small">abc : small</p>
+	<p class="x_small">abc : x-small</p>
+	<p class="xx_small">abc : xx-small</p>
+
+	<ul>
+		<li>해당 태그에 font-size 적용시 절대값이 적용됨.</li>
+		<li>부모태그에 태그에 적용시 smaller lager만 상대값이 적용됨.</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>
