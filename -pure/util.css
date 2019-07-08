@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6 {font-size: inherit;}
 a {font-size: inherit; color: inherit; text-decoration: none;}
 button {font-size: inherit; cursor:pointer; background: none; border: none; padding: 0;}
 img {vertical-align:middle; border:none;}
+form {height: 100%;}
 fieldset {padding:0; border:none; height: inherit;}
 legend {position:absolute; left:-9999999px; top:-9999999px;}
 
