@@ -1,0 +1,37 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'dynamic-css-by-width');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<script src="/_comm_res/js/Ui.js"></script>
+	<script class="code">
+		$(document).ready(function () {
+			addResCss();
+		});
+
+		function addResCss() {
+			$(document).ready(function () {
+				addResCss_trigger();
+			});
+			$(window).on('resize', function () {
+				addResCss_trigger();
+			});
+
+			function addResCss_trigger() {
+				if ($(window).width() > 800) {
+					Ui.addCss('css_pc', 'css/pc.css');
+					Ui.removeCss('css_m');
+				} else {
+					Ui.addCss('css_m', 'css/m.css');
+					Ui.removeCss('css_pc');
+				}
+			}
+		}
+	</script>
+
+	<p>반응형 화면 크기에 따라서 css 파일을 동적으로 추가</p>
+<?php
+BLayout::getFooter();
+?>

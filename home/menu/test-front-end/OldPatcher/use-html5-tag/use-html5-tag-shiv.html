@@ -1,0 +1,42 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', '');
+define('B_TITLE', 'use-html5-tag-shiv');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		main,
+		header,
+		footer,
+		nav,
+		aside,
+		section {background: #ccc; border: solid 1px black;}
+	</style>
+
+	<!--[if lte IE 8]>
+	<script src="/_comm_res/js/patch/html5shiv-printshiv.min.js?v=<?=$res_ver?>"></script>
+	<![endif]-->
+	<header>
+		header
+	</header>
+	<nav>
+		nav
+	</nav>
+	<main>
+		main
+	</main>
+	<aside>
+		aside
+	</aside>
+	<footer>
+		footer
+	</footer>
+	<ul>
+		<li>css display 추가 불필요</li>
+		<li>main태그 생성 불필요</li>
+		<li>printshiv는 html5shiv를 포함하면서 프린트 이슈를 추가한 버전</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

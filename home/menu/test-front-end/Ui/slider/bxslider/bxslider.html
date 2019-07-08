@@ -1,0 +1,107 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'bxslider');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+
+	<script src="/_comm_res/js/ui/slider/bxslider/jquery.bxslider.min.js"></script>
+
+	<!--common css-->
+	<style class="code">
+		.bx-wrapper {margin: auto;}
+
+		.bx-controls {text-align: center;}
+
+		.bx-pager-item {display: inline-block;}
+
+		.slider img {width: 100%;}
+	</style>
+
+	<!-- slider1 -->
+	<ul class="slider slider1">
+		<li>
+			<img src="img/img_swipe_hall_01.jpg" alt="">
+		</li>
+		<li>
+			<img src="img/img_swipe_hall_02.jpg" alt="">
+		</li>
+		<li>
+			<img src="img/img_swipe_hall_01.jpg" alt="">
+		</li>
+		<li>
+			<img src="img/img_swipe_hall_02.jpg" alt="">
+		</li>
+	</ul>
+
+	<script class="code">
+		$(".slider1").bxSlider({
+			slideWidth: "300",
+			//auto: true,
+			//maxSlides: 2,
+			//slideWidth: 500,
+			//slideMargin: 10
+		});
+	</script>
+
+	<!-- slider3 -->
+	<ul class="slider slider3">
+		<li>
+			<img src="img/img_swipe_hall_01.jpg" alt="">
+		</li>
+		<li>
+			<img src="img/img_swipe_hall_02.jpg" alt="">
+		</li>
+		<li>
+			<img src="img/img_swipe_hall_01.jpg" alt="">
+		</li>
+		<li>
+			<img src="img/img_swipe_hall_02.jpg" alt="">
+		</li>
+	</ul>
+
+	<script class="code">
+		$(".slider3").bxSlider({
+			auto: true,
+			maxSlides: 3,
+			slideWidth: 200,
+			slideMargin: 10
+		});
+	</script>
+
+	<!-- slider4 -->
+	<style class="code">
+		.slider4_w {width: 300px; margin: auto; height: 200px; overflow: hidden;}
+
+		.slider4_w .bx-wrapper {margin: auto; margin-left: -160px;}
+
+		.slider4_w .bx-controls {text-align: center; margin-left: 160px;}
+	</style>
+
+	<div class="slider4_w">
+		<ul class="slider slider4">
+			<li>
+				<img src="img/img_swipe_hall_02.jpg" alt="">
+			</li>
+			<li>
+				<img src="img/img_swipe_hall_01.jpg" alt="">
+			</li>
+			<li>
+				<img src="img/img_swipe_hall_02.jpg" alt="">
+			</li>
+			<li>
+				<img src="img/img_swipe_hall_01.jpg" alt="">
+			</li>
+		</ul>
+	</div>
+	<script class="code">
+		$(".slider4").bxSlider({
+			slideWidth: 200,
+			maxSlides: 3,
+			slideMargin: 10
+		});
+	</script>
+<?php
+BLayout::getFooter();
+?>

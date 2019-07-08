@@ -1,0 +1,121 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'user-agent');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+<style>
+	body {line-height: 1.6;}
+	span {margin-right: 0.5em;}
+	span:after {content: ' : '}
+</style>
+<script src="/_comm_res/js/UserAgent.js"></script>
+<p style="font-size: 13px;">
+	<script>
+		document.write(navigator.userAgent);
+	</script>
+</p>
+<ul>
+	<li>
+		<span>IOS</span>
+		<script>
+			var v = UserAgent.isIOS();
+			document.write(v);
+		</script>
+	</li>
+</ul>
+<ul>
+	<li>windows
+		<ul>
+			<li>
+				<span>win7</span>
+				<script>
+					var v = UserAgent.isWin7();
+					document.write(v);
+				</script>
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul>
+	<li>browser
+		<ul>
+			<li>
+				<span>chrome</span>
+				<script>
+					var v = UserAgent.isChrome();
+					document.write(v);
+				</script>
+			</li>
+			<li>
+				<span>firefox</span>
+				<script>
+					var v = UserAgent.isFireFox();
+					document.write(v);
+				</script>
+			</li>
+			<li>
+				<span>IE</span>
+				<script>
+					var v = UserAgent.isIE();
+					document.write(v);
+				</script>
+				<ul>
+					<li>
+						<span>IE11</span>
+						<script>
+							var v = UserAgent.isIE11();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE10</span>
+						<script>
+							var v = UserAgent.isIE10();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE9</span>
+						<script>
+							var v = UserAgent.isIE9();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE8</span>
+						<script>
+							var v = UserAgent.isIE8();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE7</span>
+						<script>
+							var v = UserAgent.isIE7();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>IE6</span>
+						<script>
+							var v = UserAgent.isIE6();
+							document.write(v);
+						</script>
+					</li>
+					<li>
+						<span>quirks</span>
+						<script>
+							var v = UserAgent.isQuirks();
+							document.write(v);
+						</script>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<?php
+BLayout::getFooter();
+?>

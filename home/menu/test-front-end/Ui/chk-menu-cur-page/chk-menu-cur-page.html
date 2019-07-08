@@ -1,0 +1,27 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'chk-menu-cur-page');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style class="code">
+		a.on {background: #3baae3;}
+	</style>
+	<nav id="gnb-nav">
+		<a href="chk-menu-cur-page.html">a</a>
+		<a href="x.html">b</a>
+	</nav>
+	<nav id="lnb-nav">
+		<a href="x.html">a</a>
+		<a href="chk-menu-cur-page.html?menu=a">b</a>
+	</nav>
+
+	<script src="/_comm_res/js/Ui.js"></script>
+	<script class="code">
+		Ui.chkMenuCurPage('#gnb-nav');
+		Ui.chkMenuCurPage('#lnb-nav');
+	</script>
+<?php
+BLayout::getFooter();
+?>

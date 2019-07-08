@@ -1,0 +1,28 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'noto');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<link rel="stylesheet" href="/_comm_res/font/noto/noto.css">
+
+	<style class="code">
+		.noto_light {font-family: Noto Light;}
+
+		.noto_regular {font-family: Noto Regular;}
+
+		.noto_medium {font-family: Noto Medium;}
+
+		.noto_bold {font-family: Noto Bold;}
+
+		.cont {font-family: Noto Medium; font-size: 14px;}
+	</style>
+	<p class="noto_light">가나다라 마바사 아자차카 타파하</p>
+	<p class="noto_regular">가나다라 마바사 아자차카 타파하</p>
+	<p class="noto_medium">가나다라 마바사 아자차카 타파하</p>
+	<p class="noto_bold">가나다라 마바사 아자차카 타파하</p>
+	<p class="cont">가나다라 마바사 아자차카 타파하</p>
+<?php
+BLayout::getFooter();
+?>

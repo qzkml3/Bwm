@@ -1,0 +1,41 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'requirejs-final');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+
+	<script src="/_comm_res/js/jquery/jquery-1.8.3.min.js"></script>
+	<script>
+	</script>
+
+	<script src="/_comm_res/js/jquery/jquery-2.2.4.min.js"></script>
+	<script>
+		$(window).on("load", function() {
+			console.log("1 window.load" + $.fn.jquery);
+		});
+		$(document).ready(function() {
+			console.log("1 document.ready" + $.fn.jquery);
+		});
+	</script>
+
+	<script src="js/require.js"></script>
+	<script src="js/require_config.js"></script>
+	<script>
+		require(["common"], function () {
+			console.log("requirejs");
+		});
+	</script>
+
+	<script>
+		$(window).on("load", function() {
+			console.log("2 window.load" + $.fn.jquery);
+		});
+		$(document).ready(function() {
+			console.log("2 document.ready" + $.fn.jquery);
+		});
+	</script>
+<?php
+BLayout::getFooter();
+?>

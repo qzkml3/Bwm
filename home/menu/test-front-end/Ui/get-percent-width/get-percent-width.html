@@ -1,0 +1,34 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'get-percent-width');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<script src="/_comm_res/js/Ui.js"></script>
+	<div class="w" style="width: 300px; background: #fcc;">
+		.w
+	</div>
+	this div width by parent <span></span>
+	<script class="code">
+		$(document).ready(function () {
+			getPercentWidth();
+		});
+
+		function getPercentWidth() {
+			$(document).ready(function() {
+				getPercentWidth_trigger();
+			});
+			$(window).on('resize', function () {
+				getPercentWidth_trigger();
+			});
+			function getPercentWidth_trigger() {
+				var v = Ui.getPercentWidth('.w');
+				$('span').text(v);
+			}
+		}
+
+	</script>
+<?php
+BLayout::getFooter();
+?>

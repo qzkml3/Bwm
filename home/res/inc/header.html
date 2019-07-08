@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<?php BSite::getGaCode(); ?>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+			content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="google-site-verification" content="GCcfpGbiy_0kwnJtQrsY3pMmoJAoL0KeNmzV-6eBCo4">
+	<title><?= BSite::getPageTitle(); ?></title>
+	<meta name="description" content="<?= B_DESC ?>">
+    <?php if (
+        (B_LAYOUT == 'main')
+        || (B_LAYOUT == 'test-front-end-main')
+        || (B_LAYOUT == 'test-front-end-sub')
+        || (B_LAYOUT == 'test-back-end-main')
+        || (B_LAYOUT == 'test-back-end-sub')
+    ) { ?>
+		 <link rel="stylesheet" href="/_comm_res/css/util.css">
+		 <link rel="stylesheet" href="/_comm_res/css/common.css">
+    <?php } ?>
+	<script src="/_comm_res/js/jquery/jquery-1.8.3.min.js"></script>
+	<script src="/_comm_res/js/Debug.js"></script>
+	<script src="/home/res/js/common.js"></script>
+</head>
+<body class="<?= B_LAYOUT ?>">
+<?php if (
+(B_LAYOUT == 'main')
+|| (B_LAYOUT == 'test-front-end-main')
+|| (B_LAYOUT == 'test-front-end-sub')
+|| (B_LAYOUT == 'test-back-end-main')
+||(B_LAYOUT == 'test-back-end-sub')
+) { ?>
+<div id="wrap" class="clfix">
+	<header id="header">
+		<h1 id="logo">
+			<a href="/"><?= B_SITE_NAME ?></a>
+		</h1>
+		<nav id="gnb">
+			<a href="/home/menu/test-front-end">test-front-end</a>
+			<a href="/home/menu/test-back-end">test-back-end</a>
+		</nav>
+		<nav id="mnb">
+			<a href="">로그인</a>
+			|
+			<a href="">회원가입</a>
+		</nav>
+	</header>
+
+	<div id="middle">
+       <?php if (
+       		     (B_LAYOUT == 'test-front-end-main')
+              || (B_LAYOUT == 'test-back-end-main')
+		 		) { ?>
+			 <!--#aside-left-->
+			 <aside id="aside-left" class="page">
+				 <h2>Category</h2>
+				 <ul>
+                 <?php BFile::getFolderList('.'); ?>
+				 </ul>
+			 </aside>
+			 <!--/#aside-left-->
+       <?php } ?>
+
+		<main id="main" class="page">
+			<?php
+			$v = str_replace($_SERVER['SERVER_NAME']
+				 , 'https://github.com/qzkml3/BWM/tree/master'
+				 , $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
+			);
+			?>
+			<a class="view-source" href="<?= $v ?>" target="_blank">view source this page in GiuHub</a>
+          <?php if (
+              (B_LAYOUT == 'main')
+              || (B_LAYOUT == 'test-front-end-main')
+              || (B_LAYOUT == 'test-back-end-main')
+              || (B_LAYOUT == 'test-front-end-sub')
+              || (B_LAYOUT == 'test-back-end-sub')
+          ) { ?>
+				 <h1><?= B_TITLE ?></h1>
+          <?php } ?>
+
+          <?php } ?>

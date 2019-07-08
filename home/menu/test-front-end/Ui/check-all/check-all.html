@@ -1,0 +1,20 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'check-all');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<input type="checkbox" id="chkAll">
+	<hr>
+	<input type="checkbox" class="chk">
+	<input type="checkbox" class="chk">
+	<input type="checkbox" class="chk">
+	<script src="/_comm_res/js/jquery/jquery-1.8.3.min.js"></script>
+	<script src="/_comm_res/js/Ui.js"></script>
+	<script class="code">
+		Ui.chkAll("#chkAll", ".chk");
+	</script>
+<?php
+BLayout::getFooter();
+?>

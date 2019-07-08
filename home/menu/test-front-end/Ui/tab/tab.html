@@ -1,0 +1,31 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'tab');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		.show-first > * {display: none;}
+
+		.show-first > *:first-child {display: block;}
+	</style>
+
+	<div class="tab-btn-w">
+		<a href="">tab-btn</a>
+		<a href="">tab-btn</a>
+		<a href="">tab-btn</a>
+	</div>
+	<div class="tab-cont-w show-first">
+		<div>tab-cont1</div>
+		<div>tab-cont2</div>
+		<div>tab-cont3</div>
+	</div>
+
+	<script src="/_comm_res/js/Ui.js"></script>
+	<script class="code">
+		Ui.tab('.tab-btn-w', '.tab-cont-w');
+	</script>
+<?php
+BLayout::getFooter();
+?>

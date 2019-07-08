@@ -1,0 +1,15 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'to-money');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<script src="/_comm_res/js/StringUtil.js"></script>
+	<script class="code">
+		var v = StringUtil.toMoney("33333333");
+		document.write(v);
+	</script>
+<?php
+BLayout::getFooter();
+?>

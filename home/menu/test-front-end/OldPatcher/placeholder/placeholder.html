@@ -1,0 +1,21 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'placeholder');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<input type="text" placeholder="placehoder">
+	<script src="/_comm_res/js/UserAgent.js"></script>
+	<script src="/_comm_res/js/Ui.js"></script>
+	<script src="/_comm_res/js/patch/OldPatcher.js"></script>
+	<script class="code">
+		OldPatcher.setPlaceholder();
+	</script>
+
+	<ul>
+		<li>ie8 에서의 placeholder사용</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

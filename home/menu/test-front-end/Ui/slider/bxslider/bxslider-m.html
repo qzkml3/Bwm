@@ -1,0 +1,60 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', 'bxslider-m');
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<script src="/_comm_res/js/ui/slider/bxslider/jquery.bxslider.min.js"></script>
+
+	<!-- common css -->
+	<style class="code">
+		.bx-wrapper {margin: auto;}
+		.bx-controls {text-align: center;}
+		.bx-pager-item {display: inline-block;}
+		.slider li {text-align: center;}
+		.slider img {width: 100%;}
+	</style>
+
+	<!-- slider2 -->
+	<style class="code">
+		.slider2_w {width: 90%; margin: auto;}
+	</style>
+	<div class="slider2_w">
+		<ul class="slider slider2">
+			<li><img src="img/img_swipe_hall_01.jpg" alt=""></li>
+			<li><img src="img/img_swipe_hall_02.jpg" alt=""></li>
+			<li><img src="img/img_swipe_hall_01.jpg" alt=""></li>
+			<li><img src="img/img_swipe_hall_02.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<script class="code">
+		$(".slider2").bxSlider({
+			auto: true,
+			slideWidth: 400,
+			minSlides: 2,
+			maxSlides: 2,
+			slideMargin: 10
+		});
+	</script>
+
+	<!-- slider1 -->
+	<style class="code">
+		.slider1_w {width: 90%; margin: auto;}
+	</style>
+	<div class="slider1_w">
+		<ul class="slider slider1">
+			<li><img src="img/img_swipe_hall_01.jpg" alt=""></li>
+			<li><img src="img/img_swipe_hall_02.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<script class="code">
+		$(".slider1").bxSlider({
+			auto: true
+		});
+	</script>
+<?php
+BLayout::getFooter();
+?>
