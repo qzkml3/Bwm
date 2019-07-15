@@ -1,0 +1,76 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<div>
+		<section>
+			<?php $v = 'btn_init' ?>
+			<h2><?= $v ?></h2>
+			<a class="<?= $v ?>" href="">Button</a>
+			<button class="<?= $v ?>" type="button">Button</button>
+		</section>
+		<section>
+			<?php $v = 'btn_init radius' ?>
+			<h2><?= $v ?></h2>
+			<a class="<?= $v ?>" href="">Button</a>
+			<button class="<?= $v ?>" type="button">Button</button>
+		</section>
+		<section>
+			<?php $v = 'btn_init round' ?>
+			<h2><?= $v ?></h2>
+			<a class="<?= $v ?>" href="">Button</a>
+			<button class="<?= $v ?>" type="button">Button</button>
+		</section>
+		<section>
+			<h2>width</h2>
+			<ul>
+				<li>
+					<?php $v = 'btn_init pad' ?>
+					<h3><?= $v ?></h3>
+					<a class="<?= $v ?>" href="">Button</a>
+					<button class="<?= $v ?>" type="button">Button</button>
+				</li>
+				<li>
+					<?php $v = 'btn_init pad2' ?>
+					<h3><?= $v ?></h3>
+					<a class="<?= $v ?>" href="">Button</a>
+					<button class="<?= $v ?>" type="button">Button</button>
+				</li>
+				<li>
+					<?php $v = 'btn_init pad3' ?>
+					<h3><?= $v ?></h3>
+					<a class="<?= $v ?>" href="">Button</a>
+					<button class="<?= $v ?>" type="button">Button</button>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>min_width</h2>
+			<ul>
+				<li>
+					<?php $v = 'btn_init min_width' ?>
+					<h3><?= $v ?></h3>
+					<a class="<?= $v ?>" href="">Button</a>
+					<button class="<?= $v ?>" type="button">Button</button>
+				</li>
+				<li>
+					<?php $v = 'btn_init min_width2' ?>
+					<h3><?= $v ?></h3>
+					<a class="<?= $v ?>" href="">Button</a>
+					<button class="<?= $v ?>" type="button">Button</button>
+				</li>
+				<li>
+					<?php $v = 'btn_init min_width3' ?>
+					<h3><?= $v ?></h3>
+					<a class="<?= $v ?>" href="">Button</a>
+					<button class="<?= $v ?>" type="button">Button</button>
+				</li>
+			</ul>
+		</section>
+	</div>
+<?php
+BLayout::getFooter();
+?>

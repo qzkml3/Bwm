@@ -61,3 +61,11 @@ input[type="text"], input[type="password"], input[type="tel"], textarea
 
 /* check radio */
 input[type="checkbox"], input[type="radio"] {}
+
+/* patch old browser */
+main,
+header,
+footer,
+nav,
+aside,
+section {display: block; margin: 0;}

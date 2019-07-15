@@ -16,6 +16,7 @@
 		}
 		
 		static function loadCommSiteClass() {
+			require_once $_SERVER['DOCUMENT_ROOT'] . '/_comm_res/class/string/StrUtil.php';
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/_comm_res/class/BDate.php';
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/_comm_res/class/BFile.php';
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/_comm_res/class/BPage.php';

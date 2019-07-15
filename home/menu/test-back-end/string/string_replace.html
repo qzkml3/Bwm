@@ -1,0 +1,24 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-back-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+
+	<h2>str_replace</h2>
+<?php
+$v = 'xaxbxcx';
+$v = str_replace('x', '', $v);
+echo $v;
+?>
+
+	<h2>replaceStrFirst</h2>
+<?php
+$v = 'xaxbxcx';
+$v = StrUtil::replaceStrFirst('x', '', $v);
+echo $v;
+?>
+
+<?php
+BLayout::getFooter();
+?>

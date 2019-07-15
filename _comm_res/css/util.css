@@ -1,14 +1,28 @@
 html {overflow-y: scroll;}
 
 body {
-	font-family: malgun gothic, arial, sans-serif; text-shadow: #ccc 1px 1px 1px;
-	color: #333; font-size: 100%; line-height: 1.5;
-	margin: 0; background: #eee;
+	font-family: malgun gothic, arial;
+	color: #333; font-size: 100%; line-height: 1.6;
+	margin: 0;
 	word-break: keep-all; word-wrap: break-word;
 }
 
-a {color: #0089d6; text-decoration: none;}
-a:hover {text-decoration: underline;}
+.btn_init {background: white; border: solid 1px #ccc;
+	font-size: 16px; line-height: 1.6em;
+	display: inline-block; vertical-align: middle; padding: 0 0.5em;
+	cursor: pointer; text-align: center; box-sizing: border-box;
+}
+
+button.radius, a.radius { border-radius: 0.3em;}
+button.round, a.round { border-radius: 100px;}
+button.pad, a.pad { padding: 0 1em;}
+button.pad2, a.pad2 { padding: 0 2em;}
+button.pad3, a.pad3 { padding: 0 3em;}
+button.min_width, a.min_width { min-width: 5em;}
+button.min_width2, a.min_width2 { min-width: 10em;}
+button.min_width3, a.min_width3 { min-width: 15em;}
+
+button { font-family: inherit; font-size: inherit;} /*font inherit*/
 
 h1 {font-size: 2em; margin: 0.5em 0;}
 h2 {font-size: 1.4em; margin: 2em 0 0.5em;}
@@ -20,15 +34,9 @@ h6 {font-size: 1.0em; margin: 2em 0 0.5em;}
 p {margin: 2em 0; line-height: 2;}
 
 ul {margin: 2em 0; padding: 0 0 0 1.5em;}
-li {margin: 1em 0;}
+	li {margin: 1em 0;}
 
-/* patch old browser */
-main,
-header,
-footer,
-nav,
-aside,
-section {display: block; margin: 0;}
+main { display: block;} /*patch IE*/
 
 @media (max-width: 800px) {
 	h1 {font-size: 1.5em;}

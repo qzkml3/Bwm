@@ -1,0 +1,23 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-back-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<div>
+		asdfs
+	</div>
+
+<?php
+
+$v = '';
+echo '<br>' . $v;
+$v = StrUtil::addStr(', ', 'a', $v);
+$v = StrUtil::addStr(', ', 'a', $v);
+echo '<br>' . $v;
+$v = StrUtil::replaceStrFirst(', ', '' , $v);
+echo '<br>' . $v;
+?>
+<?php
+BLayout::getFooter();
+?>
