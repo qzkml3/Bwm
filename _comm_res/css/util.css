@@ -53,3 +53,7 @@ main { display: block;} /*patch IE*/
 	background: #eee; display: block; /*border: solid 1px #ddd;*/ overflow-x: auto; box-sizing: border-box;
 	margin: 1em 0;
 }
+
+.ime_active { -webkit-ime-mode: active; -moz-ime-mode: active; ime-mode: active;}
+.ime_inactive { -webkit-ime-mode: inactive; -moz-ime-mode: inactive; ime-mode: inactive;}
+.ime_disabled { -webkit-ime-mode: disabled; -moz-ime-mode: disabled; ime-mode: disabled;}

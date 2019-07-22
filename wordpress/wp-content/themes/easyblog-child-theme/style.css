@@ -44,6 +44,7 @@ body {
 	color: #555; font-size: 24px; font-weight: bold;
 	border-bottom: 1px solid #ddd;
 }
+.entry-content h2::before {content: '#2 ';}
 
 .entry-content p {
 	margin: 1em 0 2em;
@@ -72,3 +73,6 @@ body {
 .entry-footer {
 	margin-top:30px;
 }
+
+/*crayon editor */
+.crayon-main * { font-family: "Ubuntu Mono", "Malgun Gothic" !important;}
