@@ -1,0 +1,18 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', '');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<div>
+		<style>
+			img {position: absolute; top:0; bottom: 0; left: 0;right: 0; width: 50%; margin: auto;}
+		</style>
+
+		<img src="/_comm_res/img/ex/horizontal-img.jpg" alt="">
+
+	</div>
+<?php
+BLayout::getFooter();
+?>

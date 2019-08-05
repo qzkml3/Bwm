@@ -22,7 +22,10 @@ button.min_width, a.min_width { min-width: 5em;}
 button.min_width2, a.min_width2 { min-width: 10em;}
 button.min_width3, a.min_width3 { min-width: 15em;}
 
-button { font-family: inherit; font-size: inherit;} /*font inherit*/
+button
+, input[type="submit"]
+, input[type="reset"]
+{ font-family: inherit; font-size: inherit; cursor: pointer;} /*font inherit*/
 
 h1 {font-size: 2em; margin: 0.5em 0;}
 h2 {font-size: 1.4em; margin: 2em 0 0.5em;}
@@ -57,3 +60,9 @@ main { display: block;} /*patch IE*/
 .ime_active { -webkit-ime-mode: active; -moz-ime-mode: active; ime-mode: active;}
 .ime_inactive { -webkit-ime-mode: inactive; -moz-ime-mode: inactive; ime-mode: inactive;}
 .ime_disabled { -webkit-ime-mode: disabled; -moz-ime-mode: disabled; ime-mode: disabled;}
+
+.vspace {margin-top: 1em; margin-bottom: 1em;}
+.vspace2 {margin-top: 2em; margin-bottom: 2em;}
+
+.align_center {text-align: center;}
+

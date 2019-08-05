@@ -1,0 +1,26 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset])
+{width: 50px; height: 50px;}
+
+	</style>
+	<section>
+		<h2></h2>
+		<ul>
+			<li><input type="text"></li>
+			<li><input type="checkbox"></li>
+			<li><input type="radio"></li>
+			<li><input type="button" value="버튼"></li>
+			<li><input type="submit"></li>
+			<li><input type="reset"></li>
+		</ul>
+	</section>
+<?php
+BLayout::getFooter();
+?>

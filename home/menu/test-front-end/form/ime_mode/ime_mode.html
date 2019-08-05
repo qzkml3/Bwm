@@ -4,15 +4,25 @@ define('B_LAYOUT', 'test-front-end-sub');
 define('B_TITLE', BPage::getTitleByFileName());
 define('B_DESC', '');
 BLayout::getHeader();
+$i = 0;
 ?>
 	<section>
-		<p>익스에서만 지원됨 (크롬, 파폭은 예전엔 지원한거 같지만 지금은 prefix 써도 안됨)</p>
-		<h2>기본한글 <?php echo $v = 'ime_active'?></h2>
-		<input type="text" class="<?=$v?>" pattern="[a-c]">
-		<h2>기본영문 <?php echo $v = 'ime_inactive'?></h2>
-		<input type="text" class="<?=$v?>">
-		<h2>영문만 <?php echo $v = 'ime_disabled';?></h2>
-		<input type="text" class="<?=$v?>">
+		<form action="">
+			<p>익스에서만 지원됨 (크롬, 파폭은 예전엔 지원한거 같지만 지금은 prefix 써도 안됨)</p>
+			<h2>기본한글 <?php echo $v = 'ime_active' ?></h2>
+			<input name="<?=++$i?>" type="text" class="<?= $v ?>">
+
+			<h2>기본한글 <?php echo $v = 'ime_active' ?></h2>
+			<input name="<?=++$i?>" type="password" class="<?= $v ?>">
+
+			<h2>기본영문 <?php echo $v = 'ime_inactive' ?></h2>
+			<input name="<?=++$i?>" type="text" class="<?= $v ?>">
+
+			<h2>영문만 <?php echo $v = 'ime_disabled'; ?></h2>
+			<input name="<?=++$i?>" type="text" class="<?= $v ?>">
+
+			<div class="vspace2"><input type="submit"></div>
+		</form>
 	</section>
 <?php
 BLayout::getFooter();

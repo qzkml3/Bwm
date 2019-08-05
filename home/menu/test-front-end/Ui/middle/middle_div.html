@@ -1,0 +1,21 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', '');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<div>
+		<style>
+			.div {position: absolute; top:0; bottom: 0; left: 0;right: 0; width: 50%; margin: auto;
+				 background: gray; height: 20%;
+			}
+
+		</style>
+
+		<div class="div">div</div>
+
+	</div>
+<?php
+BLayout::getFooter();
+?>
