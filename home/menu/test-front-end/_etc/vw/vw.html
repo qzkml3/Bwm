@@ -1,1 +1,19 @@
-가나다라
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		.p {font-size: 5vw;}
+	</style>
+	<section>
+		<p class="p">가나다</p>
+		<ul>
+			<li>IE9까지 잘먹음</li>
+		</ul>
+	</section>
+<?php
+BLayout::getFooter();
+?>
