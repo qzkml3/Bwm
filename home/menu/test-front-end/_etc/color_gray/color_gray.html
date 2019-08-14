@@ -1,0 +1,18 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<?php $v = "silver"; ?>
+	<div style=" background: <?=$v?>"><?=$v?></div>
+	<?php $v = "gray"; ?>
+	<div style=" background: <?=$v?>"><?=$v?></div>
+	<?php $v = "dimgray"; ?>
+	<div style=" background: <?=$v?>"><?=$v?></div>
+	<?php $v = "black"; ?>
+	<div style=" background: <?=$v?>"><?=$v?></div>
+<?php
+BLayout::getFooter();
+?>
