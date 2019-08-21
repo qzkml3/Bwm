@@ -1,0 +1,28 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<button class="btn" type="button">add child</button>
+
+	<div class="p">
+
+	</div>
+
+	<script>
+		$('.btn').on('click', function () {
+			$('.p').append($('#temp_child').html());
+		});
+
+		$('body').on('click', '.child', function() {
+			alert(1);
+		});
+	</script>
+
+	<script id="temp_child">
+		<div class="child">child</div>
+	</script>
+<?php
+BLayout::getFooter();
+?>
