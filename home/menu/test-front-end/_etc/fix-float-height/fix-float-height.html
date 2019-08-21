@@ -1,0 +1,47 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<style>
+		.ul { overflow: hidden;}
+		.ul > li { background: #eee; margin: 10px; float: left;}
+	</style>
+
+	<div>
+		<ul class="ul list_unstyled">
+			<li>asdfasdf</li>
+			<li>asdfasd<br>f</li>
+			<li>asdfasd<br>f<br>f<br>f</li>
+		</ul>
+	</div>
+
+
+	<script>
+		$(document).ready(function () {
+			fixFloatHeight('.ul > li', 130);
+		});
+
+		function fixFloatHeight(sel, percent) {
+			fixFloatHeight_trigger(sel, percent);
+
+			$(window).load(function () {
+				fixFloatHeight_trigger(sel, percent);
+			});
+
+			$(window).resize(function () {
+				fixFloatHeight_trigger(sel, percent);
+			});
+
+			function fixFloatHeight_trigger(sel, percent) {
+				$(sel).each(function () {
+					var v = $(this).width() * percent / 100;
+					$(sel).height(v);
+				});
+			}
+		}
+	</script>
+<?php
+BLayout::getFooter();
+?>

@@ -66,3 +66,4 @@ main { display: block;} /*patch IE*/
 
 .align_center {text-align: center;}
 
+.list_unstyled li { list-style: none;}
