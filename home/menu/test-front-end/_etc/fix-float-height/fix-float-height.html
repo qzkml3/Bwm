@@ -6,7 +6,7 @@ BLayout::getHeader();
 ?>
 	<style>
 		.ul { overflow: hidden;}
-		.ul > li { background: #eee; margin: 10px; float: left;}
+		.ul > li { background: #eee; margin: 10px; float: left; position: relative; left: -99999px;}
 	</style>
 
 	<div>
@@ -39,6 +39,7 @@ BLayout::getHeader();
 					var v = $(this).width() * percent / 100;
 					$(sel).height(v);
 				});
+				$(sel).css('left', 0);
 			}
 		}
 	</script>
