@@ -1,6 +1,6 @@
 require.config({
 	paths: {
-		"jquery": "/_comm_res/js/jquery/jquery-1.8.3.min",
+		"jquery": "/comm_res/js/jquery/jquery-1.8.3.min",
 		"common": "/home/res/js/common",
         "inner": "/home/menu/test-front-end/language/js/requirejs/js/inner",
         "inner2": "/home/menu/test-front-end/language/js/requirejs/js/inner2",
