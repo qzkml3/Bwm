@@ -1,0 +1,23 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre-proc-home.php';
+define('B_LAYOUT', 'test-front-end-sub');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<style>
+		@media (max-width: 300px) {
+			.div {background: #eee;}
+		}
+		@media (min-width: 300px) {
+			.div {background: #def;}
+		}
+	</style>
+	<section>
+		<div class="div">div</div>
+	</section>
+	<ul>
+		<li>이렇게 중첩되게 쓰면 아래것이 탄다...</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>
