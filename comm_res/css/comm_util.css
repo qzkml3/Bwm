@@ -9,13 +9,14 @@ body {
 /*font*/
 .font_12 { font-size: 12px;}
 
-/*button*/
+/*btn*/
 .btn_init { background: #ddd; color: #222; border: none; text-align: center;
 	line-height: 2em; height: 2em; display: inline-block; padding: 0 .5em; vertical-align: middle;
 	cursor: pointer;  box-sizing: border-box;
 	text-shadow: inherit; font-size: inherit; font-family: inherit;
 }
 
+/*btn_size*/
 .btn_small { font-size: 14px !important;}
 .btn_small2 { font-size: 12px !important;}
 .btn_big { font-size: 18px !important;}
