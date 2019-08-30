@@ -6,6 +6,9 @@ define('B_DESC', '');
 BLayout::getHeader();
 ?>
 	<style>
+		.font_big { font-size: 1.5em;}
+		.font_big2 { font-size: 2.0em;}
+		.font_big2_5 { font-size: 2.5em;}
 		/*#main p {font-size: 40px;}*/
 		/*body {font-size: 40px;}*/
 		.xx_large {font-size: xx-large !important;}
@@ -17,6 +20,33 @@ BLayout::getHeader();
 		.x_small {font-size: x-small !important;}
 		.xx_small {font-size: xx-small !important;}
 	</style>
+
+	<section style="font-size: 16px;">
+		large
+		<span class="font_big">large</span>
+		<span class="font_big2">large</span>
+		<span class="font_big2_5">large</span>
+	</section>
+
+	<section style="font-size: 50px;">
+		large
+		<span class="font_big">large</span>
+		<span class="font_big2">large</span>
+		<span class="font_big2_5">large</span>
+	</section>
+
+	<section style="font-size: 50px;">
+		large <span class="xx_large">xx_large</span>
+		 <span class="x_large">x_large</span>
+		 <span class="larger">larger</span>
+		 <span class="large">large</span>
+	</section>
+
+	<ul>
+		<li>해당 태그에 font-size 적용시 절대값이 적용됨.</li>
+		<li>부모태그에 태그에 적용시 smaller lager만 상대값이 적용됨.</li>
+	</ul>
+
 	<p class="xx_large">abc : xx-large</p>
 	<p class="x_large">abc : x-large</p>
 	<p class="larger">abc : larger</p>
@@ -28,11 +58,6 @@ BLayout::getHeader();
 	<p class="small">abc : small</p>
 	<p class="x_small">abc : x-small</p>
 	<p class="xx_small">abc : xx-small</p>
-
-	<ul>
-		<li>해당 태그에 font-size 적용시 절대값이 적용됨.</li>
-		<li>부모태그에 태그에 적용시 smaller lager만 상대값이 적용됨.</li>
-	</ul>
 <?php
 BLayout::getFooter();
 ?>
