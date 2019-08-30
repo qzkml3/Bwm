@@ -10,7 +10,7 @@ body {
 .font_12 { font-size: 12px;}
 /*button*/
 .btn_init { background: #ddd; color: #222; border: none; text-align: center;
-	line-height: 2em; display: inline-block; padding: 0 .5em;
+	line-height: 2em; height: 2em; display: inline-block; padding: 0 .5em; vertical-align: middle;
 	cursor: pointer;  box-sizing: border-box; text-shadow: inherit;
 }
 
