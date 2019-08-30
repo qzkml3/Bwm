@@ -5,72 +5,95 @@ define('B_TITLE', BPage::getTitleByFileName());
 define('B_DESC', '');
 BLayout::getHeader();
 ?>
-	<div>
+	<style>
+		body {line-height: 1.6;}
+	</style>
+	<section>
+		<!--btn_init-->
 		<section>
-			<?php $v = 'btn_init' ?>
-			<h2><?= $v ?></h2>
-			<a class="<?= $v ?>" href="">Button</a>
-			<button class="<?= $v ?>" type="button">Button</button>
+			<h2>btn_init</h2>
+			<a class="btn_init" href="">Button</a>
+			<button class="btn_init" type="button">Button</button> 가나다
 		</section>
+
+		<!--btn_size-->
+		<!--btn_small-->
 		<section>
-			<?php $v = 'btn_init radius' ?>
-			<h2><?= $v ?></h2>
-			<a class="<?= $v ?>" href="">Button</a>
-			<button class="<?= $v ?>" type="button">Button</button>
+			<h2>btn_small</h2>
+			<a class="btn_init btn_small" href="">Button</a>
+			<button class="btn_init btn_small" type="button">Button</button> 가나다
 		</section>
+		<!--btn_small-->
+		<section class="font_12">
+			<h2>btn_small</h2>
+			<a class="btn_init btn_small" href="">Button</a>
+			<button class="btn_init btn_small" type="button">Button</button> 가나다
+		</section>
+		<!--btn_small-->
+		<section class="font_12">
+			<h2>btn_small</h2>
+			<a class="btn_init" href="">Button</a>
+			<button class="btn_init" type="button">Button</button> 가나다
+		</section>
+		<!--btn_big-->
 		<section>
-			<?php $v = 'btn_init round' ?>
-			<h2><?= $v ?></h2>
-			<a class="<?= $v ?>" href="">Button</a>
-			<button class="<?= $v ?>" type="button">Button</button>
+			<h2>btn_big</h2>
+			<a class="btn_init btn_big" href="">Button</a>
+			<button class="btn_init btn_big" type="button">Button</button>
 		</section>
+		<!--btn_full-->
 		<section>
-			<h2>width</h2>
-			<ul>
-				<li>
-					<?php $v = 'btn_init pad' ?>
-					<h3><?= $v ?></h3>
-					<a class="<?= $v ?>" href="">Button</a>
-					<button class="<?= $v ?>" type="button">Button</button>
-				</li>
-				<li>
-					<?php $v = 'btn_init pad2' ?>
-					<h3><?= $v ?></h3>
-					<a class="<?= $v ?>" href="">Button</a>
-					<button class="<?= $v ?>" type="button">Button</button>
-				</li>
-				<li>
-					<?php $v = 'btn_init pad3' ?>
-					<h3><?= $v ?></h3>
-					<a class="<?= $v ?>" href="">Button</a>
-					<button class="<?= $v ?>" type="button">Button</button>
-				</li>
-			</ul>
+			<h2>btn_full</h2>
+			<a class="btn_init btn_full" href="">Button</a>
+			<button class="btn_init btn_full" type="button">Button</button>
 		</section>
+
+		<!--btn_radius-->
+		<!--btn_radius-->
 		<section>
-			<h2>min_width</h2>
-			<ul>
-				<li>
-					<?php $v = 'btn_init min_width' ?>
-					<h3><?= $v ?></h3>
-					<a class="<?= $v ?>" href="">Button</a>
-					<button class="<?= $v ?>" type="button">Button</button>
-				</li>
-				<li>
-					<?php $v = 'btn_init min_width2' ?>
-					<h3><?= $v ?></h3>
-					<a class="<?= $v ?>" href="">Button</a>
-					<button class="<?= $v ?>" type="button">Button</button>
-				</li>
-				<li>
-					<?php $v = 'btn_init min_width3' ?>
-					<h3><?= $v ?></h3>
-					<a class="<?= $v ?>" href="">Button</a>
-					<button class="<?= $v ?>" type="button">Button</button>
-				</li>
-			</ul>
+			<h2>btn_radius</h2>
+			<a class="btn_init btn_radius" href="">Button</a>
+			<button class="btn_init btn_radius" type="button">Button</button>
 		</section>
-	</div>
+		<!--btn_round-->
+		<section>
+			<h2>btn_round</h2>
+			<a class="btn_init btn_round" href="">Button</a>
+			<button class="btn_init btn_round" type="button">Button</button>
+		</section>
+
+		<!--btn_width-->
+		<!--btn_width6-->
+		<section>
+			<h2>btn_width6</h2>
+			<a class="btn_init btn_width6" href="">Button</a>
+			<button class="btn_init btn_width6" type="button">Button</button>
+		</section>
+		<!--btn_width8-->
+		<section>
+			<h2>btn_width8</h2>
+			<a class="btn_init btn_width8" href="">Button</a>
+			<button class="btn_init btn_width8" type="button">Button</button>
+		</section>
+		<!--btn_width10-->
+		<section>
+			<h2>btn_width10</h2>
+			<a class="btn_init btn_width10" href="">Button</a>
+			<button class="btn_init btn_width10" type="button">Button</button>
+		</section>
+		<!--btn_width12-->
+		<section>
+			<h2>btn_width12</h2>
+			<a class="btn_init btn_width12" href="">Button</a>
+			<button class="btn_init btn_width12" type="button">Button</button>
+		</section>
+		<!--custom-->
+		<section>
+			<h2>custom</h2>
+			<a class="btn_init btn_width12 btn_big btn_raduus" href="">Button</a>
+			<button class="btn_init btn_width12 btn_big btn_round" type="button">Button</button>
+		</section>
+	</section>
 <?php
 BLayout::getFooter();
 ?>

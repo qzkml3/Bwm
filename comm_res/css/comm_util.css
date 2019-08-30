@@ -6,20 +6,25 @@ body {
 	margin: 0;
 }
 
-.btn_init {background: white; border: solid 1px #ccc;
-	font-size: 16px; line-height: 1.6em;
-	display: inline-block; vertical-align: middle; padding: 0 0.5em;
-	cursor: pointer; text-align: center; box-sizing: border-box;
+/*font*/
+.font_12 { font-size: 12px;}
+/*button*/
+.btn_init { background: #ddd; color: #222; border: none; text-align: center;
+	line-height: 2em; display: inline-block; padding: 0 .5em;
+	cursor: pointer;  box-sizing: border-box; text-shadow: inherit;
 }
 
-button.radius, a.radius { border-radius: 0.3em;}
-button.round, a.round { border-radius: 100px;}
-button.pad, a.pad { padding: 0 1em;}
-button.pad2, a.pad2 { padding: 0 2em;}
-button.pad3, a.pad3 { padding: 0 3em;}
-button.min_width, a.min_width { min-width: 5em;}
-button.min_width2, a.min_width2 { min-width: 10em;}
-button.min_width3, a.min_width3 { min-width: 15em;}
+.btn_big { font-size: 1.4em;}
+.btn_small { font-size: .8em;}
+
+.btn_radius { border-radius: 0.3em;}
+.btn_round { border-radius: 100px;}
+.btn_full { width: 100%;}
+
+.btn_width6 { width: 6em;}
+.btn_width8 { width: 8em;}
+.btn_width10 { width: 10em;}
+.btn_width12 { width: 12em;}
 
 button
 , input[type="submit"]
