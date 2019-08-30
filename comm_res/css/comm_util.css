@@ -17,10 +17,8 @@ body {
 }
 
 /*btn_size*/
-.btn_small { font-size: 14px !important;}
-.btn_small2 { font-size: 12px !important;}
-.btn_big { font-size: 18px !important;}
-.btn_big2 { font-size: 20px !important;}
+.btn_small { font-size: 12px !important;}
+.btn_big { font-size: 24px !important;}
 
 .btn_radius { border-radius: 0.3em;}
 .btn_round { border-radius: 100px;}
