@@ -8,6 +8,7 @@ body {
 
 /*font*/
 .font_12 { font-size: 12px;}
+
 /*button*/
 .btn_init { background: #ddd; color: #222; border: none; text-align: center;
 	line-height: 2em; height: 2em; display: inline-block; padding: 0 .5em; vertical-align: middle;
@@ -26,11 +27,7 @@ body {
 .btn_width10 { width: 10em;}
 .btn_width12 { width: 12em;}
 
-button
-, input[type="submit"]
-, input[type="reset"]
-{ font-family: inherit; font-size: inherit; cursor: pointer;} /*font inherit*/
-
+/*title todo move theme*/
 h1 {font-size: 2em; margin: 0.5em 0;}
 h2 {font-size: 1.4em; margin: 2em 0 0.5em;}
 h3 {font-size: 1.2em; margin: 2em 0 0.5em;}
