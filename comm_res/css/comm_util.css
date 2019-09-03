@@ -15,6 +15,7 @@ body {
 	cursor: pointer;  box-sizing: border-box;
 	text-shadow: inherit; font-size: inherit; font-family: inherit;
 }
+.btn_init:hover { text-decoration: none;}
 
 /*btn_size*/
 .btn_small { font-size: 12px !important;}

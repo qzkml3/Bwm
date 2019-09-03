@@ -47,7 +47,6 @@ a:hover {text-decoration: underline;}
 /*footer*/
 #footer { position: relative; overflow: hidden; width: 78%; box-sizing: border-box;}
 #footer:after { content: ""; clear: both; display: table; }
-
 .main #footer
 , .sub_test_front_end #footer
 , .sub_test_back_end #footer
@@ -56,23 +55,13 @@ a:hover {text-decoration: underline;}
 .main_test_front_end #footer
 , .main_test_back_end #footer
 {float: right;}
-
-/**/
+/*address*/
 #address { float: left; }
+/*family*/
 #family {float: right;}
-
-@media (max-width: 1000px) {
-	body {margin-bottom: 20px;}
-	.page { margin: 0 0 20px;}
-	#logo {float: none;}
-	#gnb {margin: 20px 0 30px 0px;}
-	#gnb a {margin-left: 10px;}
-	#main {float: none !important; width: auto !important;}
-	#aside-left, #aside-right
-	{float: none !important; width: auto !important; padding: 4% !important;}
-	#footer {width: 100%;}
-}
 
 .view-source {position: absolute; top: 10px; right: 15px; font-size: 13px;}
 
-.page_style {}
+.page_style h2 { margin: 2em 0 1em; padding: 0 0 .5em;
+	border-bottom: solid 1px #ccc;
+}
