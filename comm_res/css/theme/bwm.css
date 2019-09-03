@@ -1,3 +1,9 @@
+@charset "UTF-8";
+/*
+//color
+color_pri: #;
+color_sec: #;
+*/
 body { margin: 0 4% 4%; text-shadow: #ccc 1px 1px 1px; background: #eee;}
 
 a {color: #0089d6; text-decoration: none;}
