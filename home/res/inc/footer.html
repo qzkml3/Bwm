@@ -1,18 +1,18 @@
 <?php
 if (
-	 (B_LAYOUT == 'main')
-	 || (B_LAYOUT == 'test-front-end-main')
-	 || (B_LAYOUT == 'test-back-end-main')
-	 || (B_LAYOUT == 'test-front-end-sub')
-	 || (B_LAYOUT == 'test-back-end-sub')
+	(B_LAYOUT == 'main')
+	|| (B_LAYOUT == 'test-front-end-main')
+	|| (B_LAYOUT == 'test-back-end-main')
+	|| (B_LAYOUT == 'test-front-end-sub')
+	|| (B_LAYOUT == 'test-back-end-sub')
 ) { ?>
 	</main>
 
 	<?php
 	if (
-		 (B_LAYOUT == 'main')
-		 || (B_LAYOUT == 'test-front-end-sub')
-		 || (B_LAYOUT == 'test-back-end-sub')
+		(B_LAYOUT == 'main')
+		|| (B_LAYOUT == 'test-front-end-sub')
+		|| (B_LAYOUT == 'test-back-end-sub')
 	) { ?>
 		<!--#aside-right-->
 		<aside id="aside-right" class="page">
@@ -41,7 +41,7 @@ if (
 		</aside>
 		<!--/#aside-right-->
 	<?php } ?>
-	</div>
+	</section>
 	<!--/#middle-->
 
 	<!--#footer-->
@@ -54,7 +54,7 @@ if (
 	</footer>
 	<!--/#footer-->
 
-	</div>
+	</section>
 	<!--/#wrap-->
 <?php } ?>
 <?php BSite::getNaCode(); ?>

@@ -22,8 +22,8 @@ section {margin: 3em 0;}
 #mnb {float: right; padding: 10px 0; font-size: 14px;}
 #mnb a {position: relative;}
 /**/
-#middle {}
-#middle:after { content: ""; clear: both; display: table; }
+#container {}
+#container:after { content: ""; clear: both; display: table; }
 /*main*/
 #main { box-sizing: border-box; width: 78%; position: relative;}
 body.main #main
