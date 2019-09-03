@@ -1,18 +1,18 @@
 <?php
 if (
 	(B_LAYOUT == 'main')
-	|| (B_LAYOUT == 'test-front-end-main')
-	|| (B_LAYOUT == 'test-back-end-main')
-	|| (B_LAYOUT == 'test-front-end-sub')
-	|| (B_LAYOUT == 'test-back-end-sub')
+	|| (B_LAYOUT == 'main_test_front_end')
+	|| (B_LAYOUT == 'main_test_back_end')
+	|| (B_LAYOUT == 'sub_test_front_end')
+	|| (B_LAYOUT == 'sub_test_back_end')
 ) { ?>
 	</main>
 
 	<?php
 	if (
 		(B_LAYOUT == 'main')
-		|| (B_LAYOUT == 'test-front-end-sub')
-		|| (B_LAYOUT == 'test-back-end-sub')
+		|| (B_LAYOUT == 'sub_test_front_end')
+		|| (B_LAYOUT == 'sub_test_back_end')
 	) { ?>
 		<!--#aside-right-->
 		<aside id="aside-right" class="page">

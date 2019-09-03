@@ -11,10 +11,10 @@
 	<meta name="description" content="<?= B_DESC ?>">
     <?php if (
         (B_LAYOUT == 'main')
-        || (B_LAYOUT == 'test-front-end-main')
-        || (B_LAYOUT == 'test-front-end-sub')
-        || (B_LAYOUT == 'test-back-end-main')
-        || (B_LAYOUT == 'test-back-end-sub')
+        || (B_LAYOUT == 'main_test_front_end')
+        || (B_LAYOUT == 'sub_test_front_end')
+        || (B_LAYOUT == 'main_test_back_end')
+        || (B_LAYOUT == 'sub_test_back_end')
     ) { ?>
 		 <link rel="stylesheet" href="/comm_res/css/comm_util.css">
 		 <link rel="stylesheet" href="/comm_res/css/theme/bwm.css">
@@ -26,10 +26,10 @@
 <body class="<?= B_LAYOUT ?>">
 <?php if (
 (B_LAYOUT == 'main')
-|| (B_LAYOUT == 'test-front-end-main')
-|| (B_LAYOUT == 'test-front-end-sub')
-|| (B_LAYOUT == 'test-back-end-main')
-||(B_LAYOUT == 'test-back-end-sub')
+|| (B_LAYOUT == 'main_test_front_end')
+|| (B_LAYOUT == 'sub_test_front_end')
+|| (B_LAYOUT == 'main_test_back_end')
+||(B_LAYOUT == 'sub_test_back_end')
 ) { ?>
 <section id="wrap" class="clfix">
 	<header id="header">
@@ -49,8 +49,8 @@
 
 	<section id="container">
        <?php if (
-       		     (B_LAYOUT == 'test-front-end-main')
-              || (B_LAYOUT == 'test-back-end-main')
+       		     (B_LAYOUT == 'main_test_front_end')
+              || (B_LAYOUT == 'main_test_back_end')
 		 		) { ?>
 			 <!--#aside-left-->
 			 <aside id="aside-left" class="page">
@@ -72,10 +72,10 @@
 			<a class="view-source" href="<?= $v ?>" target="_blank">view source this page in GiuHub</a>
           <?php if (
               (B_LAYOUT == 'main')
-              || (B_LAYOUT == 'test-front-end-main')
-              || (B_LAYOUT == 'test-back-end-main')
-              || (B_LAYOUT == 'test-front-end-sub')
-              || (B_LAYOUT == 'test-back-end-sub')
+              || (B_LAYOUT == 'main_test_front_end')
+              || (B_LAYOUT == 'main_test_back_end')
+              || (B_LAYOUT == 'sub_test_front_end')
+              || (B_LAYOUT == 'sub_test_back_end')
           ) { ?>
 				 <h1><?= B_TITLE ?></h1>
           <?php } ?>

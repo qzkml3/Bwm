@@ -29,13 +29,13 @@ a:hover {text-decoration: underline;}
 #container:after { content: ""; clear: both; display: table; }
 /*main*/
 #main { box-sizing: border-box; width: 78%; position: relative;}
-body.main #main
-, body.test-front-end-main #main
-, body.test-back-end-main #main
+#main
+, .main_test_front_end #main
+, .main_test_back_end #main
 { float: right;}
-body.main #main
-, body.test-front-end-sub #main
-, body.test-back-end-sub #main
+#main
+, .sub_test_front_end #main
+, .sub_test_back_end #main
 { float: left;}
 /*aside*/
 #aside-left, #aside-right { width: 20%; box-sizing: border-box; float: left; padding: 0 20px;}
@@ -48,13 +48,13 @@ body.main #main
 #footer { position: relative; overflow: hidden; width: 78%; box-sizing: border-box;}
 #footer:after { content: ""; clear: both; display: table; }
 
-body.main #footer
-, body.test-front-end-sub #footer
-, body.test-back-end-sub #footer
+.main #footer
+, .sub_test_front_end #footer
+, .sub_test_back_end #footer
 {float: left;}
 
-body.test-front-end-main #footer
-, body.test-back-end-main #footer
+.main_test_front_end #footer
+, .main_test_back_end #footer
 {float: right;}
 
 /**/
