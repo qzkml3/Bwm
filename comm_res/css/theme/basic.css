@@ -3,10 +3,9 @@ body { margin: 0 4% 4%; text-shadow: #ccc 1px 1px 1px; background: #eee;}
 a {color: #0089d6; text-decoration: none;}
 a:hover {text-decoration: underline;}
 
-section {margin: 3em 0;}
-
+/*wrap*/
 #wrap { overflow: visible; max-width: 1500px; margin: 0 auto;}
-	#wrap:after { content: ""; clear: both; display: table; }
+#wrap:after { content: ""; clear: both; display: table; }
 	
 #header { position: relative;
 	margin: 0 2%; box-sizing: border-box; }
