@@ -38,8 +38,6 @@ h4 {font-size: 1.2em; margin: 2em 0 0.5em;}
 h5 {font-size: 1.1em; margin: 2em 0 0.5em;}
 h6 {font-size: 1.0em; margin: 2em 0 0.5em;}
 
-p {margin: 2em 0; line-height: 2;}
-
 ul {margin: 2em 0; padding: 0 0 0 1.5em;}
 	li {margin: 1em 0;}
 
@@ -71,3 +69,7 @@ main { display: block;} /*patch IE*/
 .align_center {text-align: center;}
 
 .list_unstyled li { list-style: none;}
+
+/*space*/
+.space_hori_child > * { margin-left: 1em; margin-right: 1em;}
+.space_verti_child > * { margin-top: 1em; margin-bottom: 1em;}

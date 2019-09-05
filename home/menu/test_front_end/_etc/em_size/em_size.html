@@ -1,0 +1,25 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<style>
+		.p {font-size: 10px;}
+		.i {font-size: 500px;}
+
+		.i { background: #ccc; width: 1em; height: 1em;}
+	</style>
+	<section>
+		<div class="p">
+			<div class="i">
+
+			</div>
+		</div>
+	</section>
+	<ul>
+		<li>em 사이즈는 부모가 아닌 현재 자신의 폰트 사이즈에 대한 비율이다.</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

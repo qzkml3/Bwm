@@ -62,6 +62,9 @@ a:hover {text-decoration: underline;}
 
 .view-source {position: absolute; top: 10px; right: 15px; font-size: 13px;}
 
-.page_style h2 { margin: 2em 0 1em; padding: 0 0 .5em;
+/*page_style*/
+.page_style h2 { margin: 3em 0 1em; padding: 0 0 .5em;
 	border-bottom: solid 1px #ccc;
 }
+
+.page_style p {margin: 2em 0; line-height: 2;}
