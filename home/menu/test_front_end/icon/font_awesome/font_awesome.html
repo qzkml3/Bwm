@@ -1,0 +1,17 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+<section>
+	<div style="color: red;">
+		<i class="fas fa-bars"></i>가나다라마바사
+		<i class="fas fa-bars fa-sm"></i>가나다라마바사
+		<i class="fas fa-bars fa-lg"></i>가나다라마바사
+	</div>
+</section>
+<?php
+BLayout::getFooter();
+?>
