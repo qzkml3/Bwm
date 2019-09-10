@@ -1,0 +1,17 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section class="em_init	">
+		<div style="font-size: 1.6em;">p</div>
+		<div style="font-size: 16px;">p</div>
+	</section>
+	<ul>
+		<li>font-size를 62.5%로 만들어서 px와 쉬운단위로 만든다.</li>
+		<li>* {font-size: 12px;} 가 적용되어 있다면 오작동</li>
+	</ul>
+<?php
+BLayout::getFooter();
+?>

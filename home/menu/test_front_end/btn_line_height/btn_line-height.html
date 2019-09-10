@@ -4,9 +4,12 @@ define('B_LAYOUT', 'sub_test_front_end');
 define('B_TITLE', BPage::getTitleByFileName());
 BLayout::getHeader();
 ?>
-
+	<style>
+		button {background: #ddd; border: none; liln-}
+	</style>
 	<section>
-
+		<button type="button">button</button>
+		<button type="button" style="line-height: 1.6">button</button>
 	</section>
 <?php
 BLayout::getFooter();
