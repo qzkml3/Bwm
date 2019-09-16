@@ -77,3 +77,5 @@ main { display: block;} /*patch IE*/
 .em_init, .em_init * { font-size: 62.5%;}
 
 .cont_hidden {position: absolute; left: -99999px;}
+
+.clfix::after {content: ''; display: table; clear:both;}

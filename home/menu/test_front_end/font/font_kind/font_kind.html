@@ -1,0 +1,56 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+$v = '동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세<br>
+			동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세<br>
+			동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세<br>
+			동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세<br>
+			동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세<br>
+			abcdefg hijkl<br>
+';
+$font = array();
+array_push($font, 'Malgun Gothic');
+array_push($font, 'Consolas');
+array_push($font, 'Iropke Batang');
+?>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+	<style>
+		#left_sec {float: left; width: 50%;}
+		#right_sec {float: left; width: 50%;}
+	</style>
+	<section class="clfix">
+		<!--left_sec-->
+		<section id="left_sec" class="contents">
+			<div>
+				<select>
+					<?php foreach ($font as $item) { ?>
+						<option value="<?= $item ?>"><?= $item ?></option>
+					<?php } ?>
+				</select>
+			</div>
+			<?= $v ?>
+		</section>
+		<!--right_sec-->
+		<section id="right_sec" class="contents">
+			<div>
+				<select>
+					<?php foreach ($font as $item) { ?>
+						<option value="<?= $item ?>"><?= $item ?></option>
+					<?php } ?>
+				</select>
+			</div>
+			<?= $v ?>
+		</section>
+	</section>
+	<script>
+		$('select').on('change', function () {
+			$parent = $(this).closest('.contents');
+			console.log($parent);
+			$parent.css('font-family', $(this).val());
+		});
+	</script>
+<?php
+BLayout::getFooter();
+?>
