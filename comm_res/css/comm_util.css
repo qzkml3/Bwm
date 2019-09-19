@@ -79,3 +79,10 @@ main { display: block;} /*patch IE*/
 .cont_hidden {position: absolute; left: -99999px;}
 
 .clfix::after {content: ''; display: table; clear:both;}
+
+.pad_small2 {padding: 2px}
+.pad_small {padding: 4px;}
+.pad_normal {padding: 8px;}
+.pad_big {padding: 10px}
+.pad_big2 {padding: 12px;}
+

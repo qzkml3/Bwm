@@ -1,0 +1,32 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<style>
+		.block {background: #ccc;}
+	</style>
+	<section class="page_style">
+		<section>
+			<h2>pad_small2</h2>
+			<div class="block pad_small2">가나다</div>
+		</section>
+
+		<section>
+			<h2>pad_small</h2>
+			<div class="block pad_small">가나다</div>
+		</section>
+
+		<h2>pad_normal</h2>
+		<div class="block pad_normal">가나다</div>
+
+		<h2>pad_big</h2>
+		<div class="block pad_big">가나다</div>
+
+		<h2>pad_big2</h2>
+		<div class="block pad_big2">가나다</div>
+	</section>
+<?php
+BLayout::getFooter();
+?>
