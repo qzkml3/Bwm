@@ -80,9 +80,9 @@ main { display: block;} /*patch IE*/
 
 .clfix::after {content: ''; display: table; clear:both;}
 
-.pad_small2 {padding: 2px}
-.pad_small {padding: 4px;}
-.pad_normal {padding: 8px;}
-.pad_big {padding: 10px}
-.pad_big2 {padding: 12px;}
-
+/*.pad*/
+.pad_small2 {padding: 2px 4px;}
+.pad_small {padding: 4px 8px;}
+.pad_normal {padding: 8px 16px;}
+.pad_big {padding: 10px 20px;}
+.pad_big2 {padding: 12px 24px;}
