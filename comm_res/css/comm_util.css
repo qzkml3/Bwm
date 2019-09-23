@@ -10,16 +10,20 @@ body {
 .font_12 { font-size: 12px;}
 
 /*btn*/
-.btn_init { background: #ddd; color: #222; border: none; text-align: center;
-	line-height: 2em; height: 2em; display: inline-block; padding: 0 .5em; vertical-align: middle;
+.btn_init {
+	background: white; color: #222; border: solid 1px #ccc; text-shadow: inherit;
+	text-align: center; line-height: 1.6em; height: 1.8em; display: inline-block;
+	padding: 0 .5em; vertical-align: middle;
 	cursor: pointer;  box-sizing: border-box;
-	text-shadow: inherit; font-size: inherit; font-family: inherit;
+	font-size: inherit; font-family: inherit;
 }
 .btn_init:hover { text-decoration: none;}
 
 /*btn_size*/
-.btn_small { font-size: 12px !important;}
-.btn_big { font-size: 24px !important;}
+.btn_small2 { font-size: 12px; height: 20px; line-height: 18px;}
+.btn_small { font-size: 14px; height: 25px; line-height: 23px;}
+.btn_big { font-size: 24px; height: 35px; line-height: 31px;}
+.btn_big2 { font-size: 28px; height: 50px; line-height: 46px;}
 
 .btn_radius { border-radius: 0.3em;}
 .btn_round { border-radius: 100px;}
