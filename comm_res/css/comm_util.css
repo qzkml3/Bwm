@@ -87,6 +87,7 @@ main { display: block;} /*patch IE*/
 .pad_big {padding: 10px 20px;}
 .pad_big2 {padding: 12px 24px;}
 
+/*.brd_radius*/
 .brd_radius {border-radius: 1em;}
 .brd_radius_small2 {border-radius: 3px;}
 .brd_radius_small {border-radius: 6px;}
