@@ -92,10 +92,25 @@ main { display: block;} /*patch IE*/
 .pad_big2 {padding: 12px 24px;}
 
 /*.brd_radius*/
-.brd_radius {border-radius: 1em;}
+.brd_radius {border-radius: .3em;}
 .brd_radius_small2 {border-radius: 3px;}
 .brd_radius_small {border-radius: 6px;}
 .brd_radius_normal {border-radius: 9px;}
 .brd_radius_big {border-radius: 12px;}
 .brd_radius_big2 {border-radius: 15px;}
 .brd_round {border-radius: 200px;}
+
+/*.float*/
+.fl_fix::after { content: ''; display: table; clear: both; }
+.fl_left { float: left; }
+.fl_right { float:right; }
+
+
+.brd_btm { border-bottom: solid 1px #ccc;}
+.brd_btm_child > * { border-bottom: solid 1px #ccc;}
+
+.col_4_12 { width: 33.33%; }
+.col_6_12 { width: 50%; }
+
+.pad_top_child > * { padding-bottom: 5px;}
+.pad_btm_child > * { padding-bottom: 5px;}

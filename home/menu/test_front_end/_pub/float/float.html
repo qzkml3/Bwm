@@ -1,0 +1,19 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section>
+		<div class="fl_fix brd_btm_child pad_btm_child pad_top_child">
+			<div class="col_6_12 fl_left">lefd fasdfas dfasdfasf dasdf sadft dfasdfasf dasdf sadftdfasdfasf dasdf sadftdfasdfasf dasdf sadft</div>
+			<div class="col_6_12 fl_right">right</div>
+		</div>
+		<div class="fl_fix brd_btm_child pad_btm_child pad_top_child">
+			<div class="col_6_12 fl_left">left</div>
+			<div class="col_6_12 fl_right">right</div>
+		</div>
+	</section>
+<?php
+BLayout::getFooter();
+?>
