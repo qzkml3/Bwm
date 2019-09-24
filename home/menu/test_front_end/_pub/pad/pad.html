@@ -5,27 +5,30 @@ define('B_TITLE', BPage::getTitleByFileName());
 BLayout::getHeader();
 ?>
 	<style>
-		.block {background: #ccc;}
+		.block, td {background: #ccc; font-size: 14px;}
 	</style>
 	<section class="page_style">
-		<section>
-			<h2>pad_small2</h2>
-			<div class="block pad_small2">가나다</div>
-		</section>
-
-		<section>
-			<h2>pad_small</h2>
-			<div class="block pad_small">가나다</div>
-		</section>
-
-		<h2>pad_normal</h2>
-		<div class="block pad_normal">가나다</div>
-
-		<h2>pad_big</h2>
-		<div class="block pad_big">가나다</div>
-
-		<h2>pad_big2</h2>
-		<div class="block pad_big2">가나다</div>
+		<!---->
+		<h2>pad side</h2>
+		<div class="block pad_left pad_right">가나다</div>
+		<!---->
+		<h2>pad all</h2>
+		<div class="block pad_left pad_right pad_top pad_btm">가나다</div>
+		<!---->
+		<h2>pad all</h2>
+		<table class="pad_top_child pad_btm_child pad_left_child pad_right_child">
+			<caption></caption>
+			<thead>
+			<tr>
+				<td>AA</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>BB</td>
+			</tr>
+			</tbody>
+		</table>
 	</section>
 <?php
 BLayout::getFooter();

@@ -82,16 +82,7 @@ main { display: block;} /*patch IE*/
 
 .cont_hidden {position: absolute; left: -99999px;}
 
-.clfix::after {content: ''; display: table; clear:both;}
-
-/*.pad*/
-.pad_small2 {padding: 2px 4px;}
-.pad_small {padding: 4px 8px;}
-.pad_normal {padding: 8px 16px;}
-.pad_big {padding: 10px 20px;}
-.pad_big2 {padding: 12px 24px;}
-
-/*.brd_radius*/
+/*brd_radius*/
 .brd_radius {border-radius: .3em;}
 .brd_radius_small2 {border-radius: 3px;}
 .brd_radius_small {border-radius: 6px;}
@@ -100,8 +91,8 @@ main { display: block;} /*patch IE*/
 .brd_radius_big2 {border-radius: 15px;}
 .brd_round {border-radius: 200px;}
 
-/*.float*/
-.fl_fix::after { content: ''; display: table; clear: both; }
+/*fl*/
+.fl_fix::after, .clfix::after { content: ''; display: table; clear: both; }
 .fl_left { float: left; }
 .fl_right { float:right; }
 
@@ -124,12 +115,39 @@ table.brd_right_none th:first-child
 , table.brd_right_none td:first-child
 { border-right: none; }
 
+/*col*/
 .col_4_12 { width: 33.33%; }
 .col_6_12 { width: 50%; }
 
-.pad_top_child > * { padding-top: 5px;}
-.pad_left_child > * { padding-left: 5px;}
-.pad_right_child > * { padding-right: 5px;}
-.pad_btm_child > * { padding-bottom: 5px;}
+/*pad*/
+.pad_left, .pad_left_child > * { padding-left: .5em;}
+.pad_right, .pad_right_child > * { padding-right: .5em;}
+.pad_top, .pad_top_child > * { padding-top: .3em;}
+.pad_btm, .pad_btm_child > * { padding-bottom: .3em;}
+/**/
+table.pad_left_child > thead > tr > th
+, table.pad_left_child > thead > tr > td
+, table.pad_left_child > tbody > tr > th
+, table.pad_left_child > tbody > tr > td
+{padding-left: .5em;}
+/**/
+table.pad_right_child > thead > tr > th
+, table.pad_right_child > thead > tr > td
+, table.pad_right_child > tbody > tr > th
+, table.pad_right_child > tbody > tr > td
+{padding-right: .5em;}
+/**/
+table.pad_top_child > thead > tr > th
+, table.pad_top_child > thead > tr > td
+, table.pad_top_child > tbody > tr > th
+, table.pad_top_child > tbody > tr > td
+{padding-top: .3em;}
+/**/
+table.pad_btm_child > thead > tr > th
+, table.pad_btm_child > thead > tr > td
+, table.pad_btm_child > tbody > tr > th
+, table.pad_btm_child > tbody > tr > td
+{padding-bottom: .3em;}
 
+/*tbl*/
 .tbl_init {width: 100%; border-collapse: collapse;}
