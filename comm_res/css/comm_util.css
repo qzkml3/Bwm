@@ -120,30 +120,29 @@ table.brd_right_none th:first-child
 .col_6_12 { width: 50%; }
 
 /*pad*/
-.pad_left, .pad_left_child > * { padding-left: .5em;}
-.pad_right, .pad_right_child > * { padding-right: .5em;}
-.pad_top, .pad_top_child > * { padding-top: .3em;}
-.pad_btm, .pad_btm_child > * { padding-bottom: .3em;}
-/**/
-table.pad_left_child > thead > tr > th
+.pad_left, .pad_left_child > *
+, table.pad_left_child > thead > tr > th
 , table.pad_left_child > thead > tr > td
 , table.pad_left_child > tbody > tr > th
 , table.pad_left_child > tbody > tr > td
 {padding-left: .5em;}
 /**/
-table.pad_right_child > thead > tr > th
+.pad_right, .pad_right_child > *
+, table.pad_right_child > thead > tr > th
 , table.pad_right_child > thead > tr > td
 , table.pad_right_child > tbody > tr > th
 , table.pad_right_child > tbody > tr > td
 {padding-right: .5em;}
 /**/
-table.pad_top_child > thead > tr > th
+.pad_top, .pad_top_child > *
+, table.pad_top_child > thead > tr > th
 , table.pad_top_child > thead > tr > td
 , table.pad_top_child > tbody > tr > th
 , table.pad_top_child > tbody > tr > td
 {padding-top: .3em;}
 /**/
-table.pad_btm_child > thead > tr > th
+.pad_btm, .pad_btm_child > *
+, table.pad_btm_child > thead > tr > th
 , table.pad_btm_child > thead > tr > td
 , table.pad_btm_child > tbody > tr > th
 , table.pad_btm_child > tbody > tr > td
