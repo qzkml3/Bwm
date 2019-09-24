@@ -106,11 +106,30 @@ main { display: block;} /*patch IE*/
 .fl_right { float:right; }
 
 
+/**/
+.brd_left { border-left: solid 1px #ccc;}
+.brd_left_child > * { border-left: solid 1px #ccc;}
+/**/
+.brd_right { border-right: solid 1px #ccc;}
+.brd_right_child > * { border-right: solid 1px #ccc;}
+/**/
 .brd_btm { border-bottom: solid 1px #ccc;}
 .brd_btm_child > * { border-bottom: solid 1px #ccc;}
+/**/
+table.brd_left_none th:first-child
+, table.brd_left_none td:first-child
+{ border-left: none; }
+/**/
+table.brd_right_none th:first-child
+, table.brd_right_none td:first-child
+{ border-right: none; }
 
 .col_4_12 { width: 33.33%; }
 .col_6_12 { width: 50%; }
 
-.pad_top_child > * { padding-bottom: 5px;}
+.pad_top_child > * { padding-top: 5px;}
+.pad_left_child > * { padding-left: 5px;}
+.pad_right_child > * { padding-right: 5px;}
 .pad_btm_child > * { padding-bottom: 5px;}
+
+.tbl_init {width: 100%; border-collapse: collapse;}
