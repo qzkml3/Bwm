@@ -98,26 +98,25 @@ main { display: block;} /*patch IE*/
 
 
 /**/
-.brd_left { border-left: solid 1px #ccc;}
-.brd_left_child > * { border-left: solid 1px #ccc;}
+.brd_left { border-left: solid 1px #ddd;}
+.brd_left_child > * { border-left: solid 1px #ddd;}
 /**/
-.brd_right { border-right: solid 1px #ccc;}
-.brd_right_child > * { border-right: solid 1px #ccc;}
+.brd_right { border-right: solid 1px #ddd;}
+.brd_right_child > * { border-right: solid 1px #ddd;}
 /**/
-.brd_btm { border-bottom: solid 1px #ccc;}
-.brd_btm_child > * { border-bottom: solid 1px #ccc;}
-/**/
-table.brd_left_none th:first-child
-, table.brd_left_none td:first-child
-{ border-left: none; }
-/**/
-table.brd_right_none th:first-child
-, table.brd_right_none td:first-child
-{ border-right: none; }
+.brd_btm { border-bottom: solid 1px #ddd;}
+.brd_btm_child > * { border-bottom: solid 1px #ddd;}
 
 /*col*/
-.col_4_12 { width: 33.33%; }
-.col_6_12 { width: 50%; }
+.col_1_12 {width: 8.33% !important;}
+.col_2_12 {width: 16.66% !important;}
+.col_3_12 {width: 25% !important;}
+.col_4_12 {width: 33.33% !important;}
+.col_5_12 {width: 41.66% !important;}
+.col_6_12 {width: 50% !important;}
+.col_9_12 {width: 75% !important;}
+.col_10_12 {width: 83.33% !important;}
+.col_11_12 {width: 91.66% !important;}
 
 /*tbl*/
 .tbl_init {width: 100%; border-collapse: collapse;}
@@ -144,3 +143,7 @@ table.brd_right_none th:first-child
 .pad_right_off {padding-right: 0;}
 .pad_top_off {padding-top: 0;}
 .pad_btm_off {padding-bottom: 0;}
+
+/*bg*/
+.bg_gray {background: #ddd;}
+.bg_silver {background: #eee;}

@@ -58,7 +58,7 @@ a:hover {text-decoration: underline;}
 , .main_test_back_end #footer
 {float: right;}
 /*address*/
-#address { float: left; }
+#address {font-style: normal;}
 /*family*/
 #family {float: right;}
 
