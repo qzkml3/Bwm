@@ -1,7 +1,7 @@
 html {overflow-y: scroll;}
 
 body {
-	font-family: malgun gothic, arial; line-height: 1.6; word-break: keep-all; word-wrap: break-word;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', Arial; line-height: 1.6; word-break: keep-all; word-wrap: break-word;
 	color: #333;
 	margin: 0;
 }
