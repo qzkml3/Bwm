@@ -1,7 +1,7 @@
 html {overflow-y: scroll;}
 
 body {
-	font-family: 'Noto Sans KR', 'Malgun Gothic', Arial; line-height: 1.6; word-break: keep-all; word-wrap: break-word;
+	font-family:'Work Sans', 'xPT Sans', 'Noto Sans KR', 'Malgun Gothic', Arial; line-height: 1.6; word-break: keep-all; word-wrap: break-word;
 	color: #333;
 	margin: 0;
 }
@@ -150,3 +150,22 @@ table.brd_right_none th:first-child
 
 /*tbl*/
 .tbl_init {width: 100%; border-collapse: collapse;}
+
+/*tbl_brd*/
+.tbl_brd > thead > tr > th
+, .tbl_brd > tbody > tr > th
+, .tbl_brd > tbody > tr > td
+{border: solid 1px #ddd;}
+.tbl_brd_left_off > thead > tr > th
+, .tbl_brd_left_off > tbody > tr > th
+, .tbl_brd_left_off > tbody > tr > td
+{border-left: none;}
+.tbl_brd_right_off > thead > tr > th
+, .tbl_brd_right_off > tbody > tr > th
+, .tbl_brd_right_off > tbody > tr > td
+{border-right: none;}
+
+
+.pad_child > * {padding: .4em .8em;}
+.pad_child_big > * {padding: .6em .12em;}
+.pad_child_big2 > * {padding: .8em .16em;}
