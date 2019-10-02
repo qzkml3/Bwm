@@ -119,35 +119,6 @@ table.brd_right_none th:first-child
 .col_4_12 { width: 33.33%; }
 .col_6_12 { width: 50%; }
 
-/*pad*/
-.pad_left, .pad_left_child > *
-, table.pad_left_child > thead > tr > th
-, table.pad_left_child > thead > tr > td
-, table.pad_left_child > tbody > tr > th
-, table.pad_left_child > tbody > tr > td
-{padding-left: .5em;}
-/**/
-.pad_right, .pad_right_child > *
-, table.pad_right_child > thead > tr > th
-, table.pad_right_child > thead > tr > td
-, table.pad_right_child > tbody > tr > th
-, table.pad_right_child > tbody > tr > td
-{padding-right: .5em;}
-/**/
-.pad_top, .pad_top_child > *
-, table.pad_top_child > thead > tr > th
-, table.pad_top_child > thead > tr > td
-, table.pad_top_child > tbody > tr > th
-, table.pad_top_child > tbody > tr > td
-{padding-top: .3em;}
-/**/
-.pad_btm, .pad_btm_child > *
-, table.pad_btm_child > thead > tr > th
-, table.pad_btm_child > thead > tr > td
-, table.pad_btm_child > tbody > tr > th
-, table.pad_btm_child > tbody > tr > td
-{padding-bottom: .3em;}
-
 /*tbl*/
 .tbl_init {width: 100%; border-collapse: collapse;}
 
@@ -156,16 +127,20 @@ table.brd_right_none th:first-child
 , .tbl_brd > tbody > tr > th
 , .tbl_brd > tbody > tr > td
 {border: solid 1px #ddd;}
-.tbl_brd_left_off > thead > tr > th
-, .tbl_brd_left_off > tbody > tr > th
-, .tbl_brd_left_off > tbody > tr > td
+.tbl_brd_left_off > thead > tr > th:first-child
+, .tbl_brd_left_off > tbody > tr > th:first-child
+, .tbl_brd_left_off > tbody > tr > td:first-child
 {border-left: none;}
-.tbl_brd_right_off > thead > tr > th
-, .tbl_brd_right_off > tbody > tr > th
-, .tbl_brd_right_off > tbody > tr > td
+.tbl_brd_right_off > thead > tr > th:last-child
+, .tbl_brd_right_off > tbody > tr > th:last-child
+, .tbl_brd_right_off > tbody > tr > td:last-child
 {border-right: none;}
 
-
-.pad_child > * {padding: .4em .8em;}
-.pad_child_big > * {padding: .6em .12em;}
-.pad_child_big2 > * {padding: .8em .16em;}
+/*pad*/
+.pad, .pad_child > * {padding: .4em .8em;}
+.pad_big, .pad_child_big > * {padding: .6em 1.2em;}
+.pad_big2, .pad_child_big2 > * {padding: .8em 1.6em;}
+.pad_left_off {padding-left: 0;}
+.pad_right_off {padding-right: 0;}
+.pad_top_off {padding-top: 0;}
+.pad_btm_off {padding-bottom: 0;}
