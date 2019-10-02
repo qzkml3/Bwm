@@ -82,13 +82,12 @@ main { display: block;} /*patch IE*/
 
 .cont_hidden {position: absolute; left: -99999px;}
 
-/*brd_radius*/
-.brd_radius {border-radius: .3em;}
-.brd_radius_small2 {border-radius: 3px;}
-.brd_radius_small {border-radius: 6px;}
-.brd_radius_normal {border-radius: 9px;}
-.brd_radius_big {border-radius: 12px;}
-.brd_radius_big2 {border-radius: 15px;}
+/*brd_rad*/
+.brd_rad_small2 {border-radius: 3px;}
+.brd_rad_small {border-radius: 5px;}
+.brd_rad {border-radius: 7px;}
+.brd_rad_big {border-radius: 10px;}
+.brd_rad_big2 {border-radius: 15px;}
 .brd_round {border-radius: 200px;}
 
 /*fl*/
