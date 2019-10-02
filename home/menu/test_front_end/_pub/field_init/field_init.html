@@ -1,0 +1,89 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section class="page_style">
+		<section>
+			<h2>field_init</h2>
+			<form action="" class="space_verti_child field_init">
+				<div><input type="text" placeholder="text"></div>
+				<div><input type="password" placeholder="password"></div>
+				<div><input type="number" placeholder="number"></div>
+				<div><input type="tel" placeholder="tel"></div>
+				<div><input type="email" placeholder="email"></div>
+				<div>
+					<label><input type="checkbox"><span>가나다</span></label>
+					<label><input type="checkbox"><span>가나다</span></label>
+				</div>
+				<div>
+					<label><input type="radio"><span>가나다</span></label>
+					<label><input type="radio"><span>가나다</span></label>
+				</div>
+				<div>
+					<select name="" id="">
+						<option value="">aa</option>
+						<option value="">aa</option>
+						<option value="">aa</option>
+					</select>
+				</div>
+				<div><textarea></textarea></div>
+			</form>
+		</section>
+		<section>
+			<h2>field_big</h2>
+			<form action="" class="space_verti_child field_init field_big">
+				<div><input type="text" placeholder="text"></div>
+				<div><input type="password" placeholder="password"></div>
+				<div><input type="number" placeholder="number"></div>
+				<div><input type="tel" placeholder="tel"></div>
+				<div><input type="email" placeholder="email"></div>
+				<div>
+					<label><input type="checkbox"><span>가나다</span></label>
+					<label><input type="checkbox"><span>가나다</span></label>
+				</div>
+				<div>
+					<label><input type="radio"><span>가나다</span></label>
+					<label><input type="radio"><span>가나다</span></label>
+				</div>
+				<div>
+					<select name="" id="">
+						<option value="">aa</option>
+						<option value="">aa</option>
+						<option value="">aa</option>
+					</select>
+				</div>
+				<div><textarea></textarea></div>
+			</form>
+		</section>
+		<section>
+			<h2>field_small</h2>
+			<form action="" class="space_verti_child field_init field_small">
+				<div><input type="text" placeholder="text"></div>
+				<div><input type="password" placeholder="password"></div>
+				<div><input type="number" placeholder="number"></div>
+				<div><input type="tel" placeholder="tel"></div>
+				<div><input type="email" placeholder="email"></div>
+				<div>
+					<label><input type="checkbox"><span>가나다</span></label>
+					<label><input type="checkbox"><span>가나다</span></label>
+				</div>
+				<div>
+					<label><input type="radio"><span>가나다</span></label>
+					<label><input type="radio"><span>가나다</span></label>
+				</div>
+				<div>
+					<select name="" id="">
+						<option value="">aa</option>
+						<option value="">aa</option>
+						<option value="">aa</option>
+					</select>
+				</div>
+				<div><textarea></textarea></div>
+			</form>
+		</section>
+	</section>
+<?php
+BLayout::getFooter();
+?>

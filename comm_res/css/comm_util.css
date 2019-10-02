@@ -153,3 +153,41 @@ main { display: block;} /*patch IE*/
 /*bg*/
 .bg_gray {background: #ddd;}
 .bg_silver {background: #eee;}
+
+/*field_init*/
+.field_init input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):not([type=image])
+, .field_init textarea
+, .field_init select {
+	border: solid 1px #ccc; border-radius: .3em; margin: .2em 0; vertical-align: middle; font-size: inherit; background: white;
+	box-sizing: border-box; color: #555; padding: 0 0 0 .4em; width: 100%; font-family: inherit;
+	height: 32px; line-height: inherit;
+}
+.field_init ::placeholder { color: #999;}
+
+.field_init input[type=checkbox]
+, .field_init input[type=radio]
+{width: 16px; height: 15px; vertical-align: middle;}
+
+.field_init input[type=checkbox] + span
+, .field_init input[type=radio] + span
+{vertical-align: middle; margin-right: .5em;}
+
+/*field_big*/
+.field_big input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):not([type=image])
+, .field_big textarea
+, .field_big select {
+	height: 50px; font-size: 20px; padding: 0 .6em;
+}
+
+.field_big input[type=checkbox]
+, .field_big input[type=radio]
+{width: 22px; height: 20px; vertical-align: middle;}
+
+/*field_small*/
+.field_small input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):not([type=image])
+, .field_small textarea
+, .field_small select {
+	height: 30px; font-size: 16px; padding: 0 .6em;
+}
+
+.field_init textarea {height: 100px;}

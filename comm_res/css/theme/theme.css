@@ -87,3 +87,5 @@ a:hover {text-decoration: underline;}
 #shadow {position: fixed; width: 100%; height: 100%; background: black; opacity: 0.5; left: 0; top: 0; z-index: 99;
 	display: none;
 }
+
+.field_init ::placeholder {color: #f37675;}
