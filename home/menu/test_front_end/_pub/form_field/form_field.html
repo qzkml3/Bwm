@@ -1,0 +1,18 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section>
+		<form action="">
+			<input type="text" placeholder="text">
+			<input type="password" placeholder="password">
+			<input type="number" placeholder="number">
+			<input type="tel" placeholder="tel">
+			<input type="email" placeholder="email">
+		</form>
+	</section>
+<?php
+BLayout::getFooter();
+?>
