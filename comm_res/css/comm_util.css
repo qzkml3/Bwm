@@ -49,7 +49,6 @@ main { display: block;} /*patch IE*/
 
 .btn_radius { border-radius: 0.3em;}
 .btn_round { border-radius: 100px;}
-.btn_full { width: 100%;}
 
 .btn_width6 { width: 6em;}
 .btn_width8 { width: 8em;}
@@ -186,3 +185,6 @@ main { display: block;} /*patch IE*/
 }
 
 .field_init textarea {height: 100px;}
+
+/*width*/
+.w_100pc { width: 100%;}
