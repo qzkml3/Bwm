@@ -2,6 +2,8 @@ html {overflow-y: scroll;}
 
 body {font-family: 'Malgun Gothic', Arial;}
 
+main { display: block;} /*patch IE*/
+
 /*.font_size*/
 .font_10 { font-size: 10px !important;}
 .font_11 { font-size: 11px !important;}
@@ -54,10 +56,8 @@ body {font-family: 'Malgun Gothic', Arial;}
 .btn_width10 { width: 10em;}
 .btn_width12 { width: 12em;}
 
-ul {margin: 2em 0; padding: 0 0 0 1.5em;}
-	li {margin: 1em 0;}
-
-main { display: block;} /*patch IE*/
+.list_init {margin: 2em 0; padding: 0 0 0 1.5em;}
+.list_init > li {margin: 1em 0;}
 
 .code {
 	white-space: pre; line-height: 1.5; tab-size: 3;
@@ -66,11 +66,10 @@ main { display: block;} /*patch IE*/
 	margin: 1em 0;
 }
 
+/*ime_mode*/
 .ime_active { -webkit-ime-mode: active; -moz-ime-mode: active; ime-mode: active;}
 .ime_inactive { -webkit-ime-mode: inactive; -moz-ime-mode: inactive; ime-mode: inactive;}
 .ime_disabled { -webkit-ime-mode: disabled; -moz-ime-mode: disabled; ime-mode: disabled;}
-
-.space_verti {margin-top: 2em; margin-bottom: 2em;}
 
 /*align*/
 .align_center {text-align: center;}
@@ -79,6 +78,7 @@ main { display: block;} /*patch IE*/
 .align_middle {vertical-align: middle;}
 .middle_child > * {vertical-align: middle;}
 
+/*list*/
 .list_unstyled li { list-style: none;}
 
 /*space*/
@@ -87,7 +87,8 @@ main { display: block;} /*patch IE*/
 
 .em_init, .em_init * { font-size: 62.5%;}
 
-.cont_hidden {position: absolute; left: -99999px;}
+/*off*/
+.off_abs {position: absolute; left: -99999px; top: -99999px;}
 
 /*brd_rad*/
 .brd_rad_small2 {border-radius: 3px;}
@@ -102,16 +103,10 @@ main { display: block;} /*patch IE*/
 .fl_left { float: left; }
 .fl_right { float:right; }
 
-
-/**/
-.brd_left { border-left: solid 1px #ddd;}
-.brd_left_child > * { border-left: solid 1px #ddd;}
-/**/
-.brd_right { border-right: solid 1px #ddd;}
-.brd_right_child > * { border-right: solid 1px #ddd;}
-/**/
-.brd_btm { border-bottom: solid 1px #ddd;}
-.brd_btm_child > * { border-bottom: solid 1px #ddd;}
+/*brd*/
+.brd_left, .brd_left_child > * { border-left: solid 1px #ddd;}
+.brd_right, .brd_right_child > * { border-right: solid 1px #ddd;}
+.brd_btm, .brd_btm_child > * { border-bottom: solid 1px #ddd;}
 
 /*col*/
 .col_1_12 {width: 8.33% !important;}
