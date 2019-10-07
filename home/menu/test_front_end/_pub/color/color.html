@@ -1,0 +1,25 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section class="page_style">
+		<h2>color</h2>
+		<div class="color_black">div</div>
+		<div class="color_gray">div</div>
+		<div class="color_silver">div</div>
+		<div class="color_white">div</div>
+		<div class="color_1">div</div>
+		<div class="color_2">div</div>
+		<h2>bg_col</h2>
+		<div class="bg_black">div</div>
+		<div class="bg_gray">div</div>
+		<div class="bg_silver">div</div>
+		<div class="bg_white">div</div>
+		<div class="bg_col_1">div</div>
+		<div class="bg_col_2">div</div>
+	</section>
+<?php
+BLayout::getFooter();
+?>

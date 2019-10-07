@@ -50,10 +50,7 @@ main { display: block;} /*patch IE*/
 .btn_radius { border-radius: 0.3em;}
 .btn_round { border-radius: 100px;}
 
-.btn_width6 { width: 6em;}
-.btn_width8 { width: 8em;}
-.btn_width10 { width: 10em;}
-.btn_width12 { width: 12em;}
+
 
 .list_init {margin: 2em 0; padding: 0 0 0 1.5em;}
 .list_init > li {margin: 1em 0;}
@@ -82,7 +79,10 @@ main { display: block;} /*patch IE*/
 
 /*space*/
 .space_hori, .space_hori_child > * { margin-left: 1em; margin-right: 1em;}
-.space_verti, .space_verti_child > * { margin-top: 1em; margin-bottom: 1em;}
+.space_verti, .space_verti_child > *, .space_verti_desc * { margin-top: 1em; margin-bottom: 1em;}
+
+.space_btm_1_0em {}
+.space_btm_1_0em {}
 
 .em_init, .em_init * { font-size: 62.5%;}
 
@@ -144,9 +144,21 @@ main { display: block;} /*patch IE*/
 .pad_top_off {padding-top: 0;}
 .pad_btm_off {padding-bottom: 0;}
 
+/*color*/
+.color_black {color: #000;}
+.color_gray {color: #ddd;}
+.color_silver {color: #eee;}
+.color_white {color: #fff;}
+.color_1 {color: blue;}
+.color_2 {color: red;}
+
 /*bg*/
+.bg_black {background: #000;}
 .bg_gray {background: #ddd;}
 .bg_silver {background: #eee;}
+.bg_white {background: #fff;}
+.bg_col_1 {background: blue;}
+.bg_col_2 {background: red;}
 
 /*field_init*/
 .field_init input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):not([type=image])
@@ -188,3 +200,7 @@ main { display: block;} /*patch IE*/
 
 /*width*/
 .w_100pc { width: 100%;}
+.w_6em { width: 6em;}
+.w_8em { width: 8em;}
+.w_10em { width: 10em;}
+.w_12em { width: 12em;}
