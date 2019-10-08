@@ -1,0 +1,24 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section class="page_style">
+		<h2>mrg_btm</h2>
+		<section class="mrg_btm_10px_child">
+			<div class="bg_silver">div</div>
+			<div class="bg_silver">div</div>
+			<div class="bg_silver">div</div>
+		</section>
+
+		<h2>mrg_top</h2>
+		<section class="mrg_top_10px_child">
+			<div class="bg_silver">div</div>
+			<div class="bg_silver">div</div>
+			<div class="bg_silver">div</div>
+		</section>
+	</section>
+<?php
+BLayout::getFooter();
+?>

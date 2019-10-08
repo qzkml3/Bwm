@@ -88,6 +88,6 @@ a:hover {text-decoration: underline;}
 
 .field_init ::placeholder {color: #f37675;}
 
-.github_view {position: absolute;bottom: 0px;right: 0px;font-size: 13px; background: #eee; padding: 0 .8em;
-	border: solid 1px #ddd;
+.github_view {position: absolute;bottom: -35px;right: 0px;font-size: 13px; background: #eee; padding: 0 .8em;
+	border: solid 1px #ddd; z-index: 10;
 }
