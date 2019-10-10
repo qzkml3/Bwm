@@ -138,16 +138,16 @@ main { display: block;} /*patch IE*/
 .color_gray {color: #ddd;}
 .color_silver {color: #eee;}
 .color_white {color: #fff;}
-.color_1 {color: blue;}
-.color_2 {color: red;}
+.color_1 {color: #83d7ff;}
+.color_2 {color: #74cdd6;}
 
 /*bg*/
 .bg_black {background: #000;}
 .bg_gray {background: #ddd;}
 .bg_silver {background: #eee;}
 .bg_white {background: #fff;}
-.bg_col_1 {background: blue;}
-.bg_col_2 {background: red;}
+.bg_col_1 {background: #83d7ff;}
+.bg_col_2 {background: #74cdd6;}
 
 /*field_init*/
 .field_init input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=reset]):not([type=image])

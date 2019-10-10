@@ -1203,11 +1203,11 @@ main {
 }
 
 .color_1 {
-  color: blue;
+  color: #83d7ff;
 }
 
 .color_2 {
-  color: red;
+  color: #74cdd6;
 }
 
 /*bg*/
@@ -1228,11 +1228,11 @@ main {
 }
 
 .bg_col_1 {
-  background: blue;
+  background: #83d7ff;
 }
 
 .bg_col_2 {
-  background: red;
+  background: #74cdd6;
 }
 
 /*field_init*/
