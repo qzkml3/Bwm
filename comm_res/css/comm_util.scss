@@ -60,11 +60,17 @@ main { display: block;} /*patch IE*/
 .space_verti, .space_verti_child > *, .space_verti_desc * { margin-top: 1em; margin-bottom: 1em;}
 
 /*mrg*/
-@for $i from 1 to 50 {
+@for $i from 1 through 50 {
   .mrg_top_#{$i}px, .mrg_top_#{$i}px_child > *, .mrg_top_#{$i} * {margin-top: #{$i}px;}
 }
-@for $i from 1 to 50 {
+@for $i from 1 through 50 {
   .mrg_btm_#{$i}px, .mrg_btm_#{$i}px_child > *, .mrg_btm_#{$i} * {margin-bottom: #{$i}px;}
+}
+@for $i from 1 through 50 {
+  .mrg_left_#{$i}px, .mrg_left_#{$i}px_child > *, .mrg_left_#{$i} * {margin-left: #{$i}px;}
+}
+@for $i from 1 through 50 {
+  .mrg_right_#{$i}px, .mrg_right_#{$i}px_child > *, .mrg_right_#{$i} * {margin-right: #{$i}px;}
 }
 
 .em_init, .em_init * { font-size: 62.5%;}
