@@ -1,3 +1,3 @@
-@for $i from 10 through 50 {
-  .font_#{$i},.font_#{$i}_child>*{font-size:#{$i}px !important}
+@for $i from 1 through 50 {
+  .width_#{$i}em{width:#{$i}em}
 }
