@@ -26,14 +26,28 @@ legend {position:absolute; left:-9999999px; top:-9999999px;}
 .clfix:after,
 .clearfix:after
 { content: ""; clear: both; display: table;}
-/* align table */
-.th_left th {text-align: left;}
-.th_center th {text-align: center;}
-.th_right th {text-align: right;}
 
-.td_left td {text-align: left;}
-.td_center td {text-align: center;}
-.td_right td {text-align: right;}
+/* align th */
+.th_left > thead > tr > th
+, .th_left > tbody > tr > th
+{text-align: left;}
+.th_right > thead > tr > th
+, .th_right > tbody > tr > th
+{text-align: right;}
+.th_center > thead > tr > th
+, .th_center > tbody > tr > th
+{text-align: center;}
+
+/* align td */
+.td_left > tdead > tr > td
+, .td_left > tbody > tr > td
+{text-align: left;}
+.td_right > tdead > tr > td
+, .td_right > tbody > tr > td
+{text-align: right;}
+.td_center > tdead > tr > td
+, .td_center > tbody > tr > td
+{text-align: center;}
 
 /* align both */
 .both {overflow:hidden;}

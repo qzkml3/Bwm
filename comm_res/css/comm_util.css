@@ -180,3 +180,25 @@ main { display: block;} /*patch IE*/
 /*width*/
 .width_100pc { width: 100%;}
 .width_10em{width:10em}.width_11em{width:11em}.width_12em{width:12em}.width_13em{width:13em}.width_14em{width:14em}.width_15em{width:15em}.width_16em{width:16em}.width_17em{width:17em}.width_18em{width:18em}.width_19em{width:19em}.width_20em{width:20em}
+
+/* align th */
+.th_left > thead > tr > th
+, .th_left > tbody > tr > th
+{text-align: left;}
+.th_right > thead > tr > th
+, .th_right > tbody > tr > th
+{text-align: right;}
+.th_center > thead > tr > th
+, .th_center > tbody > tr > th
+{text-align: center;}
+
+/* align td */
+.td_left > tdead > tr > td
+, .td_left > tbody > tr > td
+{text-align: left;}
+.td_right > tdead > tr > td
+, .td_right > tbody > tr > td
+{text-align: right;}
+.td_center > tdead > tr > td
+, .td_center > tbody > tr > td
+{text-align: center;}
