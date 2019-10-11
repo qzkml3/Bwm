@@ -206,8 +206,10 @@ main { display: block;} /*patch IE*/
 , .td_center > tbody > tr > td
 {text-align: center;}
 
+/*icon_init*/
 .icon_init {background: center / 100% 100%; width: 1em; height: 1em; display: inline-block; vertical-align: middle;
 	margin-right: 0.1em;
 }
+.icon_init span { position: absolute; left: 99999px; top: 99999px;}
 .icon_init + span {vertical-align: middle;}
 .icon_wthie_calendar {background-image: url(/home/menu/test_front_end/_pub/icon/img/white_calendar.png); height: 0.9em}
