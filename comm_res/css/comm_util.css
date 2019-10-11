@@ -115,9 +115,12 @@ main { display: block;} /*patch IE*/
 {border-right: none;}
 
 /*pad*/
-.pad, .pad_child > * {padding: .4em .8em;}
-.pad_big, .pad_child_big > * {padding: .6em 1.2em;}
-.pad_big2, .pad_child_big2 > * {padding: .8em 1.6em;}
+.pad_small2, .pad_child_small2 > * {padding: 2px 6px;}
+.pad_small, .pad_child_small > * {padding: 4px 8px;}
+.pad, .pad_child > * {padding: 6px 10px;}
+.pad_big, .pad_child_big > * {padding: 8px 12px;}
+.pad_big2, .pad_child_big2 > * {padding: 10px 14px;}
+
 .pad_left_off {padding-left: 0;}
 .pad_right_off {padding-right: 0;}
 .pad_top_off {padding-top: 0;}
@@ -133,7 +136,7 @@ main { display: block;} /*patch IE*/
 
 /*bg*/
 .bg_black {background: #000;}
-.bg_gray {background: #ddd;}
+.bg_gray {background: #bbb;}
 .bg_silver {background: #eee;}
 .bg_white {background: #fff;}
 .bg_col_1 {background: #83d7ff;}
