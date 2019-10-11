@@ -1,45 +1,165 @@
-.width_10em {
-  width: 10em;
+.font_10, .font_10_child > * {
+  font-size: 10px !important;
 }
 
-.width_11em {
-  width: 11em;
+.font_11, .font_11_child > * {
+  font-size: 11px !important;
 }
 
-.width_12em {
-  width: 12em;
+.font_12, .font_12_child > * {
+  font-size: 12px !important;
 }
 
-.width_13em {
-  width: 13em;
+.font_13, .font_13_child > * {
+  font-size: 13px !important;
 }
 
-.width_14em {
-  width: 14em;
+.font_14, .font_14_child > * {
+  font-size: 14px !important;
 }
 
-.width_15em {
-  width: 15em;
+.font_15, .font_15_child > * {
+  font-size: 15px !important;
 }
 
-.width_16em {
-  width: 16em;
+.font_16, .font_16_child > * {
+  font-size: 16px !important;
 }
 
-.width_17em {
-  width: 17em;
+.font_17, .font_17_child > * {
+  font-size: 17px !important;
 }
 
-.width_18em {
-  width: 18em;
+.font_18, .font_18_child > * {
+  font-size: 18px !important;
 }
 
-.width_19em {
-  width: 19em;
+.font_19, .font_19_child > * {
+  font-size: 19px !important;
 }
 
-.width_20em {
-  width: 20em;
+.font_20, .font_20_child > * {
+  font-size: 20px !important;
+}
+
+.font_21, .font_21_child > * {
+  font-size: 21px !important;
+}
+
+.font_22, .font_22_child > * {
+  font-size: 22px !important;
+}
+
+.font_23, .font_23_child > * {
+  font-size: 23px !important;
+}
+
+.font_24, .font_24_child > * {
+  font-size: 24px !important;
+}
+
+.font_25, .font_25_child > * {
+  font-size: 25px !important;
+}
+
+.font_26, .font_26_child > * {
+  font-size: 26px !important;
+}
+
+.font_27, .font_27_child > * {
+  font-size: 27px !important;
+}
+
+.font_28, .font_28_child > * {
+  font-size: 28px !important;
+}
+
+.font_29, .font_29_child > * {
+  font-size: 29px !important;
+}
+
+.font_30, .font_30_child > * {
+  font-size: 30px !important;
+}
+
+.font_31, .font_31_child > * {
+  font-size: 31px !important;
+}
+
+.font_32, .font_32_child > * {
+  font-size: 32px !important;
+}
+
+.font_33, .font_33_child > * {
+  font-size: 33px !important;
+}
+
+.font_34, .font_34_child > * {
+  font-size: 34px !important;
+}
+
+.font_35, .font_35_child > * {
+  font-size: 35px !important;
+}
+
+.font_36, .font_36_child > * {
+  font-size: 36px !important;
+}
+
+.font_37, .font_37_child > * {
+  font-size: 37px !important;
+}
+
+.font_38, .font_38_child > * {
+  font-size: 38px !important;
+}
+
+.font_39, .font_39_child > * {
+  font-size: 39px !important;
+}
+
+.font_40, .font_40_child > * {
+  font-size: 40px !important;
+}
+
+.font_41, .font_41_child > * {
+  font-size: 41px !important;
+}
+
+.font_42, .font_42_child > * {
+  font-size: 42px !important;
+}
+
+.font_43, .font_43_child > * {
+  font-size: 43px !important;
+}
+
+.font_44, .font_44_child > * {
+  font-size: 44px !important;
+}
+
+.font_45, .font_45_child > * {
+  font-size: 45px !important;
+}
+
+.font_46, .font_46_child > * {
+  font-size: 46px !important;
+}
+
+.font_47, .font_47_child > * {
+  font-size: 47px !important;
+}
+
+.font_48, .font_48_child > * {
+  font-size: 48px !important;
+}
+
+.font_49, .font_49_child > * {
+  font-size: 49px !important;
+}
+
+.font_50, .font_50_child > * {
+  font-size: 50px !important;
 }
 
 /*# sourceMappingURL=test.css.map */
