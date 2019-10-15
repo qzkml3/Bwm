@@ -93,6 +93,8 @@ main { display: block;} /*patch IE*/
 .col_4_12 {width: 33.33% !important;}
 .col_5_12 {width: 41.66% !important;}
 .col_6_12 {width: 50% !important;}
+.col_7_12 {width: 58.33% !important;}
+.col_8_12 {width: 66.66% !important;}
 .col_9_12 {width: 75% !important;}
 .col_10_12 {width: 83.33% !important;}
 .col_11_12 {width: 91.66% !important;}
