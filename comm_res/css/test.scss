@@ -1,3 +1,15 @@
 @for $i from 1 through 50 {
-  .width_#{$i}em{width:#{$i}em !important;}
+
+
+/*mrg_hori*/
+.mrg_hori_#{$i}px, .mrg_hori_#{$i}px_child > * {margin-left: #{$i}px !important; margin-right: #{$i}px !important;}
+
+/*mrg_verti*/
+.mrg_verti_#{$i}px, .mrg_verti_#{$i}px_child > * {margin-top: #{$i}px !important; margin-bottom: #{$i}px !important;}
+
+/*pad_hori*/
+.pad_hori_#{$i}px, .pad_hori_#{$i}px_child > * {padding-left: #{$i}px !important; padding-right: #{$i}px !important;}
+
+/*pad_verti*/
+.pad_verti_#{$i}px, .pad_verti_#{$i}px_child > * {padding-top: #{$i}px !important; padding-bottom: #{$i}px !important;}
 }

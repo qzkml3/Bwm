@@ -1,0 +1,22 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<section class="page_style">
+		<h2>pad_hori_child</h2>
+		<div class="mrg_verti_30px_child pad_hori_20px_child">
+			<div class="bg_silver">가나다</div>
+			<div class="bg_silver">가나다</div>
+		</div>
+
+		<h2>pad_verti_child</h2>
+		<div class="mrg_verti_30px_child pad_verti_20px_child">
+			<div class="bg_silver">가나다</div>
+			<div class="bg_silver">가나다</div>
+		</div>
+	</section>
+<?php
+BLayout::getFooter();
+?>
