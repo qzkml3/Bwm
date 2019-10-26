@@ -1,0 +1,16 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<style>
+		#this h2 {background: deeppink;}
+		.tit {background: gray;}
+	</style>
+	<section id="this" class="this">
+		<h2 class="tit">h2</h2>
+	</section>
+<?php
+BLayout::getFooter();
+?>
