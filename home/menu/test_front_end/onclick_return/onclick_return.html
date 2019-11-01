@@ -4,9 +4,19 @@
 	define('B_TITLE', BPage::getTitleByFileName());
 	BLayout::getHeader();
 ?>
-	<section>
 
-	</section>
+	<a href="#" onclick="a();b();">as dfasd fasd asdf</a>
+
+	<script>
+		function a() {
+			alert('a');
+			return false;
+		}
+
+		function b() {
+			alert('b');
+		}
+	</script>
 <?php
 	BLayout::getFooter();
 ?>
