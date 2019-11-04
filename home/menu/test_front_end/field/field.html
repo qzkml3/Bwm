@@ -1,0 +1,53 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+	define('B_LAYOUT', 'sub_test_front_end');
+	define('B_TITLE', BPage::getTitleByFileName());
+	BLayout::getHeader();
+?>
+	<section>
+		<section class="field_init">
+			<h2>field_init</h2>
+			<table class="tbl_init">
+				<tr>
+					<td>
+						<input type="text">
+					</td>
+					<td class="align_right" style="width: 60px;">
+						<button class="btn_init" type="button">버튼</button>
+					</td>
+				</tr>
+			</table>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+		</section>
+		<section class="field_init field_small">
+			<h2>field_small</h2>
+			<table class="tbl_init">
+				<tr>
+					<td>
+						<input type="text">
+					</td>
+					<td class="align_right" style="width: 50px;">
+						<button class="btn_init btn_small" type="button">버튼</button>
+					</td>
+				</tr>
+			</table>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+		</section>
+		<section class="field_init field_big">
+			<h2>field_big</h2>
+			<table class="tbl_init">
+				<tr>
+					<td>
+						<input type="text">
+					</td>
+					<td class="align_right" style="width: 80px;">
+						<button class="btn_init btn_big" type="button">버튼</button>
+					</td>
+				</tr>
+			</table>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+		</section>
+	</section>
+<?php
+	BLayout::getFooter();
+?>
