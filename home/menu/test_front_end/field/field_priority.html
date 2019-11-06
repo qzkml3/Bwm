@@ -1,0 +1,16 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+	define('B_LAYOUT', 'sub_test_front_end');
+	define('B_TITLE', BPage::getTitleByFileName());
+	BLayout::getHeader();
+?>
+	<section class="field_init x">
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	</section>
+
+	<style>
+		.x textarea {height: 500px;}
+	</style>
+<?php
+	BLayout::getFooter();
+?>
