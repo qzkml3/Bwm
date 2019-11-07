@@ -68,13 +68,13 @@ main { display: block;} /*patch IE*/
 /*off*/
 .off_abs {position: absolute; left: -99999px; top: -99999px;}
 
-/*brd_rad*/
-.brd_rad_small2 {border-radius: 3px;}
-.brd_rad_small {border-radius: 5px;}
-.brd_rad {border-radius: 7px;}
-.brd_rad_big {border-radius: 10px;}
-.brd_rad_big2 {border-radius: 15px;}
+.brd_rad {border-radius: 3px;}
+.brd_rad_big {border-radius: 6px;}
+.brd_rad_big2 {border-radius: 9px;}
+.brd_rad_big3 {border-radius: 12px;}
+
 .brd_round {border-radius: 200px;}
+
 
 /*fl*/
 .fl_fix::after, .clfix::after { content: ''; display: table; clear: both; }

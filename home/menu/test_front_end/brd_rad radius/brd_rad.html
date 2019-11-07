@@ -1,0 +1,28 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+BLayout::getHeader();
+?>
+	<style>
+		.this div {height: 50px; background: gray;}
+	</style>
+	<section class="space_verti_child page_style this">
+		<h2>brd_rad</h2>
+		<div class="brd_rad">div</div>
+
+		<h2>brd_rad_big</h2>
+		<div class="brd_rad_big">div</div>
+
+		<h2>brd_rad_big2</h2>
+		<div class="brd_rad_big2">div</div>
+
+		<h2>brd_rad_big3</h2>
+		<div class="brd_rad_big3">div</div>
+
+		<h2>brd_round</h2>
+		<div class="brd_round">div</div>
+	</section>
+<?php
+BLayout::getFooter();
+?>
