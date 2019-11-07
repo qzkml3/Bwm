@@ -1,3 +1,3 @@
 @for $i from 1 through 50 {
-.f_#{$i},.f_#{$i} *{font-size:#{$i}px !important}
+  .mg_right_#{$i}px,.mg_right_#{$i}px_child>*{margin-right:#{$i}px !important}
 }
