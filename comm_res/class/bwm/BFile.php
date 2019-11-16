@@ -2,7 +2,15 @@
 
 	class BFile
 	{
-		static function getFolderList($dir) {
+		static function getFullPath() {
+			return __FILE__;
+
+		}
+		static function getName() {
+			return basename($_SERVER['PHP_SELF']);
+		}
+		static function getFolderList($dir)
+		{
 			if (is_dir($dir)) {
 				if ($dh = opendir($dir)) {
 					while (($entry = readdir($dh)) !== false) {
@@ -23,10 +31,12 @@
 				}
 			}
 		}
-		
-		
+
+
 		private $files = array();
-		function getRecurFileList($dir) {
+
+		function getRecurFileList($dir)
+		{
 			$this->getFileList($dir);
 			natcasesort($this->files);
 			echo '<ul>';
@@ -35,8 +45,9 @@
 			}
 			echo '</ul>';
 		}
-		
-		function getFileList($dir) {
+
+		function getFileList($dir)
+		{
 			if (is_dir($dir)) {
 				if ($dh = opendir($dir)) {
 					while (($entry = readdir($dh)) !== false) {
