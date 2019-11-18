@@ -1,7 +1,11 @@
 <?php
 
-class StrUtil
+class BStr
 {
+	static function replace($target, $from, $to) {
+		return str_replace($from, $to, $target);
+	}
+
 	static function addStr($separ, $add, $now) {
 		$rtn = $now . $separ . $add;
 		return $rtn;
