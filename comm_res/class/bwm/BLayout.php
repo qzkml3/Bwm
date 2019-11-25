@@ -5,7 +5,7 @@
 		static function getHeader() {
 			switch (B_LAYOUT) {
 				default:
-					require_once $_SERVER['DOCUMENT_ROOT'] . '/home/res/inc/header.html';
+					require_once $_SERVER['DOCUMENT_ROOT'] . '/home/menu/-inc/header.html';
 					break;
 				case 'admin':
 					break;
@@ -15,7 +15,7 @@
 		static function getFooter() {
 			switch (B_LAYOUT) {
 				default:
-					require_once $_SERVER['DOCUMENT_ROOT'] . '/home/res/inc/footer.html';
+					require_once $_SERVER['DOCUMENT_ROOT'] . '/home/menu/-inc/footer.html';
 					break;
 				case 'admin':
 					break;

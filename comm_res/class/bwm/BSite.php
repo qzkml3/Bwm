@@ -14,10 +14,10 @@ class BSite
 	}
 
 	static function getGaCode() {
-		require_once $_SERVER['DOCUMENT_ROOT'] . '/home/res/inc/code-ga.html';
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/home/menu/-inc/code-ga.html';
 	}
 
 	static function getNaCode() {
-		require_once $_SERVER['DOCUMENT_ROOT'] . '/home/res/inc/code-na.html';
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/home/menu/-inc/code-na.html';
 	}
 }
