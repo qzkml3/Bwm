@@ -8,4 +8,10 @@
 
 .ui-datepicker {font-size: 13px;}
 .ui-datepicker-title {font-size: 14px;}
-.ui-datepicker-week-end:first-child {color: orangered;}
+.ui-datepicker-week-end:first-child > span {color: orangered;}
+
+.ui-datepicker-year, .ui-datepicker-month
+{font-size: 13px !important; vertical-align: middle; position: relative; top: -2px;}
+
+.ui-datepicker-year {left: -1px;}
+.ui-datepicker-month { left: 4px;}
