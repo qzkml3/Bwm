@@ -1,0 +1,28 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+		.canvas {border: solid 1px #ccc; text-align: center; position: relative; height: 300px;}
+		.item {width: 200px; background: #ccc;
+			position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+
+		}
+	</style>
+	<section class="canvas">
+		<div class="item">
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+		</div>
+	</section>
+<?php
+BLayout::getFooter();
+?>

@@ -1,0 +1,58 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+define('B_LAYOUT', 'sub_test_front_end');
+define('B_TITLE', BPage::getTitleByFileName());
+define('B_DESC', '');
+BLayout::getHeader();
+?>
+	<style>
+
+		.item {
+			width: 200px; background: #ccc;
+			position: fixed; z-index: 9999; left: 0; right: 0; margin: 0 auto;
+			max-height: 90%; overflow-y: auto;
+		}
+	</style>
+	<section class="canvas">
+		<div class="item">
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+			가나다<br>
+		</div>
+	</section>
+	<script>
+      centerLayer('.item');
+
+      function centerLayer(pop) {
+          $(document).ready(function () {
+              centerLayer_callback(pop);
+			 });
+          $(window).on('resize', function () {
+              centerLayer_callback(pop);
+          });
+          function centerLayer_callback(pop) {
+              var w_h = $(window).height();
+
+              $(pop).each(function () {
+                  var $pop = $(this);
+                  var p_h = $pop.outerHeight(true);
+
+                  $pop.css({
+                      'left': 0,
+                      'right': 0,
+                      'margin-left': 'auto',
+                      'margin-right': 'auto',
+                      'top': (w_h - p_h) / 2,
+                      'transform': 'none'
+                  })
+              });
+          }
+		}
+	</script>
+<?php
+BLayout::getFooter();
+?>
