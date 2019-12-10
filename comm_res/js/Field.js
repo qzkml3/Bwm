@@ -1,5 +1,5 @@
 Field = {
-	chkAllChkbox: function (btn, target) {
+	selAllChkbox: function (btn, target) {
 		var $btn = $(btn);
 		var $target = $(target);
 
