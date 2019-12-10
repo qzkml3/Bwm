@@ -1,4 +1,19 @@
 Field = {
+	chkAllChkbox: function (btn, target) {
+		var $btn = $(btn);
+		var $target = $(target);
+
+		$target.each(function () {
+			var $target = $(this);
+			if ($btn.prop('checked')) {
+				$target.prop('checked', true);
+			} else {
+				$target.prop('checked', false);
+			}
+		});
+
+
+	},
 	chkEmpty: function (field, fieldName) {
 		var work_flag = '';
 		if (
@@ -26,8 +41,7 @@ Field = {
 				return this.chkEmptyTrigger(field, fieldName, work_flag);
 			}
 		}
-	}
-	,
+	},
 	chkEmptyTrigger: function (field, fieldName, work_type) {
 		alert(fieldName + '을(를) ' + work_type + ' 해주세요.');
 		return this.fieldChkHandler(field);

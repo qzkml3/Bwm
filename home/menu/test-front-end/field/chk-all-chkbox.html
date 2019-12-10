@@ -1,0 +1,16 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+	define('B_LAYOUT', 'sub_test_front_end');
+	define('B_TITLE', BPage::getTitleByFileName());
+	BLayout::getHeader();
+?>
+	<script src="/comm_res/js/Field.js"></script>
+
+
+	<input type="checkbox" onclick="Field.chkAllChkbox(this, '.to_chk')">
+	<div>
+		<input class="to_chk" type="checkbox">
+		<input class="to_chk" type="checkbox">
+		<input class="to_chk" type="checkbox">
+	</div>
+<?php BLayout::getFooter(); ?>
