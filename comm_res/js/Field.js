@@ -14,6 +14,28 @@ Field = {
 
 
 	},
+	selRow: function (btn) {
+		var $btn = $(btn);
+		var $parent = $btn.closest('tr');
+
+		if ($btn.prop('checked')) {
+			$parent.addClass('on');
+		} else {
+			$parent.removeClass('on');
+		}
+	},
+	selOnOff(btn, input) {
+		var $btn = $(btn);
+		var $input = $(input);
+
+		if ($btn.hasClass('on')) {
+			$btn.removeClass('on');
+			$input.val('');
+		} else {
+			$btn.addClass('on');
+			$input.val('on');
+		}
+	},
 	chkEmpty: function (field, fieldName) {
 		var work_flag = '';
 		if (
