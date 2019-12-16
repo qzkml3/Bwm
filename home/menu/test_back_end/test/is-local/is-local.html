@@ -1,0 +1,32 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+	define('B_LAYOUT', 'sub_test_back_end');
+	define('B_TITLE', BPage::getTitleByFileName());
+	BLayout::getHeader();
+?>
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/comm_res/class/bwm/BTest.php';
+?>
+	<section>
+		<h2>SERVER_ADDR</h2>
+		<?= $_SERVER['SERVER_ADDR']; ?>
+
+		<h2>REMOTE_ADDR</h2>
+		<?= $_SERVER['REMOTE_ADDR']; ?>
+
+		<h2>HTTP_HOST</h2>
+		<?= $_SERVER['HTTP_HOST']; ?>
+
+		<h2>SERVER_PORT</h2>
+		<?= $_SERVER['SERVER_PORT']; ?>
+
+		<h2>Local Test</h2>
+		<?=BTest::isLocal();?>
+
+		<ul>
+			<li>로컬에 도메인을 잡은면 아이피가 127.0.0.1로 나온다.</li>
+			<li>로컬에 아이피로 접속시 해당 아이피로 나온다.</li>
+			<li>둘다 만족하려면, 고정아이피를 주던가 포트를 준다...</li>
+		</ul>
+	</section>
+<?php BLayout::getFooter(); ?>
