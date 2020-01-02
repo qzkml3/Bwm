@@ -12,7 +12,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/home/res/inc/code-ga.html'; ?>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/home/menu/-inc/code-ga.html'; ?>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
