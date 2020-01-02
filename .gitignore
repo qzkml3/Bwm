@@ -1,9 +1,5 @@
-# 인텔리제이
-.idea
+.*
+
+# jetbrains
 *.iml
 
-# 이클립스
-.buildpath
-.project
-.settings
-.externalToolBuilders
