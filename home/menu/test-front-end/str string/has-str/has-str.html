@@ -1,0 +1,46 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/pre_proc_home.php';
+	define('B_LAYOUT', 'sub_test_front_end');
+	define('B_TITLE', BPage::getTitleByFileName());
+?>
+<?php BLayout::getHeader(); ?>
+	<script class="code">
+		var str = 'a\\%';
+		
+		var exe = 'str.match("a")';
+		
+		document.write('<hr>');
+		document.write(exe);
+		
+		document.write('<hr>');
+		document.write(eval(exe));
+	</script>
+	
+	<script class="code">
+		//try {
+		var str = 'a\\%';
+		
+		var exe = 'str.match("\\")';
+		
+		document.write('<hr>');
+		document.write(exe);
+		
+		document.write('<hr>');
+		document.write(eval(exe));
+		//} catch (e) {
+		   // console.log(e);
+		//}
+	</script>
+	
+	<script class="code">
+		var str = 'a\\%';
+		
+		var exe = 'str.indexOf("\\") > -1';
+		
+		document.write('<hr>');
+		document.write(exe);
+		
+		document.write('<hr>');
+		document.write(eval(exe));
+	</script>
+<?php BLayout::getFooter(); ?>
