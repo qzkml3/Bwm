@@ -1,3 +1,5 @@
-<footer>footer</footer>
+<script>
+	console.log('load: footer');
+</script>
 </body>
 </html>

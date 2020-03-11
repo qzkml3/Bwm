@@ -1,0 +1,18 @@
+<div class="editor-cont">
+	<a target="_blank" href="http://www.naver.com"><img src="/comm_res/img/ex/hori-img.jpg" alt=""></a>
+	<img src="/comm_res/img/ex/hori-img.jpg" alt="">
+	<a target="_blank" href="http://www.naver.com"><img src="/comm_res/img/ex/hori-img.jpg" alt=""></a>
+</div>
+
+<script>
+	$('.editor-cont img').each(function () {
+		var $img = $(this);
+		var parentTagName = $img.parent().get(0).tagName;
+		
+		$img.css({'width': '100%'});
+		
+		if (parentTagName != 'A') {
+			$img.wrap('<a target="_blank" href="' + $img.attr('src') + '">');	
+		}
+	})
+</script>
