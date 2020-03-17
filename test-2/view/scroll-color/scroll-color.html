@@ -1,0 +1,20 @@
+<style>
+	.d {width: 100px; height: 100px; border: solid 1px #ccc; overflow-y: auto;}
+	
+	.s1::-webkit-scrollbar {width: 8px; height: 8px; border: 3px solid #fff; }
+	.s1::-webkit-scrollbar-button {width: 8px; height: 8px; border: 3px solid black; }
+	.s1::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .2)}
+	.s1::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0, 0, 0, .2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .1)}
+	
+	.s2::-webkit-scrollbar {width: 8px; height: 8px; border: 3px solid #fff; }
+	.s2::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .2)}
+</style>
+
+<section>
+	<div class="d d1 s1">
+		<?php require 'inner.html'; ?>
+	</div>
+	<div class="d d2 s2">
+		<?php require 'inner.html'; ?>
+	</div>
+</section>

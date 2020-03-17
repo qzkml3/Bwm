@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="test">
 <head>
 	<title>
 		<?php
@@ -22,6 +22,6 @@
 <body>
 <?php require_once 'header.php'; ?>
 <?php require_once $_view; ?>
-<?php require_once 'header.php'; ?>
+<?php require_once 'footer.php'; ?>
 </body>
 </html>
