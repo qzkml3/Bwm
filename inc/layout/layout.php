@@ -15,9 +15,9 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link href="<?=PRJ_URL?>/css/style.css" rel="stylesheet">
+	<link href="<?=SITE_URL?>/css/style.css" rel="stylesheet">
 
-	<script src="/comm_res/js/jquery/jquery-3.4.1.min.js"></script>
+	<script src="/bwm/js/jquery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <?php require_once 'header.php'; ?>
