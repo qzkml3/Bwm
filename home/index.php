@@ -13,9 +13,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bwm/class/file/BFile.php';
 $file = new BFile();
 $file->getRecurFileList('.');
 
-$file->getFileList('.');
 
-BFile::getFolderList('.');
+
+BFile::getFolderList('./');
 
 ?>
 </body>
