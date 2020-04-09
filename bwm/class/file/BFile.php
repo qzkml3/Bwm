@@ -23,6 +23,7 @@
 							$files[] = $v;
 						}
 					}
+					echo $files;
 					natcasesort($files);
 					foreach ($files as $v) {
 						echo '<li><a href="' . $v . '">' . str_replace('./', '', $v) . '</a></li>';
