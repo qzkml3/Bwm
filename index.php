@@ -9,13 +9,13 @@
 <body>
 <ul>
 	<li>메모공간</li>
-	<li>프로젝트 공간</li>
 	<li>테스트 공간</li>
 	<li>홈페이지 공간</li>
 </ul>
 <p>전부 파괴 후 리뉴얼중...</p>
 
 <div><a href="home">새로 시작하는 홈...</a></div>
+<div><a href="test">새로 시작하는 test...</a></div>
 <div><a href="wordpress">내용 폭파할지 예정인 워드프레스...</a></div>
 </body>
 </html>
