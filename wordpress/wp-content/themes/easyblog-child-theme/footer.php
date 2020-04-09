@@ -36,6 +36,7 @@
 
 <?php wp_footer(); ?>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/home/menu/-inc/code-na.html'; ?>
+<!--# na-->
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/tool/analytics/na.html'; ?>
 </body>
 </html>
