@@ -1,5 +1,5 @@
 window.b = [
-  'a'
+  'abb'
   'a'
   'a'
 ]
