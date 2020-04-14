@@ -5,4 +5,4 @@ require_once 'config/conf-site.php';
 $v = $_SERVER['PHP_SELF'];
 $v = str_replace('.php', '.html', $v);
 $_view = ROOT_DIR . $v;
-require_once SITE_DIR . '/inc/layout/layout.php';
+require_once SITE_DIR . '/inc/-inc/-inc.php';

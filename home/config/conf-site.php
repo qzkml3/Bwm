@@ -1,12 +1,14 @@
 <?php
 # Site Config
 define('SITE_NAME', 'Home');
-define('SITE_FOLDER', 'home');
+define('SITE_Id', 'home');
 
-# URL Config
-define('SITE_URL', SITE_FOLDER == '' ? '' : '/' . SITE_FOLDER);
+# Web Source
+define('SITE_URL', SITE_Id == '' ? '' : '/' . SITE_Id);
+define('CSS_URL',  SITE_URL . '/css');
+define('JS_URL',  SITE_URL . '/js');
 
-# Dir Config 
+# Local Source 
 define('ROOT_DIR', $_SERVER['DOCUMENT_ROOT']);
 define('SITE_DIR', ROOT_DIR . SITE_URL);
 define('VIEW_DIR', SITE_DIR . '/view');
