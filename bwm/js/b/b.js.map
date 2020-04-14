@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "b.js",
+  "sourceRoot": "",
+  "sources": [
+    "b.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA,MAAM,CAAC,CAAP,GAAW,CACT,GADS,EAET,GAFS,EAGT,GAHS;;EAOX,MAAM,CAAC,CAAP,GAAW;IACT,CAAA,EAAG,GADM;IAET,CAAA,EAAG,GAFM;IAGT,CAAA,EAAG,GAHM;;AAPX"
+}
