@@ -1,9 +1,3 @@
-
 $ ->
-  console.log 'home'
-  a = 'aaa'
-  
-  Cs.log 'kkk ASDF A'
-
-  alert Str.hasStr(a, '');
-  
+	b.log b instanceof Object		
+	b.log [] instanceof Array

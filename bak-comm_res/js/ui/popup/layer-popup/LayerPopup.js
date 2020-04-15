@@ -54,7 +54,7 @@ LayerPopup = {
 				$pop.draggable();
 			}
 
-			//-inc css
+			//--inc css
 			if (!LayerPopup.isCssAttached) {
 				var css = '<link rel="stylesheet" href="' + cssPath + '">';
 				$("head").prepend(css);
