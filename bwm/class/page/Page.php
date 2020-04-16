@@ -1,36 +1,43 @@
 <?php
 
 class Page {
-	static private $layout = '';
-	static private $title = '';
+	private $layout = '';
+	private $title = '';	
+	private $site_conf;
 	
-	static function setLayout($layout) {
+	function __construct() {
+		$this->site_conf = SiteConf::getInstance();
+	}
+
+	function setLayout($layout) {
 		
 	}
 
-	static function getLayout() {
+	function getLayout() {
 		echo 'getFileName';
 	}
 	
-	static function setTitle($title) {
-		self::$title = $title;
+	function setTitle($title) {
+		$this->title = $title;
 	}
 
-	static function getTitle() {
-		if (self::$title) {
-			$title =  self::$title . ' : '. SiteConf::SITE_NAME;
+	function getTitle() {
+		if ($this->title) {
+			$title =  $this->title . ' : '. SiteConf::SITE_NAME;
 		} else  {
 			$title = SiteConf::SITE_NAME;
 		}
 		return $title;
 	}
 	
-	static function show($replace) {
+	function getView($replace) {
 		$v = $_SERVER['PHP_SELF'];
 		$v = str_replace('.php', $replace, $v);
-		$_view = $_SERVER['DOCUMENT_ROOT'] . $v;
-		
-		require_once SiteConf::getLayoutDir() . '/layout.php';
+		return $_SERVER['DOCUMENT_ROOT'] . $v;
+	}
+	
+	function showPage() {
+		require_once $this->site_conf->getLayoutDir() . '/layout.php';
 	}
 }
 

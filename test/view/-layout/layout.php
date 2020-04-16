@@ -2,7 +2,7 @@
 <html lang="ko" class="test">
 <head>
 	<title>
-		<?=Page::getTitle();?>
+		<?=$_page->getLayout();?>
 	</title>
 
 	<meta charset="UTF-8">
@@ -12,8 +12,8 @@
 	<script src="/bwm/js/jquery/jquery-3.4.1.min.js"></script>
 	<script src="/bwm/js/b/b.js"></script>
 	
-	<link href="<?=SiteConf::SITE_ROOT_URL?>/css/<?=SiteConf::SITE_ID?>.css" rel="stylesheet">
-	<script src="<?=SiteConf::JS_URL?>/<?=SiteConf::SITE_ID?>.js"></script>
+	<link href="<?=$_site_conf->getC?>/css<?=$_site_conf->getSiteId()?>.css" rel="stylesheet">
+	<script src="<?=$_site_conf->getJsUrl()?><?=$_site_conf->getSiteId()?>.js"></script>
 </head>
 <body>
 <?php require_once $_view; ?>

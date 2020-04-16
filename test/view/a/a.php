@@ -1,16 +1,10 @@
 <?php
 $_site_root = '/test';
 require_once $_SERVER['DOCUMENT_ROOT'] . $_site_root . '/pre-proc.php';
-Page::setLayout('');
-Page::setTitle('a');
-//Page::show('.html');
-
-$v = $_SERVER['PHP_SELF'];
-		$v = str_replace('.php', '.html', $v);
-		
-		echo $v; exit;
-		$_view = $_SERVER['DOCUMENT_ROOT'] . $v;
-		
-		require_once SiteConf::getLayoutDir() . '/layout.php';
+$_page->setLayout('');
+$_page->setTitle('a');
+$_view = $_page->getView('.html');
+require_once $_site_conf->getLayoutDir() . '/layout.php';
+//$_page->showPage();
 require_once $_SERVER['DOCUMENT_ROOT'] . $_site_root . '/post-proc.php';
 ?>

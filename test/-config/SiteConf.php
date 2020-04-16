@@ -1,50 +1,93 @@
 <?php
 
 class SiteConf {
+	private static $instance;
+
 	# Site
-	const SITE_NAME = 'Test';
-	const SITE_ID = 'test';
-	
+	private $site_name = 'Test';
+	private $site_id = '/test';
+
 	# Site dir
-	const VIEW_DIR = '/view';
-	const LAYOUT_DIR = '/-layout';
-	const INC_DIR = '/-inc';
-	const POP_DIR = '/-pop';
-	
+	private $view_dir = '/view';
+	private $layout_dir = '/-layout';
+	private $inc_dir = '/-inc';
+	private $pop_dir = '/-pop';
+
 	# Site URL
-	const ROOT_URL = '/';
-	const SITE_ROOT_URL = '/' . self::SITE_ID;
-	const VIEW_URL = self::SITE_ROOT_URL . '/view';
-	const LAYOUT_URL = self::VIEW_URL . '/-layout';
-	const INC_URL = self::VIEW_URL . '/-inc';
-	const POP_URL = self::VIEW_URL . '/-pop';
-	
+	private $root_url = '/';
+	private $view_url = '/view';
+	private $layout_url = '/-layout';
+	private $inc_url = '/-inc';
+	private $pop_url = '/-pop';
+
 	# Site resource URL
-	const css_URL = self::SITE_ROOT_URL . '/css';
-	const JS_URL = self::SITE_ROOT_URL . '/js';
-	const IMG_URL = self::SITE_ROOT_URL . '/img';
-	
-	static function getRootDir() {
-		return $_SERVER['DOCUMENT_ROOT'];	
+	private $css_url = '/css';
+	private $js_url = '/js';
+	private $img_url = '/img';
+
+	public static function getInstance() {
+		if (null === self::$instance) {
+			self::$instance = new SiteConf();
+		}
+
+		return self::$instance;
+	}
+
+	private function __construct() {
+		echo 'SiteConf __construct';
+	}
+
+	private function __destruct() {
+		echo 'SiteConf __destruct';
 	}
 	
-	static function getSiteRootDir() {
-		return self::getRootDir() . self::SITE_ID;	
+	function getSiteName() {
+		return $this->site_name;
 	}
 	
-	static function getViewDir() {
-		return self::getSiteRootDir() . self::VIEW_DIR;
+	function getSiteId() {
+		return $this->site_id;
+	}
+
+	# Server root
+	function getRootDir() {
+		return $_SERVER['DOCUMENT_ROOT'];
+	}
+
+	# Site root
+	function getSiteRootDir() {
+		return $this->getRootDir() . $this->site_id;
+	}
+
+	function getViewDir() {
+		return $this->getSiteRootDir() . $this->view_dir;
+	}
+
+	function getLayoutDir() {
+		return $this->getViewDir() . $this->layout_dir;
+	}
+
+	function getIncDir() {
+		return $this->getViewDir() . $this->inc_dir;
+	}
+
+	function getPopDir() {
+		return $this->getViewDir() . $this->pop_dir;
 	}
 	
-	static function getLayoutDir() {
-		return self::getViewDir() . self::LAYOUT_DIR;
+	function getSiteRootUrl() {
+		return $this->site_id;
 	}
-	
-	static function getIncDir() {
-		return self::getViewDir() . self::INC_DIR;
+
+	function getCssUrl() {
+		return $this->getSiteRootUrl() . $this->css_url;
 	}
-	
-	static function getPopDir() {
-		return self::getViewDir() . self::POP_DIR;
+
+	function getJsUrl() {
+		return $this->getSiteRootUrl() . $this->js_url;
+	}
+
+	function getImgUrl() {
+		return $this->getSiteRootUrl() . $this->img_url;
 	}
 }
