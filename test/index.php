@@ -1,8 +1,12 @@
 <?php
-$_site_root = '/test';
-require_once $_SERVER['DOCUMENT_ROOT'] . $_site_root . '/pre-proc.php';
-Page::setLayout('');
-Page::setTitle('');
-Page::show('.html');
-require_once $_SERVER['DOCUMENT_ROOT'] . $_site_root . '/post-proc.php';
+$b_site_root_dir = $_SERVER['DOCUMENT_ROOT'] . '/test';
+require_once $b_site_root_dir . '/pre-proc.php';
+
+$b_page->setLayout('');
+$b_page->setTitle('');
+
+$b_view = $b_page->getView('.html');
+require_once $b_page->getPage('/layout.php');
+
+require_once $b_site_root_dir . '/post-proc.php';
 ?>
