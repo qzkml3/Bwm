@@ -23,9 +23,9 @@ class Page {
 
 	function getTitle() {
 		if ($this->title) {
-			$title =  $this->title . ' : '. SiteConf::SITE_NAME;
+			$title =  $this->title . ' : ' . $this->site_conf->getSiteName();
 		} else  {
-			$title = SiteConf::SITE_NAME;
+			$title = SiteConf::$this->site_conf->getSiteName();
 		}
 		return $title;
 	}
@@ -36,8 +36,8 @@ class Page {
 		return $_SERVER['DOCUMENT_ROOT'] . $v;
 	}
 	
-	function showPage() {
-		require_once $this->site_conf->getLayoutDir() . '/layout.php';
+	function getPage($layout) {
+		return $this->site_conf->getLayoutDir() . $layout;
 	}
 }
 

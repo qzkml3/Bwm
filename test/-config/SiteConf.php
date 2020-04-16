@@ -5,7 +5,7 @@ class SiteConf {
 
 	# Site
 	private $site_name = 'Test';
-	private $site_id = '/test';
+	private $site_id = 'test';
 
 	# Site dir
 	private $view_dir = '/view';
@@ -15,10 +15,6 @@ class SiteConf {
 
 	# Site URL
 	private $root_url = '/';
-	private $view_url = '/view';
-	private $layout_url = '/-layout';
-	private $inc_url = '/-inc';
-	private $pop_url = '/-pop';
 
 	# Site resource URL
 	private $css_url = '/css';
@@ -31,14 +27,6 @@ class SiteConf {
 		}
 
 		return self::$instance;
-	}
-
-	private function __construct() {
-		echo 'SiteConf __construct';
-	}
-
-	private function __destruct() {
-		echo 'SiteConf __destruct';
 	}
 	
 	function getSiteName() {
@@ -56,7 +44,7 @@ class SiteConf {
 
 	# Site root
 	function getSiteRootDir() {
-		return $this->getRootDir() . $this->site_id;
+		return $this->getRootDir() . '/' . $this->site_id;
 	}
 
 	function getViewDir() {
@@ -75,8 +63,13 @@ class SiteConf {
 		return $this->getViewDir() . $this->pop_dir;
 	}
 	
+	# URL		
+	function getRootUrl() {
+		return '/';
+	}
+	
 	function getSiteRootUrl() {
-		return $this->site_id;
+		return $this->getRootUrl() . $this->site_id;
 	}
 
 	function getCssUrl() {
