@@ -10,8 +10,8 @@
 	<script src="/bwm/js/jquery/jquery-3.4.1.min.js"></script>
 	<script src="/bwm/js/b/b.js"></script>
 	
-	<link href="<?=$_site_conf->getCssUrl()?>/<?=$_site_conf->getSiteId()?>.css" rel="stylesheet">
-	<script src="<?=$_site_conf->getJsUrl()?>/<?=$_site_conf->getSiteId()?>.js"></script>
+	<link href="<?=$b_site_conf->getCssUrl()?>/<?=$b_site_conf->getSiteId()?>.css" rel="stylesheet">
+	<script src="<?=$b_site_conf->getJsUrl()?>/<?=$b_site_conf->getSiteId()?>.js"></script>
 </head>
 <body>
 <?php require_once $b_view; ?>
