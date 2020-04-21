@@ -1,4 +1,5 @@
 <?php
+
 namespace BWM;
 
 class SiteConf {
@@ -29,11 +30,11 @@ class SiteConf {
 
 		return self::$instance;
 	}
-	
+
 	function getSiteName() {
 		return $this->site_name;
 	}
-	
+
 	function getSiteId() {
 		return $this->site_id;
 	}
@@ -63,12 +64,12 @@ class SiteConf {
 	function getPopDir() {
 		return $this->getViewDir() . $this->pop_dir;
 	}
-	
+
 	# URL		
 	function getRootUrl() {
 		return '/';
 	}
-	
+
 	function getSiteRootUrl() {
 		return $this->getRootUrl() . $this->site_id;
 	}
