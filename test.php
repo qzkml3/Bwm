@@ -1,5 +1,10 @@
-<?php
-$_layout = '';
-$_title = 'test';
-?>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/home/show-page.php';
+
+<script>
+	function aaa() {
+		
+	}
+	
+	a = [];
+	
+	alert(aaa instanceof function);
+</script>
