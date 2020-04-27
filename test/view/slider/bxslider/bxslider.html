@@ -2,7 +2,7 @@
 $sld_list = [];
 
 
-for ($i = 0; $i < 10; $i ++) {
+for ($i = 0; $i < 5; $i ++) {
 	array_push($sld_list, ['src' => '/bwm/img/test/img-h.jpg']);
 
 }
@@ -22,7 +22,7 @@ for ($i = 0; $i < 10; $i ++) {
 <style>
 	body {margin: 0;}
 
-	.bxslider {text-align: center; position: relative;}
+	.bxslider {text-align: center; position: relative; overflow: hidden;}
 	.bxslider ul {padding: 0; margin: 0;}
 	.bxslider li {list-style: none;}
 	.bxslider img {width: 100%;}
@@ -43,10 +43,10 @@ for ($i = 0; $i < 10; $i ++) {
 		display: inline-block; width: 30px; height: 30px; font-size: 11px; line-height: 2.8;
 	}
 
-	.bxslider .bx-pager {bottom: 5%; position: absolute; width: 100%;}
-	.bxslider .bx-pager-item {display: inline-block; margin: 0 10px;}
-	.bxslider .bx-pager-link {text-indent: -99999px; display: inline-block; width: 20px; height: 20px; background: gray;
-		border-radius: 100px;
+	.bxslider .bx-pager {bottom: 2%; position: absolute; width: 100%;}
+	.bxslider .bx-pager-item {display: inline-block; margin: 0 5px;}
+	.bxslider .bx-pager-link {text-indent: -99999px; display: inline-block; width: 10px; height: 10px; background: gray;
+		border-radius: 100px; opacity: .7;
 	}
 	.bxslider .bx-pager-link.active {background: #f1bc1d;}
 </style>
