@@ -1,8 +1,9 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/test/bwm.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/test/load-bwm.php';
+require_once '가.php';
 
-$b->lo('sub');
-$b->tt('title');
+$b->layout('sub');
+$b->title('');
 
 require_once $b->page();
 ?>
