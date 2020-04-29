@@ -10,18 +10,18 @@ class SiteConf {
 	private $site_id = 'test';
 
 	# Site dir
-	private $view_dir = '/view';
-	private $layout_dir = '/-layout';
-	private $inc_dir = '/-inc';
-	private $pop_dir = '/-pop';
+	private $view_dir = '/view/';
+	private $layout_dir = '/-layout/';
+	private $inc_dir = '/-inc/';
+	private $pop_dir = '/-pop/';
 
 	# Site URL
 	private $root_url = '/';
 
 	# Site resource URL
-	private $css_url = '/css';
-	private $js_url = '/js';
-	private $img_url = '/img';
+	private $css_url = '/css/';
+	private $js_url = '/js/';
+	private $img_url = '/img/';
 
 	public static function getInstance() {
 		if (null === self::$instance) {
@@ -74,12 +74,22 @@ class SiteConf {
 		return $this->getRootUrl() . $this->site_id;
 	}
 
+	# CSS
 	function getCssUrl() {
 		return $this->getSiteRootUrl() . $this->css_url;
 	}
 
+	function getCssFile() {
+		return $this->getCssUrl() . $this->getSiteId() . '.css';
+	}
+
+	# JS
 	function getJsUrl() {
 		return $this->getSiteRootUrl() . $this->js_url;
+	}
+	
+	function getJsFile() {
+		return $this->getJsUrl() . $this->getSiteId() . '.j';
 	}
 
 	function getImgUrl() {
