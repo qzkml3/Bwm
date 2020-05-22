@@ -3,6 +3,7 @@
 	class BWM
 	{
 		static function load() {
+			echo ($_SERVER['DOCUMENT_ROOT']); exit;
 			require_once 'BSite.php';
 			require_once 'BPage.php';
 			require_once 'BLayout.php';

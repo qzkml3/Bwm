@@ -1,5 +1,5 @@
 <?php
-use BWM\SiteConf;
+use _bwm\SiteConf;
 
 class BWM {
 	public $site_conf;
