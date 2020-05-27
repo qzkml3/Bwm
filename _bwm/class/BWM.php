@@ -1,5 +1,7 @@
 <?php
-use _bwm\SiteConf;
+namespace bwm;
+
+use bwm\SiteConf;
 
 class BWM {
 	public $site_conf;
@@ -53,8 +55,9 @@ class BWM {
 		$v = $_SERVER['PHP_SELF'];
 		$v = str_replace('.php', $replace, $v);
 		//$v = iconv('UTF-8', 'EUC-KR', $v);
-		$v = iconv('EUC-KR', 'UTF-8', $v);
-		echo $v; exit;
+		//$v = iconv('EUC-KR', 'UTF-8', $v);
+		$v = urldecode($v);
+		//echo $v; exit;
 		return $_SERVER['DOCUMENT_ROOT'] . $v;
 	}
 }

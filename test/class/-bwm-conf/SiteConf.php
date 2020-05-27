@@ -1,6 +1,6 @@
 <?php
 
-namespace _bwm;
+namespace bwm;
 
 class SiteConf {
 	private static $instance;

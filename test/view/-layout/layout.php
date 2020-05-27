@@ -18,5 +18,6 @@
 require_once $b->getView();
 $b->postProc();
 ?>
+
 </body>
 </html>
