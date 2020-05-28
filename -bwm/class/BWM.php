@@ -2,7 +2,7 @@
 
 namespace bwm;
 
-use bwm\SiteConf;
+use bwm\conf\SiteConf;
 
 class BWM {
 	public $site_conf;
@@ -55,7 +55,7 @@ class BWM {
 		} else {
 			$layout = 'layout.php';
 		}
-		return $this->getLayoutDir() . '/' . $layout;
+		return SiteConf::getLayoutDir() . '/' . $layout;
 	}
 	
 	function getSiteId() {
@@ -64,27 +64,6 @@ class BWM {
 	
 	function getSiteName() {
 		return SiteConf::SITE_NAME;
-	}
-	
-	function getRootDir() {
-		return $_SERVER['DOCUMENT_ROOT'];
-	}
-	
-	function getSiteRootDir() {
-		return $this->getRootDir() . SiteConf::SITE_ROOT_URL;
-	}
-
-	function getViewDir() {
-		return $this->getSiteRootDir() . SiteConf::VIEW_URL;
-
-	}
-
-	function getLayoutDir() {
-		return $this->getViewDir() . SiteConf::LAYOUT_URL;
-	}
-	
-	function getSiteRootUrl() {
-		return SiteConf::SITE_ROOT_URL;
 	}
 	
 	function postProc() {
