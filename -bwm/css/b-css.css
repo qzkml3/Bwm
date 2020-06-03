@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*# util*/
+.cl_fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*# position*/
+.p_a {
+  position: absolute;
+}
+
+.t {
+  top: 0;
+}
+
+.r {
+  right: 0;
+}
+
+.b {
+  bottom: 0;
+}
+
+.l {
+  left: 0;
+}
+
+.c {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/*# initialize*/
+.b_init * {
+  font-family: "Malgun Gothic";
+  letter-spacing: -0.03em;
+}
+.b_init a {
+  color: #3baae3;
+  text-decoration: none;
+}
+.b_init a:hover {
+  box-shadow: 0px 0px 5px 5px #ddd;
+  text-decoration: underline;
+}
+.b_init a[target=_blank]::after {
+  content: "=▷";
+  font-size: smaller;
+  transform: rotate(-30deg);
+  display: inline-block;
+  box-shadow: none;
+  text-decoration: none;
+}
+.b_init li {
+  margin: 1em 0;
+  border-bottom: solid 1px #ccc;
+  padding: 0.5em;
+}
+.b_init li:last-child {
+  border-bottom: none;
+}
+
+.b_page {
+  padding: 0 20px;
+}
+
+/*# sourceMappingURL=b-css.css.map */

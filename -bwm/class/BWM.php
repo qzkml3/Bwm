@@ -13,9 +13,7 @@ class BWM {
 	private $page;
 	private $view;
 
-	function __construct($site_conf) {
-		$this->site_conf = $site_conf;
-		
+	function __construct() {
 		$this->loadBwm();
 		$this->setErrConf();
 	}
@@ -58,10 +56,6 @@ class BWM {
 		return SiteConf::getLayoutDir() . '/' . $layout;
 	}
 	
-	function getSiteId() {
-		return SiteConf::SITE_ID;
-	}
-	
 	function getSiteName() {
 		return SiteConf::SITE_NAME;
 	}
@@ -85,9 +79,5 @@ class BWM {
 		$v = urldecode($v);
 		//echo $v; exit;
 		return $_SERVER['DOCUMENT_ROOT'] . $v;
-	}
-
-	function getRootUrl() {
-		return '/';
 	}
 }

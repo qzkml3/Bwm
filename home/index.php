@@ -1,5 +1,8 @@
 <?php
-$_layout = '';
-$_title = 'main';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
+
+$b->setLayout('sub');
+$b->setTitle('');
+
+require_once $b->getPage();
 ?>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/home/show-page.php';
