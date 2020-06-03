@@ -1,10 +1,16 @@
 body {
-  border: solid 15px #eee;
+  background: #eee;
   margin: 0;
 }
 
+.gnb {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 50px;
+}
+
 .gnb > * {
-  float: left;
   margin: 0 10px;
 }
 

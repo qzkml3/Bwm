@@ -15,7 +15,7 @@
 	<script src="<?=$b->site_conf->getSiteRootUrl()?>/js/<?=$b->site_conf->getSiteId()?>.js"></script>
 </head>
 <body class="b_init">
-<?require_once 'gnb.php'?>
+<?php require_once 'gnb.php'?>
 <?php
 require_once $b->getView();
 $b->postProc();
