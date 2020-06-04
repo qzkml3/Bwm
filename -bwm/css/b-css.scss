@@ -1,13 +1,6 @@
-main {display: block;}
-/*# util*/
-.cl_fix::after {content: ''; display: block; clear:both;}
-
-/*# position*/
-.p_a {position: absolute;}
-.t {top: 0}  .r {right: 0;} .b {bottom: 0}  .l {left: 0;}
-.c {left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
-
 /*# initialize*/
+main {display: block;}
+
 .b_init {
   * {font-family: 'Malgun Gothic'; letter-spacing: -0.03em;}
   a {color: #3baae3; text-decoration: none;}
@@ -17,8 +10,18 @@ main {display: block;}
   a:hover[target=_blank]::after {text-decoration: none; color: orange;}
   
   ul, ol {padding-left: 1.5em;}
-  li {margin: 1em 0; border-bottom: solid 1px #ccc; padding: .5em; list-style-position: insidex; list-style-type: nonex}
-  li:last-child {border-bottom: none;}
+  li {margin: 1em 0; border-bottom: solid 1px #ccc; padding: .5em; list-style-position: insidex;}
+  li:last-child{border-bottom: none;}
 }
 
-.b_page {padding: 1px 20px; max-width: 1000px; margin: 0 auto; background: white;}
+.b_page {padding: 1px 20px; max-width: 1000px; margin: 0 auto; background: white; box-sizing: border-box; line-height: 1.8;}
+.b_page >
+
+
+
+/*# util*/
+.cl_fix::after {content: ''; display: block; clear:both;}
+.p_a {position: absolute;}
+.t {top: 0}  .r {right: 0;} .b {bottom: 0}  .l {left: 0;}
+.c {left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
+.p_0 {padding: 0;}

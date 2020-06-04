@@ -14,12 +14,13 @@
 	<link href="<?=$b->site_conf->getSiteRootUrl()?>/css/<?=$b->site_conf->getSiteId()?>.css" rel="stylesheet">
 	<script src="<?=$b->site_conf->getSiteRootUrl()?>/js/<?=$b->site_conf->getSiteId()?>.js"></script>
 </head>
-<body class="b_init">
-<?php require_once 'gnb.php'?>
-<?php
-require_once $b->getView();
-$b->postProc();
-?>
-
+<body class="<?=$b->getLayout();?>b_init">
+<?php require_once 'gnb.php' ?>
+<section class="b_page">
+	<?php
+	require_once $b->getView();
+	$b->postProc();
+	?>
+</section>
 </body>
 </html>

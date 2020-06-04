@@ -31,6 +31,11 @@ class BWM {
 	function setLayout($layout) {
 		$this->layout = $layout;
 	}
+	function getLayout() {
+		$v = $this->layout;
+		$v = ' ' . $v . ' ';
+		return $v;
+	}
 
 	# Title
 	function setTitle($title) {

@@ -1,43 +1,9 @@
 @charset "UTF-8";
+/*# initialize*/
 main {
   display: block;
 }
 
-/*# util*/
-.cl_fix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/*# position*/
-.p_a {
-  position: absolute;
-}
-
-.t {
-  top: 0;
-}
-
-.r {
-  right: 0;
-}
-
-.b {
-  bottom: 0;
-}
-
-.l {
-  left: 0;
-}
-
-.c {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-/*# initialize*/
 .b_init * {
   font-family: "Malgun Gothic";
   letter-spacing: -0.03em;
@@ -68,7 +34,6 @@ main {
   border-bottom: solid 1px #ccc;
   padding: 0.5em;
   list-style-position: insidex;
-  list-style-type: nonex;
 }
 .b_init li:last-child {
   border-bottom: none;
@@ -79,6 +44,44 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   background: white;
+  box-sizing: border-box;
+  line-height: 1.8;
+}
+
+.b_page > .cl_fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.p_a {
+  position: absolute;
+}
+
+.t {
+  top: 0;
+}
+
+.r {
+  right: 0;
+}
+
+.b {
+  bottom: 0;
+}
+
+.l {
+  left: 0;
+}
+
+.c {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.p_0 {
+  padding: 0;
 }
 
 /*# sourceMappingURL=b-css.css.map */
