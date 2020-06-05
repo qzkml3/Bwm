@@ -4,6 +4,14 @@ main {
   display: block;
 }
 
+*:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: none;
+}
+
 .b_init * {
   font-family: "Malgun Gothic";
   letter-spacing: -0.03em;
@@ -14,7 +22,7 @@ main {
   color: #3baae3;
   text-decoration: none;
 }
-.b_init a:hover {
+.b_init a:hover, .b_init a:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 .b_init a[target=_blank]::after {
@@ -100,7 +108,8 @@ body .b_ls_inside ul > *, body .b_ls_inside ol > * {
   box-sizing: border-box;
   height: 30px;
 }
-.b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus {
+.b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus,
+.b_fd input:hover, .b_fd select:hover, .b_fd textarea:hover {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 .b_fd label > span {
@@ -151,13 +160,47 @@ body .b_ls_inside ul > *, body .b_ls_inside ol > * {
 .b_bt a {
   line-height: 30px;
 }
-.b_bt button:hover, .b_bt a:hover, .b_bt input[type=button]:hover {
+.b_bt button:hover, .b_bt a:hover, .b_bt input[type=button]:hover,
+.b_bt button:focus, .b_bt a:focus, .b_bt input[type=button]:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
+}
+
+.b_bt_s button, .b_bt_s a, .b_bt_s input[type=button] {
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.b_bt_s2 button, .b_bt_s2 a, .b_bt_s2 input[type=button] {
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+body .b_bt_gray {
+  background: gray;
+}
+
+body .b_bt_safe {
+  background: green;
+}
+
+body .b_bt_black {
+  background: #333;
+}
+
+body .b_bt_alert {
+  background: orangered;
+}
+
+body .b_bt_warn {
+  background: orange;
 }
 
 @media (max-width: 1000px) {
   .b_bt button, .b_bt a, .b_bt input[type=button] {
     top: -1px;
+    font-size: smaller;
   }
 }
 /*# util*/
@@ -195,6 +238,14 @@ body .b_ls_inside ul > *, body .b_ls_inside ol > * {
 
 .p_0 {
   padding: 0;
+}
+
+.w_100p {
+  width: 100%;
+}
+
+.ta_c {
+  text-align: center;
 }
 
 /*# sourceMappingURL=b-css.css.map */
