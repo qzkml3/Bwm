@@ -33,7 +33,6 @@ class BWM {
 	}
 	function getLayout() {
 		$v = $this->layout;
-		$v = ' ' . $v . ' ';
 		return $v;
 	}
 
@@ -49,6 +48,10 @@ class BWM {
 			$title = $this->getSiteName();
 		}
 		return $title;
+	}
+
+	function getPageTitle() {
+		return $this->title;
 	}
 
 	# Page that with layout

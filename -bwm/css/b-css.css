@@ -7,13 +7,15 @@ main {
 .b_init * {
   font-family: "Malgun Gothic";
   letter-spacing: -0.03em;
+  line-height: 1.6;
+  color: #555;
 }
 .b_init a {
   color: #3baae3;
   text-decoration: none;
 }
 .b_init a:hover {
-  box-shadow: 0px 0px 5px 5px #ddd;
+  box-shadow: 0px 0px 3px 3px skyblue;
 }
 .b_init a[target=_blank]::after {
   content: "=▷";
@@ -23,32 +25,143 @@ main {
   box-shadow: none;
 }
 .b_init a:hover[target=_blank]::after {
+  content: "=▶";
   text-decoration: none;
   color: orange;
 }
 .b_init ul, .b_init ol {
   padding-left: 1.2em;
 }
-.b_init li {
-  margin: 0em 0;
+.b_init h1 {
+  font-size: 22px;
   border-bottom: solid 1px #ccc;
-  padding: 0.6em 0 0.4em;
-  list-style-position: insidex;
+  padding-bottom: 0.2em;
 }
-.b_init li:last-child {
+.b_init h2 {
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .b_init * {
+    font-size: 12px;
+  }
+}
+.b_page {
+  padding: 1px 3%;
+  max-width: 1000px;
+  margin: 0 auto 5%;
+  background: white;
+  box-sizing: border-box;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+  box-shadow: 4px 4px 8px #bbb;
+}
+
+.b_page > * {
+  margin: 40px 0;
+}
+
+.b_page h2 {
+  margin-top: 80px;
+}
+
+/*list*/
+.b_ls ul > *, .b_ls ol > * {
+  margin: 0em 0;
+  padding: 0.6em 0 0.4em;
+}
+
+.b_ls_bordered ul > *, .b_ls_bordered ol > * {
+  border-bottom: solid 1px #ccc;
+}
+.b_ls_bordered ul > *:last-child, .b_ls_bordered ol > *:last-child {
   border-bottom: none;
 }
 
-.b_page {
-  padding: 1px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: white;
-  box-sizing: border-box;
-  line-height: 1.8;
+.b_ls_off_style ul > *, .b_ls_off_style ol > * {
+  list-style-type: none;
 }
 
-.b_page > .cl_fix::after {
+body .b_ls_inside ul, body .b_ls_inside ol {
+  padding: 0;
+}
+body .b_ls_inside ul > *, body .b_ls_inside ol > * {
+  list-style-position: inside;
+}
+
+/*field*/
+.b_fd input[type=text], .b_fd input[type=password], .b_fd select, .b_fd textarea {
+  border: solid 1px #ccc;
+  background: white;
+  border-radius: 3px;
+  font-size: smaller;
+  padding: 0em 0.2em;
+  box-sizing: border-box;
+  height: 30px;
+}
+.b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus {
+  box-shadow: 0px 0px 3px 3px skyblue;
+}
+.b_fd label > span {
+  font-size: smaller;
+  vertical-align: baseline;
+}
+.b_fd label > input[type=checkbox], .b_fd label > input[type=radio] {
+  font-size: smaller;
+  position: relative;
+  top: -0.16em;
+  vertical-align: middle;
+}
+.b_fd textarea {
+  width: 100%;
+  height: 100px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1000px) {
+  .b_fd label > input[type=checkbox], .b_fd label > input[type=radio] {
+    width: 13px;
+    height: 13px;
+    top: -0.1em;
+  }
+  .b_fd label > input[type=checkbox] {
+    top: -0.07em;
+  }
+  .b_fd label > input[type=radio] {
+    top: -0.22em;
+  }
+}
+/*btn*/
+.b_bt button, .b_bt a, .b_bt input[type=button] {
+  color: white;
+  background: #0070a3;
+  border: none;
+  font-size: smaller;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 30px;
+  padding: 0 1em;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.b_bt a {
+  line-height: 30px;
+}
+.b_bt button:hover, .b_bt a:hover, .b_bt input[type=button]:hover {
+  box-shadow: 0px 0px 3px 3px skyblue;
+}
+
+@media (max-width: 1000px) {
+  .b_bt button, .b_bt a, .b_bt input[type=button] {
+    top: -1px;
+  }
+}
+/*# util*/
+.cl_fix::after {
   content: "";
   display: block;
   clear: both;
