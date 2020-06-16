@@ -18,7 +18,7 @@
 <?php require_once 'gnb.php' ?>
 <main class="b_page">
 	<?php if ($b->getPageTitle()) { ?>
-		<h1><?=$b->getPageTitle()?></h1>
+		<h1 class="b_tit"><?=$b->getPageTitle()?></h1>
 	<?php } ?>
 	<?php
 
