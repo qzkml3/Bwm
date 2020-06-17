@@ -1,34 +1,50 @@
-<section class="b_cont">
-	<section class="b_cont">
-		<style>
-			.f1 {display: flex; width: 50px; height: 50px; border: solid 1px #ccc;}
-			
-			.p {border: solid 5px orange;}
-			.c {border: solid 5px silver;}
-		</style>
-		
-		<div class="p">
-			<div class="c">asdf</div>
-		</div>
-		
-		<div class="f1 b_flex_al_c b_flex_al_m">
-			a
-		</div>
-
-		<div class="b_box">
-			<ul class="b_flex_column">
-				<?php for ($i = 0; $i < 3; $i++) { ?>
-					<li class="b_flex">
-						<div style="flex-shrink: 0; width: 100px;">1</div>
-						<div style="flex-grow: 2;">21as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad1as fad</div>
-					</li>
-				<?php } ?>
-			</ul>
-		</div>
-	</section>
-</section>
-
 <style>
-	
-
+	.f1 {display: flex; width: 50px; height: 50px; border: solid 1px #ccc;}
+	.p {border: solid 5px orange;}
+	.c {border: solid 5px silver;}
 </style>
+<section class="b_cont">
+	<div class="p b_flex">
+		<div class="c">asdf</div>
+		<div class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex">
+		<div style="flex-grow: 1;" class="c">asdf</div>
+		<div class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex">
+		<div style="flex-grow: 1;" class="c">asdf</div>
+		<div style="flex-grow: 1;" class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex">
+		<div style="flex-grow: 2;" class="c">asdf</div>
+		<div style="flex-grow: 1;" class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex">
+		<div style="flex-grow: 1;" class="c">asdf</div>
+		<div style="width: 100px;" class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex">
+		<div style="flex-grow: 1;" class="c">asdf</div>
+		<div style="flex-basis: 100px;" class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex">
+		<div style="" class="c">asdf</div>
+		<div style="flex-basis: 100px;" class="c">asdf</div>
+	</div>
+
+	<div class="p b_flex" style="flex-direction: column;">
+		<div style="" class="c">asdf</div>
+		<div style="flex-basis: 100px;" class="c">asdf</div>
+	</div>
+
+	<div class="f1 b_flex_al_c b_flex_al_m">
+		a
+	</div>
+</section>
