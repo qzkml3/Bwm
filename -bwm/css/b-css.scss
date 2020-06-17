@@ -52,7 +52,7 @@ main {display: block;}
 .b_cont > *:first-child {margin-top: 0;}
 .b_cont > *:last-child {margin-bottom: 0;}
 
-.b_cont_w_s {max-width: 400px; box-sizing: border-box;}
+.b_cont_w_s {max-width: 400px; box-sizing: border-box; margin-left: auto; margin-right: auto;}
 
 
 /*list*/
@@ -73,7 +73,7 @@ main {display: block;}
 .b_fd {
   input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
     border: solid 1px #ccc; background: white; border-radius: 3px; font-size: smaller;
-    padding: 0em .2em; box-sizing: border-box; height: 30px;
+    padding: 0em .2em; box-sizing: border-box; height: 30px; width: 100%;
   }
   
   input:focus, select:focus, textarea:focus,

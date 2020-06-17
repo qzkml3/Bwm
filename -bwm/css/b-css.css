@@ -114,6 +114,8 @@ main {
 .b_cont_w_s {
   max-width: 400px;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*list*/
@@ -142,6 +144,7 @@ main {
   padding: 0em 0.2em;
   box-sizing: border-box;
   height: 30px;
+  width: 100%;
 }
 .b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus,
 .b_fd input:hover, .b_fd select:hover, .b_fd textarea:hover {
