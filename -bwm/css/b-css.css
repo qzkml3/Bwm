@@ -52,9 +52,12 @@ main {
   font-size: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 400px) {
   .b_init * {
     font-size: 12px;
+  }
+  .b_init h2 {
+    font-size: 16px;
   }
 }
 .b_page {
@@ -80,6 +83,11 @@ main {
   margin: 30px 0 30px;
 }
 
+@media (max-width: 400px) {
+  .b_tit {
+    font-size: 18px;
+  }
+}
 .b_cont {
   padding: 1px;
   margin-left: auto;
@@ -104,7 +112,8 @@ main {
 }
 
 .b_cont_w_s {
-  max-width: 300px;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 /*list*/
@@ -124,15 +133,8 @@ main {
   list-style-type: none;
 }
 
-body .b_ls_block ul, body .b_ls_block ol {
-  padding: 0;
-}
-body .b_ls_block ul > *, body .b_ls_block ol > * {
-  list-style-position: inside;
-}
-
 /*field*/
-.b_fd input[type=text], .b_fd input[type=password], .b_fd select, .b_fd textarea {
+.b_fd input[type=text], .b_fd input[type=password], .b_fd input[type=number], .b_fd input[type=email], .b_fd select, .b_fd textarea {
   border: solid 1px #ccc;
   background: white;
   border-radius: 3px;
@@ -164,6 +166,11 @@ body .b_ls_block ul > *, body .b_ls_block ol > * {
   color: #3baae3;
 }
 
+@media (max-width: 400px) {
+  .b_fd input[type=text], .b_fd input[type=password], .b_fd input[type=number], .b_fd input[type=email], .b_fd select, .b_fd textarea {
+    font-size: inherit;
+  }
+}
 .b_fd_100p input[type=text], .b_fd_100p input[type=password], .b_fd_100p select, .b_fd_100p textarea {
   width: 100%;
 }
@@ -184,7 +191,7 @@ body .b_ls_block ul > *, body .b_ls_block ol > * {
   height: 40px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 400px) {
   .b_fd label > input[type=checkbox], .b_fd label > input[type=radio] {
     width: 13px;
     height: 13px;
@@ -280,7 +287,7 @@ body .b_bt_warn {
   background: orange;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 400px) {
   .b_bt button, .b_bt a, .b_bt input[type=button] {
     top: -1px;
     font-size: smaller;
@@ -383,6 +390,91 @@ body .b_bt_warn {
 
 .b_flex_al_m {
   align-items: center;
+}
+
+.b_flex_grow {
+  flex-grow: 1;
+}
+
+.d_ib {
+  display: inline-block;
+}
+
+.ta_l {
+  text-align: left !important;
+}
+
+.ta_c {
+  text-align: center !important;
+}
+
+.ta_r {
+  text-align: right !important;
+}
+
+.b_ls ol {
+  counter-reset: cnt;
+  padding: 0;
+}
+.b_ls ol li {
+  padding-left: 1.2em;
+  list-style: none;
+  list-style-position: inside;
+  position: relative;
+}
+.b_ls ol li::before {
+  counter-increment: cnt;
+  content: counter(cnt) ". ";
+  position: absolute;
+  left: 0;
+}
+.b_ls ul {
+  padding: 0;
+}
+.b_ls ul li {
+  /*padding-left: 1.2em;*/
+  margin-left: 1.2em;
+  list-style-type: none;
+  list-style-position: outside;
+  position: relative;
+}
+.b_ls ul li::before {
+  counter-increment: cnt;
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -1em;
+  width: 7px;
+  height: 7px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: #444;
+}
+.b_ls ul ul li::before {
+  border: solid 1px #444;
+  background: none;
+}
+.b_ls ul ul ul li::before {
+  background: #444;
+  border-radius: 0;
+}
+
+body .b_ls_block ul, body .b_ls_block ol {
+  padding: 0;
+}
+body .b_ls_block ul > *, body .b_ls_block ol > * {
+  list-style-position: inside;
+}
+body .b_ls_block li {
+  margin-left: 0;
+}
+
+body .b_ls_block li {
+  padding-left: 1em;
+}
+
+body .b_ls_block li::before {
+  left: 0;
 }
 
 /*# sourceMappingURL=b-css.css.map */

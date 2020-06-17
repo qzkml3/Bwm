@@ -23,9 +23,10 @@ main {display: block;}
   h2 {font-size: 20px;}
 }
 
-@media(max-width: 1000px) {
-  .b_init * {
-    font-size: 12px;
+@media(max-width: 400px) {
+  .b_init {
+    * {font-size: 12px;}
+    h2 {font-size: 16px;}
   }
 
 }
@@ -38,6 +39,10 @@ main {display: block;}
 
 .b_tit {font-size: 22px; border-bottom: solid 1px #ccc; padding-bottom: .2em; margin: 30px 0 30px;}
 
+@media(max-width: 400px) {
+  .b_tit {font-size: 18px;}
+}
+
 .b_cont {
   padding: 1px; margin-left: auto; margin-right: auto;
   h1 {font-size: larger; margin-top: 3em; margin-bottom: -1em;}
@@ -47,7 +52,7 @@ main {display: block;}
 .b_cont > *:first-child {margin-top: 0;}
 .b_cont > *:last-child {margin-bottom: 0;}
 
-.b_cont_w_s {max-width: 300px;}
+.b_cont_w_s {max-width: 400px; box-sizing: border-box;}
 
 
 /*list*/
@@ -64,14 +69,9 @@ main {display: block;}
   ul > *, ol > * {list-style-type: none;}
 }
 
-body .b_ls_block {
-  ul, ol {padding: 0;}
-  ul > *, ol > * {list-style-position: inside;}
-}
-
 /*field*/
 .b_fd {
-  input[type=text], input[type=password], select, textarea {
+  input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
     border: solid 1px #ccc; background: white; border-radius: 3px; font-size: smaller;
     padding: 0em .2em; box-sizing: border-box; height: 30px;
   }
@@ -89,6 +89,14 @@ body .b_ls_block {
   textarea {width: 100%; height: 100px; vertical-align: middle;}
   
   ::placeholder {color: #3baae3;}
+}
+
+@media(max-width: 400px) {
+  .b_fd {
+    input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
+      font-size: inherit;
+    }
+  }
 }
 
 .b_fd_100p {
@@ -115,7 +123,7 @@ body .b_ls_block {
     height: 40px;
   }
 }
-@media(max-width: 1000px) {
+@media(max-width: 400px) {
   .b_fd {
     label > input[type=checkbox], label > input[type=radio] {
       width: 13px; height: 13px; top: -0.1em;
@@ -163,7 +171,7 @@ body .b_bt_black {background: #333;}
 body .b_bt_alert {background: orangered;}
 body .b_bt_warn {background: orange;}
 
-@media(max-width: 1000px) {
+@media(max-width: 400px) {
   .b_bt {
     button, a, input[type=button] {
       top: -1px; font-size: smaller;
@@ -203,3 +211,40 @@ body .b_bt_warn {background: orange;}
 
 .b_flex_al_c {justify-content: center;}
 .b_flex_al_m {align-items: center;}
+.b_flex_grow {flex-grow: 1;}
+
+.d_ib {display: inline-block;}
+
+.ta_l {text-align: left !important;}
+.ta_c {text-align: center !important;}
+.ta_r {text-align: right !important;}
+
+.b_ls {
+  ol {counter-reset: cnt; padding:0;}
+  ol li {padding-left: 1.2em; list-style: none; list-style-position: inside; position: relative;}
+  ol li::before {
+    counter-increment: cnt; content: counter(cnt)'. ';
+    position: absolute; left: 0
+  }
+  
+  ul {padding:0;}
+  ul li {/*padding-left: 1.2em;*/ margin-left: 1.2em; list-style-type: none; list-style-position: outside; position: relative;}
+  ul li::before {
+    counter-increment: cnt; content: '';
+    position: absolute; top: 1.2em; left: -1em;
+    width: 7px; height: 7px; box-sizing: border-box;
+    border-radius: 100px;
+    background: #444;
+  }
+  
+  ul ul li::before {border: solid 1px #444; background: none;}
+  ul ul ul li::before {background: #444; border-radius: 0;}
+}
+
+body .b_ls_block {
+  ul, ol {padding: 0;}
+  ul > *, ol > * {list-style-position: inside;}
+  li {margin-left: 0;}
+}
+body .b_ls_block li { padding-left: 1em;}
+body .b_ls_block li::before {left: 0;}

@@ -13,30 +13,39 @@
 			<li>
 				<input type="text" placeholder="비밀번호를 한번 더 입력해주세요">
 			</li>
-			
+
 		</ul>
 		<div class="b_bt_l">
 			<button type="button" style="width: 10em;">본인인증받기</button>
 		</div>
-		<ul>
+		<ul class="b_flex_agree">
 			<li class="b_flex">
-				<div>개인정보보호방침(필수)</div>
-				<div><label><input type="radio"></label>동의 <label><input type="radio">미동의</label></div>
+				<div>개인정보보호방침 <span class="d_ib">(필수)</span></div>
+				<div><label><input type="radio">동의</label> <label><input type="radio">미동의</label></div>
 			</li>
 			<li class="b_flex">
-				<div>이용약관 동의(필수)</div>
-				<div><label><input type="radio"></label>동의 <label><input type="radio">미동의</label></div>
+				<div>이용약관 동의 <span class="d_ib">(필수)</span></div>
+				<div><label><input type="radio">동의</label> <label><input type="radio">미동의</label></div>
 			</li>
 			<li class="b_flex">
-				<div>이벤트-홍보수신(선택)</div>
-				<div><label><input type="radio"></label>동의 <label><input type="radio">미동의</label></div>
+				<div>이벤트-홍보수신 <span class="d_ib">(선택)</span></div>
+				<div><label><input type="radio">동의</label> <label><input type="radio">미동의</label></div>
 			</li>
 		</ul>
-		<div style="margin-top: -10px;">
-			전체동의하기 <label><input type="radio"></label>동의 <label><input type="radio">미동의</label>
+		<div style="margin-top: -10px;" class="b_flex">
+			<div class="" style="flex-grow: 1;"><strong>전체동의하기</strong></div>
+			<div class="" style="flex-grow: 1;">
+				<label><input type="radio">동의</label>
+				<label><input type="radio">미동의</label>
+			</div>
 		</div>
 		<div class="b_bt_l2">
 			<button type="button" class="b_bt_p3">가입하기</button>
 		</div>
 	</form>
 </section>
+
+<style>
+	.b_flex_agree .b_flex > *:nth-child(1) {text-align: left; flex-grow: 1;}
+	.b_flex_agree .b_flex > *:nth-child(2) {text-align: left; flex-basis: 130px; flex-shrink: 0;}
+</style>
