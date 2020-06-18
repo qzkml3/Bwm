@@ -18,7 +18,7 @@ main {
   line-height: 1.6;
   color: #555;
 }
-.b_init a {
+.b_init a, .b_init .b_link {
   color: #3baae3;
   text-decoration: none;
 }
@@ -56,9 +56,6 @@ main {
   .b_init * {
     font-size: 12px;
   }
-  .b_init h2 {
-    font-size: 16px;
-  }
 }
 .b_page {
   padding: 1px 3% 40px;
@@ -72,10 +69,11 @@ main {
   box-shadow: 4px 4px 8px #bbb;
 }
 
-.b_page h2 {
-  margin-top: 80px;
+@media (max-width: 400px) {
+  .b_page {
+    border-radius: 10px;
+  }
 }
-
 .b_tit {
   font-size: 22px;
   border-bottom: solid 1px #ccc;
@@ -93,10 +91,22 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+
 .b_cont h1 {
-  font-size: larger;
-  margin-top: 3em;
-  margin-bottom: -1em;
+  font-size: 16px;
+}
+
+.b_cont h2 {
+  font-size: 16px;
+}
+
+.b_cont h1::before, .b_cont h2::before, .b_cont h3::before, .b_cont h4::before, .b_cont h5::before, .b_cont h6::before {
+  content: "# ";
+}
+
+.b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {
+  margin-top: 50px;
+  margin-bottom: -10px;
 }
 
 .b_cont > * {
@@ -118,23 +128,6 @@ main {
   margin-right: auto;
 }
 
-/*list*/
-.b_ls ul > *, .b_ls ol > * {
-  margin: 0em 0;
-  padding: 0.6em 0 0.4em;
-}
-
-.b_ls_bd ul > *, .b_ls_bd ol > * {
-  border-bottom: solid 1px #ccc;
-}
-.b_ls_bd ul > *:last-child, .b_ls_bd ol > *:last-child {
-  border-bottom: none;
-}
-
-.b_ls_off_shape ul > *, .b_ls_off_shape ol > * {
-  list-style-type: none;
-}
-
 /*field*/
 .b_fd input[type=text], .b_fd input[type=password], .b_fd input[type=number], .b_fd input[type=email], .b_fd select, .b_fd textarea {
   border: solid 1px #ccc;
@@ -145,6 +138,7 @@ main {
   box-sizing: border-box;
   height: 30px;
   width: 100%;
+  vertical-align: middle;
 }
 .b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus,
 .b_fd input:hover, .b_fd select:hover, .b_fd textarea:hover {
@@ -174,10 +168,6 @@ main {
     font-size: inherit;
   }
 }
-.b_fd_100p input[type=text], .b_fd_100p input[type=password], .b_fd_100p select, .b_fd_100p textarea {
-  width: 100%;
-}
-
 .b_fd_s input[type=text], .b_fd_s input[type=password], .b_fd_s select {
   height: 25px;
 }
@@ -220,8 +210,6 @@ main {
   height: 30px;
   padding: 0 1em;
   vertical-align: middle;
-  position: relative;
-  top: -2px;
 }
 .b_bt a {
   line-height: 30px;
@@ -270,7 +258,12 @@ main {
   padding-right: 3em !important;
 }
 
-body .b_bt_gray {
+.b_bt_p4 {
+  padding-left: 4em !important;
+  padding-right: 4em !important;
+}
+
+body .b_bt_cancel {
   background: gray;
 }
 
@@ -381,7 +374,6 @@ body .b_bt_warn {
 }
 
 .b_flex_column {
-  margin: 0;
   padding: 0 !important;
   display: flex;
   flex-direction: column;
@@ -413,6 +405,23 @@ body .b_bt_warn {
 
 .ta_r {
   text-align: right !important;
+}
+
+/*list*/
+.b_ls ul > *, .b_ls ol > * {
+  margin: 0em 0;
+  padding: 0.6em 0 0.4em;
+}
+
+.b_ls_bd ul > *, .b_ls_bd ol > * {
+  border-bottom: solid 1px #ccc;
+}
+.b_ls_bd ul > *:last-child, .b_ls_bd ol > *:last-child {
+  border-bottom: none;
+}
+
+.b_ls_off_shape ul > *, .b_ls_off_shape ol > * {
+  list-style-type: none;
 }
 
 .b_ls ol {
@@ -478,6 +487,13 @@ body .b_ls_block li {
 
 body .b_ls_block li::before {
   left: 0;
+}
+
+@media (max-width: 400px) {
+  .b_ls ul li::before {
+    width: 5px;
+    height: 5px;
+  }
 }
 
 /*# sourceMappingURL=b-css.css.map */

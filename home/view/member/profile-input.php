@@ -2,7 +2,8 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
 $b->setLayout('sub');
-$b->setTitle('필드, 버튼');
+$b->setTitle('프로필 입력하기');
 
 require_once $b->getPage();
 ?>
+

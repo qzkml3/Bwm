@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
 $b->setLayout('sub');
-$b->setTitle('필드, 버튼');
+$b->setTitle('이메일 확인');
 
 require_once $b->getPage();
 ?>

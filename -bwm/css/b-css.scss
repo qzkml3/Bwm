@@ -7,7 +7,7 @@ main {display: block;}
 
 .b_init {
   * {font-family: 'Malgun Gothic'; letter-spacing: -0.03em; line-height: 1.6; color: #555;}
-  a {color: #3baae3; text-decoration: none;}
+  a, .b_link {color: #3baae3; text-decoration: none;}
   a:hover, a:focus {box-shadow: 0px 0px 3px 3px skyblue;}
   
   a[target=_blank]::after {
@@ -23,30 +23,29 @@ main {display: block;}
   h2 {font-size: 20px;}
 }
 
-@media(max-width: 400px) {
-  .b_init {
-    * {font-size: 12px;}
-    h2 {font-size: 16px;}
-  }
-
+@media (max-width: 400px) {
+  .b_init  * {font-size: 12px;}
 }
 
-.b_page {padding: 1px 3% 40px; max-width: 1000px; margin: 0 auto 5%; background: white; box-sizing: border-box;
+.b_page {
+  padding: 1px 3% 40px; max-width: 1000px; margin: 0 auto 5%; background: white; box-sizing: border-box;
   border-top: none; border-bottom: none; position: relative; box-shadow: 4px 4px 8px #bbb;
 }
-
-.b_page  h2 {margin-top: 80px;}
+@media (max-width: 400px) {
+  .b_page {border-radius: 10px}
+}
 
 .b_tit {font-size: 22px; border-bottom: solid 1px #ccc; padding-bottom: .2em; margin: 30px 0 30px;}
-
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .b_tit {font-size: 18px;}
 }
 
-.b_cont {
-  padding: 1px; margin-left: auto; margin-right: auto;
-  h1 {font-size: larger; margin-top: 3em; margin-bottom: -1em;}
-}
+.b_cont {padding: 1px; margin-left: auto; margin-right: auto;}
+
+.b_cont h1 {font-size: 16px;}
+.b_cont h2 {font-size: 16px;}
+.b_cont h1::before, .b_cont h2::before, .b_cont h3::before, .b_cont h4::before, .b_cont h5::before, .b_cont h6::before {content: '# ';}
+.b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {margin-top: 50px; margin-bottom: -10px;}
 
 .b_cont > * {margin: 30px 0;}
 .b_cont > *:first-child {margin-top: 0;}
@@ -54,26 +53,11 @@ main {display: block;}
 
 .b_cont_w_s {max-width: 400px; box-sizing: border-box; margin-left: auto; margin-right: auto;}
 
-
-/*list*/
-.b_ls {
-  ul > *, ol > * {margin: .0em 0; padding: .6em 0 .4em;}
-}
-
-.b_ls_bd {
-  ul > *, ol > * {border-bottom: solid 1px #ccc;}
-  ul > *:last-child, ol > *:last-child {border-bottom: none;}
-}
-
-.b_ls_off_shape {
-  ul > *, ol > * {list-style-type: none;}
-}
-
 /*field*/
 .b_fd {
   input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
     border: solid 1px #ccc; background: white; border-radius: 3px; font-size: smaller;
-    padding: 0em .2em; box-sizing: border-box; height: 30px; width: 100%;
+    padding: 0em .2em; box-sizing: border-box; height: 30px; width: 100%; vertical-align: middle;
   }
   
   input:focus, select:focus, textarea:focus,
@@ -91,16 +75,12 @@ main {display: block;}
   ::placeholder {color: #3baae3;}
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .b_fd {
     input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
       font-size: inherit;
     }
   }
-}
-
-.b_fd_100p {
-  input[type=text], input[type=password], select, textarea {width: 100%;}
 }
 
 .b_fd_s {
@@ -123,7 +103,7 @@ main {display: block;}
     height: 40px;
   }
 }
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .b_fd {
     label > input[type=checkbox], label > input[type=radio] {
       width: 13px; height: 13px; top: -0.1em;
@@ -138,8 +118,7 @@ main {display: block;}
   button, a, input[type=button] {
     color: white !important; background: #0070a3; border: none; font-size: smaller;
     display: inline-block; box-sizing: border-box; cursor: pointer !important; border-radius: 3px;
-    height: 30px; padding: 0 1em; vertical-align: middle;
-    position: relative; top: -2px;
+    height: 30px; padding: 0 1em; vertical-align: middle; 
   }
 
   a {line-height: 30px;}
@@ -164,14 +143,15 @@ main {display: block;}
 .b_bt_p {padding-left: 1em !important; padding-right: 1em !important;}
 .b_bt_p2 {padding-left: 2em !important; padding-right: 2em !important;}
 .b_bt_p3 {padding-left: 3em !important; padding-right: 3em !important;}
+.b_bt_p4 {padding-left: 4em !important; padding-right: 4em !important;}
 
-body .b_bt_gray {background: gray;}
+body .b_bt_cancel {background: gray;}
 body .b_bt_safe {background: green;}
 body .b_bt_black {background: #333;}
 body .b_bt_alert {background: orangered;}
 body .b_bt_warn {background: orange;}
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .b_bt {
     button, a, input[type=button] {
       top: -1px; font-size: smaller;
@@ -207,7 +187,8 @@ body .b_bt_warn {background: orange;}
 /*b_flex*/
 .b_flex {display: flex; box-sizing: border-box;}
 .b_flex > * {padding: .5em;}
-.b_flex_column {margin: 0; padding: 0 !important; display: flex; flex-direction: column;}
+
+.b_flex_column {padding: 0 !important; display: flex; flex-direction: column;}
 
 .b_flex_al_c {justify-content: center;}
 .b_flex_al_m {align-items: center;}
@@ -218,6 +199,20 @@ body .b_bt_warn {background: orange;}
 .ta_l {text-align: left !important;}
 .ta_c {text-align: center !important;}
 .ta_r {text-align: right !important;}
+
+/*list*/
+.b_ls {
+  ul > *, ol > * {margin: .0em 0; padding: .6em 0 .4em;}
+}
+
+.b_ls_bd {
+  ul > *, ol > * {border-bottom: solid 1px #ccc;}
+  ul > *:last-child, ol > *:last-child {border-bottom: none;}
+}
+
+.b_ls_off_shape {
+  ul > *, ol > * {list-style-type: none;}
+}
 
 .b_ls {
   ol {counter-reset: cnt; padding:0;}
@@ -248,3 +243,9 @@ body .b_ls_block {
 }
 body .b_ls_block li { padding-left: 1em;}
 body .b_ls_block li::before {left: 0;}
+
+@media (max-width: 400px) {
+  .b_ls {
+    ul li::before {width: 5px; height: 5px;}
+  }
+}
