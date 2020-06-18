@@ -42,8 +42,12 @@ main {display: block;}
 
 .b_cont {padding: 1px; margin-left: auto; margin-right: auto;}
 
-.b_cont h1 {font-size: 16px;}
+.b_cont h1 {font-size: 17px;}
 .b_cont h2 {font-size: 16px;}
+.b_cont h3 {font-size: 15px;}
+.b_cont h4 {font-size: 14px;}
+.b_cont h5 {font-size: 13px;}
+.b_cont h6 {font-size: 12px;}
 .b_cont h1::before, .b_cont h2::before, .b_cont h3::before, .b_cont h4::before, .b_cont h5::before, .b_cont h6::before {content: '# ';}
 .b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {margin-top: 50px; margin-bottom: -10px;}
 
