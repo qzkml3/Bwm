@@ -1,0 +1,36 @@
+<section id="b_pop" class="b_pop" data-close-on-shadow="0">
+	<div class="b_pop_page">
+		<button onclick="closePop('#b_pop')" type="button">닫기</button>
+	</div>
+</section>
+
+<style>
+	.b_pop {
+		z-index: 99999;
+		position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+		background: rgba(0, 0, 0, .5); 
+	}
+	.b_pop_page {
+		background: white; position: absolute; left: 0; right: 0; width: 90%; margin: auto; max-width: 400px;
+		top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%);
+	}
+</style>
+
+<script>
+	$('.b_pop').on('click', function (e) {
+		$pop = $(this);
+		
+		if (this == e.target) {
+			if ($pop.data('close-on-shadow') == 1) {
+				closePop($pop);
+			}
+		}
+	});
+	
+	function closePop(sel) {
+		console.log(sel);
+		$pop = $(sel);
+		$pop.fadeOut('fast');
+		
+	}
+</script>

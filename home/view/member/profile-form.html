@@ -1,0 +1,69 @@
+<form action="">
+	<section class="b_fd b_cont">
+		<div class="b_bt">
+			<button type="button">프로필사진등록</button>
+		</div>
+		<div class="b_form">
+			<div>
+				<label>성별</label>
+				<div class="b_hide_radio">
+					<label><input name="a" type="radio">남</label>
+					<label><input name="a" type="radio">여</label>
+				</div>
+			</div>
+			<div>
+				<label>지역</label>
+				<div class="b_hide_radio">
+					<label><input name="b" type="radio">서울</label>
+					<label><input name="b" type="radio">경기</label>
+					<label><input name="b" type="radio">협의가능</label>
+				</div>
+			</div>
+			<div>
+				<label>연령대</label>
+				<div class="b_hide_radio">
+					<label><input type="radio">20대</label>
+					<label><input type="radio">30대</label>
+					<label><input type="radio">40대</label>
+					<label><input type="radio">50대</label>
+				</div>
+			</div>
+			<div>
+				<label>이상형</label>
+				<div>
+					<input type="text">
+				</div>
+			</div>
+			<div>
+				<label>흡연</label>
+				<div class="b_hide_radio">
+					<label><input type="radio">흡연</label>
+					<label><input type="radio">비흡연</label>
+					<label><input type="radio">상관없음</label>
+				</div>
+			</div>
+		</div>
+		<div class="b_bt b_bt_l2 ta_c">
+			<button type="button" class="b_bt_p2">프로필 등록</button>
+		</div>
+	</section>
+</form>
+
+<style>
+	.b_hide_radio label {border: solid 1px #ddd; padding: 2px 8px; border-radius: 5px;}
+	.b_hide_radio label.on {border-color: #555; box-shadow: 2px 2px #ccc}
+	.b_hide_radio input[type=radio] {display: none;}
+</style>
+
+<script>
+	var p = '.b_hide_radio';
+	$(p).find('label').on('click', function() {
+		var $p = $(this).closest(p);
+		
+		$p.find('label').removeClass('on');
+		$p.find('input').prop('checked', false);
+
+		$(this).addClass('on');
+		$(this).find('input').prop('checked', true);
+	});
+</script>

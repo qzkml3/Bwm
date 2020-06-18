@@ -1,12 +1,12 @@
 /*# initialize*/
-main {display: block;}
-
-
-*:focus {outline: none;}
 ::-moz-focus-inner {border: none;}
+*:focus {outline: none;}
+
+main {display: block;}
 
 .b_init {
   * {font-family: 'Malgun Gothic'; letter-spacing: -0.03em; line-height: 1.6; color: #555;}
+  
   a, .b_link {color: #3baae3; text-decoration: none;}
   a:hover, a:focus {box-shadow: 0px 0px 3px 3px skyblue;}
   
@@ -20,7 +20,7 @@ main {display: block;}
   
   ul, ol {padding-left: 1.2em;}
   
-  h2 {font-size: 20px;}
+  label {display: inline-block;}
 }
 
 @media (max-width: 400px) {
@@ -32,7 +32,7 @@ main {display: block;}
   border-top: none; border-bottom: none; position: relative; box-shadow: 4px 4px 8px #bbb;
 }
 @media (max-width: 400px) {
-  .b_page {border-radius: 10px}
+  .b_page {border-radius: 7px;}
 }
 
 .b_tit {font-size: 22px; border-bottom: solid 1px #ccc; padding-bottom: .2em; margin: 30px 0 30px;}
@@ -252,4 +252,15 @@ body .b_ls_block li::before {left: 0;}
   .b_ls {
     ul li::before {width: 5px; height: 5px;}
   }
+}
+
+.b_form > * {display: flex;}
+.b_form > * > * {align-items: center; padding: .5em;}
+.b_form > * > *:nth-child(1) {flex-basis: 20%; max-width: 100px;}
+.b_form > * > *:nth-child(2) {flex-grow: 1;}
+.b_form > * > label {display: flex; padding: .5em;}
+
+@media (max-width: 330px) {
+  .b_form > * {flex-direction: column; margin-top: 15px;}
+  .b_form > *:first-child {margin-top: 0;}
 }
