@@ -386,7 +386,7 @@ body .b_bt_warn {
 }
 
 .b_flex > * {
-  padding: 0.5em;
+  padding: 2% 0;
 }
 
 .b_flex_column {

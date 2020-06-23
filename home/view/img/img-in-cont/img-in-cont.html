@@ -1,4 +1,4 @@
-<div class="editor-cont">
+<div class="img_in_cont">
 	<p>링크있는 이미지</p>
 	<a target="_blank" href="http://www.naver.com"><img src="/comm_res/img/ex/hori-img.jpg" alt=""></a>
 	<p>링크없는 이미지</p>
@@ -6,14 +6,20 @@
 </div>
 
 <script>
-	$('.editor-cont img').each(function () {
-		var $img = $(this);
-		var parentTagName = $img.parent().get(0).tagName;
-		
-		$img.css({'width': '100%'});
-		
-		if (parentTagName != 'A') {
-			$img.wrap('<a target="_blank" href="' + $img.attr('src') + '">');	
-		}
-	})
+	procImgInCont('.img_in_cont');
+
+	function procImgInCont(sel) {
+		var $imgs = $(sel).find('img');
+
+		$($imgs).each(function () {
+			var $img = $(this);
+			var parentTagName = $img.parent().get(0).tagName;
+
+			$img.css({'width': '100%'});
+
+			if (parentTagName != 'A') {
+				$img.wrap('<a target="_blank" href="' + $img.attr('src') + '">');
+			}
+		})
+	}
 </script>
