@@ -8,10 +8,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--bwm lib-->
 	<link href="<?=$b->site_conf->getBwmRootUrl()?>/css/b-css.css" rel="stylesheet">
+	
 	<script src="<?=$b->site_conf->getBwmRootUrl()?>/js/jquery/jquery-3.5.1.min.js"></script>
 	<script src="<?=$b->site_conf->getBwmRootUrl()?>/js/b-js.js"></script>
+	<script src="<?=$b->site_conf->getBwmRootUrl()?>/js/img/imageMapResizer/imageMapResizer.min.js"></script>
+	
 	<!--site lib-->
 	<link href="<?=$b->site_conf->getSiteRootUrl()?>/css/<?=$b->site_conf->getSiteId()?>.css" rel="stylesheet">
+	
 	<script src="<?=$b->site_conf->getSiteRootUrl()?>/js/<?=$b->site_conf->getSiteId()?>.js"></script>
 </head>
 <body class="<?=$b->getLayout();?> b_init">

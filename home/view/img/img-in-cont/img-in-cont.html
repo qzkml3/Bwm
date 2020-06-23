@@ -6,20 +6,5 @@
 </div>
 
 <script>
-	procImgInCont('.img_in_cont');
-
-	function procImgInCont(sel) {
-		var $imgs = $(sel).find('img');
-
-		$($imgs).each(function () {
-			var $img = $(this);
-			var parentTagName = $img.parent().get(0).tagName;
-
-			$img.css({'width': '100%'});
-
-			if (parentTagName != 'A') {
-				$img.wrap('<a target="_blank" href="' + $img.attr('src') + '">');
-			}
-		})
-	}
+	b.img.imgInCont('.img_in_cont');
 </script>
