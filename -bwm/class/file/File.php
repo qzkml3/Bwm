@@ -1,6 +1,6 @@
 <?php
 
-namespace BWM;
+namespace bwm\file;
 
 class File {
 	static function getFullPath() {
@@ -66,5 +66,16 @@ class File {
 				closedir($dh);
 			}
 		}
+	}
+	
+	# Get file name from current web addr (without extention)
+	function getFileName() {
+		$s = $_SERVER['PHP_SELF'];
+		
+		$s = substr($s, strrpos($s,'/') + 1);
+
+		$s = substr($s, 0,  strrpos($s,'.'));
+		
+		return $s;
 	}
 }

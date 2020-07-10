@@ -8,12 +8,24 @@ $b.log = function(o) {
 	return console.log(o);
 }
 
+$b.result = function(o) {
+	var v = '<div class="b_result">' + o + '</div>';
+	
+	document.write(v)
+}
+
 $b.outerHtml = function(jq) {
 	var $jq = $(jq);
 	var outerHtml = $jq.wrap('<div class="temp">').parent().html()
 
 	$jq.unwrap();	
 	return outerHtml;
+}
+
+$b.write = function() {
+	var v = 0;
+	
+	document.write(v);
 }
 
 /**Charset of ajax*/
@@ -27,6 +39,7 @@ $b.ajax.charset = function(charset) {
 
 $b.debug = {};
 
+/** Show script to generated next Element */
 $b.debug.showScript = function(cls) {
 	var $script;
 	
@@ -38,13 +51,9 @@ $b.debug.showScript = function(cls) {
 	
 	$script.each(function() {
 		var $script = $(this);
-
 		var script = $b.outerHtml($script);
 		
-		console.log(
-			script
-		);
-		$script.after('<xmp class="show_script">' + script + "</xmp>");
+		$script.before('<code class="b_source"><xmp>' + script + "</xmp></code>");
 	});
 }
 

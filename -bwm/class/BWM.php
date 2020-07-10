@@ -3,9 +3,11 @@
 namespace bwm;
 
 use bwm\conf\SiteConf;
+use bwm\file\File;
 
 class BWM {
 	public $site_conf;
+	public $file;
 
 	private $layout;
 	private $layout_file;
@@ -36,11 +38,15 @@ class BWM {
 		return $v;
 	}
 
-	# Title
+	# Set title
 	function setTitle($title) {
 		$this->title = $title;
 	}
+	function setTitleByFileName() {
+		$this->title = $this->file->getFileName();
+	}
 
+	# Get title
 	function getTitle() {
 		if ($this->title) {
 			$title = $this->title . ' : ' . $this->getSiteName();
@@ -61,9 +67,10 @@ class BWM {
 		} else {
 			$layout = 'layout.html';
 		}
-		return SiteConf::getLayoutDir() . '/' . $layout;
+		return $this->site_conf->getLayoutDir() . '/' . $layout;
 	}
 	
+	# Get site name
 	function getSiteName() {
 		return SiteConf::SITE_NAME;
 	}

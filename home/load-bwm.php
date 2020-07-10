@@ -30,5 +30,10 @@ function b_loadAuto($dir, $class) {
 	//echo $path . '<br>'; //test
 }
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/class/file/File.php';;
+
 $b = new bwm\BWM();
-$b->site_conf = new bwm\conf\SiteConf;
+$b->site_conf = new bwm\conf\SiteConf();
+$b->file = new bwm\file\File();
+
+$b->file->getFileName();
