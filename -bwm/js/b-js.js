@@ -39,7 +39,9 @@ $b.ajax.charset = function(charset) {
 
 $b.debug = {};
 
-/** Show script to generated next Element */
+/** Show script to page
+ * If no class parameter every script to page 
+ * */
 $b.debug.showScript = function(cls) {
 	var $script;
 	

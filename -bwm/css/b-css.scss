@@ -180,8 +180,8 @@ body .b_bt_warn {background: orange;}
 
 .cl_fix::after {content: ''; display: block; clear:both;}
 
-.p_a {position: absolute;}
-.t_0 {top: 0}  .r_0 {right: 0;} .b_0 {bottom: 0}  .l_0 {left: 0;}
+.b_pos_a {position: absolute;}
+.b_t_0 {top: 0}  .b_r_0 {right: 0;} .b_0 {bottom: 0}  .b_l_0 {left: 0;}
 .l_50p {left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
 
 .p_0 {padding: 0;}

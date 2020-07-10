@@ -358,15 +358,15 @@ body .b_bt_warn {
   clear: both;
 }
 
-.p_a {
+.b_pos_a {
   position: absolute;
 }
 
-.t_0 {
+.b_t_0 {
   top: 0;
 }
 
-.r_0 {
+.b_r_0 {
   right: 0;
 }
 
@@ -374,7 +374,7 @@ body .b_bt_warn {
   bottom: 0;
 }
 
-.l_0 {
+.b_l_0 {
   left: 0;
 }
 
