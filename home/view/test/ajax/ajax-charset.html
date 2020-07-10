@@ -1,0 +1,24 @@
+<section class="append_area">
+	
+</section>
+
+<script>
+	$b.ajax.charset('euc-kr');
+	$.get('ajax-inc.php', function(res) {
+		$('.append_area').append(res);
+	});
+	
+	$b.ajax.charset('utf-8');
+	$.get('ajax-inc.php', function(res) {
+		$('.append_area').append(res);
+	});
+	$b.ajax.charset('euc-kr');
+	$.get('ajax-inc.php', function(res) {
+		$('.append_area').append(res);
+	});
+
+	$b.ajax.charset('utf-8');
+	$.get('ajax-inc.php', function(res) {
+		$('.append_area').append(res);
+	});
+</script>

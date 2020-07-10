@@ -59,7 +59,7 @@ class BWM {
 		if ($this->layout_file) {
 			$layout = $this->layout_file;
 		} else {
-			$layout = 'layout.php';
+			$layout = 'layout.html';
 		}
 		return SiteConf::getLayoutDir() . '/' . $layout;
 	}
