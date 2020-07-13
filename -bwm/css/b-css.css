@@ -1,9 +1,10 @@
 @charset "UTF-8";
-/*# initialize*/
+/**initialize*/
 ::-moz-focus-inner {
   border: none;
 }
 
+/*remove ff outline*/
 *:focus {
   outline: none;
 }
@@ -12,7 +13,7 @@
   -webkit-appearance: none;
 }
 
-/*ios input 그림자 제거*/
+/*remove ios input shadow*/
 html {
   overflow-y: scroll;
 }
@@ -396,12 +397,6 @@ body .b_bt_warn {
   text-align: center;
 }
 
-/*b_box*/
-.b_box {
-  background: #f5f5f5;
-  padding: 1em;
-}
-
 .b_box_rad_s {
   border-radius: 5px;
 }
@@ -418,12 +413,22 @@ body .b_bt_warn {
   border: 1px solid #ccc;
 }
 
-.b_box_silver {
+.b_bc_silver {
   background: #eee;
 }
 
-.b_box_gray {
+.b_bc_deep_silver {
   background: #ddd;
+}
+
+.b_bc_gray {
+  background: #888;
+  color: white;
+}
+
+.b_bc_black {
+  background: black;
+  color: white;
 }
 
 /*b_flex*/
@@ -1010,7 +1015,7 @@ dl.b_dl, .b_dl dl {
   background: center/cover;
 }
 
-.b_c_bright_yellow {
+.b_c_light_yellow {
   color: #fffcab;
 }
 
