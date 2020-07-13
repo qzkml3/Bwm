@@ -1196,12 +1196,36 @@ dl.b_dl, .b_dl dl {
   color: white;
 }
 
-.b_b {
+.b_bd {
   border: solid 1px #ccc;
 }
 
-.b_b_black {
+.b_bd_black {
   border: solid 1px black;
+}
+
+.b_p {
+  padding: 10px;
+}
+
+.b_p2 {
+  padding: 15px 10px;
+}
+
+.b_m_t_0 {
+  margin-top: 0 !important;
+}
+
+.b_m_b_0 {
+  margin-bottom: 0 !important;
+}
+
+.b_m_l_0 {
+  margin-left: 0 !important;
+}
+
+.b_m_r_0 {
+  margin-right: 0 !important;
 }
 
 /*# sourceMappingURL=b-css.css.map */
