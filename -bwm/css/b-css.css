@@ -1208,7 +1208,7 @@ dl.b_dl, .b_dl dl {
   padding: 10px;
 }
 
-.b_p2 {
+.b_p_2 {
   padding: 15px 10px;
 }
 
@@ -1226,6 +1226,18 @@ dl.b_dl, .b_dl dl {
 
 .b_m_r_0 {
   margin-right: 0 !important;
+}
+
+.b_rad {
+  border-radius: 3px !important;
+}
+
+.b_rad_5px {
+  border-radius: 5px !important;
+}
+
+.b_rad_10px {
+  border-radius: 10px !important;
 }
 
 /*# sourceMappingURL=b-css.css.map */

@@ -456,9 +456,13 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_bd_black {border: solid 1px black;}
 
 .b_p {padding: 10px;}
-.b_p2 {padding: 15px 10px;}
+.b_p_2 {padding: 15px 10px;}
 
 .b_m_t_0 {margin-top: 0 !important;}
 .b_m_b_0 {margin-bottom: 0 !important;}
 .b_m_l_0 {margin-left: 0 !important;}
 .b_m_r_0 {margin-right: 0 !important;}
+
+.b_rad {border-radius: 3px !important;}
+.b_rad_5px {border-radius: 5px !important;}
+.b_rad_10px {border-radius: 10px !important;}
