@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
 $b->setLayout('sub');
-$b->setTitle('목록 - List');
+$b->setTitle('b_ls ol, ul');
 
 require_once $b->getPage();
 ?>
