@@ -1,11 +1,12 @@
 /**initialize*/
+*:focus {outline: none;} /*remove all outline*/
 ::-moz-focus-inner {border: none;} /*remove ff outline*/
-*:focus {outline: none;}
 
 * {-webkit-appearance: none;} /*remove ios input shadow*/
 
 html {overflow-y: scroll;}
-body {padding: 1px 0; color: #555;}
+
+body {color: #555;}
 
 main {display: block;}
 
@@ -192,12 +193,6 @@ body .b_bt_warn {background: orange;}
 
 .ta_c {text-align: center;}
 
-.b_box_rad_s {border-radius: 5px}
-.b_box_rad {border-radius: 10px}
-.b_box_rad_l {border-radius: 15px}
-
-.b_box_bd {border: 1px solid #ccc;}
-
 .b_bc_silver {background: #eee;}
 .b_bc_deep_silver {background: #ddd;}
 .b_bc_gray {background: #888; color: white;}
@@ -231,54 +226,39 @@ body .b_bt_warn {background: orange;}
 .ta_c {text-align: center !important;}
 .ta_r {text-align: right !important;}
 
-/*list*/
-.b_ls {
-  ul > *, ol > * {margin: .0em 0; padding: .6em 0 .4em;}
+/*b_ls*/
+.b_ls ol, .b_ls ul {counter-reset: cnt; padding:0;}
+.b_ls li {margin: 0; padding: .6em 0 .4em 1.2em; list-style: none; position: relative;}
+
+
+.b_ls li::before {position: absolute; left: 0;}
+.b_ls ol li::before {
+  counter-increment: cnt; content: counter(cnt)'. ';
 }
 
-.b_ls_bd {
-  ul > *, ol > * {border-bottom: solid 1px #ccc;}
-  ul > *:last-child, ol > *:last-child {border-bottom: none;}
+.b_ls ul li::before {
+   content: '';
+  top: 1.2em;
+  width: 7px; height: 7px; box-sizing: border-box;
+  border-radius: 100px;
+  background: #444;
 }
 
-.b_ls_off_shape {
-  ul > *, ol > * {list-style-type: none;}
-}
+.b_ls ul ul li::before {border: solid 1px #444; background: none;}
+.b_ls ul ul ul li::before {background: #444; border-radius: 0;}
 
-.b_ls {
-  ol {counter-reset: cnt; padding:0;}
-  ol li {padding-left: 1.2em; list-style: none; list-style-position: inside; position: relative;}
-  ol li::before {
-    counter-increment: cnt; content: counter(cnt)'. ';
-    position: absolute; left: 0
-  }
-  
-  ul {padding:0;}
-  ul li {/*padding-left: 1.2em;*/ margin-left: 1.2em; list-style-type: none; list-style-position: outside; position: relative;}
-  ul li::before {
-    counter-increment: cnt; content: '';
-    position: absolute; top: 1.2em; left: -1em;
-    width: 7px; height: 7px; box-sizing: border-box;
-    border-radius: 100px;
-    background: #444;
-  }
-  
-  ul ul li::before {border: solid 1px #444; background: none;}
-  ul ul ul li::before {background: #444; border-radius: 0;}
-}
 
-body .b_ls_block {
-  ul, ol {padding: 0;}
-  ul > *, ol > * {list-style-position: inside;}
-  li {margin-left: 0;}
-}
-body .b_ls_block li { padding-left: 1em;}
-body .b_ls_block li::before {left: 0;}
+.b_ls_bd ul > *, .b_ls_bd ol > * {border-bottom: solid 1px #ccc;}
+.b_ls_bd ul > *:last-child, .b_ls_bd ol > *:last-child {border-bottom: none;}
+
+.b_ls_indent li {margin-left: 1.2em; padding-left: 0em;}
+.b_ls_indent li::before {left: -1em;}
+
+.b_ls.b_ls_shape_off li {padding-left: 0;}
+.b_ls.b_ls_shape_off li::before {display: none;}
 
 @media (max-width: 500px) {
-  .b_ls {
-    ul li::before {width: 5px; height: 5px;}
-  }
+  .b_ls ul li::before {width: 5px; height: 5px;}
 }
 
 .b_form > * {display: flex;}
@@ -356,6 +336,7 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .m_v_10px {margin-top: 10px; margin-bottom: 10px;}
 
 .b_post {background: white; padding: 5px; border-radius: 7px; box-shadow: 2px 2px #ddd;}
+
 .b_cont_pad {padding: 15px 15px;}
 .b_cont_pad_h {padding-left: 15px; padding-right: 15px;}
 .b_cont_pad2 {padding: 60px 15px;}
