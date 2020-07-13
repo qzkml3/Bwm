@@ -1196,4 +1196,12 @@ dl.b_dl, .b_dl dl {
   color: white;
 }
 
+.b_b {
+  border: solid 1px #ccc;
+}
+
+.b_b_black {
+  border: solid 1px black;
+}
+
 /*# sourceMappingURL=b-css.css.map */
