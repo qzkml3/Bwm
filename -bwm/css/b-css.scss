@@ -195,8 +195,8 @@ body .b_bt_warn {background: orange;}
 
 .b_bc_silver {background: #eee;}
 .b_bc_deep_silver {background: #ddd;}
-.b_bc_gray {background: #888; color: white;}
-.b_bc_black {background: black; color: white;}
+.b_bc_gray {background: #888;}
+.b_bc_black {background: black;}
 
 
 /*b_flex*/
@@ -335,7 +335,7 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .m_v_5px {margin-top: 5px; margin-bottom: 5px;}
 .m_v_10px {margin-top: 10px; margin-bottom: 10px;}
 
-.b_post {background: white; padding: 5px; border-radius: 7px; box-shadow: 2px 2px #ddd;}
+.b_box {background: white; padding: 5px; border-radius: 7px; box-shadow: 1px 1px 3px #ccc;}
 
 .b_cont_pad {padding: 15px 15px;}
 .b_cont_pad_h {padding-left: 15px; padding-right: 15px;}

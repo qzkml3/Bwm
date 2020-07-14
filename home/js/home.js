@@ -1,5 +1,6 @@
 $(document).ready(function () {
-  $b.debug.showScript('.on');  
+  $b.debug.showScript('.on');
+  $b.img.resImgMap();
 });
 
 function authMobileI() {

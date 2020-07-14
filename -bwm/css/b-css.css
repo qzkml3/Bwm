@@ -407,12 +407,10 @@ body .b_bt_warn {
 
 .b_bc_gray {
   background: #888;
-  color: white;
 }
 
 .b_bc_black {
   background: black;
-  color: white;
 }
 
 /*b_flex*/
@@ -834,11 +832,11 @@ dl.b_dl, .b_dl dl {
   margin-bottom: 10px;
 }
 
-.b_post {
+.b_box {
   background: white;
   padding: 5px;
   border-radius: 7px;
-  box-shadow: 2px 2px #ddd;
+  box-shadow: 1px 1px 3px #ccc;
 }
 
 .b_cont_pad {
