@@ -122,3 +122,23 @@ function b_onScrollEnd(callBackFunc, charset) {
 		console.log('b_h: ' + b_h);
 	});
 }
+
+$b.pop = {};
+
+$b.pop.open = function(jq) {
+	var $pop = $(jq);
+	$pop.fadeIn('fast');
+}
+
+$b.pop.close = function(jq) {
+	var $pop;
+
+	if (typeof jq == 'string') {
+		$pop = $(jq);
+	} else {
+		$pop = $(jq).closest('.b_pop');
+	}
+
+	$pop.fadeOut('fast');
+	return false;
+}
