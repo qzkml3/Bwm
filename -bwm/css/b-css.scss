@@ -10,32 +10,22 @@ body {color: #555;}
 
 main {display: block;}
 
-.b_init {
-  * {font-family: 'Malgun Gothic'; letter-spacing: -0.03em; line-height: 1.6; }
-  
-  a, .b_link {color: #3baae3; text-decoration: none;}
-  a:hover, a:focus, tr:focus, tr:hover {box-shadow: 0px 0px 3px 3px skyblue;}
-  
-  a[target=_blank]::after {
-    content: '=▷'; font-size: smaller; transform: rotate(-40deg); display: inline-block; box-shadow: none;
-    position: relative; left: 2px; top: -2px;
-  }
-  a:hover[target=_blank]::after {content: '=▶';text-decoration: none; color: orange;}
-
-  /*a:not([href]), a[href=''], a[href='#'], a[href*=' '] {color: #aaa; box-shadow: none; cursor: default;}*/
-  
-  label {display: inline-block;}
-  
-  button {vertical-align: middle;}
+.b_init * {font-family: 'Malgun Gothic'; letter-spacing: -0.03em; line-height: 1.6; }
+.b_init a {color: #3baae3; text-decoration: none;}
+.b_init a:hover, .b_init a:focus, .b_init tr:focus, .b_init tr:hover {box-shadow: 0px 0px 3px 3px skyblue;}
+.b_init a[target=_blank]::after {
+  content: '=▷'; font-size: smaller; transform: rotate(-40deg); display: inline-block; box-shadow: none;
+  position: relative; left: 2px; top: -2px;
 }
+.b_init a:hover[target=_blank]::after {content: '=▶';text-decoration: none; color: orange;}
+.b_init a:not([href]) {color: #aaa; box-shadow: none; cursor: default;}
+
+.b_init label {display: inline-block;}
+
+.b_init button {vertical-align: middle;}
+
 .b_init  img {vertical-align: middle;}
 .b_init  hr {border: none; width: 100%; height: 1px; background: #ccc; padding: 0; margin: 5px 0;}
-.b_init  h1 {font-size: 17px;}
-.b_init  h2 {font-size: 16px;}
-.b_init  h3 {font-size: 15px;}
-.b_init  h4 {font-size: 14px;}
-.b_init  h5 {font-size: 13px;}
-.b_init  h6 {font-size: 12px;}
 .b_init  small {font-size: smaller;}
 
 @media (max-width: 500px) {
@@ -48,117 +38,99 @@ main {display: block;}
 }
 
 .b_page_m {max-width: 500px;}
+
 @media (max-width: 500px) {
   .b_page {border-radius: 7px;}
 }
 
 .b_tit {font-size: 22px; border-bottom: solid 1px #ccc; padding-bottom: .2em; margin: 30px 0 30px;}
+
 @media (max-width: 500px) {
   .b_tit {font-size: 18px;}
 }
 
 .b_cont {padding: 1px 0; margin-left: auto; margin-right: auto;}
 
-.b_cont h1 {font-size: 17px;}
-/*.b_cont h2 {font-size: 16px;}*/
-.b_cont h3 {font-size: 15px;}
-.b_cont h4 {font-size: 14px;}
-.b_cont h5 {font-size: 13px;}
-.b_cont h6 {font-size: 12px;}
-/*.b_cont h1::before, .b_cont h2::before, .b_cont h3::before, .b_cont h4::before, .b_cont h5::before, .b_cont h6::before {content: '# ';}*/
-/*.b_cont_style h1, .b_cont h2, .b_cont h3, .b_cont_style h4, .b_cont h5, .b_cont h6 {margin-top: 50px; margin-bottom: -10px;}*/
+.b_cont h1 {font-size: 16px;}
+.b_cont h2 {font-size: 15px;}
+.b_cont h3 {font-size: 14px;}
+.b_cont h4 {font-size: 13px;}
+.b_cont h5 {font-size: 12px;}
+.b_cont h6 {font-size: 11px;}
+.b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {margin-top: 50px; margin-bottom: -20px;}
 
 .b_cont > * {margin: 30px 0;}
 .b_cont > *:first-child {margin-top: 0;}
 .b_cont > *:last-child {margin-bottom: 0;}
 
-/*field*/
-.b_fd {
-  input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
-    border: solid 1px #ccc; background: white; border-radius: 3px; font-size: smaller;
-    padding: 0 5px; box-sizing: border-box; height: 30px; width: 100%; vertical-align: middle;
-    margin: 3px 0; color: inherit;
-  }
-  
-  input:focus, select:focus, textarea:focus,
-  input:hover, select:hover, textarea:hover
-  {box-shadow: 0px 0px 3px 3px skyblue;}
+/*b_fd*/
 
-  label > span {font-size: smaller; vertical-align:  baseline;}
-  label > input[type=checkbox], label > input[type=radio] {
-    font-size: smaller;position: relative; top: -0.16em;
-    vertical-align: middle;
-  }
+.b_fd input[type=text], .b_fd input[type=password], .b_fd input[type=number], .b_fd input[type=email], .b_fd select, .b_fd textarea {
+  border: solid 1px #ccc; background: white; border-radius: 3px; font-size: smaller;
+  padding: 0 5px; box-sizing: border-box; height: 30px; width: 100%; vertical-align: middle;
+  margin: 3px 0; color: inherit;
+}
 
-  textarea {width: 100%; height: 100px; vertical-align: middle;}
-  
-  ::placeholder {color: #3baae3; font-size: 12px;}
+.b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus, .b_fd input:hover, .b_fd select:hover, .b_fd textarea:hover
+{box-shadow: 0px 0px 3px 3px skyblue;}
+
+.b_fd label > span {font-size: smaller; vertical-align:  baseline;}
+.b_fd label > input[type=checkbox], .b_fd label > input[type=radio] {
+  font-size: smaller;position: relative; top: -0.16em;
+  vertical-align: middle;
+}
+.b_fd textarea {width: 100%; height: 100px; vertical-align: middle;}
+.b_fd ::placeholder {color: #3baae3; font-size: 12px;}
+
+@media (max-width: 500px) {
+  .b_fd input[type=text], .b_fd input[type=password], .b_fd input[type=number], .b_fd input[type=email], .b_fd select, .b_fd textarea {
+    font-size: 16px;
+  }
+}
+
+.b_fd_s input[type=text], .b_fd_s input[type=password], .b_fd_s select {
+  height: 25px;
+}
+
+.b_fd_s2 input[type=text], .b_fd_s2 input[type=password], .b_fd_s2 select {
+  height: 20px;
+}
+
+.b_fd_l input[type=text], .b_fd_l input[type=password], .b_fd_l select {
+  height: 35px;
+}
+
+.b_fd_l2 input[type=text], .b_fd_l2 input[type=password], .b_fd_l2 select {
+  height: 40px;
 }
 
 @media (max-width: 500px) {
-  .b_fd {
-    input[type=text], input[type=password], input[type=number], input[type=email], select, textarea {
-      font-size: 16px;
-    }
-  }
-}
-
-.b_fd_s {
-  input[type=text], input[type=password], select {
-    height: 25px;
-  }
-}
-.b_fd_s2 {
-  input[type=text], input[type=password], select {
-    height: 20px;
-  }
-}
-.b_fd_l {
-  input[type=text], input[type=password], select {
-    height: 35px;
-  }
-}
-.b_fd_l2 {
-  input[type=text], input[type=password], select {
-    height: 40px;
-  }
-}
-@media (max-width: 500px) {
-  .b_fd {
-    label > input[type=checkbox], label > input[type=radio] {
-      width: 13px; height: 13px; top: -0.1em;
-    }
-    label > input[type=checkbox] { top: -0.07em}
-    label > input[type=radio] { top: -0.22em}
-  }
-}
-
-/*btn*/
-.b_bt {
-  button, a, input[type=button] {
-    color: white; background: #0070a3; border: none; font-size: smaller;
-    display: inline-block; box-sizing: border-box; cursor: pointer !important; border-radius: 3px;
-    height: 30px; padding: 0 1em; vertical-align: middle; margin: 3px 1px; 
+  .b_fd label > input[type=checkbox], .b_fd label > input[type=radio] {
+    width: 13px; height: 13px; top: -0.1em;
   }
 
-  a {line-height: 30px;}
+  .b_fd label > input[type=checkbox] { top: -0.07em}
+  .b_fd label > input[type=radio] { top: -0.22em}
+}
 
-  button:hover, a:hover, input[type=button]:hover,
-  button:focus, a:focus, input[type=button]:focus
-  {box-shadow: 0px 0px 3px 3px skyblue;}
+/*b_bt*/
+.b_bt button, .b_bt a, .b_bt input[type=button] {
+  color: white; background: #0070a3; border: none; font-size: smaller;
+  display: inline-block; box-sizing: border-box; cursor: pointer !important; border-radius: 3px;
+  height: 30px; padding: 0 1em; vertical-align: middle; margin: 3px 1px;
 }
-.b_bt_s {
-  button, a, input[type=button] {height: 25px; line-height: 25px; font-size: smaller;}
-}
-.b_bt_s2 {
-  button, a, input[type=button] {height: 20px; line-height: 20px; font-size: small !important;}
-}
-.b_bt_l {
-  button, a, input[type=button] {height: 35px; line-height: 35px; font-size: inherit !important;}
-}
-.b_bt_l2 {
-  button, a, input[type=button] {height: 40px; line-height: 40px; font-size: larger !important;}
-}
+
+.b_bt a {line-height: 30px;}
+.b_bt button:hover, .b_bt a:hover, .b_bt input[type=button]:hover, .b_bt button:focus, .b_bt a:focus, .b_bt input[type=button]:focus
+{box-shadow: 0px 0px 3px 3px skyblue;}
+
+.b_bt_s button, .b_bt_s a, .b_bt_s input[type=button] {height: 25px; line-height: 25px; font-size: smaller;}
+
+.b_bt_s2 button, .b_bt_s2 a, .b_bt_s2 input[type=button] {height: 20px; line-height: 20px; font-size: small !important;}
+
+.b_bt_l button, .b_bt_l a, .b_bt_l input[type=button] {height: 35px; line-height: 35px; font-size: inherit !important;}
+
+.b_bt_l2 button, .b_bt_l2 a, .b_bt_l2 input[type=button] {height: 40px; line-height: 40px; font-size: larger !important;}
 
 .b_bt_p {padding-left: 1em !important; padding-right: 1em !important;}
 .b_bt_p2 {padding-left: 2em !important; padding-right: 2em !important;}
@@ -167,17 +139,15 @@ main {display: block;}
 
 .b_bt_round {border-radius: 200px !important;}
 
-body .b_bt_cancel, body .b_bt_gray {background: gray !important;}
-body .b_bt_safe {background: green;}
-body .b_bt_black {background: #333;}
-body .b_bt_alert {background: orangered;}
-body .b_bt_warn {background: orange;}
+.b_bt_cancel, .b_bt_gray {background: gray !important;}
+.b_bt_safe {background: green !important;}
+.b_bt_black {background: #333 !important;}
+.b_bt_alert {background: orangered !important;}
+.b_bt_warn {background: orange !important;}
 
 @media (max-width: 500px) {
-  .b_bt {
-    button, a, input[type=button] {
-      top: -1px; font-size: smaller;
-    }
+  .b_bt button, .b_bt a, .b_bt input[type=button] {
+    top: -1px; font-size: smaller;
   }
 }
 

@@ -27,21 +27,21 @@ main {
   display: block;
 }
 
-.b_init {
-  /*a:not([href]), a[href=''], a[href='#'], a[href*=' '] {color: #aaa; box-shadow: none; cursor: default;}*/
-}
 .b_init * {
   font-family: "Malgun Gothic";
   letter-spacing: -0.03em;
   line-height: 1.6;
 }
-.b_init a, .b_init .b_link {
+
+.b_init a {
   color: #3baae3;
   text-decoration: none;
 }
+
 .b_init a:hover, .b_init a:focus, .b_init tr:focus, .b_init tr:hover {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
+
 .b_init a[target=_blank]::after {
   content: "=▷";
   font-size: smaller;
@@ -52,14 +52,23 @@ main {
   left: 2px;
   top: -2px;
 }
+
 .b_init a:hover[target=_blank]::after {
   content: "=▶";
   text-decoration: none;
   color: orange;
 }
+
+.b_init a:not([href]) {
+  color: #aaa;
+  box-shadow: none;
+  cursor: default;
+}
+
 .b_init label {
   display: inline-block;
 }
+
 .b_init button {
   vertical-align: middle;
 }
@@ -75,30 +84,6 @@ main {
   background: #ccc;
   padding: 0;
   margin: 5px 0;
-}
-
-.b_init h1 {
-  font-size: 17px;
-}
-
-.b_init h2 {
-  font-size: 16px;
-}
-
-.b_init h3 {
-  font-size: 15px;
-}
-
-.b_init h4 {
-  font-size: 14px;
-}
-
-.b_init h5 {
-  font-size: 13px;
-}
-
-.b_init h6 {
-  font-size: 12px;
 }
 
 .b_init small {
@@ -150,28 +135,34 @@ main {
 }
 
 .b_cont h1 {
-  font-size: 17px;
+  font-size: 16px;
 }
 
-/*.b_cont h2 {font-size: 16px;}*/
-.b_cont h3 {
+.b_cont h2 {
   font-size: 15px;
 }
 
-.b_cont h4 {
+.b_cont h3 {
   font-size: 14px;
 }
 
-.b_cont h5 {
+.b_cont h4 {
   font-size: 13px;
 }
 
-.b_cont h6 {
+.b_cont h5 {
   font-size: 12px;
 }
 
-/*.b_cont h1::before, .b_cont h2::before, .b_cont h3::before, .b_cont h4::before, .b_cont h5::before, .b_cont h6::before {content: '# ';}*/
-/*.b_cont_style h1, .b_cont h2, .b_cont h3, .b_cont_style h4, .b_cont h5, .b_cont h6 {margin-top: 50px; margin-bottom: -10px;}*/
+.b_cont h6 {
+  font-size: 11px;
+}
+
+.b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
+
 .b_cont > * {
   margin: 30px 0;
 }
@@ -184,7 +175,7 @@ main {
   margin-bottom: 0;
 }
 
-/*field*/
+/*b_fd*/
 .b_fd input[type=text], .b_fd input[type=password], .b_fd input[type=number], .b_fd input[type=email], .b_fd select, .b_fd textarea {
   border: solid 1px #ccc;
   background: white;
@@ -198,25 +189,29 @@ main {
   margin: 3px 0;
   color: inherit;
 }
-.b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus,
-.b_fd input:hover, .b_fd select:hover, .b_fd textarea:hover {
+
+.b_fd input:focus, .b_fd select:focus, .b_fd textarea:focus, .b_fd input:hover, .b_fd select:hover, .b_fd textarea:hover {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
+
 .b_fd label > span {
   font-size: smaller;
   vertical-align: baseline;
 }
+
 .b_fd label > input[type=checkbox], .b_fd label > input[type=radio] {
   font-size: smaller;
   position: relative;
   top: -0.16em;
   vertical-align: middle;
 }
+
 .b_fd textarea {
   width: 100%;
   height: 100px;
   vertical-align: middle;
 }
+
 .b_fd ::placeholder {
   color: #3baae3;
   font-size: 12px;
@@ -249,14 +244,16 @@ main {
     height: 13px;
     top: -0.1em;
   }
+
   .b_fd label > input[type=checkbox] {
     top: -0.07em;
   }
+
   .b_fd label > input[type=radio] {
     top: -0.22em;
   }
 }
-/*btn*/
+/*b_bt*/
 .b_bt button, .b_bt a, .b_bt input[type=button] {
   color: white;
   background: #0070a3;
@@ -271,11 +268,12 @@ main {
   vertical-align: middle;
   margin: 3px 1px;
 }
+
 .b_bt a {
   line-height: 30px;
 }
-.b_bt button:hover, .b_bt a:hover, .b_bt input[type=button]:hover,
-.b_bt button:focus, .b_bt a:focus, .b_bt input[type=button]:focus {
+
+.b_bt button:hover, .b_bt a:hover, .b_bt input[type=button]:hover, .b_bt button:focus, .b_bt a:focus, .b_bt input[type=button]:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 
@@ -327,24 +325,24 @@ main {
   border-radius: 200px !important;
 }
 
-body .b_bt_cancel, body .b_bt_gray {
+.b_bt_cancel, .b_bt_gray {
   background: gray !important;
 }
 
-body .b_bt_safe {
-  background: green;
+.b_bt_safe {
+  background: green !important;
 }
 
-body .b_bt_black {
-  background: #333;
+.b_bt_black {
+  background: #333 !important;
 }
 
-body .b_bt_alert {
-  background: orangered;
+.b_bt_alert {
+  background: orangered !important;
 }
 
-body .b_bt_warn {
-  background: orange;
+.b_bt_warn {
+  background: orange !important;
 }
 
 @media (max-width: 500px) {
