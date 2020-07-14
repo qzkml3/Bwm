@@ -57,7 +57,7 @@ main {display: block;}
 .b_cont h4 {font-size: 13px;}
 .b_cont h5 {font-size: 12px;}
 .b_cont h6 {font-size: 11px;}
-.b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {margin-top: 50px; margin-bottom: -20px;}
+.b_cont > h1, .b_cont > h2, .b_cont > h3, .b_cont > h4, .b_cont > h5, .b_cont > h6 {margin-top: 50px; margin-bottom: -20px;}
 
 .b_cont > * {margin: 30px 0;}
 .b_cont > *:first-child {margin-top: 0;}

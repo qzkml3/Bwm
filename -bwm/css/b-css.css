@@ -158,7 +158,7 @@ main {
   font-size: 11px;
 }
 
-.b_cont h1, .b_cont h2, .b_cont h3, .b_cont h4, .b_cont h5, .b_cont h6 {
+.b_cont > h1, .b_cont > h2, .b_cont > h3, .b_cont > h4, .b_cont > h5, .b_cont > h6 {
   margin-top: 50px;
   margin-bottom: -20px;
 }
