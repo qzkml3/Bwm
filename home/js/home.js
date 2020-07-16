@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $b.debug.showScript('.on');
   $b.img.resImgMap();
 });
 

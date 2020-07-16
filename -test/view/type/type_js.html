@@ -1,0 +1,116 @@
+<div class="b_cont">
+	<script class="on">
+		$b.result(
+			typeof function a() {}
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof new Array()
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof []
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof asdf
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof undefiend
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof null
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof new Object()
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof {}
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof 'aaa'
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			typeof new String('aaa')
+		);
+	</script>
+	
+	<h2>is Array</h2>
+	<script class="on">
+		$b.result(
+			[] instanceof Array
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			{} instanceof Array
+		);
+	</script>
+
+	<h2>is Object</h2>
+	<script class="on">
+		$b.result(
+			{} instanceof Object
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			Function instanceof Object
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			Object instanceof Function 
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			Object instanceof Array
+		);
+	</script>
+	<script class="on">
+		$b.result(
+			Function == Object
+		);
+	</script>
+
+	<h2>is Function</h2>
+	<script class="on">
+		$b.result(
+			function() {} instanceof Function
+		);
+	</script>
+	<script class="on">
+		var a = new Array();
+		$b.result(
+			a instanceof Function
+		);
+	</script>
+	<script class="on">
+		var a = new Array();
+		$b.result(
+			a instanceof Object
+		);
+	</script>
+	<script class="on">
+		var a = new Array();
+		$b.result(
+			a instanceof Array
+		);
+	</script>
+</div>
