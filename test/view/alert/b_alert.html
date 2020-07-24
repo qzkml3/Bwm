@@ -1,0 +1,49 @@
+<div class="b_bt b_cont">
+	<div>
+		<button id="alert" type="button">alert</button>
+		<script class="on">
+			$('#alert').on('click', function () {
+				$b.alert('내용이다');
+			});
+		</script>
+	</div>
+	<div>
+		<button id="alert_with_head" type="button">alert_with_head</button>
+		<script class="on">
+			$('#alert_with_head').on('click', function () {
+				$b.alert('제목이다', '내용이다');
+			});
+		</script>
+	</div>
+	<div>
+		<button id="confirm" type="button">confirm</button>
+		<script class="on">
+			$('#confirm').on('click', function () {
+				$b.confirm('내용이다', function () {
+					console.log('callback');
+				});
+			});
+		</script>
+	</div>
+</div>
+
+<section id="b_alert" class="b_pop">
+	<div class="b_pop_page">
+		<div class="b_pop_head">제목</div>
+		<div class="b_pop_cont">내용</div>
+		<div class="b_pop_foot b_bt b_bt_s">
+			<button onclick="$b.pop.close(this);" type="button">확인</button>
+		</div>
+	</div>
+</section>
+
+<section id="b_confirm" class="b_pop">
+	<div class="b_pop_page">
+		<div class="b_pop_head">제목</div>
+		<div class="b_pop_cont">내용</div>
+		<div class="b_pop_foot b_bt b_bt_s">
+			<button onclick="$b.confirm.callBack();" type="button">확인</button>
+			<button onclick="$b.pop.close(this);" type="button" class="b_bt_cancel">취소</button>
+		</div>
+	</div>
+</section>

@@ -703,7 +703,7 @@ main {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.b_pop_pad_off .b_pop_page_cont {
+.b_pop_pad_off .b_pop_cont {
   padding: 0;
 }
 
@@ -723,7 +723,7 @@ main {
   /*max-height: 90%;*/
 }
 
-.b_pop_page_head {
+.b_pop_head {
   text-align: center;
   background: #eee;
   height: 40px;
@@ -732,26 +732,26 @@ main {
   justify-content: center;
 }
 
-.b_pop_page_cont {
+.b_pop_cont {
   text-align: center;
   padding: 30px 5%;
   overflow-y: auto;
   max-height: calc(100vh - 80px);
 }
 
-.b_pop_head_foot .b_pop_page_cont {
+.b_pop_head_foot .b_pop_cont {
   max-height: calc(100vh - 220px);
   overflow-y: auto;
 }
 
 /*제목 풋터 경우*/
-.b_pop_foot .b_pop_page_cont {
+.b_pop_foot .b_pop_cont {
   max-height: calc(100vh - 180px);
   overflow-y: auto;
 }
 
 /*풋터 경우*/
-.b_pop_page_foot {
+.b_pop_foot {
   text-align: center;
   background: #eee;
   height: 40px;
@@ -766,7 +766,7 @@ main {
     max-height: 95%;
   }
 
-  .b_pop_page_cont {
+  .b_pop_cont {
     height: auto;
   }
 }
@@ -1204,6 +1204,10 @@ dl.b_dl, .b_dl dl {
 
 .b_rad_10px {
   border-radius: 10px !important;
+}
+
+.b_d_b {
+  display: block;
 }
 
 /*# sourceMappingURL=b-css.css.map */

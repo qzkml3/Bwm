@@ -1,0 +1,52 @@
+<style>
+	.on {background: #ccc;}
+</style>
+
+<style>
+</style>
+
+<div class="b_cont">
+	<section>
+		<h2>1 cont</h2>
+		<nav class="tab_bt">
+			<a href="">aa</a>
+			<a href="">aa</a>
+			<a href="">aa</a>
+		</nav>
+
+		<div class="b_tab_ct tab_ct_1">
+			<div>a</div>
+			<div>b</div>
+			<div>c</div>
+		</div>
+		<script>
+			$b.tab('.tab_bt a', '.tab_ct_1 > div');
+		</script>
+	</section>
+	<section>
+		<h2>array cont</h2>
+		<nav class="tab_bt_2">
+			<a href="">aa</a>
+			<a href="">aa</a>
+			<a href="">aa</a>
+		</nav>
+
+		<div class="b_tab_ct tab_ct_2_1">
+			<div>a</div>
+			<div>b</div>
+			<div>c</div>
+		</div>
+
+		<div class="b_tab_ct tab_ct_2_2">
+			<div>a</div>
+			<div>b</div>
+			<div>c</div>
+		</div>
+		<script>
+			$b.tab('.tab_bt_2 a', [
+				'.tab_ct_2_1 > *',
+				'.tab_ct_2_2 > *'
+			]);
+		</script>
+	</section>
+</div>

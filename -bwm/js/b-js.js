@@ -9,25 +9,46 @@ window.$b = function () {
 
 $b.ajax = {};
 
-$b.alert = function (head, cont) {
+$b.alert = function (ag_1, ag_2) {
 	switch (arguments.length) {
-		case 2:
-			$('#b_alert .b_pop_page_head').show();
-			$('#b_alert .b_pop_page_head').text(head);
-			$('#b_alert .b_pop_page_cont').text(cont);
-			break;
 		case 1:
-			$('#b_alert .b_pop_page_head').hide();
-			$('#b_alert .b_pop_page_head').text(head);
-			$('#b_alert .b_pop_page_cont').text(cont);
+			$('#b_alert .b_pop_head').hide();
+			$('#b_alert .b_pop_head').text(ag_1);
+			$('#b_alert .b_pop_cont').text(ag_2);
+			break;
+		case 2:
+			$('#b_alert .b_pop_head').show();
+			$('#b_alert .b_pop_head').text(ag_1);
+			$('#b_alert .b_pop_cont').text(ag_2);
 			break;
 		default:
 	}
 	$('#b_alert').fadeIn('fast');
-		
-	
-		
 }
+$b.confirm = function (ag_1, ag_2) {
+	switch (arguments.length) {
+		case 2:
+			if ($b.isFt(arguments[1])) {
+				$('#b_confirm .b_pop_head').hide();
+				$('#b_confirm .b_pop_head').text(ag_1);
+				$('#b_confirm .b_pop_cont').text(ag_2);
+				$b.confirm.callBack = ag_2;
+			}
+			break;
+		case 3:
+			$b.log(1);
+			$('#b_confirm .b_pop_head').show();
+			$('#b_confirm .b_pop_head').text(ag_1);
+			$('#b_confirm .b_pop_cont').text(ag_2);
+			break;
+		default:
+	}
+	$('#b_confirm').fadeIn('fast');
+}
+
+$b.getIdx = function () {
+
+};
 
 $b.log = function (o) {
 	return console.log(o);
@@ -90,12 +111,74 @@ $b.debug.showScript = function (cls) {
 	});
 }
 
+$b.isStr = function (o) {
+	return o instanceof String;
+}
+
+$b.isArray = function (o) {
+	return o instanceof Array;
+}
+
+$b.isObj = function (o) {
+	return o instanceof Object;
+}
+
+$b.isFt = function (o) {
+	return o instanceof Function;
+}
+
 $b.str = {};
 
 /**Search text in contents*/
 $b.str.hasStr = function (full_str, keyword) {
 	return full_str.indexOf(keyword) > -1;
 }
+
+$b.tab = function (bt, ct, onClass) {
+	var $aBt = $(bt);
+	var aCt;
+
+	if (onClass == null) { //default value
+		onClass = 'on';
+	}
+
+	if ($b.isArray(ct)) { //default type to array
+		aCt = ct;
+	} else {
+		aCt = new Array(ct);
+	}
+
+	$aBt.eq(0).addClass(onClass);
+	
+	for (var i = 0; i < aCt.length; i++) {
+		var $ct = $(aCt[i]);
+		$ct.eq(0).addClass('on');
+	}
+
+	$(document).on('click', bt, function () {
+		var $btns = $(bt);
+		var $clickBtn = $(this);
+		var idx;
+
+		$btns.removeClass('on');
+		$clickBtn.addClass('on');
+
+		$btns.each(function (i) {
+			if ($(this).hasClass('on')) {
+				idx = i;
+				return false;
+			}
+		});
+
+		for (var i = 0; i < aCt.length; i++) {
+			var $ct = $(aCt[i]);
+			$ct.removeClass('on');
+			$ct.eq(idx).addClass('on');
+		}
+
+		return false;
+	});
+};
 
 $b.img = {};
 

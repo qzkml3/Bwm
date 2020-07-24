@@ -260,7 +260,7 @@ main {display: block;}
   background: rgba(0, 0, 0, .5);
 }
 
-.b_pop_pad_off .b_pop_page_cont {padding: 0;}
+.b_pop_pad_off .b_pop_cont {padding: 0;}
 
 .b_pop_page {
   background: white; position: absolute; left: 0; right: 0; width: 95%; margin: auto; max-width: 500px;
@@ -268,19 +268,19 @@ main {display: block;}
   box-sizing: border-box; overflow-y: auto; /*max-height: 90%;*/
 }
 
-.b_pop_page_head {text-align: center; background: #eee; height: 40px; display: flex; align-items: center; justify-content: center;}
-.b_pop_page_cont {text-align: center; padding: 30px 5%; overflow-y: auto; max-height: calc(100vh - 80px);}
+.b_pop_head {text-align: center; background: #eee; height: 40px; display: flex; align-items: center; justify-content: center;}
+.b_pop_cont {text-align: center; padding: 30px 5%; overflow-y: auto; max-height: calc(100vh - 80px);}
 
-.b_pop_head_foot .b_pop_page_cont {max-height: calc(100vh - 220px); overflow-y: auto;} /*제목 풋터 경우*/
+.b_pop_head_foot .b_pop_cont {max-height: calc(100vh - 220px); overflow-y: auto;} /*제목 풋터 경우*/
 
-.b_pop_foot .b_pop_page_cont {max-height: calc(100vh - 180px); overflow-y: auto;} /*풋터 경우*/
+.b_pop_foot .b_pop_cont {max-height: calc(100vh - 180px); overflow-y: auto;} /*풋터 경우*/
 
 
-.b_pop_page_foot {text-align: center; background: #eee; height: 40px; display: flex; align-items: center; justify-content: center;}
+.b_pop_foot {text-align: center; background: #eee; height: 40px; display: flex; align-items: center; justify-content: center;}
 
 @media(max-height: 350px) {
   .b_pop_page {overflow-y: auto; max-height: 95%;}
-  .b_pop_page_cont {height: auto;}
+  .b_pop_cont {height: auto;}
 }
 
 .b_p_0 {padding: 0;}
@@ -417,3 +417,9 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_rad {border-radius: 3px !important;}
 .b_rad_5px {border-radius: 5px !important;}
 .b_rad_10px {border-radius: 10px !important;}
+
+.b_d_b {display: block;}
+
+.b_tab_ct {position: relative;}
+.b_tab_ct > * {position: absolute; opacity: 0; transition: all .3s; left: -99999px; top: -99999px;}
+.b_tab_ct > *.on {position: static; opacity: 1; left: 0; top: 0;}
