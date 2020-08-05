@@ -1,0 +1,33 @@
+<div class="b_cont">
+	<ul class="paste_area">
+		<script id="tmpl_1" type="text/html">
+			<li class="item">
+				<span class="item_1"></span>
+				<span class="item_2"></span>
+			</li>
+		</script>
+	</ul>
+
+	<script class="on">
+		var list = [
+			{'a': 'a_1', 'b': 'b_1'},
+			{'a': 'a_2', 'b': 'b_2'},
+			{'a': 'a_3', 'b': 'b_3'}
+		]
+		var tmpl = $('#tmpl_1').html();
+		var $tmpl
+
+		for (v in list) {
+			var data = list[v];
+			
+			$tmpl = $(tmpl);
+			
+			console.log($tmpl)
+			$tmpl.find('.item_1').text(data.a);
+			$tmpl.find('.item_2').text(data.b);
+			
+			$('.paste_area').append($tmpl);
+		}
+	</script>
+
+</div>

@@ -1,0 +1,23 @@
+<script src="/-bwm/js/tpl/tmpl/jquery.tmpl.min.js"></script>
+
+<div class="b_cont">
+	<ul>
+		
+	</ul>
+</div>
+
+<script type="text/html" id="tpl">
+	<li>${a} ${b}</li>
+</script>
+
+<script>
+	var tpl = $('#tpl');
+	
+	var data = [
+		{'a': 'a_1', 'b': 'b_1'},
+		{'a': 'a_2', 'b': 'b_2'},
+		{'a': 'a_3', 'b': 'b_3'}
+	];
+	
+	$.tmpl(tpl, data).appendTo('ul');
+</script>
