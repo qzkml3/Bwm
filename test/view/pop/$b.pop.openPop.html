@@ -1,0 +1,19 @@
+<div class="b_bt_w">
+	<button onclick="$b.pop.openPop('#pop_kkk');" type="button">Layer Popup</button>
+</div>
+
+
+<section class="b_pop b_show" id="pop_kkk">
+	<div class="b_pop_page">
+		<img src="/comm_res/img/ex/hori-img.jpg" alt="" class="b_w_100pc">
+		<div class="ta_c b_bt_w b_bt_w_s">
+			<button onclick="$b.pop.confirm(closePopToday, '오늘 하루동안 팝업을 열지 않으시겠습니까?', '팝업 확인');" type="button">오늘하루 열지않기</button>
+		</div>
+	</div>
+</section>
+
+<script>
+function closePopToday() {
+	alert(1);
+}
+</script>

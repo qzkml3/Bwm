@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$b.debug.showScript('.on');
-	$b.pop.closePopClickShadow();
+	$b.pop.closePopPopClickShadow();
 });
 
 window.$b = function () {
@@ -8,6 +8,28 @@ window.$b = function () {
 }
 
 $b.ajax = {};
+
+$b.debug = {};
+
+/** Show script to page
+ * If no class parameter every script to page
+ * */
+$b.debug.showScript = function (cls) {
+	var $script;
+
+	if (cls) {
+		$script = $('script').filter(cls);
+	} else {
+		$script = $('script');
+	}
+
+	$script.each(function () {
+		var $script = $(this);
+		var script = $b.outerHtml($script);
+
+		$script.before('<code class="b_source"><xmp>' + script + "</xmp></code>");
+	});
+}
 
 $b.pop = {};
 
@@ -22,10 +44,10 @@ $b.pop.POP_PAGE = '<div class="' + $b.pop.POP_PAGE_CLASS + '"></div>';
 $b.pop.POP_HEAD = '<div class="' + $b.pop.POP_HEAD_CLASS + '">알림</div>';
 $b.pop.POP_BODY = '<div class="' + $b.pop.POP_BODY_CLASS + '"></div>';
 $b.pop.POP_FOOT = '<div class="' + $b.pop.POP_FOOT_CLASS + ' b_bt_w b_m_h_c_8px"></div>';
-$b.pop.POP_BT_OK = '<button onclick="$b.pop.remove(this);" class="b_bt_ok">확인</button>';
-$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.remove(this);" class="b_bt_cancel">취소</button>';
+$b.pop.POP_BT_OK = '<button onclick="$b.pop.removePop(this);" class="b_bt_ok">확인</button>';
+$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.removePop(this);" class="b_bt_cancel">취소</button>';
 
-$b.alert = function (html, tit) {
+$b.pop.alert = function (html, tit) {
 	var $pop = $($b.pop.POP);
 	$pop.append($b.pop.POP_PAGE);
 	if (tit) {
@@ -42,7 +64,7 @@ $b.alert = function (html, tit) {
 	$b.scroll.lockScroll();
 }
 
-$b.confirm = function (callback, html, tit) {
+$b.pop.confirm = function (callback, html, tit) {
 	var $pop = $($b.pop.POP);
 	$pop.append($b.pop.POP_PAGE);
 	if (tit) {
@@ -67,10 +89,6 @@ $b.confirm = function (callback, html, tit) {
 		callback();
 	});
 }
-
-$b.getIdx = function () {
-
-};
 
 $b.log = function (o) {
 	return console.log(o);
@@ -111,28 +129,6 @@ $b.ajax.charset = function (charset) {
 	});
 }
 
-$b.debug = {};
-
-/** Show script to page
- * If no class parameter every script to page
- * */
-$b.debug.showScript = function (cls) {
-	var $script;
-
-	if (cls) {
-		$script = $('script').filter(cls);
-	} else {
-		$script = $('script');
-	}
-
-	$script.each(function () {
-		var $script = $(this);
-		var script = $b.outerHtml($script);
-
-		$script.before('<code class="b_source"><xmp>' + script + "</xmp></code>");
-	});
-}
-
 $b.isStr = function (o) {
 	return typeof o == 'string';
 }
@@ -162,6 +158,18 @@ $b.scroll.unlockScroll = function(target) {
 }
 
 $b.str = {};
+
+$b.str.addZero = function (v, size) {
+	var v  = new String(v);
+	
+	for (var i = 0; i < v.length; i++) {
+		if (v.length < size) {
+			v = '0' + v;
+		}
+	}
+	
+	return v;
+}
 
 /**Search text in contents*/
 $b.str.hasStr = function (full_str, keyword) {
@@ -271,15 +279,17 @@ function b_onScrollEnd(callBackFunc, charset) {
 	});
 }
 
-$b.pop.open = function (jq) {
-	var $pop = $(jq);
+$b.pop.openPop = function (pop) {
+	var $pop = $(pop);
 	var firstBtn = $pop.find('button').eq(0);
+
+	if (!$pop.length) $b.log('pop not found.');
 
 	$pop.fadeIn('fast');
 	firstBtn.focus();
 }
 
-$b.pop.close = function (jq) {
+$b.pop.closePop = function (jq) {
 	var $pop;
 
 	if ($b.isStr(jq)) {
@@ -293,7 +303,7 @@ $b.pop.close = function (jq) {
 	return false;
 }
 
-$b.pop.remove = function (jq) {
+$b.pop.removePop = function (jq) {
 	var $pop;
 
 	if ($b.isStr(jq)) {
@@ -310,13 +320,13 @@ $b.pop.remove = function (jq) {
 }
 
 /*Close pop when click shadow when if*/
-$b.pop.closePopClickShadow = function () {
+$b.pop.closePopPopClickShadow = function () {
 	$('.b_pop').on('click', function (e) {
 		$pop = $(this);
 
 		if (this == e.target) {
-			if ($pop.data('click-shadow-close') == 1) {
-				$b.pop.close($pop);
+			if ($pop.data('close-when-shadow-click') == 1) {
+				$b.pop.closePop($pop);
 			}
 		}
 	});
