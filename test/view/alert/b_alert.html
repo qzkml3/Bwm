@@ -1,49 +1,51 @@
+<?php
+$pop_cont = "내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br>내용이다<br> 내용이다 내용이다<br>내용이다 <p>내용이다</p> 내용이다<br> 내용이다<br> 내용이다<br> 내용이다<br> 내용이다<br> 내용이다<br> 내용이다<br> 내용이다<br> 내용이다 내용이다 내용이다 내용이다";
+?>
 <div class="b_bt_w b_cont">
+	<h2>tit</h2>
 	<div>
-		<button id="alert" type="button">alert</button>
+		<button id="alert" type="button">Alert</button>
 		<script class="on">
 			$('#alert').on('click', function () {
-				$b.alert('내용이다');
+				$b.alert('알림창이 떳습니다.', '알림');
 			});
 		</script>
 	</div>
 	<div>
-		<button id="alert_with_head" type="button">alert_with_head</button>
-		<script class="on">
-			$('#alert_with_head').on('click', function () {
-				$b.alert('제목이다', '내용이다');
-			});
-		</script>
-	</div>
-	<div>
-		<button id="confirm" type="button">confirm</button>
+		<button id="confirm" type="button">Confirm</button>
 		<script class="on">
 			$('#confirm').on('click', function () {
-				$b.confirm('내용이다', function () {
-					console.log('callback');
-				});
+				$b.confirm(
+					function () {
+						$b.alert('callback');
+					},
+					'<?=$pop_cont?>',
+					'확인사항'
+				);
+			});
+		</script>
+	</div>
+	
+	<h2>no tit</h2>
+	<div>
+		<button id="alert_no_tit" type="button">Alert</button>
+		<script class="on">
+			$('#alert_no_tit').on('click', function () {
+				$b.alert('알림창이 떳습니다.');
+			});
+		</script>
+	</div>
+	<div>
+		<button id="confirm_no_tit" type="button">Confirm no tit</button>
+		<script class="on">
+			$('#confirm_no_tit').on('click', function () {
+				$b.confirm(
+					function () {
+						$b.alert('callback');
+					},
+					'<?=$pop_cont?>'
+				);
 			});
 		</script>
 	</div>
 </div>
-
-<section id="b_alert" class="b_pop">
-	<div class="b_pop_page">
-		<div class="b_pop_head">제목</div>
-		<div class="b_pop_cont">내용</div>
-		<div class="b_pop_foot b_bt_w b_bt_w_s">
-			<button onclick="$b.pop.close(this);" type="button">확인</button>
-		</div>
-	</div>
-</section>
-
-<section id="b_confirm" class="b_pop">
-	<div class="b_pop_page">
-		<div class="b_pop_head">제목</div>
-		<div class="b_pop_cont">내용</div>
-		<div class="b_pop_foot b_bt_w b_bt_w_s">
-			<button onclick="$b.confirm.callBack();" type="button">확인</button>
-			<button onclick="$b.pop.close(this);" type="button" class="b_bt_cancel">취소</button>
-		</div>
-	</div>
-</section>

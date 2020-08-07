@@ -726,7 +726,7 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
   background: rgba(0, 0, 0, 0.5);
 }
 
-.b_pop_pad_off .b_pop_cont {
+.b_pop_pad_off .b_pop_body {
   padding: 0;
 }
 
@@ -744,31 +744,36 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
   box-sizing: border-box;
   overflow-y: auto;
   /*max-height: 90%;*/
+  border-radius: 5px;
+  /*border-bottom-left-radius: 0; border-bottom-right-radius: 0;*/
+  /*border: solid 1px #aaa; */
+  box-shadow: 0px 0px 4px 2px #aaa;
 }
 
 .b_pop_head {
   text-align: center;
-  background: #eee;
+  background: #82dcf7;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
-.b_pop_cont {
-  text-align: center;
-  padding: 30px 5%;
+.b_pop_body {
+  text-align: left;
+  padding: 20px 5% 15px;
   overflow-y: auto;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 220px);
 }
 
-.b_pop_head_foot .b_pop_cont {
+.b_pop_head_foot .b_pop_body {
   max-height: calc(100vh - 220px);
   overflow-y: auto;
 }
 
 /*제목 풋터 경우*/
-.b_pop_foot .b_pop_cont {
+.b_pop_foot .b_pop_body {
   max-height: calc(100vh - 180px);
   overflow-y: auto;
 }
@@ -776,11 +781,8 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
 /*풋터 경우*/
 .b_pop_foot {
   text-align: center;
-  background: #eee;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*background: #eee;*/
+  padding: 0 0 20px;
 }
 
 @media (max-height: 350px) {
@@ -789,7 +791,7 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
     max-height: 95%;
   }
 
-  .b_pop_cont {
+  .b_pop_body {
     height: auto;
   }
 }
@@ -1147,7 +1149,6 @@ dl.b_dl, .b_dl dl {
 .b_source {
   position: relative;
   display: block;
-  padding: 10px;
   border-radius: 5px;
   background: #f5f5f5;
   border: solid 1px #ccc;
@@ -1166,6 +1167,8 @@ dl.b_dl, .b_dl dl {
 
 .b_source > * {
   margin: 0;
+  overflow-x: auto;
+  padding: 10px;
 }
 
 .b_result {
@@ -1270,6 +1273,19 @@ dl.b_dl, .b_dl dl {
   margin-right: 0 !important;
 }
 
+.b_m_h_c_3px > * {
+  margin-right: 3px !important;
+  margin-left: 3px !important;
+}
+
+.b_m_h_c_3px > *:first-child {
+  margin-left: 0 !important;
+}
+
+.b_m_h_c_3px > *:last-child {
+  margin-right: 0 !important;
+}
+
 .b_m_h_c_4px > * {
   margin-right: 4px !important;
   margin-left: 4px !important;
@@ -1280,6 +1296,32 @@ dl.b_dl, .b_dl dl {
 }
 
 .b_m_h_c_4px > *:last-child {
+  margin-right: 0 !important;
+}
+
+.b_m_h_c_6px > * {
+  margin-right: 6px !important;
+  margin-left: 6px !important;
+}
+
+.b_m_h_c_6px > *:first-child {
+  margin-left: 0 !important;
+}
+
+.b_m_h_c_6px > *:last-child {
+  margin-right: 0 !important;
+}
+
+.b_m_h_c_8px > * {
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+
+.b_m_h_c_8px > *:first-child {
+  margin-left: 0 !important;
+}
+
+.b_m_h_c_8px > *:last-child {
   margin-right: 0 !important;
 }
 
@@ -1368,6 +1410,10 @@ dl.b_dl, .b_dl dl {
 
 .b_w_10em {
   width: 10em;
+}
+
+.b_show {
+  display: block;
 }
 
 /*# sourceMappingURL=b-css.css.map */

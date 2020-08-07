@@ -1,12 +1,15 @@
 <div class="b_cont">
+	<h2>is</h2>
 	<script class="on">
 		$b.result(
-			{} instanceof Function
+			$b.isStr('kkk')
 		);
 	</script>
+	<h2>typeof</h2>
 	<script class="on">
 		$b.result(
-			typeof function a() {}
+			typeof function a() {
+			}
 		);
 	</script>
 	<script class="on">
@@ -54,7 +57,14 @@
 			typeof new String('aaa')
 		);
 	</script>
-	
+
+	<h2>instanceof</h2>
+	<script class="on">
+		$b.result(
+			{} instanceof Function
+		);
+	</script>
+
 	<h2>is Array</h2>
 	<script class="on">
 		$b.result(
@@ -80,7 +90,7 @@
 	</script>
 	<script class="on">
 		$b.result(
-			Object instanceof Function 
+			Object instanceof Function
 		);
 	</script>
 	<script class="on">
@@ -97,7 +107,8 @@
 	<h2>is Function</h2>
 	<script class="on">
 		$b.result(
-			function() {} instanceof Function
+			function () {
+			} instanceof Function
 		);
 	</script>
 	<script class="on">

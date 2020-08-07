@@ -9,41 +9,63 @@ window.$b = function () {
 
 $b.ajax = {};
 
-$b.alert = function (ag_1, ag_2) {
-	switch (arguments.length) {
-		case 1:
-			$('#b_alert .b_pop_head').hide();
-			$('#b_alert .b_pop_head').text(ag_1);
-			$('#b_alert .b_pop_cont').text(ag_2);
-			break;
-		case 2:
-			$('#b_alert .b_pop_head').show();
-			$('#b_alert .b_pop_head').text(ag_1);
-			$('#b_alert .b_pop_cont').text(ag_2);
-			break;
-		default:
+$b.pop = {};
+
+$b.pop.POP_CLASS = 'b_pop';
+$b.pop.POP_PAGE_CLASS = 'b_pop_page';
+$b.pop.POP_HEAD_CLASS = 'b_pop_head';
+$b.pop.POP_BODY_CLASS = 'b_pop_body';
+$b.pop.POP_FOOT_CLASS = 'b_pop_foot';
+
+$b.pop.POP = '<section class="' + $b.pop.POP_CLASS + '"></section>';
+$b.pop.POP_PAGE = '<div class="' + $b.pop.POP_PAGE_CLASS + '"></div>';
+$b.pop.POP_HEAD = '<div class="' + $b.pop.POP_HEAD_CLASS + '">알림</div>';
+$b.pop.POP_BODY = '<div class="' + $b.pop.POP_BODY_CLASS + '"></div>';
+$b.pop.POP_FOOT = '<div class="' + $b.pop.POP_FOOT_CLASS + ' b_bt_w b_m_h_c_8px"></div>';
+$b.pop.POP_BT_OK = '<button onclick="$b.pop.remove(this);" class="b_bt_ok">확인</button>';
+$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.remove(this);" class="b_bt_cancel">취소</button>';
+
+$b.alert = function (html, tit) {
+	var $pop = $($b.pop.POP);
+	$pop.append($b.pop.POP_PAGE);
+	if (tit) {
+		$pop.find('.' + $b.pop.POP_PAGE_CLASS).append($b.pop.POP_HEAD);
 	}
-	$('#b_alert').fadeIn('fast');
+	$pop.find('.' + $b.pop.POP_PAGE_CLASS).append($b.pop.POP_BODY);
+	$pop.find('.' + $b.pop.POP_PAGE_CLASS).append($b.pop.POP_FOOT);
+	$pop.find('.' + $b.pop.POP_BODY_CLASS).html(html);
+	$pop.find('.' + $b.pop.POP_FOOT_CLASS).append($b.pop.POP_BT_OK);
+
+	$pop.appendTo('body');
+	$pop.fadeIn('fast');
+	$pop.find('button').eq(0).focus();
+	$b.scroll.lockScroll();
 }
-$b.confirm = function (ag_1, ag_2) {
-	switch (arguments.length) {
-		case 2:
-			if ($b.isFt(arguments[1])) {
-				$('#b_confirm .b_pop_head').hide();
-				$('#b_confirm .b_pop_head').text(ag_1);
-				$('#b_confirm .b_pop_cont').text(ag_2);
-				$b.confirm.callBack = ag_2;
-			}
-			break;
-		case 3:
-			$b.log(1);
-			$('#b_confirm .b_pop_head').show();
-			$('#b_confirm .b_pop_head').text(ag_1);
-			$('#b_confirm .b_pop_cont').text(ag_2);
-			break;
-		default:
+
+$b.confirm = function (callback, html, tit) {
+	var $pop = $($b.pop.POP);
+	$pop.append($b.pop.POP_PAGE);
+	if (tit) {
+		$pop.find('.' + $b.pop.POP_PAGE_CLASS).append($b.pop.POP_HEAD);
 	}
-	$('#b_confirm').fadeIn('fast');
+	$pop.find('.' + $b.pop.POP_PAGE_CLASS).append($b.pop.POP_BODY);
+	$pop.find('.' + $b.pop.POP_PAGE_CLASS).append($b.pop.POP_FOOT);
+
+	$pop.find('.' + $b.pop.POP_HEAD_CLASS).html(tit);
+	$pop.find('.' + $b.pop.POP_BODY_CLASS).html(html);
+	$pop.find('.' + $b.pop.POP_FOOT_CLASS).append($b.pop.POP_BT_OK);
+	$pop.find('.' + $b.pop.POP_FOOT_CLASS).append($b.pop.POP_BT_CANCEL);
+
+	var $pop_ok_btn = $pop.find('button').eq(0);
+
+	$pop.appendTo('body');
+	$pop.fadeIn('fast');
+
+	$pop_ok_btn.focus();
+	$b.scroll.lockScroll();
+	$pop_ok_btn.on('click', function () {
+		callback();
+	});
 }
 
 $b.getIdx = function () {
@@ -112,7 +134,7 @@ $b.debug.showScript = function (cls) {
 }
 
 $b.isStr = function (o) {
-	return o instanceof String;
+	return typeof o == 'string';
 }
 
 $b.isArray = function (o) {
@@ -125,6 +147,18 @@ $b.isObj = function (o) {
 
 $b.isFt = function (o) {
 	return o instanceof Function;
+}
+
+$b.scroll = {};
+
+$b.scroll.lockScroll = function(target) {
+	if (!target) target = 'html';
+	$(target).css({'overflow-y':'hidden'});
+}
+
+$b.scroll.unlockScroll = function(target) {
+	if (!target) target = 'html';
+	$(target).css({'overflow-y':'scroll'});
 }
 
 $b.str = {};
@@ -149,7 +183,7 @@ $b.tab = function (bt, ct, onClass) {
 	}
 
 	$aBt.eq(0).addClass(onClass);
-	
+
 	for (var i = 0; i < aCt.length; i++) {
 		var $ct = $(aCt[i]);
 		$ct.eq(0).addClass('on');
@@ -237,23 +271,41 @@ function b_onScrollEnd(callBackFunc, charset) {
 	});
 }
 
-$b.pop = {};
-
 $b.pop.open = function (jq) {
 	var $pop = $(jq);
+	var firstBtn = $pop.find('button').eq(0);
+
 	$pop.fadeIn('fast');
+	firstBtn.focus();
 }
 
 $b.pop.close = function (jq) {
 	var $pop;
 
-	if (typeof jq == 'string') {
+	if ($b.isStr(jq)) {
 		$pop = $(jq);
 	} else {
 		$pop = $(jq).closest('.b_pop');
 	}
 
 	$pop.fadeOut('fast');
+	$b.scroll.unlockScroll();
+	return false;
+}
+
+$b.pop.remove = function (jq) {
+	var $pop;
+
+	if ($b.isStr(jq)) {
+		$pop = $(jq);
+	} else {
+		$pop = $(jq).closest('.b_pop');
+	}
+
+	$pop.fadeOut('fast', function () {
+		$pop.remove()
+	});
+	$b.scroll.unlockScroll();
 	return false;
 }
 
