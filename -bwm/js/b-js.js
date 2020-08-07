@@ -9,6 +9,62 @@ window.$b = function () {
 
 $b.ajax = {};
 
+$b.date = {};
+
+$b.date.getFullDate = function (sp) {
+	if (sp == null) sp = '-'; 
+	var v = $b.date.getYear() + sp + $b.date.getMonth() + sp + $b.date.getDate();
+	return v;
+}
+
+$b.date.getYear = function () {
+	var v = new Date().getFullYear();
+	return v;
+}
+
+$b.date.getMonth = function () {
+	var v = new Date().getMonth() + 1;
+	v = $b.str.addZero(v, 2);
+	return  v;
+}
+
+$b.date.getDate = function () {
+	var v = new Date().getDate();
+	v = $b.str.addZero(v, 2);
+	return v;
+}
+
+$b.date.getFullTime = function (sp) {
+	if (sp == null) sp = ':';
+	var v = $b.date.getHour() + sp + $b.date.getMinute() + sp + $b.date.getSecond();
+	return v;
+}
+
+$b.date.getHour = function () {
+	var v = new Date().getHours();
+	v = $b.str.addZero(v, 2);
+	return v;
+}
+
+$b.date.getMinute = function () {
+	var v = new Date().getMinutes();
+	v = $b.str.addZero(v, 2);
+	return v;
+}
+
+$b.date.getSecond = function () {
+	var v = new Date().getSeconds();
+	v = $b.str.addZero(v, 2);
+	return v;
+}
+
+$b.date.getDay = function () {
+	var kor = ['일', '월', '화', '수', '목', '금', '토']; 
+	var v = new Date().getDay();
+	v = kor[v];
+	return v;
+}
+
 $b.debug = {};
 
 /** Show script to page
@@ -23,12 +79,13 @@ $b.debug.showScript = function (cls) {
 		$script = $('script');
 	}
 
-	$script.each(function () {
+	$script.wrapInner('<div class="b_source"></div>');
+	/*$script.each(function () {
 		var $script = $(this);
 		var script = $b.outerHtml($script);
 
 		$script.before('<code class="b_source"><xmp>' + script + "</xmp></code>");
-	});
+	});*/
 }
 
 $b.pop = {};
