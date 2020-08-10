@@ -1,0 +1,34 @@
+<div class="b_bt_w b_fl b_fl_col" style="width: 200px;">
+	<button id="set_cook" type="button">set_cook a</button>
+	<button id="del_cook" type="button">del_cook a</button>
+	<button id="view_cook" type="button">view_cook a</button>
+
+	<button id="set_cook_2s" type="button">set_cook_2s a</button>
+	<button id="set_cook_only_today" type="button">set_cook_only_today a</button>
+</div>
+
+<script>
+	$('#set_cook').on('click', function () {
+		$b.cook.setSessCook('a', 'av');
+	});
+	
+	$('#del_cook').on('click', function () {
+		$b.cook.delCook('a');
+	});
+
+	$('#view_cook').on('click', function () {
+		var v = $b.cook.getCook('a')
+		$b.log(v);
+		
+		var v = $b.cook.getCook('b')
+		$b.log(v);
+	});
+	
+	$('#set_cook_2s').on('click', function () {
+		$b.cook.setCookBySecond('a', 'av', 2);
+	});
+	
+	$('#set_cook_only_today').on('click', function () {
+		$b.cook.setCookOnlyToday('a', 'av');
+	});
+</script>

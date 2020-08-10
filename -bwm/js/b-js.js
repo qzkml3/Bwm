@@ -9,6 +9,97 @@ window.$b = function () {
 
 $b.ajax = {};
 
+/**Charset of ajax*/
+$b.ajax.charset = function (charset) {
+	$.ajaxSetup({
+		'beforeSend': function (xhr) {
+			xhr.overrideMimeType('text/html; charset=' + charset);
+		},
+	});
+}
+
+/**
+- encodeURIComponent를 추천한다지만 쓰면 Uncaught URIError: URI malformed 가 나므로 deprecated 지만 escape을 쓴다...
+- expires 설정안하면 세션쿠키 설정하면 영구쿠키
+- 세션쿠키: 익스는 브라우저를 닫으면 사라지고 크폼, 파폭은 브라우저를 닫았다가 열어도 세션이 복구되어 사라지지 않는다.
+- 크롬 설정에 브라우저 닫을때 쿠키 지우는 옵션이 있음. 
+- 파폭 개발자도구에서는 새로고침시 날짜 지난 쿠키도 표시해 준다. 수동으로 삭제하기 전까지.
+ * */
+$b.cook = {};
+
+$b.cook.delCook = function(name) {
+	var today = new Date();
+	document.cookie = name + "=; path=/; expires=" + today.toUTCString() + ";"
+}
+
+$b.cook.getCook =  function (name) {
+	var arg = name + "=";
+	var alen = arg.length;
+	var clen = document.cookie.length;
+	var i = 0;
+	while (i < clen) {
+		var j = i + alen;
+		if (document.cookie.substring(i, j) == arg)
+			return getCookieVal(j);
+		i = document.cookie.indexOf(" ", i) + 1;
+		if (i == 0) break;
+	}
+	return null;
+
+	function getCookieVal (offset) {
+		var endstr = document.cookie.indexOf(";", offset);
+		if (endstr == -1)
+			endstr = document.cookie.length;
+		return unescape(document.cookie.substring(offset, endstr));
+	}
+}
+
+$b.cook.setCookOnlyToday = function(name, value) {
+	var today = new Date();
+	
+	var nowHour = today.getHours();
+	var nowMin = today.getMinutes()
+	var nowSec = today.getSeconds()
+	
+	var addHour = (23 - nowHour);
+	var addMin = (59 - nowMin);
+	var addSec = (60 - nowSec);
+	
+	today.setHours(nowHour + addHour);
+	today.setMinutes(nowMin + addMin);
+	today.setSeconds(nowSec + addSec);
+	
+	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
+}
+
+$b.cook.setCookByDate = function(name, value, date) {
+	var today = new Date();
+	today.setDate(today.getDate() + date);
+	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
+}
+
+$b.cook.setCookByHour = function(name, value, hour) {
+	var today = new Date();
+	today.setHours(today.getHours() + hour);
+	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
+}
+
+$b.cook.setCookByMinute = function(name, value, min) {
+	var today = new Date();
+	today.setMinutes(today.getMinutes() + min);
+	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
+}
+
+$b.cook.setCookBySecond = function(name, value, sec) {
+	var today = new Date();
+	today.setSeconds(today.getSeconds() + sec);
+	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
+}
+
+$b.cook.setSessCook =  function (name, value) {
+	document.cookie = name + "=" + escape(value) + "; path=/;"
+}
+
 $b.date = {};
 
 $b.date.getFullDate = function (sp) {
@@ -175,15 +266,6 @@ $b.write_br = function (s) {
 
 $b.write_ln = function (s) {
 	document.write(s + '\n');
-}
-
-/**Charset of ajax*/
-$b.ajax.charset = function (charset) {
-	$.ajaxSetup({
-		'beforeSend': function (xhr) {
-			xhr.overrideMimeType('text/html; charset=' + charset);
-		},
-	});
 }
 
 $b.isStr = function (o) {
