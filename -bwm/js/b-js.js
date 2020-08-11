@@ -428,6 +428,24 @@ $b.pop.openPop = function (pop) {
 	firstBtn.focus();
 }
 
+$b.pop.openPopOnLoad = function () {
+	$('.b_pop').each(function () {
+		var $pop = $(this);
+		var id = $pop.attr('id');
+		
+		if ($b.cook.getCook(id) == null) {
+			$('#' + id).fadeIn('fast');
+		}
+	});
+}
+
+$b.pop.notToday = function (bt) {
+	var id = $(bt).closest('.b_pop').attr('id');
+
+	$('#' + id).fadeOut('fast');
+	$b.cook.setCookOnlyToday(id, '');
+}
+
 $b.pop.closePop = function (jq) {
 	var $pop;
 
