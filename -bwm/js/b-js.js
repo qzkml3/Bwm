@@ -179,6 +179,51 @@ $b.debug.showScript = function (cls) {
 	});*/
 }
 
+$b.link = {};
+
+/** v1.02 
+* 애니메이트되어 ID로 이동
+*  IE10 부터 pushState 사용
+*  IE9 이하 hash 사용 깜박임 있음
+*  */
+$b.link.goId = function (id, offset) {
+	var loc = window.location;
+	var doc = window.document;
+	var gotoScroll;
+
+	if (id == "#") {
+		gotoScroll = 0;
+		//id = "";
+	} else { //sub 일때
+		$('*').filter('[id]:visible').each(function() {
+			if ('#' + $(this).attr('id') == id) {
+				gotoScroll = $(this).offset().top + (offset || 0);
+				return false;
+			}
+		});
+	}
+
+	if ("pushState" in history) {
+		$("html, body").animate({scrollTop: gotoScroll});
+		history.pushState(null, doc.title, loc.pathname + loc.search + id);
+	} else {
+		$("html, body").animate({scrollTop: gotoScroll}); //이걸 hash 위에서 호출해야 애니메이션이 먹음
+		location.hash = id;
+	}
+}
+	
+$b.link.setGoId = function (offset) {
+	$('body').on("click", 'a, area', function (e) {
+		var $link = $(this);
+		var href = $link.attr("href");
+
+		if (href && href.match("#")) {
+			e.preventDefault();
+			$b.link.goId(href, offset);
+		}
+	});
+}
+
 $b.pop = {};
 
 $b.pop.POP_CLASS = 'b_pop';

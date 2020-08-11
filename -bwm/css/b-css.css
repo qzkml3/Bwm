@@ -29,7 +29,7 @@ main {
 
 /*.b_init*/
 .b_init * {
-  font-family: "Malgun Gothic";
+  font-family: "Ubuntu Mono", "Malgun Gothic";
   letter-spacing: -0.03em;
   line-height: 1.6;
 }
