@@ -420,12 +420,12 @@ function b_onScrollEnd(callBackFunc, charset) {
 
 $b.pop.openPop = function (pop) {
 	var $pop = $(pop);
-	var firstBtn = $pop.find('button').eq(0);
+	var firstBt = $pop.find('button').eq(0);
 
 	if (!$pop.length) $b.log('pop not found.');
 
 	$pop.fadeIn('fast');
-	firstBtn.focus();
+	firstBt.focus();
 }
 
 $b.pop.openPopOnLoad = function () {
