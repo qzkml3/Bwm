@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$b.debug.showScript('.on');
-	$b.pop.closePopOnClickShadow();
+	$b.pop.closeOnClickShadow();
 });
 
 window.$b = function () {
@@ -243,8 +243,8 @@ $b.pop.POP_PAGE = '<div class="' + $b.pop.POP_PAGE_CLASS + '"></div>';
 $b.pop.POP_HEAD = '<div class="' + $b.pop.POP_HEAD_CLASS + '">알림</div>';
 $b.pop.POP_BODY = '<div class="' + $b.pop.POP_BODY_CLASS + '"></div>';
 $b.pop.POP_FOOT = '<div class="' + $b.pop.POP_FOOT_CLASS + ' b_bt_w b_m_h_c_8px"></div>';
-$b.pop.POP_BT_OK = '<button onclick="$b.pop.removePop(this);" class="b_bt_ok">확인</button>';
-$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.removePop(this);" class="b_bt_cancel">취소</button>';
+$b.pop.POP_BT_OK = '<button onclick="$b.pop.remove(this);" class="b_bt_ok">확인</button>';
+$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.remove(this);" class="b_bt_cancel">취소</button>';
 
 $b.pop.alert = function (html, tit) {
 	var $pop = $($b.pop.POP);
@@ -471,7 +471,7 @@ $b.img.imgInCont = function (sel) {
 	});
 }
 
-$b.pop.openPop = function (pop) {
+$b.pop.open = function (pop) {
 	var $pop = $(pop);
 
 	if (!$pop.length) $b.log('pop not found.');
@@ -485,7 +485,7 @@ $b.pop.openPopsOnLoad = function () {
 		var id = $pop.attr('id');
 		
 		if ($b.cook.get(id) == null) {
-			$b.pop.openPop('#' + id);
+			$b.pop.open('#' + id);
 		}
 	});
 }
@@ -497,7 +497,7 @@ $b.pop.notToday = function (bt) {
 	$b.cook.setOnlyToday(id, '');
 }
 
-$b.pop.closePop = function (jq) {
+$b.pop.close = function (jq) {
 	var $pop;
 
 	if ($b.is.str(jq)) {
@@ -511,7 +511,7 @@ $b.pop.closePop = function (jq) {
 	return false;
 }
 
-$b.pop.removePop = function (jq) {
+$b.pop.remove = function (jq) {
 	var $pop;
 
 	if ($b.is.str(jq)) {
@@ -528,13 +528,13 @@ $b.pop.removePop = function (jq) {
 }
 
 /*Close pop when click shadow when if*/
-$b.pop.closePopOnClickShadow = function () {
+$b.pop.closeOnClickShadow = function () {
 	$('.b_pop').on('click', function (e) {
 		$pop = $(this);
 
 		if (this == e.target) {
 			if ($pop.data('close-when-shadow-click') == 1) {
-				$b.pop.closePop($pop);
+				$b.pop.close($pop);
 			}
 		}
 	});
