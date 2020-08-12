@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$b.debug.showScript('.on');
-	$b.pop.closePopPopClickShadow();
+	$b.pop.closePopOnClickShadow();
 });
 
 window.$b = function () {
@@ -27,12 +27,12 @@ $b.ajax.charset = function (charset) {
  * */
 $b.cook = {};
 
-$b.cook.delCook = function(name) {
+$b.cook.del = function(name) {
 	var today = new Date();
 	document.cookie = name + "=; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.getCook =  function (name) {
+$b.cook.get =  function (name) {
 	var arg = name + "=";
 	var alen = arg.length;
 	var clen = document.cookie.length;
@@ -54,7 +54,7 @@ $b.cook.getCook =  function (name) {
 	}
 }
 
-$b.cook.setCookOnlyToday = function(name, value) {
+$b.cook.setOnlyToday = function(name, value) {
 	var today = new Date();
 	
 	var nowHour = today.getHours();
@@ -72,31 +72,31 @@ $b.cook.setCookOnlyToday = function(name, value) {
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setCookByDate = function(name, value, date) {
+$b.cook.setByDate = function(name, value, date) {
 	var today = new Date();
 	today.setDate(today.getDate() + date);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setCookByHour = function(name, value, hour) {
+$b.cook.setByHour = function(name, value, hour) {
 	var today = new Date();
 	today.setHours(today.getHours() + hour);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setCookByMinute = function(name, value, min) {
+$b.cook.setByMinute = function(name, value, min) {
 	var today = new Date();
 	today.setMinutes(today.getMinutes() + min);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setCookBySecond = function(name, value, sec) {
+$b.cook.setBySecond = function(name, value, sec) {
 	var today = new Date();
 	today.setSeconds(today.getSeconds() + sec);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setSessCook =  function (name, value) {
+$b.cook.setBySess =  function (name, value) {
 	document.cookie = name + "=" + escape(value) + "; path=/;"
 }
 
@@ -179,6 +179,12 @@ $b.debug.showScript = function (cls) {
 	});*/
 }
 
+$b.focus = {};
+
+$b.focus.onFirstBt = function (wrap) {
+	$(wrap).find('button, a, input[type=image]').eq(0).focus();	
+}
+
 $b.link = {};
 
 /** v1.02 
@@ -253,8 +259,8 @@ $b.pop.alert = function (html, tit) {
 
 	$pop.appendTo('body');
 	$pop.fadeIn('fast');
-	$pop.find('button').eq(0).focus();
-	$b.scroll.lockScroll();
+	$b.focus.onFirstBt($pop);
+	$b.scroll.lock();
 }
 
 $b.pop.confirm = function (callback, html, tit) {
@@ -276,8 +282,8 @@ $b.pop.confirm = function (callback, html, tit) {
 	$pop.appendTo('body');
 	$pop.fadeIn('fast');
 
-	$pop_ok_btn.focus();
-	$b.scroll.lockScroll();
+	$b.focus.onFirstBt($pop);
+	$b.scroll.lock();
 	$pop_ok_btn.on('click', function () {
 		callback();
 	});
@@ -313,30 +319,61 @@ $b.write_ln = function (s) {
 	document.write(s + '\n');
 }
 
-$b.isStr = function (o) {
+$b.is = {};
+
+$b.is.str = function (o) {
 	return typeof o == 'string';
 }
 
-$b.isArray = function (o) {
+$b.is.array = function (o) {
 	return o instanceof Array;
 }
 
-$b.isObj = function (o) {
+$b.is.obj = function (o) {
 	return o instanceof Object;
 }
 
-$b.isFt = function (o) {
+$b.is.ft = function (o) {
 	return o instanceof Function;
 }
 
 $b.scroll = {};
 
-$b.scroll.lockScroll = function(target) {
+$b.scroll.lock = function(target) {
 	if (!target) target = 'html';
 	$(target).css({'overflow-y':'hidden'});
 }
 
-$b.scroll.unlockScroll = function(target) {
+/**Scroll end of document*/
+$b.scroll.onEnd = function (callBackFunc, charset) {
+	if (charset == null) {
+		charset = 'utf-8';
+	}
+
+	$(window).on('scroll', function () {
+		var w_st = $(window).scrollTop();
+		var w_h = $(window).height();
+		var w_b = Math.round(w_st + w_h) + 100;
+		var b_h = Math.round($('body').outerHeight(true));
+
+		window.paging_lock = false;
+
+		if (w_b >= b_h) {
+			clearTimeout($.data(this, 'b_scroll_paging'));
+			$.data(this, 'b_scroll_paging', setTimeout(function () {
+
+				callBackFunc();
+				console.log('============================');
+			}, 100));
+
+		}
+
+		console.log('w_b: ' + w_b);
+		console.log('b_h: ' + b_h);
+	});
+}
+
+$b.scroll.unlock = function(target) {
 	if (!target) target = 'html';
 	$(target).css({'overflow-y':'scroll'});
 }
@@ -356,7 +393,7 @@ $b.str.addZero = function (v, size) {
 }
 
 /**Search text in contents*/
-$b.str.hasStr = function (full_str, keyword) {
+$b.str.has = function (full_str, keyword) {
 	return full_str.indexOf(keyword) > -1;
 }
 
@@ -368,7 +405,7 @@ $b.tab = function (bt, ct, onClass) {
 		onClass = 'on';
 	}
 
-	if ($b.isArray(ct)) { //default type to array
+	if ($b.is.array(ct)) { //default type to array
 		aCt = ct;
 	} else {
 		aCt = new Array(ct);
@@ -434,52 +471,21 @@ $b.img.imgInCont = function (sel) {
 	});
 }
 
-/**Scroll end of document*/
-function b_onScrollEnd(callBackFunc, charset) {
-	if (charset == null) {
-		charset = 'utf-8';
-	}
-
-	$(window).on('scroll', function () {
-		var w_st = $(window).scrollTop();
-		var w_h = $(window).height();
-		var w_b = Math.round(w_st + w_h) + 100;
-		var b_h = Math.round($('body').outerHeight(true));
-
-		window.paging_lock = false;
-
-		if (w_b >= b_h) {
-			clearTimeout($.data(this, 'b_scroll_paging'));
-			$.data(this, 'b_scroll_paging', setTimeout(function () {
-
-				callBackFunc();
-				console.log('============================');
-			}, 100));
-
-		}
-
-		console.log('w_b: ' + w_b);
-		console.log('b_h: ' + b_h);
-	});
-}
-
 $b.pop.openPop = function (pop) {
 	var $pop = $(pop);
-	var firstBt = $pop.find('button').eq(0);
 
 	if (!$pop.length) $b.log('pop not found.');
 
 	$pop.fadeIn('fast');
-	firstBt.focus();
 }
 
-$b.pop.openPopOnLoad = function () {
+$b.pop.openPopsOnLoad = function () {
 	$('.b_pop').each(function () {
 		var $pop = $(this);
 		var id = $pop.attr('id');
 		
-		if ($b.cook.getCook(id) == null) {
-			$('#' + id).fadeIn('fast');
+		if ($b.cook.get(id) == null) {
+			$b.pop.openPop('#' + id);
 		}
 	});
 }
@@ -488,27 +494,27 @@ $b.pop.notToday = function (bt) {
 	var id = $(bt).closest('.b_pop').attr('id');
 
 	$('#' + id).fadeOut('fast');
-	$b.cook.setCookOnlyToday(id, '');
+	$b.cook.setOnlyToday(id, '');
 }
 
 $b.pop.closePop = function (jq) {
 	var $pop;
 
-	if ($b.isStr(jq)) {
+	if ($b.is.str(jq)) {
 		$pop = $(jq);
 	} else {
 		$pop = $(jq).closest('.b_pop');
 	}
 
 	$pop.fadeOut('fast');
-	$b.scroll.unlockScroll();
+	$b.scroll.unlock();
 	return false;
 }
 
 $b.pop.removePop = function (jq) {
 	var $pop;
 
-	if ($b.isStr(jq)) {
+	if ($b.is.str(jq)) {
 		$pop = $(jq);
 	} else {
 		$pop = $(jq).closest('.b_pop');
@@ -517,12 +523,12 @@ $b.pop.removePop = function (jq) {
 	$pop.fadeOut('fast', function () {
 		$pop.remove()
 	});
-	$b.scroll.unlockScroll();
+	$b.scroll.unlock();
 	return false;
 }
 
 /*Close pop when click shadow when if*/
-$b.pop.closePopPopClickShadow = function () {
+$b.pop.closePopOnClickShadow = function () {
 	$('.b_pop').on('click', function (e) {
 		$pop = $(this);
 
