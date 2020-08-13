@@ -11,7 +11,7 @@ body {color: #555;}
 main {display: block;}
 
 /*.b_init*/
-.b_init * {font-family: 'Ubuntu Mono', 'Malgun Gothic'; letter-spacing: -0.03em; line-height: 1.6; }
+.b_init * {font-family: Ubuntu Mono, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.6; }
 
 .b_init a {color: #3baae3; text-decoration: none;}
 .b_init a:hover, .b_init a:focus, .b_init tr:focus, .b_init tr:hover {box-shadow: 0px 0px 3px 3px skyblue;}
@@ -269,8 +269,9 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
 .b_pop_pad_off .b_pop_body {padding: 0;}
 
 .b_pop_page {
-  background: white; position: absolute; left: 0; right: 0; width: 95%; margin: auto; max-width: 500px;
-  top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%);
+  background: white; position: absolute; width: 95%; max-width: 500px;
+  left: 50%;
+  top: 50%; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);
   box-sizing: border-box; overflow-y: auto; /*max-height: 90%;*/
   border-radius: 5px; /*border-bottom-left-radius: 0; border-bottom-right-radius: 0;*/
   /*border: solid 1px #aaa; */box-shadow: 0px 0px 4px 2px #aaa;
@@ -478,3 +479,5 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_show {display: block;}
 
 script.on {display: block; white-space: pre;}
+
+.b_draggable {cursor: move;}

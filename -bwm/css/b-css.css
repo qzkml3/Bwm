@@ -29,8 +29,8 @@ main {
 
 /*.b_init*/
 .b_init * {
-  font-family: "Ubuntu Mono", "Malgun Gothic";
-  letter-spacing: -0.03em;
+  font-family: Ubuntu Mono, Malgun Gothic;
+  letter-spacing: -0.02em;
   line-height: 1.6;
 }
 
@@ -733,14 +733,12 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
 .b_pop_page {
   background: white;
   position: absolute;
-  left: 0;
-  right: 0;
   width: 95%;
-  margin: auto;
   max-width: 500px;
+  left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   box-sizing: border-box;
   overflow-y: auto;
   /*max-height: 90%;*/
@@ -1420,6 +1418,10 @@ dl.b_dl, .b_dl dl {
 script.on {
   display: block;
   white-space: pre;
+}
+
+.b_draggable {
+  cursor: move;
 }
 
 /*# sourceMappingURL=b-css.css.map */

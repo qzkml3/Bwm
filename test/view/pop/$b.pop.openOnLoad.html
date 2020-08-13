@@ -1,9 +1,9 @@
-<div class="b_bt_w">
-	<button onclick="$b.pop.open('#pop_kkk');" type="button">Layer Popup</button>
-</div>
-
-<section class="b_pop" id="pop_1">
-	<div class="b_pop_page">
+<section class="b_pop" id="pop_1" data-b_pop='{
+	"width": "auto"
+	, "left": 100, "top": 100
+	, "position": 100
+}'>
+	<div class="b_pop_page b_draggable">
 		<img src="/comm_res/img/ex/hori-img.jpg" alt="" class="b_w_100pc">
 		<div class="ta_c b_bt_w b_bt_w_s b_m_h_c_4px">
 			<button onclick="$b.pop.notToday(this);" type="button">오늘하루 열지않기</button>
@@ -12,10 +12,12 @@
 	</div>
 </section>
 
-<section class="b_pop" id="pop_2" data-b_pop='{
-"width": "auto", "height": "auto",
+<section class="b_pop b_draggable" id="pop_2" data-b_pop='{
+	"width": "auto"
+	, "left": 600, "top": 100
+	, "position": 100
 }'>
-	<div class="b_pop_page">
+	<div class="b_pop_page b_draggable">
 		<img src="/comm_res/img/ex/hori-img.jpg" alt="" class="b_w_100pc">
 		<div class="ta_c b_bt_w b_bt_w_s b_bt_w_s b_m_h_c_4px">
 			<button onclick="$b.pop.notToday(this);" type="button">오늘하루 열지않기</button>
@@ -24,8 +26,8 @@
 	</div>
 </section>
 
-<script>
+<script class="on">
 	$(document).ready(function () {
-		$b.pop.openPopsOnLoad();
+		$b.pop.openOnLoad();
 	});
 </script>

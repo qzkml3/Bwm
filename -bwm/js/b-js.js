@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	$b.mouse.draggable('.b_draggable');
 	$b.debug.showScript('.on');
 	$b.pop.closeOnClickShadow();
 });
@@ -27,12 +28,12 @@ $b.ajax.charset = function (charset) {
  * */
 $b.cook = {};
 
-$b.cook.del = function(name) {
+$b.cook.del = function (name) {
 	var today = new Date();
 	document.cookie = name + "=; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.get =  function (name) {
+$b.cook.get = function (name) {
 	var arg = name + "=";
 	var alen = arg.length;
 	var clen = document.cookie.length;
@@ -46,7 +47,7 @@ $b.cook.get =  function (name) {
 	}
 	return null;
 
-	function getCookieVal (offset) {
+	function getCookieVal(offset) {
 		var endstr = document.cookie.indexOf(";", offset);
 		if (endstr == -1)
 			endstr = document.cookie.length;
@@ -54,56 +55,56 @@ $b.cook.get =  function (name) {
 	}
 }
 
-$b.cook.setOnlyToday = function(name, value) {
+$b.cook.setOnlyToday = function (name, value) {
 	var today = new Date();
-	
+
 	var nowHour = today.getHours();
 	var nowMin = today.getMinutes()
 	var nowSec = today.getSeconds()
-	
+
 	var addHour = (23 - nowHour);
 	var addMin = (59 - nowMin);
 	var addSec = (60 - nowSec);
-	
+
 	today.setHours(nowHour + addHour);
 	today.setMinutes(nowMin + addMin);
 	today.setSeconds(nowSec + addSec);
-	
+
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setByDate = function(name, value, date) {
+$b.cook.setByDate = function (name, value, date) {
 	var today = new Date();
 	today.setDate(today.getDate() + date);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setByHour = function(name, value, hour) {
+$b.cook.setByHour = function (name, value, hour) {
 	var today = new Date();
 	today.setHours(today.getHours() + hour);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setByMinute = function(name, value, min) {
+$b.cook.setByMinute = function (name, value, min) {
 	var today = new Date();
 	today.setMinutes(today.getMinutes() + min);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setBySecond = function(name, value, sec) {
+$b.cook.setBySecond = function (name, value, sec) {
 	var today = new Date();
 	today.setSeconds(today.getSeconds() + sec);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setBySess =  function (name, value) {
+$b.cook.setBySess = function (name, value) {
 	document.cookie = name + "=" + escape(value) + "; path=/;"
 }
 
 $b.date = {};
 
 $b.date.getFullDate = function (sp) {
-	if (sp == null) sp = '-'; 
+	if (sp == null) sp = '-';
 	var v = $b.date.getYear() + sp + $b.date.getMonth() + sp + $b.date.getDate();
 	return v;
 }
@@ -116,7 +117,7 @@ $b.date.getYear = function () {
 $b.date.getMonth = function () {
 	var v = new Date().getMonth() + 1;
 	v = $b.str.addZero(v, 2);
-	return  v;
+	return v;
 }
 
 $b.date.getDate = function () {
@@ -150,7 +151,7 @@ $b.date.getSecond = function () {
 }
 
 $b.date.getDay = function () {
-	var kor = ['일', '월', '화', '수', '목', '금', '토']; 
+	var kor = ['일', '월', '화', '수', '목', '금', '토'];
 	var v = new Date().getDay();
 	v = kor[v];
 	return v;
@@ -182,16 +183,16 @@ $b.debug.showScript = function (cls) {
 $b.focus = {};
 
 $b.focus.onFirstBt = function (wrap) {
-	$(wrap).find('button, a, input[type=image]').eq(0).focus();	
+	$(wrap).find('button, a, input[type=image]').eq(0).focus();
 }
 
 $b.link = {};
 
-/** v1.02 
-* 애니메이트되어 ID로 이동
-*  IE10 부터 pushState 사용
-*  IE9 이하 hash 사용 깜박임 있음
-*  */
+/** v1.02
+ * 애니메이트되어 ID로 이동
+ *  IE10 부터 pushState 사용
+ *  IE9 이하 hash 사용 깜박임 있음
+ *  */
 $b.link.goId = function (id, offset) {
 	var loc = window.location;
 	var doc = window.document;
@@ -201,7 +202,7 @@ $b.link.goId = function (id, offset) {
 		gotoScroll = 0;
 		//id = "";
 	} else { //sub 일때
-		$('*').filter('[id]:visible').each(function() {
+		$('*').filter('[id]:visible').each(function () {
 			if ('#' + $(this).attr('id') == id) {
 				gotoScroll = $(this).offset().top + (offset || 0);
 				return false;
@@ -217,7 +218,7 @@ $b.link.goId = function (id, offset) {
 		location.hash = id;
 	}
 }
-	
+
 $b.link.setGoId = function (offset) {
 	$('body').on("click", 'a, area', function (e) {
 		var $link = $(this);
@@ -228,6 +229,16 @@ $b.link.setGoId = function (offset) {
 			$b.link.goId(href, offset);
 		}
 	});
+}
+
+$b.mobile = {};
+
+$b.mobile.MAX_WIDTH = 500;
+
+$b.mouse = {};
+
+$b.mouse.draggable = function (jq) {
+	$(jq).draggable();
 }
 
 $b.pop = {};
@@ -339,9 +350,9 @@ $b.is.ft = function (o) {
 
 $b.scroll = {};
 
-$b.scroll.lock = function(target) {
+$b.scroll.lock = function (target) {
 	if (!target) target = 'html';
-	$(target).css({'overflow-y':'hidden'});
+	$(target).css({'overflow-y': 'hidden'});
 }
 
 /**Scroll end of document*/
@@ -373,22 +384,22 @@ $b.scroll.onEnd = function (callBackFunc, charset) {
 	});
 }
 
-$b.scroll.unlock = function(target) {
+$b.scroll.unlock = function (target) {
 	if (!target) target = 'html';
-	$(target).css({'overflow-y':'scroll'});
+	$(target).css({'overflow-y': 'scroll'});
 }
 
 $b.str = {};
 
 $b.str.addZero = function (v, size) {
-	var v  = new String(v);
-	
+	var v = new String(v);
+
 	for (var i = 0; i < v.length; i++) {
 		if (v.length < size) {
 			v = '0' + v;
 		}
 	}
-	
+
 	return v;
 }
 
@@ -471,19 +482,41 @@ $b.img.imgInCont = function (sel) {
 	});
 }
 
-$b.pop.open = function (pop) {
+$b.pop.open = function (pop, conf) {
 	var $pop = $(pop);
 
 	if (!$pop.length) $b.log('pop not found.');
 
+	if ($pop.data('b_pop')) {
+		conf = $pop.data('b_pop');
+	}
+
+	if (conf != null) {
+		if ($(window).width() > $b.mobile.MAX_WIDTH) {
+			$pop.find('.b_pop_page img').css(conf);
+
+			$pop.find('.b_pop_page').css(conf);
+
+			if (conf.left) {
+				$pop.css({'background': 'transparent', 'width': 0, 'height': 0});
+				$pop.find('.b_pop_page').css({'-webkit-transform': 'translateX(0) translateY(0)'});
+				$pop.find('.b_pop_page').css({'transform': 'translateX(0) translateY(0)'});
+			}
+			var img_w = $pop.find('.b_pop_page img').width();
+		}
+	} else {
+		$pop.find('.b_pop_page').removeClass('b_draggable');
+		$pop.find('.b_pop_page').draggable('disable');
+	}
+
 	$pop.fadeIn('fast');
 }
 
-$b.pop.openPopsOnLoad = function () {
+$b.pop.openOnLoad = function () {
 	$('.b_pop').each(function () {
 		var $pop = $(this);
 		var id = $pop.attr('id');
-		
+
 		if ($b.cook.get(id) == null) {
 			$b.pop.open('#' + id);
 		}
