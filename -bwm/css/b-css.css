@@ -39,7 +39,7 @@ main {
   text-decoration: none;
 }
 
-.b_init a:hover, .b_init a:focus, .b_init tr:focus, .b_init tr:hover {
+.b_init a:hover, .b_init a:focus, .b_init tr:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 
@@ -192,7 +192,7 @@ main {
   color: inherit;
 }
 
-.b_fd_w input:focus, .b_fd_w select:focus, .b_fd_w textarea:focus, .b_fd_w input:hover, .b_fd_w select:hover, .b_fd_w textarea:hover {
+.b_fd_w input:focus, .b_fd_w select:focus, .b_fd_w textarea:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 
@@ -280,10 +280,12 @@ main {
   font-size: 12px;
 }
 
-.b_bt_w button:hover, .b_bt_w a:hover, .b_bt_w input[type=button]:hover, .b_bt_w button:focus, .b_bt_w a:focus, .b_bt_w input[type=button]:focus {
+/*b_bt_focus*/
+.b_bt_w button:focus, .b_bt_w a:focus, .b_bt_w input[type=button]:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 
+/*b_bt_size*/
 body .b_bt_s2, .b_bt_w_s_2 button, .b_bt_w_s_2 a, .b_bt_w_s_2 input[type=button] {
   height: 20px;
   line-height: 20px;
@@ -308,22 +310,23 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
   font-size: 14px;
 }
 
+/*b_bt_pad*/
 .b_bt_p {
   padding-left: 1em !important;
   padding-right: 1em !important;
 }
 
-.b_bt_p2 {
+.b_bt_p_2 {
   padding-left: 2em !important;
   padding-right: 2em !important;
 }
 
-.b_bt_p3 {
+.b_bt_p_3 {
   padding-left: 3em !important;
   padding-right: 3em !important;
 }
 
-.b_bt_p4 {
+.b_bt_p_4 {
   padding-left: 4em !important;
   padding-right: 4em !important;
 }
@@ -746,6 +749,7 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
   /*border-bottom-left-radius: 0; border-bottom-right-radius: 0;*/
   /*border: solid 1px #aaa; */
   box-shadow: 0px 0px 4px 2px #aaa;
+  margin: 0;
 }
 
 .b_pop_head {
@@ -1422,6 +1426,47 @@ script.on {
 
 .b_draggable {
   cursor: move;
+}
+
+.b_tb {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.b_tb tr:nth-child(odd) {
+  background: white;
+}
+
+.b_tb tr:nth-child(even) {
+  background: #eee;
+}
+
+.b_tb th {
+  background: #61b6dc;
+  color: white;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px #ccc;
+  text-align: left;
+}
+
+.b_tb td {
+  border-bottom: solid 1px #ccc;
+}
+
+.b_tb th, .b_tb td {
+  padding: 0.5em 1em;
+}
+
+.b_tb_orange th {
+  background: #fc804f;
+}
+
+.b_tb_yellow th {
+  background: #fcb74f;
+}
+
+.b_tb_green th {
+  background: #1e8064;
 }
 
 /*# sourceMappingURL=b-css.css.map */

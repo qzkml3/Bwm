@@ -14,7 +14,7 @@ main {display: block;}
 .b_init * {font-family: Ubuntu Mono, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.6; }
 
 .b_init a {color: #3baae3; text-decoration: none;}
-.b_init a:hover, .b_init a:focus, .b_init tr:focus, .b_init tr:hover {box-shadow: 0px 0px 3px 3px skyblue;}
+.b_init a:hover, .b_init a:focus, .b_init tr:focus {box-shadow: 0px 0px 3px 3px skyblue;}
 .b_init a[target=_blank]::after {
   content: '=▷'; font-size: smaller; transform: rotate(-40deg); display: inline-block; box-shadow: none;
   position: relative; left: 2px; top: -2px;
@@ -66,14 +66,13 @@ main {display: block;}
 .b_cont > *:last-child {margin-bottom: 0;}
 
 /*b_fd_w*/
-
 .b_fd_w input[type=text], .b_fd_w input[type=password], .b_fd_w input[type=number], .b_fd_w input[type=email], .b_fd_w select, .b_fd_w textarea {
   border: solid 1px #ccc; background: white; border-radius: 3px; font-size: smaller;
   padding: 0 5px; box-sizing: border-box; height: 30px; width: 100%; vertical-align: middle;
   margin: 3px 0; color: inherit;
 }
 
-.b_fd_w input:focus, .b_fd_w select:focus, .b_fd_w textarea:focus, .b_fd_w input:hover, .b_fd_w select:hover, .b_fd_w textarea:hover
+.b_fd_w input:focus, .b_fd_w select:focus, .b_fd_w textarea:focus
 {box-shadow: 0px 0px 3px 3px skyblue;}
 
 .b_fd_w label > span {font-size: smaller; vertical-align:  baseline;}
@@ -126,18 +125,21 @@ main {display: block;}
   line-height: 30px; font-size: 12px;
 }
 
-.b_bt_w button:hover, .b_bt_w a:hover, .b_bt_w input[type=button]:hover, .b_bt_w button:focus, .b_bt_w a:focus, .b_bt_w input[type=button]:focus,
+/*b_bt_focus*/
+.b_bt_w button:focus, .b_bt_w a:focus, .b_bt_w input[type=button]:focus
 {box-shadow: 0px 0px 3px 3px skyblue;}
 
+/*b_bt_size*/
 body .b_bt_s2, .b_bt_w_s_2 button, .b_bt_w_s_2 a, .b_bt_w_s_2 input[type=button] {height: 20px; line-height: 20px; font-size: 10px;}
 body .b_bt_s, .b_bt_w_s button, .b_bt_w_s a, .b_bt_w_s input[type=button] {height: 25px; line-height: 25px; font-size: 11px;}
 body .b_bt_l, .b_bt_w_l button, .b_bt_w_l a, .b_bt_w_l input[type=button] {height: 35px; line-height: 35px; font-size: 13px;}
 body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button] {height: 40px; line-height: 40px; font-size: 14px;}
 
+/*b_bt_pad*/
 .b_bt_p {padding-left: 1em !important; padding-right: 1em !important;}
-.b_bt_p2 {padding-left: 2em !important; padding-right: 2em !important;}
-.b_bt_p3 {padding-left: 3em !important; padding-right: 3em !important;}
-.b_bt_p4 {padding-left: 4em !important; padding-right: 4em !important;}
+.b_bt_p_2 {padding-left: 2em !important; padding-right: 2em !important;}
+.b_bt_p_3 {padding-left: 3em !important; padding-right: 3em !important;}
+.b_bt_p_4 {padding-left: 4em !important; padding-right: 4em !important;}
 
 .b_bt_round {border-radius: 200px !important;}
 
@@ -274,7 +276,7 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
   top: 50%; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);
   box-sizing: border-box; overflow-y: auto; /*max-height: 90%;*/
   border-radius: 5px; /*border-bottom-left-radius: 0; border-bottom-right-radius: 0;*/
-  /*border: solid 1px #aaa; */box-shadow: 0px 0px 4px 2px #aaa;
+  /*border: solid 1px #aaa; */box-shadow: 0px 0px 4px 2px #aaa; margin: 0;
 }
 
 .b_pop_head {text-align: center; background: #82dcf7; height: 40px; display: flex; align-items: center; justify-content: center; color: white;}
@@ -481,3 +483,20 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 script.on {display: block; white-space: pre;}
 
 .b_draggable {cursor: move;}
+
+.b_tb {border-collapse: collapse; width: 100%;}
+
+.b_tb tr:nth-child(odd) {background: white;}
+.b_tb tr:nth-child(even) {background: #eee;}
+
+.b_tb th {background: #61b6dc; color: white; font-weight: normal; text-shadow: 1px 1px 2px #ccc;
+  text-align: left;
+}
+
+.b_tb td { border-bottom: solid 1px #ccc;}
+
+.b_tb th, .b_tb td {padding: .5em 1em;}
+
+.b_tb_orange th {background: #fc804f;}
+.b_tb_yellow th {background: #fcb74f;}
+.b_tb_green th {background: #1e8064;}

@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 window.$b = function () {
-	return 'b-js.js v0.01 dev';
+	return $b.ver();
 }
 
 $b.ajax = {};
@@ -571,4 +571,8 @@ $b.pop.closeOnClickShadow = function () {
 			}
 		}
 	});
+}
+
+$b.ver = function () {
+	return 'v0.91 dev';
 }
