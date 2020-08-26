@@ -43,23 +43,16 @@ main {
   box-shadow: 0px 0px 3px 3px skyblue;
 }
 
-.b_init a[target=_blank]::after {
-  content: "=▷";
-  font-size: smaller;
-  transform: rotate(-40deg);
-  display: inline-block;
-  box-shadow: none;
-  position: relative;
-  left: 2px;
-  top: -2px;
+.b_init a[target=_blank] {
+  border-bottom: solid 2px #BADFFF;
+  padding-bottom: 2px;
 }
 
-.b_init a:hover[target=_blank]::after {
-  content: "=▶";
-  text-decoration: none;
-  color: orange;
+/*.b_init a[target=_blank]::after {
+  content: '=▶'; font-size: 10px; transform: rotate(-43deg); display: inline-block; box-shadow: none;
+  position: relative; left: 2px; top: -5px;
 }
-
+.b_init a:hover[target=_blank]::after {content: '=▶';text-decoration: none; color: orange;}*/
 .b_init a:not([href]) {
   color: #aaa;
   box-shadow: none;
@@ -311,22 +304,22 @@ body .b_bt_l_2, .b_bt_w_l_2 button, .b_bt_w_l_2 a, .b_bt_w_l_2 input[type=button
 }
 
 /*b_bt_pad*/
-.b_bt_p {
+.b_bt_p_0 {
   padding-left: 1em !important;
   padding-right: 1em !important;
 }
 
-.b_bt_p_2 {
+.b_bt_p_2em {
   padding-left: 2em !important;
   padding-right: 2em !important;
 }
 
-.b_bt_p_3 {
+.b_bt_p_3em {
   padding-left: 3em !important;
   padding-right: 3em !important;
 }
 
-.b_bt_p_4 {
+.b_bt_p_4em {
   padding-left: 4em !important;
   padding-right: 4em !important;
 }
@@ -1469,4 +1462,4 @@ script.on {
   background: #1e8064;
 }
 
-/*# sourceMappingURL=b-css.css.map */
+/*# sourceMappingURL=bwm.css.map */
