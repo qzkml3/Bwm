@@ -1,71 +1,9 @@
 <div class="b_cont">
-	<h2>is</h2>
 	<script class="on">
-		$b.result(
-			$b.is.str('kkk')
-		);
-	</script>
-	<h2>typeof</h2>
-	<script class="on">
-		$b.result(
-			typeof function a() {
-			}
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof new Array()
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof []
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof asdf
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof undefiend
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof null
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof new Object()
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof {}
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof 'aaa'
-		);
-	</script>
-	<script class="on">
-		$b.result(
-			typeof new String('aaa')
-		);
+		var v = {} instanceof Function; 
+		$b.result(v);
 	</script>
 
-	<h2>instanceof</h2>
-	<script class="on">
-		$b.result(
-			{} instanceof Function
-		);
-	</script>
-
-	<h2>is Array</h2>
 	<script class="on">
 		$b.result(
 			[] instanceof Array

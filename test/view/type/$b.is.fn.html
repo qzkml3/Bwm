@@ -1,0 +1,19 @@
+<div class="b_cont">
+	<script class="on">
+		var v = $b.is.fn(new Function);
+		$b.result(v);
+	</script>
+	<script class="on">
+		var v = $b.is.fn({});
+		$b.result(v);
+	</script>
+	<script class="on">
+		var v = $b.is.fn(function a() {});
+		$b.result(v);
+	</script>
+	<script class="on">
+		function b() {}
+		var v = $b.is.fn(b);
+		$b.result(v);
+	</script>
+</div>
