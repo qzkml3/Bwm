@@ -1,4 +1,17 @@
 <div class="b_cont">
 	<div><a href="">링크</a></div>
-	<div><a href="" target="_blank">링크 새창</a></div>
+	<div><a href="" title='' target="_blank">링크 새창</a></div>
+	<div><a href="" target="_blank" title="가를 새창으로 엽니다">링크 새창</a></div>
+	<div><a >링크 새창</a></div>
 </div>
+
+<script>
+	$('a[target=_blank]').each(function() {
+		var $a = $(this);
+		var title = $a.attr('title');
+		
+		if (title == null) {
+			$a.attr('title', '새창열림');
+		} 
+	});
+</script>

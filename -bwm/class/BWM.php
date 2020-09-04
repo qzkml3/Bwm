@@ -14,6 +14,8 @@ class BWM {
 	private $title;
 	private $page;
 	private $view;
+	
+	private $tag;
 
 	function __construct() {
 		$this->loadBwm();
@@ -29,7 +31,7 @@ class BWM {
 
 	}
 
-	# Layout
+	# layout
 	function setLayout($layout) {
 		$this->layout = $layout;
 	}
@@ -38,15 +40,14 @@ class BWM {
 		return $v;
 	}
 
-	# Set title
+	# title
 	function setTitle($title) {
 		$this->title = $title;
 	}
 	function setTitleByFileName() {
 		$this->title = $this->file->getFileName();
 	}
-
-	# Get title
+	
 	function getTitle() {
 		if ($this->title) {
 			$title = $this->title . ' : ' . $this->getSiteName();
@@ -94,5 +95,21 @@ class BWM {
 		$v = urldecode($v);
 		//echo $v; exit;
 		return $_SERVER['DOCUMENT_ROOT'] . $v;
+	}
+	
+	function setTag($tags) {
+		$v = str_replace(' ', '', $tags);
+		$v = explode(',', $v);
+		
+		$rtn = '';
+		foreach($v as $v2) {
+			$rtn .= '<span>#'. $v2 . '</span>';
+		}
+		
+		$this->tag = $rtn;
+	}
+
+	function getTag($tags) {
+		return $this->tag;
 	}
 }

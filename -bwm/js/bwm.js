@@ -193,7 +193,7 @@ $b.link = {};
  *  IE10 부터 pushState 사용
  *  IE9 이하 hash 사용 깜박임 있음
  *  */
-$b.link.goId = function (id, offset) {
+$b.link.scrollToId = function (id, offset) {
 	var loc = window.location;
 	var doc = window.document;
 	var gotoScroll;
@@ -217,16 +217,17 @@ $b.link.goId = function (id, offset) {
 		$("html, body").animate({scrollTop: gotoScroll}); //이걸 hash 위에서 호출해야 애니메이션이 먹음
 		location.hash = id;
 	}
+	return false;
 }
 
-$b.link.setGoId = function (offset) {
+$b.link.scrollToId = function (offset) {
 	$('body').on("click", 'a, area', function (e) {
 		var $link = $(this);
 		var href = $link.attr("href");
 
 		if (href && href.match("#")) {
 			e.preventDefault();
-			$b.link.goId(href, offset);
+			$b.link.scrollToId(href, offset);
 		}
 	});
 }
@@ -332,11 +333,28 @@ $b.write_ln = function (s) {
 
 $b.is = {};
 
+/*빈 문자열인지 판별*/
+$b.is.emptyStr = function (v) {
+	var result = false;
+	
+	if (v != null) {
+		if ($.trim(v) == '') {
+			result = true;
+		} else {
+			result = false;
+		}		
+	} else {
+		result = false;
+	}
+	
+	return result;
+}
+
 $b.is.str = function (o) {
 	return typeof o == 'string';
 }
 
-$b.is.array = function (o) {
+$b.is.arr = function (o) {
 	return o instanceof Array;
 }
 
@@ -344,7 +362,7 @@ $b.is.obj = function (o) {
 	return o instanceof Object;
 }
 
-$b.is.ft = function (o) {
+$b.is.fn = function (o) {
 	return o instanceof Function;
 }
 
@@ -416,7 +434,7 @@ $b.tab = function (bt, ct, onClass) {
 		onClass = 'on';
 	}
 
-	if ($b.is.array(ct)) { //default type to array
+	if ($b.is.arr(ct)) { //default type to array
 		aCt = ct;
 	} else {
 		aCt = new Array(ct);
