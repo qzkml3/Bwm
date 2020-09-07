@@ -133,7 +133,7 @@ main {display: block;}
 
 /*b_btn_size*/
 $v: .9em;
-body .b_btn_s_2, .b_btn_w_s_2 button, .b_btn_w_s_2 a, .b_btn_w_s_2 input[type=button] {
+body .b_btn_s_2, .b_btn_w_s2 button, .b_btn_w_s2 a, .b_btn_w_s2 input[type=button] {
   height: 20px; line-height: 20px; font-size: 10px;
   padding-left: $v; padding-right: $v;
 }
@@ -143,7 +143,7 @@ body .b_btn_s, .b_btn_w_s button, .b_btn_w_s a, .b_btn_w_s input[type=button] {
   padding-left: $v; padding-right: $v;
 }
 body .b_btn_l, .b_btn_w_l button, .b_btn_w_l a, .b_btn_w_l input[type=button] {height: 35px; line-height: 35px; font-size: 13px;}
-body .b_btn_l_2, .b_btn_w_l_2 button, .b_btn_w_l_2 a, .b_btn_w_l_2 input[type=button] {height: 40px; line-height: 40px; font-size: 14px;}
+body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button] {height: 40px; line-height: 40px; font-size: 14px;}
 
 /*b_btn_pad*/
 .b_btn_p_0 {padding-left: 1em !important; padding-right: 1em !important;}
@@ -325,7 +325,7 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .m_v_10px {margin-top: 10px; margin-bottom: 10px;}
 
 /*b_box*/
-.b_box {padding: 5px; border: solid 1px #ddd; box-sizing: border-box;}
+.b_box {padding: 5px; border: solid 1px #dfdfdf; box-sizing: border-box;}
 
 .b_box_white {background: white;}
 
@@ -494,5 +494,5 @@ script.on {display: block; white-space: pre;}
 .b_tb_green th {background: #1e8064;}
 
 .b_tag_w {margin: 25px 0; font-size: 11px; background: #f5f5f5; padding: 5px 10px; color: black;}
-.b_tag_w > * {margin-right: 20px;}
+.b_tag_w > * {margin-right: 5px !important;}
 .b_tag_w span:first-child {margin-left: 0;}

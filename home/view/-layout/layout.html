@@ -34,24 +34,11 @@
 	$b->postProc();
 	?>
 
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	가나다 가나다 가나다 가나다 가나다 가나다 가나다
-	<div class="b_tag_w">		
+	<?php if(sizeof($b->getTag())) {?>
+	<div class="b_tag_w b_btn_w b_btn_w_s">
 		<?=$b->getTag();?>
 	</div>
-
-	<div class="b_tag_w b_btn_w b_btn_w_s b_box">
-		<?=$b->getTag();?>
-		<?=$b->getTag();?>
-		<?=$b->getTag();?>
-		<?=$b->getTag();?>
-	</div>
+	<? } ?>
 </main>
 </body>
 </html>
