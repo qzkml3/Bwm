@@ -254,9 +254,9 @@ $b.pop.POP = '<section class="' + $b.pop.POP_CLASS + '"></section>';
 $b.pop.POP_PAGE = '<div class="' + $b.pop.POP_PAGE_CLASS + '"></div>';
 $b.pop.POP_HEAD = '<div class="' + $b.pop.POP_HEAD_CLASS + '">알림</div>';
 $b.pop.POP_BODY = '<div class="' + $b.pop.POP_BODY_CLASS + '"></div>';
-$b.pop.POP_FOOT = '<div class="' + $b.pop.POP_FOOT_CLASS + ' b_bt_w b_m_h_c_8px"></div>';
-$b.pop.POP_BT_OK = '<button onclick="$b.pop.remove(this);" class="b_bt_ok">확인</button>';
-$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.remove(this);" class="b_bt_cancel">취소</button>';
+$b.pop.POP_FOOT = '<div class="' + $b.pop.POP_FOOT_CLASS + ' b_btn_w b_mh_c_8px"></div>';
+$b.pop.POP_BT_OK = '<button onclick="$b.pop.remove(this);" class="b_btn_ok">확인</button>';
+$b.pop.POP_BT_CANCEL = '<button onclick="$b.pop.remove(this);" class="b_btn_cancel">취소</button>';
 
 $b.pop.alert = function (html, tit) {
 	var $pop = $($b.pop.POP);

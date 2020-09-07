@@ -103,7 +103,7 @@ class BWM {
 		
 		$rtn = '';
 		foreach($v as $v2) {
-			$rtn .= '<span>#'. $v2 . '</span>';
+			$rtn .= '<a class="b_btn_green">#'. $v2 . '</a> ';
 		}
 		
 		$this->tag = $rtn;

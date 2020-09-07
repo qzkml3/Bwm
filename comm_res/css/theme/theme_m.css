@@ -24,7 +24,7 @@
 		box-shadow: #eee 1px 1px 1px 1px;
 	}
 	#gnb a {margin-left: 10px; display: list-item; color: #0089d6; list-style-type: disc; line-height: 2;}
-	#gnb_btn {position: fixed; width: 35px; height: 35px; border: solid 1px #ddd; left: 10px; bottom: 10px; background: white;
+	#gnb_btnn {position: fixed; width: 35px; height: 35px; border: solid 1px #ddd; left: 10px; bottom: 10px; background: white;
 		z-index: 100; display: block; color: #555;
 	}
 }

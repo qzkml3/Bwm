@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
 $b->setLayout('sub');
-$b->setTitle('#Button #버튼 #b_bt');
+$b->setTitle('#Button Padding #버튼 패딩 #b_btn_p');
 
 require_once $b->getPage();
 ?>
