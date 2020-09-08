@@ -1,3 +1,3 @@
 <?=
-$b->setTag('Type, 타입');
+$b->addTag('Type, 타입');
 ?>

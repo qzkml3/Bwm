@@ -10,8 +10,11 @@
 .ui-datepicker-title {font-size: 14px;}
 .ui-datepicker-week-end:first-child > span {color: orangered;}
 
-.ui-datepicker-year, .ui-datepicker-month
-{font-size: 13px !important; vertical-align: middle; position: relative; top: -2px;}
+.ui-datepicker-year, .ui-datepicker-month {
+	vertical-align: middle; position: relative; top: -2px;
+	font-size: 11px !important; padding: 0; height: 21px;
+	position: relative; top: 0px; border: solid 1px #aaa;
+}
 
 .ui-datepicker-year {left: -1px;}
 .ui-datepicker-month { left: 4px;}

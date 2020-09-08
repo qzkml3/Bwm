@@ -145,11 +145,11 @@ body .b_btn_s, .b_btn_w_s button, .b_btn_w_s a, .b_btn_w_s input[type=button] {
 body .b_btn_l, .b_btn_w_l button, .b_btn_w_l a, .b_btn_w_l input[type=button] {height: 35px; line-height: 35px; font-size: 13px;}
 body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button] {height: 40px; line-height: 40px; font-size: 14px;}
 
-/*b_btn_pad*/
-.b_btn_p_0 {padding-left: 1em !important; padding-right: 1em !important;}
-.b_btn_p_2em {padding-left: 2em !important; padding-right: 2em !important;}
-.b_btn_p_3em {padding-left: 3em !important; padding-right: 3em !important;}
-.b_btn_p_4em {padding-left: 4em !important; padding-right: 4em !important;}
+/*b_pad_h*/
+.b_pad_h_0 {padding-left: 1em !important; padding-right: 1em !important;}
+.b_pad_h_2em {padding-left: 2em !important; padding-right: 2em !important;}
+.b_pad_h_3em {padding-left: 3em !important; padding-right: 3em !important;}
+.b_pad_h_4em {padding-left: 4em !important; padding-right: 4em !important;}
 
 .b_btn_w_safe, .b_btn_green {background: #25b177 !important;}
 .b_btn_black, .b_btn_alt {background: #333 !important;}
@@ -496,3 +496,5 @@ script.on {display: block; white-space: pre;}
 .b_tag_w {margin: 25px 0; font-size: 11px; background: #f5f5f5; padding: 5px 10px; color: black;}
 .b_tag_w > * {margin-right: 5px !important;}
 .b_tag_w span:first-child {margin-left: 0;}
+
+.b_datepicker {text-align: center; width: 6em;}

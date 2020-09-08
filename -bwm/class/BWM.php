@@ -97,7 +97,7 @@ class BWM {
 		return $_SERVER['DOCUMENT_ROOT'] . $v;
 	}
 	
-	function setTag($tags) {
+	function addTag($tags) {
 		$v = str_replace(' ', '', $tags);
 		$v = explode(',', $v);
 		
@@ -106,7 +106,7 @@ class BWM {
 			$rtn .= '<a class="b_btn_green">#'. $v2 . '</a> ';
 		}
 		
-		$this->tag = $rtn;
+		$this->tag .= $rtn;
 	}
 
 	function getTag($tags) {

@@ -304,23 +304,23 @@ body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button
   font-size: 14px;
 }
 
-/*b_btn_pad*/
-.b_btn_p_0 {
+/*b_pad_h*/
+.b_pad_h_0 {
   padding-left: 1em !important;
   padding-right: 1em !important;
 }
 
-.b_btn_p_2em {
+.b_pad_h_2em {
   padding-left: 2em !important;
   padding-right: 2em !important;
 }
 
-.b_btn_p_3em {
+.b_pad_h_3em {
   padding-left: 3em !important;
   padding-right: 3em !important;
 }
 
-.b_btn_p_4em {
+.b_pad_h_4em {
   padding-left: 4em !important;
   padding-right: 4em !important;
 }
@@ -1606,6 +1606,11 @@ script.on {
 
 .b_tag_w span:first-child {
   margin-left: 0;
+}
+
+.b_datepicker {
+  text-align: center;
+  width: 6em;
 }
 
 /*# sourceMappingURL=bwm.css.map */

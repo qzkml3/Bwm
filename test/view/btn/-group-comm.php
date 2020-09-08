@@ -1,3 +1,3 @@
 <?php
-$b->setTag('Button, 버튼');
+$b->addTag('Button, 버튼');
 ?>

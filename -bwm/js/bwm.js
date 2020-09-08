@@ -2,6 +2,7 @@ $(document).ready(function () {
 	$b.mouse.draggable('.b_draggable');
 	$b.debug.showScript('.on');
 	$b.pop.closeOnClickShadow();
+	$b.date.datepicker();
 });
 
 window.$b = function () {
@@ -102,6 +103,10 @@ $b.cook.setBySess = function (name, value) {
 }
 
 $b.date = {};
+
+$b.date.datepicker = function () {
+	$('.b_datepicker').datepicker();
+};
 
 $b.date.getFullDate = function (sp) {
 	if (sp == null) sp = '-';
