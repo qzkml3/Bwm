@@ -252,8 +252,8 @@ $b.pop = {};
 $b.pop.POP_CLASS = 'b_pop';
 $b.pop.POP_PAGE_CLASS = 'b_pop_page';
 $b.pop.POP_HEAD_CLASS = 'b_pop_head';
-$b.pop.POP_BODY_CLASS = 'b_pop_body';
-$b.pop.POP_FOOT_CLASS = 'b_pop_foot';
+$b.pop.POP_BODY_CLASS = 'b_pop_cont';
+$b.pop.POP_FOOT_CLASS = 'b_pop_btn_w';
 
 $b.pop.POP = '<section class="' + $b.pop.POP_CLASS + '"></section>';
 $b.pop.POP_PAGE = '<div class="' + $b.pop.POP_PAGE_CLASS + '"></div>';
@@ -507,29 +507,39 @@ $b.img.imgInCont = function (sel) {
 
 $b.pop.open = function (pop, conf) {
 	var $pop = $(pop);
+	var $pop_page = $pop.find('.b_pop_page');
 
 	if (!$pop.length) $b.log('pop not found.');
 
-	if ($pop.data('b_pop')) {
-		conf = $pop.data('b_pop');
-	}
-
 	if (conf != null) {
 		if ($(window).width() > $b.mobile.MAX_WIDTH) {
+			if (conf.width != null) {
+				$pop.css('width', 0);
+				$pop_page.css('width', conf.width);
+			}
+			
+			if (! conf.shadow) {
+				$pop.css('background', 'transparent');
+			}
+
+			if (conf.draggable) {
+				$pop_page.draggable();
+				/*$pop_page.resizable();*/
+				$pop_page.addClass('b_draggable');
+			}
+			
+			$pop_page.css(conf);
 			$pop.find('.b_pop_page img').css(conf);
 
-			$pop.find('.b_pop_page').css(conf);
-
-			if (conf.left) {
-				$pop.css({'background': 'transparent', 'width': 0, 'height': 0});
-				$pop.find('.b_pop_page').css({'-webkit-transform': 'translateX(0) translateY(0)'});
-				$pop.find('.b_pop_page').css({'transform': 'translateX(0) translateY(0)'});
+			if (conf.left != null) {
+				//$pop_page.css({'-webkit-transform': 'translateX(0) translateY(0)'}); //not working
+				$pop_page.css({'transform': 'translateX(0) translateY(0)'});
 			}
 			var img_w = $pop.find('.b_pop_page img').width();
 		}
 	} else {
-		$pop.find('.b_pop_page').removeClass('b_draggable');
-		$pop.find('.b_pop_page').draggable('disable');
+		//$pop.find('.b_pop_page').removeClass('b_draggable');
+		//$pop.find('.b_pop_page').draggable('disable');
 	}
 
 	$pop.fadeIn('fast');

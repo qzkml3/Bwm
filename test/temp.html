@@ -1,27 +1,20 @@
 <div class="b_cont">
-	<script class="on">
-		var v = undefined;
-		var r = $b.is.emptyStr(v);
-		$b.result(r);
-	</script>
-	<script class="on">
-		var v = null;
-		var r = $b.is.emptyStr(v);
-		$b.result(r);
-	</script>
-	<script class="on">
-		var v = '  a';
-		var r = $b.is.emptyStr(v);
-		$b.result(r);
-	</script>
-	<script class="on">
-		var v = '  ';
-		var r = $b.is.emptyStr(v);
-		$b.result(r);
-	</script>
-	<script class="on">
-		var v = '';
-		var r = $b.is.emptyStr(v);
-		$b.result(r);
-	</script>
+	<div class="b_box" id="box1">
+		sfdasdf
+	</div>
 </div>
+
+
+<script>
+	$(document).ready(function() {
+		$('#box1').css({'width': '1'});
+		$('#box1').css({'height': '1'});
+		$('#box1').css({WebkitTransition: 'translateX(50%)'});
+		$('#box1').css({'transform': 'translateX(50%)  translateY(0)'});
+	});
+</script>
+
+
+<style>
+	.a {transform: translateX(0);}
+</style>

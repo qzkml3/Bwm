@@ -1,0 +1,53 @@
+<button class="b_btn" onclick="$b.pop.open('#pop1');">팝업</button>
+
+
+<button class="b_btn" onclick="$b.pop.open('#pop2', {
+	/*left: 30, top: 30, width: 500, shadow: false, draggable: true*/
+	left: 30, top: 30, width: 200, shadow: true, draggable: true
+});">팝업</button>
+
+<section class="b_pop" id="pop1" style="display: blockx;">
+	<div class="b_pop_page" style="">
+		<div class="b_pop_cont">가나다라</div>
+		<div class="b_pop_btn_w">
+			<button onclick="$b.pop.close(this);" class="b_btn">닫기</button>
+		</div>
+	</div>
+</section>
+
+<section class="b_pop" id="pop2" style="display: blockx;">
+	<div class="b_pop_page">
+		<div class="b_pop_cont b_fd_w">
+			<div contenteditable="true">
+				텍스트를 입력하세요.
+			</div>
+			<!--<input type="text" placeholder="">-->
+		</div>
+		<div class="b_pop_btn_w">
+			<button onclick="$b.pop.close(this);" class="b_btn">닫기</button>
+		</div>
+	</div>
+</section>
+
+
+<button onclick="drag('.b_tit');">드래그 추가</button>
+<button onclick="un_drag('.b_tit');">드래그 삭제</button>
+<button onclick="re_drag('.b_tit');">드래그 재설정</button>
+<script>
+	function drag(jq) {
+		$(jq).draggable();
+	}
+	
+	function un_drag(jq) {
+		$(jq).draggable('disable');
+	}
+
+	function re_drag(jq) {
+		$(jq).draggable('enable');
+	}
+	
+	
+	$('.b_tit').attr('contenteditable', true);
+
+
+</script>

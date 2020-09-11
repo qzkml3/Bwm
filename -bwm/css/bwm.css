@@ -252,7 +252,6 @@ main {
 /*b_btn_w*/
 .b_btn, .b_btn_w button, .b_btn_w a, .b_btn_w input[type=button] {
   color: white !important;
-  background: #38a5d6;
   border: none;
   display: inline-block;
   box-sizing: border-box;
@@ -264,6 +263,8 @@ main {
   height: 30px;
   line-height: 30px;
   font-size: 12px;
+  /*background: #38a5d6;*/
+  background: #3db0e4;
 }
 
 /*b_btn_focus*/
@@ -719,7 +720,7 @@ body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button
   background: rgba(0, 0, 0, 0.5);
 }
 
-.b_pop_pad_off .b_pop_body {
+.b_pop_pad_off .b_pop_cont {
   padding: 0;
 }
 
@@ -752,29 +753,33 @@ body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button
   color: white;
 }
 
-.b_pop_body {
+.b_pop_cont {
   text-align: left;
-  padding: 20px 5% 15px;
+  padding: 20px 5% 10px;
   overflow-y: auto;
   max-height: calc(100vh - 220px);
 }
 
-.b_pop_head_foot .b_pop_body {
+.b_pop_head_foot .b_pop_cont {
   max-height: calc(100vh - 220px);
   overflow-y: auto;
 }
 
 /*제목 풋터 경우*/
-.b_pop_foot .b_pop_body {
+.b_pop_btn_w .b_pop_cont {
   max-height: calc(100vh - 180px);
   overflow-y: auto;
 }
 
 /*풋터 경우*/
-.b_pop_foot {
+.b_pop_btn_w {
   text-align: center;
   /*background: #eee;*/
-  padding: 0 0 20px;
+  padding: 1px 0 20px;
+}
+
+.b_pop_btn_w > * {
+  margin: 0;
 }
 
 @media (max-height: 350px) {
@@ -783,7 +788,7 @@ body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button
     max-height: 95%;
   }
 
-  .b_pop_body {
+  .b_pop_cont {
     height: auto;
   }
 }
