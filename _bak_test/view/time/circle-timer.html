@@ -1,0 +1,43 @@
+<style>
+	.c_timer {
+		width: 100px;
+	}
+</style>
+
+
+<button id="start">Start</button>
+<div class="c_timer" id="c_timer"></div>
+
+<div class="c_timer" id="c_timer2"></div>
+
+<!-- These are probably out dated so you might want to use newest versions -->
+<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
+
+
+
+<script>
+	window.onload = function onLoad() {
+	};
+	
+	$('#start').on('click', function () {
+		var circle = new ProgressBar.Circle('#c_timer', {
+			color: '#FCB03C',
+			duration: 3000,
+			strokeWidth: 5
+		});
+
+		circle.animate(1);
+
+		var circle = new ProgressBar.Circle('#c_timer2', {
+			color: '#FCB03C',
+			duration: 3000,
+			strokeWidth: 5
+		});
+
+		circle.animate(1);
+	});
+</script>
+
+<ul>
+	<li>클래스로 돌려도 아이디처럼 여러번 써줘야 돌아간다.</li>
+</ul>
