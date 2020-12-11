@@ -47,6 +47,9 @@ class BWM {
 	function setTitleByFileName() {
 		$this->title = $this->file->getFileName();
 	}
+	function setTitleByFolderName() {
+		$this->title = $this->file->getFileName();
+	}
 	
 	function getTitle() {
 		if ($this->title) {

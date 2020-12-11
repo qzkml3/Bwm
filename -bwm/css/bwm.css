@@ -44,6 +44,9 @@ main {
 
 .b_init a:hover, .b_init a:focus, .b_init tr:focus {
   box-shadow: 0px 0px 3px 3px skyblue;
+  border-radius: 2px;
+  transition: all 0.3s;
+  padding: 2px;
 }
 
 .b_init a:not([href]) {

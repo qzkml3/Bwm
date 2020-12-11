@@ -78,4 +78,10 @@ class File {
 		
 		return $s;
 	}
+
+	function getFolderName() {
+		$r = basename(getcwd());
+
+		return $r;
+	}
 }

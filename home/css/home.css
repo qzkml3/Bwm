@@ -1,4 +1,4 @@
-body {
+.main body, .sub body {
   background: #eee;
   margin: 0;
   padding: 0 1.8%;
