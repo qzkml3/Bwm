@@ -1,0 +1,17 @@
+<script>
+	var v;
+	v = getRand(-1, 1);
+	console.log(v);
+	v = getRand(1, 2);
+	console.log(v);
+	
+	function getRand(min, max) {
+		var v = Math.random() * (max + 1 - min) + min;
+		v = Math.floor(v);
+		return v;
+	}
+</script>
+
+<ul>
+	<li>parseInt를 사용하면 음수 값에서 차이가 난다.</li>
+</ul>

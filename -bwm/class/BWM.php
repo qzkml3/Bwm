@@ -22,6 +22,10 @@ class BWM {
 		$this->setErrConf();
 	}
 	
+	function setTag($tag) {
+		$this->$tag = $tag;
+	}
+	
 	private function setErrConf() {
 		ini_set('display_errors', 1);
 		error_reporting(E_ERROR | E_COMPILE_ERROR | E_PARSE);	
