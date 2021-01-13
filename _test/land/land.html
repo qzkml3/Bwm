@@ -1,0 +1,67 @@
+<?
+$link_down = '';
+?>
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="EUC-KR">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>랜딩</title>
+	<link href="css/cm.css" rel="stylesheet">
+	<link href="css/pc.css" rel="stylesheet" media="(min-width: 1000px)">
+	<link href="css/mo.css" rel="stylesheet" media="(max-width: 1000px)">
+	<script src="/ext/js/jquery/jquery-1.8.3.min.js"></script>
+	<script src="/ext/js/ui/res-img-map/imageMapResizer/imageMapResizer.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('map').imageMapResize();
+		});
+	</script>
+</head>
+<body>
+<!--pc-->
+<section class="pc">
+	<div class="cont">
+		<img src="img/pc_01.jpg?<?=$res_ver?>" alt="" usemap="#map_1">
+		<map name="map_1">
+			<area coords="707,1234,1195,1334" href="<?=$link_down?>" alt="">
+		</map>
+	</div>
+	<div class="cont">
+		<img src="img/pc_02.jpg?<?=$res_ver?>" alt="" usemap="#map_2">
+		<map name="map_2">
+			<area coords="906,1099,1356,1199" href="<?=$link_down?>" alt="">
+		</map>
+	</div>
+	<div class="cont">
+		<img src="img/pc_03.jpg?<?=$res_ver?>" alt="" usemap="#map_3">
+		<map name="map_3">
+			<area coords="707,1705,1197,1805" href="<?=$link_down?>" alt="">
+		</map>
+	</div>
+</section>
+
+<!--mo-->
+<section class="mo">
+	<div class="cont">
+		<img src="img/mo_01.jpg?<?=$res_ver?>" alt="" usemap="#map_1_mo">
+		<map name="map_1_mo">
+			<area coords="130,857,593,952" href="<?=$link_down?>" alt="">
+		</map>
+	</div>
+	<div class="cont">
+		<img src="img/mo_02.jpg?<?=$res_ver?>" alt="" usemap="#map_2_mo">
+		<map name="map_2_mo">
+			<area coords="326,834,697,916" href="<?=$link_down?>" alt="">
+		</map>
+	</div>
+	<div class="cont">
+		<img src="img/mo_03.jpg?<?=$res_ver?>" alt="" usemap="#map_3_mo">
+		<map name="map_3_mo">
+			<area coords="111,1898,610,2000" href="<?=$link_down?>" alt="">
+		</map>
+	</div>
+</section>
+</body>
+</html>
