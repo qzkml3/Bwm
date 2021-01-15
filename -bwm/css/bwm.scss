@@ -12,7 +12,7 @@ input:not([type=checkbox]):not([type=radio]), textarea {-webkit-appearance: none
 main {display: block;}
 
 /*.b_init*/
-.b_init * {font-family: Ubuntu Mono, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.6;
+.b_init * {font-family: Ubuntu Mono, D2Coding, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.6;
   vertical-align: middle;
 }
 
@@ -46,7 +46,9 @@ main {display: block;}
   .b_page {border-radius: 7px;}
 }
 
-.b_tit {font-size: 22px; border-bottom: solid 1px #ccc; padding-bottom: .2em; margin: 30px 0 30px;}
+.b_tit {font-size: 22px; border-bottom: solid 1px #ccc; padding-bottom: .2em; margin: 30px 0 30px;
+  text-align: center;
+}
 
 @media (max-width: 500px) {
   .b_tit {font-size: 18px;}
