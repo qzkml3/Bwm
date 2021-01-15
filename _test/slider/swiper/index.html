@@ -33,16 +33,16 @@
 	</li>
 </ul>
 
-<?$swiper = 'swiper_1'?>
+<?$swiper_sec = 'swiper_1'?>
 <section>
-	<h1><?=$swiper?></h1>
+	<h1><?=$swiper_sec?></h1>
 	<style>
-		.<?=$swiper?> {} /*영역*/
-		.<?=$swiper?> .swiper-container {} /*스와이퍼*/
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
+		.<?=$swiper_sec?> {} /*영역*/
+		.<?=$swiper_sec?> .swiper-container {} /*스와이퍼*/
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<?php for ($i = 0; $i < 5; $i++) { ?>
@@ -56,14 +56,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 				}, autoplay: {
 					delay: 2000,
 					disableOnInteraction: false,
@@ -79,16 +79,16 @@
 	</ul>
 </section>
 
-<?$swiper = 'swiper_1_pad'?>
+<?$swiper_sec = 'swiper_1_pad'?>
 <section>
-	<h1><?=$swiper?> #padding to section</h1>
+	<h1><?=$swiper_sec?> #padding to section</h1>
 	<style>
-		.<?=$swiper?> { padding: 0 30px;} /*영역*/
-		.<?=$swiper?> .swiper-container {} /*스와이퍼*/
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
+		.<?=$swiper_sec?> { padding: 0 30px;} /*영역*/
+		.<?=$swiper_sec?> .swiper-container {} /*스와이퍼*/
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<?php for ($i = 0; $i < 5; $i++) { ?>
@@ -102,14 +102,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 				},
 				spaceBetween: 14,
 				/*slidesPerGroup: 1,*/
@@ -119,16 +119,16 @@
 	</script>
 </section>
 
-<?$swiper = 'swiper_1_pad_swiper'?>
+<?$swiper_sec = 'swiper_1_pad_swiper'?>
 <section>
-	<h1><?=$swiper?> #padding to swiper</h1>
+	<h1><?=$swiper_sec?> #padding to swiper</h1>
 	<style>
-		.<?=$swiper?> { } /*영역*/
-		.<?=$swiper?> .swiper-container { padding: 0 30px;} /*스와이퍼*/
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
+		.<?=$swiper_sec?> { } /*영역*/
+		.<?=$swiper_sec?> .swiper-container { padding: 0 30px;} /*스와이퍼*/
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<?php for ($i = 0; $i < 5; $i++) { ?>
@@ -142,14 +142,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 				},
 				spaceBetween: 14,
 				/*slidesPerGroup: 1,*/
@@ -159,16 +159,16 @@
 	</script>
 </section>
 
-<?$swiper = 'swiper_1_mg'?>
+<?$swiper_sec = 'swiper_1_mg'?>
 <section>
-	<h1><?=$swiper?> #margin to section</h1>
+	<h1><?=$swiper_sec?> #margin to section</h1>
 	<style>
-		.<?=$swiper?> { margin: 0 30px;} /*영역*/
-		.<?=$swiper?> .swiper-container {} /*스와이퍼*/
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
+		.<?=$swiper_sec?> { margin: 0 30px;} /*영역*/
+		.<?=$swiper_sec?> .swiper-container {} /*스와이퍼*/
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<?php for ($i = 0; $i < 5; $i++) { ?>
@@ -182,14 +182,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 				},
 				spaceBetween: 14,
 				/*slidesPerGroup: 1,*/
@@ -199,16 +199,16 @@
 	</script>
 </section>
 
-<?$swiper = 'swiper_1_mg_swiper'?>
+<?$swiper_sec = 'swiper_1_mg_swiper'?>
 <section>
-	<h1><?=$swiper?> #margin to swiper</h1>
+	<h1><?=$swiper_sec?> #margin to swiper</h1>
 	<style>
-		.<?=$swiper?> { } /*영역*/
-		.<?=$swiper?> .swiper-container { margin: 0 30px;} /*스와이퍼*/
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
+		.<?=$swiper_sec?> { } /*영역*/
+		.<?=$swiper_sec?> .swiper-container { margin: 0 30px;} /*스와이퍼*/
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: calc(100% - 1px) !important; margin-left: 1px;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<?php for ($i = 0; $i < 5; $i++) { ?>
@@ -222,14 +222,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 				},
 				spaceBetween: 14,
 				/*slidesPerGroup: 1,*/
@@ -239,19 +239,19 @@
 	</script>
 </section>
 
-<?$swiper = 'swiper_1_hash'?>
+<?$swiper_sec = 'swiper_1_hash'?>
 <section>
-	<h1><?=$swiper?> #hashNavigation load시 배너 저장</h1>
+	<h1><?=$swiper_sec?> #hashNavigation load시 배너 저장</h1>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 					0:0
 				},
 				spaceBetween: 14,
@@ -264,7 +264,7 @@
 		});
 	</script>
 
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<section class="swiper-wrapper">
 				<?php for ($i = 0; $i < 5; $i++) { ?>
@@ -278,26 +278,26 @@
 	</section>
 
 	<style>
-		.<?=$swiper?> {}
-		.<?=$swiper?> .swiper-container {}
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {}
+		.<?=$swiper_sec?> {}
+		.<?=$swiper_sec?> .swiper-container {}
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {}
 	</style>
 </section>
 
-<?$swiper = 'swiper_m'?>
+<?$swiper_sec = 'swiper_m'?>
 <section>
-	<h1><?=$swiper?> #multy</h1>
+	<h1><?=$swiper_sec?> #multy</h1>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 					0:0
 				},
 				slidesPerView: 'auto',
@@ -309,7 +309,7 @@
 		});
 	</script>
 
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<section class="swiper-wrapper">
 				<?php for ($i = 0; $i < 8; $i++) { ?>
@@ -325,23 +325,23 @@
 
 
 	<style>
-		.<?=$swiper?> {}
-		.<?=$swiper?> .swiper-container {}
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: 20%;}
+		.<?=$swiper_sec?> {}
+		.<?=$swiper_sec?> .swiper-container {}
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: 20%;}
 	</style>
 </section>
 
-<?$swiper = 'swiper_m_pad'?>
+<?$swiper_sec = 'swiper_m_pad'?>
 <section>
-	<h1><?=$swiper?> #multy padding to section</h1>
+	<h1><?=$swiper_sec?> #multy padding to section</h1>
 	<style>
-		.<?=$swiper?> { padding: 0 30px;}
-		.<?=$swiper?> .swiper-container {}
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: 20%;}
+		.<?=$swiper_sec?> { padding: 0 30px;}
+		.<?=$swiper_sec?> .swiper-container {}
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: 20%;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<section class="swiper-wrapper">
 				<?php for ($i = 0; $i < 8; $i++) { ?>
@@ -355,57 +355,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
-					0:0
-				},
-				slidesPerView: 'auto',
-				spaceBetween: 14,
-				/*slidesPerGroup: 1,*/
-				/*slidesPerView: 2,*/
-				0:0
-			});
-		});
-	</script>
-</section>
-
-<?$swiper = 'swiper_m_pad_swiper'?>
-<section>
-	<h1><?=$swiper?> #multy padding to swiper</h1>
-	<style>
-		.<?=$swiper?> {}
-		.<?=$swiper?> .swiper-container {padding: 0 30px;}
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: 20%;}
-	</style>
-	<section class="swiper_sec <?=$swiper?>">
-		<div class="swiper-container">
-			<section class="swiper-wrapper">
-				<?php for ($i = 0; $i < 8; $i++) { ?>
-					<div class="swiper-slide"><?=$i + 1?></div>
-				<?php } ?>
-			</section>
-		</div>
-		<div class="swiper-pagination"></div>
-		<span class="swiper-button-prev-cm swiper-button-prev">이전</span>
-		<span class="swiper-button-prev-cm swiper-button-next">다음</span>
-	</section>
-	<script>
-		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
-				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
-					clickable: true,
-				},
-				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 					0:0
 				},
 				slidesPerView: 'auto',
@@ -418,16 +375,16 @@
 	</script>
 </section>
 
-<?$swiper = 'swiper_m_mg'?>
+<?$swiper_sec = 'swiper_m_pad_swiper'?>
 <section>
-	<h1><?=$swiper?> #multy margin to section</h1>
+	<h1><?=$swiper_sec?> #multy padding to swiper</h1>
 	<style>
-		.<?=$swiper?> { margin: 0 30px;}
-		.<?=$swiper?> .swiper-container {}
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: 20%;}
+		.<?=$swiper_sec?> {}
+		.<?=$swiper_sec?> .swiper-container {padding: 0 30px;}
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: 20%;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<section class="swiper-wrapper">
 				<?php for ($i = 0; $i < 8; $i++) { ?>
@@ -441,14 +398,14 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 					0:0
 				},
 				slidesPerView: 'auto',
@@ -461,16 +418,16 @@
 	</script>
 </section>
 
-<?$swiper = 'swiper_m_mg_swiper'?>
+<?$swiper_sec = 'swiper_m_mg'?>
 <section>
-	<h1><?=$swiper?> #multy margin to swiper</h1>
+	<h1><?=$swiper_sec?> #multy margin to section</h1>
 	<style>
-		.<?=$swiper?> { }
-		.<?=$swiper?> .swiper-container {margin: 0 30px;}
-		.<?=$swiper?> .swiper-wrapper {}
-		.<?=$swiper?> .swiper-slide {width: 20%;}
+		.<?=$swiper_sec?> { margin: 0 30px;}
+		.<?=$swiper_sec?> .swiper-container {}
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: 20%;}
 	</style>
-	<section class="swiper_sec <?=$swiper?>">
+	<section class="swiper_sec <?=$swiper_sec?>">
 		<div class="swiper-container">
 			<section class="swiper-wrapper">
 				<?php for ($i = 0; $i < 8; $i++) { ?>
@@ -484,14 +441,57 @@
 	</section>
 	<script>
 		$(function () {
-			var swiper = new Swiper('.<?=$swiper?> .swiper-container', {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
 				pagination: {
-					el: '.<?=$swiper?> .swiper-pagination',
+					el: '.<?=$swiper_sec?> .swiper-pagination',
 					clickable: true,
 				},
 				navigation: {
-					nextEl: '.<?=$swiper?> .swiper-button-next',
-					prevEl: '.<?=$swiper?> .swiper-button-prev',
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
+					0:0
+				},
+				slidesPerView: 'auto',
+				spaceBetween: 14,
+				/*slidesPerGroup: 1,*/
+				/*slidesPerView: 2,*/
+				0:0
+			});
+		});
+	</script>
+</section>
+
+<?$swiper_sec = 'swiper_m_mg_swiper'?>
+<section>
+	<h1><?=$swiper_sec?> #multy margin to swiper</h1>
+	<style>
+		.<?=$swiper_sec?> { }
+		.<?=$swiper_sec?> .swiper-container {margin: 0 30px;}
+		.<?=$swiper_sec?> .swiper-wrapper {}
+		.<?=$swiper_sec?> .swiper-slide {width: 20%;}
+	</style>
+	<section class="swiper_sec <?=$swiper_sec?>">
+		<div class="swiper-container">
+			<section class="swiper-wrapper">
+				<?php for ($i = 0; $i < 8; $i++) { ?>
+					<div class="swiper-slide"><?=$i + 1?></div>
+				<?php } ?>
+			</section>
+		</div>
+		<div class="swiper-pagination"></div>
+		<span class="swiper-button-prev-cm swiper-button-prev">이전</span>
+		<span class="swiper-button-prev-cm swiper-button-next">다음</span>
+	</section>
+	<script>
+		$(function () {
+			var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
+				pagination: {
+					el: '.<?=$swiper_sec?> .swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+					prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
 					0:0
 				},
 				slidesPerView: 'auto',
