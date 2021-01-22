@@ -47,6 +47,9 @@ main {
   border-radius: 2px;
   transition: all 0.2s;
   /* padding: 2px;*/
+  position: relative;
+  top: 1px;
+  left: 1px;
 }
 
 .b_init a:not([href]) {
