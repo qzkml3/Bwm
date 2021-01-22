@@ -23,7 +23,9 @@ class BWM {
 	}
 	
 	function setTag($tag) {
-		$this->$tag = $tag;
+		if ($tag != null) {
+			$this->$tag = $tag;
+		}
 	}
 	
 	private function setErrConf() {

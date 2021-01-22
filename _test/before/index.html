@@ -1,0 +1,82 @@
+<h1>insertBefore</h1>
+<section>
+	<div>
+		<div class="a1">a1</div>
+		<div class="a2">a2</div>
+		<div class="a3">a3</div>
+	</div>
+
+	<script>
+		$('.a3').insertBefore($('.a1'));
+	</script>
+
+	<ul>
+		<li>jquery objet를 인자로 받아서 순서를 바꾼다.</li>
+	</ul>
+</section>
+
+<hr>
+
+<h1>before</h1>
+<section>
+	<div>
+		<div class="b1">b1</div>
+		<div class="b2">b2</div>
+		<div class="b3">b3</div>
+	</div>
+
+	<script>
+		$('.b3').before($('.b1').html());
+	</script>
+
+	<ul>
+		<li>html을 추가해 준다.</li>
+	</ul>
+</section>
+
+<hr>
+
+<h1>insertBefore 이전 다음 예제</h1>
+<section>
+	<style>
+		li {margin: 10px 0;}
+	</style>
+	<!--영역-->
+	<button onclick="addItem();" style="margin: 10px 0 0 100px; width: 100px;" type="button">추가</button>
+	<ul class="sec">
+	</ul>
+
+	<script id="tpl_item" type="text/html">
+		<li class="item">
+			<input type="text">
+			<button type="button">삭제</button>
+			<button onclick="prevItem(this);" type="button">상</button>
+			<button onclick="nextItem(this);" type="button">하</button>
+		</li>
+	</script>
+
+	<script>
+		$(function() {
+			initItem();
+		});
+		
+		function initItem() {
+			addItem();
+		}
+		
+		function addItem() {
+			var tpl = $('#tpl_item').html();
+			$('.sec').append(tpl);
+		}
+
+		function prevItem(btn) {
+			var $item = $(btn).closest('.item');
+			$item.insertBefore($item.prev());
+		}
+
+		function nextItem(btn) {
+			var $item = $(btn).closest('.item');
+			$item.insertAfter($item.next());
+		}
+	</script>
+</section>
