@@ -1,0 +1,97 @@
+스와이퍼 자체에서 masonry 가 되는지 확인해 봤는데 안된다.
+
+
+slidesPerColumnFill: 'column',
+
+<script src="/_/js/slider/swiper_6.4.7/swiper-bundle.min.js"></script>
+
+<div class="a">
+	<div class="a_item">asdf</div>
+	<div class="a_item">asdf</div>
+</div>
+
+<style>
+	h1 {margin: 30px 0 10px; border-bottom: solid 1px #ccc;}
+	
+	.sec_swiper {position: relative; /*height: 500px;*/}
+	.swiper {overflow: hidden; position: relative; /*height: 500px;*/}
+	.swiper-wrapper {display: flex; /*height: 500px;*/}
+	.swiper-slide {box-sizing: border-box; border: solid 2px #aaa; flex-shrink: 0; background: #eee; text-align: center;
+        height: 100px; float: left;
+	}
+	
+	.swiper-button-prev-cm {position: absolute; top: 0; bottom: 0; margin: auto;
+		border: solid 1px #ccc; height: 20px; width: 20px; border-radius: 50%;
+		cursor: pointer; text-indent: -99999px;
+	}
+	.swiper-button-prev { left: -30px; }
+	.swiper-button-next { right: -30px;}
+	
+	.swiper-pagination {width: 100%; position: absolute; left: 0px; bottom: -22px; text-align: center;}
+	
+	.swiper-pagination-bullet {width: 10px; height: 10px; background: #aaa; display: inline-block;
+		border-radius: 50%; margin: 0 5px; cursor: pointer;
+	}
+	.swiper-pagination-bullet-active {/*background: skyblue;*/ background: lightskyblue;}
+</style>
+
+<ul>
+	<li>슬라이더 안에 swiper-wrapper를 넣고 그안에 swiper-slide를 넣는다.</li>
+	<li>슬라이더에 overflow: hidden을 준다.</li>
+	<li>css 슬라이더 간격은 margin-right로 준다.</li>
+	<li>swiper에 주면 버튼을 밖으로 빼 수 없다. sec_swiper 에 주어야 한다.
+		<ul>
+			<li>margin으로 하면 버튼을 뺄 수 없고 padding으로 하면 이전다음 슬라이드가 보인다.</li>
+		</ul>
+	</li>
+</ul>
+
+<?$sec_swiper = 'sec_swiper_1'?>
+<section>
+	<h1><?=$sec_swiper?></h1>
+	<style>
+		.<?=$sec_swiper?> {} /*영역*/
+		.<?=$sec_swiper?> .swiper {} /*스와이퍼*/
+		.<?=$sec_swiper?> .swiper-wrapper {}
+		.<?=$sec_swiper?> .swiper-slide {}
+	</style>
+	<section class="sec_swiper <?=$sec_swiper?>">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<?php for ($i = 0; $i < 10; $i++) { ?>
+					<?php $v = rand(30, 100); ?>
+					<div class="swiper-slide" style="height: <?=$v?>px;"><?=$i + 1?></div>
+				<?php } ?>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<span class="swiper-button-prev-cm swiper-button-prev">이전</span>
+		<span class="swiper-button-prev-cm swiper-button-next">다음</span>
+	</section>
+	<script>
+		$(function () {
+			var swiper = new Swiper('.<?=$sec_swiper?> .swiper', {
+				pagination: {
+					el: '.<?=$sec_swiper?> .swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.<?=$sec_swiper?> .swiper-button-next',
+					prevEl: '.<?=$sec_swiper?> .swiper-button-prev',
+				}, autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
+				spaceBetween: 14,
+				
+				slidesPerColumn: 2,
+				/*slidesPerGroup: 2,*/
+				slidesPerView: 2,
+				slidesPerColumnFill: 'column',
+				/*slidesPerColumnFill: 'row',*/
+			});
+		});
+	</script>
+	<ul>
+	</ul>
+</section>

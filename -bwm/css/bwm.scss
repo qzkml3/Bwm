@@ -12,14 +12,14 @@ input:not([type=checkbox]):not([type=radio]), textarea {-webkit-appearance: none
 main {display: block;}
 
 /*.b_init*/
-.b_init * {font-family: Ubuntu Mono, D2Coding, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.6;
+.b_init * {font-family: Ubuntu Mono, D2Coding, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.4;
   vertical-align: middle;
 }
 
 /*link*/
 .b_init a {color: #3baae3; text-decoration: none;}
 .b_init a:hover, .b_init a:focus, .b_init tr:focus {box-shadow: 0px 0px 3px 3px skyblue; border-radius: 2px;
-  transition: all .2s; /* padding: 2px;*/
+  transition: all .3s; /* padding: 2px;*/
   position: relative; top: 1px; left: 1px;
 }
 .b_init a:not([href]) {color: #aaa; box-shadow: none; cursor: default;}
