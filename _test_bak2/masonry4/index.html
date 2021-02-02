@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>masonry</title>
+	<script src="/-bwm/js/jquery/jquery-1.8.3.min.js"></script>
+	<script src="masonry.pkgd.min.js"></script>
+	<script src="/_/js/slider/swiper_4.4.1/swiper.min.js"></script>
+</head>
+<body>
+
+<ul>
+	<li>검색하니 .gutter-sizer를 calc()로 주라고 한다.</li>
+	<li>gutter = vertical space</li>
+	<li>gutter-size 는 margin의 2배</li>
+	<li>gutter-sizer 는 정수값을 준다.</li>
+	<li>gutter-sizer 는 퍼센트로 잡으려면 태그를 넣는다.</li>
+</ul>
+
+<section>
+	<style>
+        html {overflow-y: scroll;}
+
+        .wrap {max-width: 500px; margin: 0 auto;}
+
+        .grid {display: flex; flex-wrap: wrap; justify-content: space-between; box-sizing: border-box;}
+
+        .grid-item {border: solid 3px gray; box-sizing: border-box; word-break: break-all; margin-bottom: 2%;
+            width: calc(45%);
+        }
+
+        .gutter-sizer {width: 10%;}
+
+        /*.grid-item {width: 24%;}
+        .gutter-sizer {width: 1.35%;}*/
+	</style>
+
+
+	<h1>Document click append</h1>
+	<div class="wrap">
+		<div class="swiper_sec">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<?php for ($i3 = 0; $i3 < 3; $i3++) { ?>
+						<section class="swiper-slide">
+							<div class="grid">
+								<?php
+								for ($i = 0; $i < 10; $i++) {
+									$h = rand(10, 50);
+									?>
+									<div class="grid-item">
+										<div><?=$i + 1?></div>
+
+										<? for ($i2 = 0; $i2 < $h; $i2++) {
+											echo 'x';
+										} ?>
+
+									</div>
+								<?php } ?>
+								<div class="gutter-sizer"></div>
+							</div>
+						</section>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		$('.grid').masonry({
+			//autoHeight: true, //enable auto height
+			gutter: '.gutter-sizer',
+			/*gutter: 20,*/
+			/*percentPosition: true*/
+		});
+
+		<?$swiper_sec = 'swiper_sec'?>
+		var swiper = new Swiper('.<?=$swiper_sec?> .swiper-container', {
+			pagination: {
+				el: '.<?=$swiper_sec?> .swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.<?=$swiper_sec?> .swiper-button-next',
+				prevEl: '.<?=$swiper_sec?> .swiper-button-prev',
+			},
+			spaceBetween: 14,
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+		});
+
+		swiper.on('slideChangeTransitionStart', function () {
+			fixSwiperHeight();
+		})
+
+		function fixSwiperHeight() {
+			var $activeSlide = $('.swiper-slide-active');
+			var h = $activeSlide.find('*').outerHeight();
+			$activeSlide.closest('.swiper-container').height(h);
+		}
+	</script>
+
+
+	<script>
+
+
+		$(document).on('click', function () {
+			var v = $('.grid').html();
+			$v = $(v);
+
+			//$('.grid').append($v).masonry( 'appended', $v );
+			//$('.swiper-slide-active .grid').append($v).masonry( 'appended', $v, true);
+
+			$('.swiper-slide-active .grid').append($v).masonry('appended', $v);
+			//$('.swiper-slide-active.grid').masonry( 'reloadItems' );
+
+
+			fixSwiperHeight();
+		});
+	</script>
+
+
+	<style>
+        .<?=$swiper_sec?> {}
+        /*영역*/
+        .<?=$swiper_sec?> .swiper-container {display: flex; overflow: hidden;
+            border: solid 2px orange;
+        }
+        /*스와이퍼*/
+        .<?=$swiper_sec?> .swiper-wrapper {display: flex; height: auto !important;}
+        .<?=$swiper_sec?> .swiper-slide { /*width: calc(100% - 1px) !important; margin-left: 1px;*/
+            border: solid 2px red; box-sizing: border-box;
+        }
+	</style>
+</section>
+
+
+하단
+
+</body>
+</html>

@@ -1,0 +1,726 @@
+<link href="/comm_res/js/slider/swiper/swiper-bundle.min.css" rel="stylesheet">
+<style>
+	#msg {position: fixed; left: 50%; bottom: 10px;
+		background: #888; border: solid 1px #ccc; border-radius: 5px; color: white;
+		transform: translateX(-50%); text-align: center;
+		padding: 5px; font-size: 11px;
+		display: none;
+		opacity: .8;
+	}
+	
+	.grid {display: flex; flex-wrap: wrap; justify-content: space-between;}
+	.grid-item {width: 49%; box-sizing: border-box; transition: all 0s !important; margin-bottom: 10px;}
+	
+	.grid.rank .grid-item{height: 290px;}
+	
+	
+	.swiper-container2 .swiper-wrapper { /*height: auto !important;*/
+		overflow: visible !important;
+		/*height: auto !important;*/
+		/*height: 0 !important;*/
+		position: static;
+	}
+	
+	.swiper-wrapper {display: flex; /*height: auto !important;*/}
+	.swiper-slide {flex-shrink: 0; margin-right: 0;}
+	
+	/*.star_list > * {margin-right: .0% !important;}*/
+	
+	.gutter-sizer {width: 1.9%;}
+	/*.star_list > *:nth-child(2) {margin-right: .5% !important;}*/
+	
+	.swiper-pagination2 {display: flex; border: solid 1px #ddd; border-radius: 10px; overflow: hidden;}
+	.swiper-pagination2 > * {width: 100%; height: 0; padding-bottom: 15%; background: center / 80% no-repeat; border-radius: 0; opacity: 1 !important;
+		position: relative; outline: none;
+	}
+	
+	.swiper-pagination-bullet-active {background-color: #ff7247;}
+	
+	.swiper-pagination2 > *::after {position: absolute; width: 1px; height: 70%; background: #ddd; left: 0; top: 0; bottom: 0; margin: auto;
+		content: '';
+	}
+	
+	.swiper-pagination2 > *:first-child::after, .swiper-pagination2 > *.swiper-pagination-bullet-active::after, .swiper-pagination2 > *.swiper-pagination-bullet-active + *::after {display: none; }
+	
+	.swiper-pagination2 > *:nth-child(1) {background-image: url(/comm_res/img/tab/bb_tab_1.jpg);}
+	.swiper-pagination2 > *:nth-child(2) {background-image: url(/comm_res/img/tab/bb_tab_2.jpg);}
+	.swiper-pagination2 > *:nth-child(3) {background-image: url(/comm_res/img/tab/bb_tab_3.jpg);}
+	.swiper-pagination2 > *:nth-child(4) {background-image: url(/comm_res/img/tab/bb_tab_4.jpg);}
+	.swiper-pagination2 > *:nth-child(5) {background-image: url(/comm_res/img/tab/bb_tab_5.jpg);}
+	.swiper-pagination2 > *:nth-child(6) {background-image: url(/comm_res/img/tab/bb_tab_6.jpg);}
+	
+	.swiper-pagination2 > *.swiper-pagination-bullet-active:nth-child(1) {background-image: url(/comm_res/img/tab/bb_tab_1_on.jpg);}
+	.swiper-pagination2 > *.swiper-pagination-bullet-active:nth-child(2) {background-image: url(/comm_res/img/tab/bb_tab_2_on.jpg);}
+	.swiper-pagination2 > *.swiper-pagination-bullet-active:nth-child(3) {background-image: url(/comm_res/img/tab/bb_tab_3_on.jpg);}
+	.swiper-pagination2 > *.swiper-pagination-bullet-active:nth-child(4) {background-image: url(/comm_res/img/tab/bb_tab_4_on.jpg);}
+	.swiper-pagination2 > *.swiper-pagination-bullet-active:nth-child(5) {background-image: url(/comm_res/img/tab/bb_tab_5_on.jpg);}
+	.swiper-pagination2 > *.swiper-pagination-bullet-active:nth-child(6) {background-image: url(/comm_res/img/tab/bb_tab_6_on.jpg);}
+
+</style>
+
+<script src="/comm_res/js/slider/swiper/swiper-bundle.min.js"></script>
+<script src="/comm_res/js/masonry/masonry.pkgd.min.js"></script>
+<script src="/comm_res/js/image/imagesloaded.pkgd.min.js"></script>
+<script>
+	var DEBUG_MODE = 0;
+
+	var TOTAL_ON_LOAD = 6;
+
+	function log(o) {
+		if (DEBUG_MODE) {
+			console.log(o);
+		}
+	}
+</script>
+
+
+
+
+<script src="/comm_res/js/no_mouse.js?v=<?=time()?>"></script>
+<!--페이지-->
+<div class="page_pad_h b_page">
+
+	<!--인기모델-->
+	<section class="p_r">
+		<h2 class="b_page_tit f_black va_m_c">
+			<i class="icon_init icon_crown_illust"></i>
+			<span>TOP10</span>
+			<span class="f_normal f_gray">인기모델</span>
+		</h2>
+
+		<!--모델검색-->
+		<a href="/content/searchNew?type=star">
+			<img src="/comm_res/img/etc/srch_model.jpg" alt="" style="position: absolute; right: 0; top: -2px; width: 130px;">
+		</a>
+
+		<section style="padding-bottom: 10px; overflow-x: hidden; margin-top: 25px;" class="main_slider">
+			<!--스와이퍼-->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<?php
+
+					$i = 0;
+					foreach ($top_list as $k => $v) {
+
+						if ($v->bup_u_nick) {
+
+							$bup_u_nick = $v->bup_u_nick;
+							$bup_photo_url = $v->bup_photo_url;
+
+						} else {
+
+							$bup_u_nick = $v->u_nick;
+							$bup_photo_url = $v->u_profile_img;
+
+						}
+
+						$user_data = starProfileDetail($v->user_key);
+						$photo_list = starPictorialList($v->user_key, $this->session->userdata('user_key'));
+
+						if ($this->session->userdata('user_key') == "") {
+
+							$bup_photo_url = "/comm_res/img/no_adult.png";
+						}
+						?>
+						<!--롤링-->
+						<section class="swiper-slide fx b_box b_box_silver b_box_rad" style="font-size: 15px;" onclick="location.href='/pictorial/profile?bj_user_key=<?=$v->user_key?>';">
+							<!--메인 이미지-->
+							<div style="width: 135px;">
+								<div class="b_img_wrap b_profile_rad b_profile_shadow" style="font-size: 135px; width: 1em;">
+									<img class="b_img b_rad" src="<?=$bup_photo_url?>" alt="">
+								</div>
+								<div class="b_ta_c" style="margin: 8px 0;"><?=$bup_u_nick?></div>
+							</div>
+							<!--최근화보-->
+							<div class="fx" style=" margin-left: 4%; flex: 1;">
+								<div style="flex: 1;">
+									<div style="font-size: 14px; margin-top: 6px;"><b>최근화보</b></div>
+									<div>
+										<? $w = '30%;' ?>
+										<? for ($z = 0; $z < 2; $z++) {
+											$v2 = $photo_list[$z];
+
+											if (sizeof($v2) > 0) {
+
+												$buy_coin = "";
+												$icon_lock = "";
+												$movie_icon = "";
+												$photoClass = "";
+												if ($v2->bp_type == "P") {
+													if ($v2->bp_gold > 0 && $v->my_order_cnt == 0) {
+														if ($v2->bp_gd_url) $bp_photo = $v2->bp_gd_url;
+														else $bp_photo = $v2->bp_sum_url;
+														$icon_lock = '<div>
+															<i class="b_icon icon_lock2" style="width: 1.5em; height: 2em;"></i>
+														</div>';
+														$buy_coin = '<section class="b_middle_center_area" style="font-size: 13px; text-align: center;">
+																<i class="b_icon icon_candy2"></i>
+																<div>
+																	<span class="f_white">' . number_format($v2->bp_gold) . '</span>
+																</div>
+															</section>';
+														$photoClass = "square blurEffect blur_light2";
+													} else {
+														$bp_photo = $v2->bp_sum_url;
+														$star_link = "/pictorial/view?start_seq=" . $v2->bp_key;
+													}
+
+												} else {
+													$movie_icon = '<section class="b_tr_area" style="font-size: 14px; top: 2px; right: 4px;">
+																<i class="b_icon icon_video2">비디오</i>
+															</section>';
+													if ($v2->bp_gold > 0) {
+														if ($v2->bp_gd_vod_img) $bp_photo = $v2->bp_gd_vod_img;
+														else $bp_photo = $v2->bp_sum_url;
+
+														$icon_lock = '<div>
+															<i class="b_icon icon_lock2" style="width: 1.5em; height: 2em;"></i>
+														</div>';
+														$buy_coin = '<section class="b_middle_center_area" style="font-size: 13px; text-align: center;">
+																<i class="b_icon icon_candy2"></i>
+																<div>
+																	<span class="f_white">' . number_format($v2->bp_gold) . '</span>
+																</div>
+															</section>';
+														$photoClass = "square blurEffect blur_light2";
+													} else {
+														$bp_photo = $v2->bp_sum_url;
+														$star_link = "/pictorial/view?start_seq=" . $v2->bp_key;
+													}
+
+
+												}
+//												if($v2->bp_sum_url){
+//													$bp_photo = $v2->bp_sum_url;
+//												}
+												?>
+												<div style="margin-top: 10px;" class="b_fx">
+													<div>
+														<div class="b_img_wrap2 b_rad">
+															<div class="b_img_wrap <?=$photoClass?>" style="font-size: 55px; width: 1em;">
+																<img class="b_img b_rad" src="<?=$bp_photo?>" alt="">
+															</div>
+
+
+															<?=$movie_icon?>
+															<?=$buy_coin?>
+
+														</div>
+													</div>
+													<div class="" style="height: 2.8em; overflow: hidden; margin-left: 10px; line-height: 0;">
+														<span style="line-height: 1.4; position: relative; top: 3px;">
+															<?=nl2br($v2->bp_subject)?>
+														</span>
+													</div>
+												</div>
+											<? } else { ?>
+												<!--<div class="b_profile b_profile_rad" style="flex: 0 0 <? /*=$w*/ ?>;">
+													<div class="b_profile_img_wrap">
+														<div class="b_profile_img b_profile_img_rad"></div>
+													</div>
+												</div>-->
+											<? } ?>
+										<? } ?>
+										<!-- <div class="b_profile b_profile_rad" style="flex: 0 0 <?=$w?>;">
+											<div class="b_profile_img b_profile_img_rad" style="background-image: url(/comm_res/img/profile/profile_model.jpg);"></div>
+										</div>
+										<div class="b_profile b_profile_rad" style="flex: 0 0 <?=$w?>; margin-right: 3%;">
+											<div class="b_profile_img b_profile_img_rad" style="background-image: url(/comm_res/img/profile/profile_model.jpg);"></div>
+										</div> -->
+									</div>
+								</div>
+								<div>
+						</section>
+						<?php
+						$i++;
+					} ?>
+				</div>
+			</div>
+		</section>
+		<div class="main_slider_pre_next_area" id="swiper-start">
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</section>
+
+	<section style="margin-top: -10px;">
+		<!--탭-->
+		<div class="swiper-pagination2"></div>
+
+		<section class="swiper-container2" style="overflow: hidden; margin-top: 0px;">
+			<div class="swiper-wrapper">
+				<?php for ($i = 0; $i < 6; $i++) {
+					if ($i == 0) {
+						$sel_type = 'rank';
+					} else {
+						$sel_type = 'other';
+					}
+					?>
+					<input type="hidden" name="page_<?=$i?>" id="page_<?=$i?>" value="1">
+					<section class="swiper-slide" data-swiper-number="<?=$i?>" id="swiper_slide_section<?=$i?>">
+						<div class="grid <?=$sel_type?>">
+							<?php //for ($i2 = 0; $i2 < 3; $i2 ++) { 
+							if (sizeof($list[$i]) > 0) {
+								foreach ($list[$i] as $k => $v) {
+
+									if ($rank) $rank = $rank + 1;
+									else $rank = 1;
+
+
+									if ($i < 3) {
+										$this->load->view(SKIN_DIR . '/pictorial/main_pic_new_list2', array('k' => $k, 'v' => $v, 'i' => $i, 'rank' => $rank, 'sel_type' => $sel_type));
+									} else {
+										$this->load->view(SKIN_DIR . '/pictorial/main_user_new_list2', array('k' => $k, 'v' => $v, 'i' => $i, 'rank' => $rank));
+									}
+
+									?>
+
+								<?php }
+							} else {
+								?>
+								<section>
+									<section style="margin: 15px 0 10px;">
+										<div style="padding:50px;text-align:center;border:1px solid #e3e3e3;">
+											검색된 데이터가 없습니다.
+										</div>
+									</section>
+								</section>
+								<?php
+							}
+
+							?>
+							<div class="gutter-sizer"></div>
+						</div>
+					</section>
+				<?php } ?>
+			</div>
+		</section>
+
+		<script>
+			var $masonry = $('.swiper-container2 .grid');
+
+			$(document).ready(function() {
+				log('load img cnt: ' + 1);
+				masonry($masonry);
+			});
+
+			$masonry.imagesLoaded().always(function () {
+				log('load img cnt: ' + 1);
+				masonry($masonry);
+				//fixSwiperHeight();
+			});
+
+			function masonry(target) {
+				$(target).masonry({
+					gutter: '.gutter-sizer',
+				});
+			}
+
+			var page_type = "rank";
+			var section_number = 0;
+			var swiper2 = new Swiper('.swiper-container2', {
+				autoHeight: true,
+				/*loop: true,*/
+				/*speed: 100,*/
+				pagination: {
+					el: '.swiper-pagination2',
+					clickable: true
+				},
+				/*effect: 'coverflow',*/
+				/*grabCursor: true,*/
+				/*centeredSlides: true,*/
+				/*slidesPerView: 'auto',*/
+
+				/*coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true,
+				},*/
+				spaceBetween: 30
+			});
+
+
+			//swiper2
+
+			//swiper2.updateAutoHeight(10);
+
+
+			var currentIndex = 0;
+
+			/*swiper2.on('slideChangeTransitionStart', function () {*/
+			/*swiper2.on('slideChangeTransitionEnd', function () {*/
+
+			swiper2.on('slideChange', function () {
+				//var nowNumber = parseInt($(".swiper-slide-duplicate-active").attr("data-swiper-number"));
+				//var nowNumber = $('.swiper-container2 .swiper-slide-active').data('swiper-number');
+				to_remove = 0;
+				var nowNumber = swiper2.activeIndex;
+
+				//var nowNumber = swiper2.previousIndex;
+
+
+				section_number = nowNumber;
+
+				if (nowNumber == "0") {
+					page_type = "rank";
+				} else if (nowNumber == "1") {
+					page_type = "newpic";
+				} else if (nowNumber == "2") {
+					page_type = "viewpic";
+				} else if (nowNumber == "3") {
+					page_type = "topuser";
+				} else if (nowNumber == "4") {
+					page_type = "pure";
+				} else if (nowNumber == "5") {
+					page_type = "model";
+				}
+
+				var offset = $("#swiper-start").offset();
+				$('html, body').animate({scrollTop: offset.top}, 150);
+
+				//cntGridItem();
+				//$('.swiper-container2 .swiper-wrapper').css("height",$('.swiper-container2 .swiper-slide-duplicate-active').css("height"));
+				//$('.swiper-container2 .swiper-wrapper').css("height",$('.swiper-container2 .swiper-slide-duplicate-active').height()+300);
+				//$('.swiper-container2 .swiper-wrapper').css('height', 'auto');
+
+				//$('.swiper-container2 .swiper-wrapper').css("height", 0);
+				//$('.swiper-container2 .swiper-wrapper').css("height", 'auto');
+				fixSwiperHeight();
+			});
+
+
+
+			/*swiper2.on('slideChangeTransitionEnd', function () {
+				//$('.swiper-container2 .swiper-wrapper').css("height", 0);
+				//$('.swiper-container2 .swiper-wrapper').css("height", 'auto');
+				fixSwiperHeight();
+				
+			});*/
+
+			function fixSwiperHeight() {
+				var v = $('.swiper-container2 .swiper-slide-active').outerHeight() + 0;
+				$('.swiper-container2 .swiper-wrapper').css("height", v);
+			}
+
+			$(window).load(function () {
+				//$('.swiper-container2 .swiper-wrapper').css("height",$('.swiper-container2 .swiper-slide-duplicate-active').css("height"));
+				//$('.swiper-container2 .swiper-wrapper').css("height",$('.swiper-container2 .swiper-slide-duplicate-active').height()+300);
+				//$('.swiper-container2 .swiper-wrapper').css('height', 'auto');
+
+				//$('.swiper-container2 .swiper-wrapper').css("height", 0);
+				//$('.swiper-container2 .swiper-wrapper').css("height", 'auto');
+				//fixSwiperHeight();
+			});
+
+			//fixSwiperHeight();
+
+			var to_remove = 0;
+			function list_app() {
+				var page = parseInt($("#page_" + section_number).val()) + 1;
+
+				log('page:' + page);
+//				
+//				if(page > 2){
+//					return false;
+//				}
+				//		alert(page);
+				//alert(page_type);
+				//return false;
+				log('data ing.');
+
+				log('data str');
+
+				/*swiper2.allowSlidePrev = swiper2.allowSlideNext = false;
+				swiper2.update();*/
+
+				/*$(document).ajaxStop(function() {
+					swiper2.allowSlidePrev = swiper2.allowSlideNext = true;
+					swiper2.update();
+				}); */
+				$.ajax({
+					url: "/app/pictorial/mainMoreNew2",
+					data: {'page': page, 'sel_type': page_type, 'not_user_key': $("#not_user_key").val(), 'tab_change': "no"},
+					dataType: 'json',
+					type: "get",
+					success: function (data) {
+						console.log(data);
+
+						var html = data.html;
+
+						//alert(html);
+						//$('#swiper_slide_section'+section_number).append(html);
+
+						/*$v = $('.swiper-container2 .swiper-slide-duplicate-active .grid'); 
+						$v.append(html).masonry( 'appended', html, true);
+						$v.masonry( 'reloadItems' );
+						$v.imagesLoaded().progress( function() {
+							$v.masonry();
+						});*/
+
+						$v = $('.swiper-container2 .swiper-slide-active .grid');
+
+						$v.append(html).masonry('appended', html, true);
+						$v.masonry('reloadItems');
+
+						$v.imagesLoaded().progress(function () {
+							log('add img cnt: ' + 1);
+							$v.masonry();
+							//$('.swiper-container2 .swiper-wrapper').css("height",$('.swiper-container2 .swiper-slide-duplicate-active').css("height"));
+
+							//$('.swiper-container2 .swiper-wrapper').css("height", 0);
+							//$('.swiper-container2 .swiper-wrapper').css("height", 'auto');
+							fixSwiperHeight();
+						});
+
+						var $grid_item = $v.find('.grid-item');
+
+						var tot = 20;
+						if ($grid_item.length > tot) {
+							var target = $grid_item.length - tot;
+							//$v.masonry('remove', $grid_item.filter(':visible').eq(to_remove)).masonry('layout');
+							to_remove++;
+						}
+
+
+						if (html == "") {
+							log('더 이상 데이터가 없습니다.');
+						} else {
+							$("#page_" + section_number).val(page);
+							//cntGridItem();
+						}
+						_temp = 1;
+
+					}, error: function (err) {
+						console.log(err);
+						//alert("다시 시도해주세요");
+						return false;
+					}, complete: function () {
+						log('data end');
+						/*swiper2.allowSlidePrev = swiper2.allowSlideNext = true;
+						swiper2.update();*/
+					}
+				})//ajax
+			}
+
+			function cntGridItem() {
+				$('.swiper-container2 .grid').each(function(i) {
+					var grid_item_cnt = $(this).find('.grid-item').length;
+					grid_item_cnt = grid_item_cnt - TOTAL_ON_LOAD + 1;
+					$("#page_" + i).val(grid_item_cnt);
+				});
+			}
+
+			var _temp = 1;
+			function getData() {
+				var dh = $(document).height();
+				var wh = $(window).height();
+				var wt = $(window).scrollTop();
+				/*if (_temp == 0) {
+					alert('로딩중 입니다.');
+					return;
+				}*/
+
+				//log(dh);
+				//log(wh + wt + 400);
+				if (dh <= (wh + wt + 400) && _temp == 1) {
+					_temp = 0;
+					list_app();
+				}
+			}
+
+			$(window).load(function() {
+			});
+
+			$(window).on({
+				'wheel': function (e) {
+					log('휠');
+					msg('휠');
+					//getData();
+					//unlockSwiper();
+				},
+				'touchmove': function (e) {
+					log('터치');
+					msg('터치');
+					//getData();
+					//unlockSwiper();
+				},
+				'scroll': function (e) {
+					log('스크롤');
+					msg('스크롤');
+					getData();
+					//unlockSwiper();
+				}
+			});
+
+			function msg(msg) {
+				if (DEBUG_MODE) {
+					var $msg = $('#msg');
+					$msg.show();
+					$msg.text(msg);
+
+					setTimeout(function () {
+						$msg.fadeOut(function () {
+							$msg.text('');
+						});
+					}, 500);
+				}
+			}
+
+			function msgHide(msg) {
+				if (true) {
+					var $msg = $('#msg');
+					$msg.show();
+					$msg.text(msg);
+
+					setTimeout(function () {
+						$msg.fadeOut(function () {
+							$msg.text('');
+						});
+					}, 500);
+				}
+			}
+		</script>
+	</section>
+</div>
+
+<div id="msg" style="">msg</div>
+<input type="hidden" name="not_user_key" id="not_user_key" value="<?=$not_user_key?>">
+<input type="hidden" name="st" id="st" value="<?=$st?>">
+<? require_once 'menu_btm.php' ?>
+
+<script>
+	//tab('.tab_1', '.tab_cont_1');
+</script>
+
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		/*
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		},*/
+		/*effect: 'coverflow',*/
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
+		},
+		spaceBetween: 30
+	});
+
+	function tab_tab1(clicked) {
+		var all_tab = $('.tab_1');
+
+		all_tab.addClass('b_btn_off');
+		$(clicked).removeClass('b_btn_off');
+	}
+
+	$(document).on('click', '.follow_main_btn', function () {
+		var bj_user_key = $(this).attr("data-bj-user-key");
+		var follow_type = $(this).attr("data-type");
+//	alert("bj_user_key : "+bj_user_key);
+//	alert("_UK : "+_UK);
+//	alert("follow_type : "+follow_type);
+//	return false;
+
+		if (bj_user_key == _UK) {
+			alert("자기자신을 팔로잉 할수는 없습니다.");
+			return false;
+		}
+
+
+
+		$.ajax({
+			url: "/app/pictorial/followIns",
+			data: {'bj_user_key': bj_user_key, 'follow_type': follow_type},
+			dataType: 'json',
+			type: "post",
+			success: function (data) {
+
+				console.log(data);
+				if (data.result < "-3") {
+					alert("잘못된 접근입니다.");
+					location.href = '/pictorial';
+					return false;
+				} else if (data.result == "-1") {
+					alert("다시 시도해주세요");
+					return false;
+				} else if (data.result == "-2") {
+					alert("팔로잉이 되어 있는 모델계정 입니다");
+					return false;
+				} else {
+					if (follow_type == "add") {
+						alert("팔로잉 처리 되었습니다.");
+						//alert($(".follow_list"+bj_user_key));
+						$(".follow_list"+bj_user_key).removeClass("b_btn_violet");
+						$(".follow_list"+bj_user_key).addClass("b_btn_silver");
+						$(".follow_list"+bj_user_key).attr("data-type", "del");
+						$(".follow_list"+bj_user_key).html("팔로잉");
+
+
+
+					} else {
+						alert("팔로잉 취소 처리 되었습니다.");
+						$(".follow_list"+bj_user_key).removeClass("b_btn_silver");
+						$(".follow_list"+bj_user_key).addClass("b_btn_violet");
+						$(".follow_list"+bj_user_key).attr("data-type", "add");
+						$(".follow_list"+bj_user_key).html("팔로우");
+
+
+					}
+				}
+
+			}, error: function (err) {
+				console.log(err);
+				alert("다시 시도해주세요");
+				return false;
+			}
+		})//ajax
+	});
+
+
+</script>
+
+
+<script src="/app/application/views/skin/mobile/rose/pictorial/index.js"></script>
+
+<script>
+	$(document).ready(function () {
+		setTimeout(function () {
+			$('.icon_movie').fadeIn();
+		}, 300);
+	})
+</script>
+
+<script>
+	$(document).ajaxStart(function() {
+		//console.log('ajaxStart');
+		lockSwiper();
+		msgHide('Loading...');
+	});
+	$(document).ajaxComplete(function() {
+		//console.log('ajaxComplete');
+		unlockSwiper();
+	});
+
+	function lockSwiper() {
+		swiper2.allowSlidePrev = swiper2.allowSlideNext = false;
+		swiper2.update();
+	}
+
+	function unlockSwiper() {
+		swiper2.allowSlidePrev = swiper2.allowSlideNext = true;
+		swiper2.update();
+	}
+</script>
