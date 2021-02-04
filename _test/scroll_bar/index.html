@@ -1,0 +1,31 @@
+<ul>
+	<li>부모 안써주면 전체 스크롤에 먹음</li>
+</ul>
+
+<style>
+	/*track*/
+	.wrap ::-webkit-scrollbar {width: 10px;background: #eee;}
+	
+	/*inner*/
+	.wrap ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 200px; }
+	
+	/* Up */
+	/*.wrap ::-webkit-scrollbar-button:vertical:decrement {background: #ddd; border-radius: 200px; height: 10px;}*/
+	
+	/* Down */
+	/*.wrap ::-webkit-scrollbar-button:vertical:increment {background: #ddd; border-radius: 200px; height: 10px;}*/
+	
+	/* Left */
+	/*.wrap ::-webkit-scrollbar-button:horizontal:decrement {background: #ddd; border-radius: 200px; height: 10px;}*/
+	
+	/* Right */
+	/*.wrap ::-webkit-scrollbar-button:horizontal:increment {background: #ddd; border-radius: 200px; height: 10px;}*/
+</style>
+
+<div class="wrap">
+	<div style="overflow: auto; height: 100px;">
+		<div style="height: 500px;">
+
+		</div>
+	</div>
+</div>
