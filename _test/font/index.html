@@ -1,0 +1,43 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;500&display=swap" rel="stylesheet">
+
+<section>
+	<ul>
+		<li>signika 큰 글씨에 좋다.</li>
+		<li>본문으로 쓰기엔 세로로 너무 길다. (큰 글씨는 상관 없음)</li>
+	</ul>
+	<div>
+		<style>
+			.f_signika * {
+				font-family: 'Signika', sans-serif;
+				font-weight: 100;
+			}
+		</style>
+		<div class="f_signika"><? require 'text.html' ?></div>
+	</div>
+	<div>
+		<style>
+			.f_signika_b * {
+				font-family: 'Signika', sans-serif;
+				font-weight: 500;
+			}
+		</style>
+		<div class="f_signika_b"><? require 'text.html' ?></div>
+	</div>
+	<div>
+		<style>
+			.f_big * {
+				font-size: 30px;
+			}
+		</style>
+		<div class="f_signika f_big"><? require 'text.html' ?></div>
+	</div>
+	<div>
+		<style>
+			.f_big * {
+				font-size: 30px;
+			}
+		</style>
+		<div class="f_signika_b f_big"><? require 'text.html' ?></div>
+	</div>
+</section>
