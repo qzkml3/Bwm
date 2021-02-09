@@ -50,3 +50,5 @@ input {
 .b-img-cover img {max-height: 100%; max-width: 100%;
 	position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto;
 }
+
+.b-cut-str { white-space: nowrap; text-overflow: ellipsis; display: block; overflow: hidden;}
