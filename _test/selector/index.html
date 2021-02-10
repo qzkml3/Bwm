@@ -1,10 +1,16 @@
 <style>
 	/*a-로 시작*/
 	/*[class|=a] {background: #ccc;}*/
+	
 	/*a로 시작*/
 	/*[class^=a] {background: #ccc;}*/
+	
 	/*문자포함 단어 아님 b-btn을 찾으면 tab-btn도 찾는다.*/
-	[class*=a_] {background: #ccc;} 
+	/*[class*=a_] {background: #ccc;}*/
+	
+	/*완전 단어지 부분 단어가 아니다 . 과 모가 다른지 모르겠다.*/
+	/*[class~=a_b_c] {background: #ccc;}*/
+	
 </style>
 
 <ul>
@@ -16,4 +22,14 @@
 <div>
 	<span class="a-b a_b_c a-b-c">aa</span>
 	<span class="a_b_c a-b-c">aa</span>
+	<span class="-aaa">aa</span>
 </div>
+
+
+
+
+
+
+<span class="a_b_c a_b_c a_b_c a_b_c a_b_c a_b_c a_b_c a_b_c">aa</span>
+
+<span class="a-b-c a-b-c a-b-c a-b-c a-b-c a-b-c a-b-c a-b-c">aa</span>
