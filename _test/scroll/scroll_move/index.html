@@ -3,7 +3,7 @@
 	.item {height: 500px; border: solid  5px black;}
 </style>
 <section>
-	<h1>scrollTop()</h1>
+	<h1>scrollTop();</h1>
 	<div class="list list_1">
 		<div class="item">
 
@@ -11,12 +11,12 @@
 	</div>
 	<script>
 		$list = $('.list_1');
-		scroll_to = $list.children().outerHeight(true);
+		scroll_to = $list.prop('scrollHeight');
 		$list.scrollTop(scroll_to);
 	</script>
 </section>
 <section>
-	<h1>animate({scrollTop: i})</h1>
+	<h1>animate({scrollTop: i});</h1>
 	<div class="list list_2">
 		<div class="item">
 
