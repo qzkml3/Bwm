@@ -25,9 +25,13 @@ input {
 
 .b-btn > i, .b-btn > img {margin-right: 5px;}
 
-.b-rad-round {border-radius: 200px !important;}
+
 .b-rad {border-radius: 4px !important;}
-.b-rad-5px {border-radius: 5px !important;}
+.b-rad-round {border-radius: 1000px !important;}
+.b-rad-2px {border-radius: 2px !important;}
+.b-rad-4px {border-radius: 4px !important;}
+.b-rad-6px {border-radius: 6px !important;}
+.b-rad-8px {border-radius: 8px !important;}
 .b-rad-10px {border-radius: 10px !important;}
 
 .b-mg-v-c > * { margin-top: 40px !important; margin-bottom: 40px !important; }
@@ -44,11 +48,14 @@ input {
 
 .b-bg-silver {background: #eeeeee !important;}
 
-.b-img-cover {width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; background: #eee;
-	position: relative;
+.b-img-contain {
+	width: 1em; height: 1em; display: inline-flex; justify-content: center; align-items: center; background: #eee;
+	position: relative; vertical-align: middle;
 }
-.b-img-cover img {max-height: 100%; max-width: 100%;
+.b-img-contain img {max-height: 100%; max-width: 100%;
 	position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto;
 }
 
 .b-cut-str { white-space: nowrap; text-overflow: ellipsis; display: block; overflow: hidden;}
+
+.b-hide-pos {position: absolute; left: -9999999px; top: -9999999px; line-height: 0; width: 0; height: 0; overflow: hidden;}
