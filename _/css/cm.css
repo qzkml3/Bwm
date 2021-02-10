@@ -58,4 +58,10 @@ input {
 
 .b-cut-str { white-space: nowrap; text-overflow: ellipsis; display: block; overflow: hidden;}
 
-.b-hide-pos {position: absolute; left: -9999999px; top: -9999999px; line-height: 0; width: 0; height: 0; overflow: hidden;}
+.b-hide-abs {position: absolute; left: -9999999px; top: -9999999px; line-height: 0; width: 0; height: 0; overflow: hidden;}
+
+.b-svg {width: 1em; height: 1em; background: #ddd;}
+
+.b-svg-blur-10 {filter:url(#b-svg-blur-10);}
+.b-svg-blur-20 {filter:url(#b-svg-blur-20);}
+.b-svg-blur-30 {filter:url(#b-svg-blur-30);}

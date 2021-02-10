@@ -1,0 +1,72 @@
+<style>
+	.wrap {width: 100px; height: 100px; border: solid 1px #ccc; position: relative; display: inline-block;}
+	
+	.item {width: 10px; height: 10px; background: #aaa;}
+	
+	[class*=b-abs] {position: absolute;}
+	.b-abs-center {left: 50%; transform: translateX(-50%);}
+	.b-abs-middle {top: 50%; transform: translateY(-50%);}
+	.b-abs-center-middle, .b-abs-middle-center {left: 50%; top: 50%; transform: translate(-50%, -50%);}
+	
+	.b-abs-t {top: 0 !important}
+	.b-abs-r {right: 0 !important}
+	.b-abs-b {bottom: 0 !important}
+	.b-abs-l {left: 0 !important}
+	
+	.b-abs-tr {top: 0 !important; right: 0 !important;}
+	.b-abs-tl {top: 0 !important; left: 0 !important;}
+	.b-abs-br {bottom: 0 !important; right: 0 !important;}
+	.b-abs-bl {bottom: 0 !important; left: 0 !important;}
+</style>
+<section>
+	<section>
+		<h1>center</h1>
+		<div class="wrap">
+			<div class="item b-abs-center"></div>
+		</div>
+		<div class="wrap">
+			<div class="item b-abs-middle"></div>
+		</div>
+		<div class="wrap">
+			<div class="item b-abs-center-middle"></div>
+		</div>
+	</section>
+	<section>
+		<h1>trbl</h1>
+		<span>t</span>
+		<div class="wrap">
+			<div class="item b-abs-t"></div>
+		</div>
+		<span>r</span>
+		<div class="wrap">
+			<div class="item b-abs-r"></div>
+		</div>
+		<span>b</span>
+		<div class="wrap">
+			<div class="item b-abs-b"></div>
+		</div>
+		<span>l</span>
+		<div class="wrap">
+			<div class="item b-abs-l"></div>
+		</div>
+	</section>
+	<section>
+		<h1>trbl2</h1>
+		<span>tr</span>
+		<div class="wrap">
+			<div class="item b-abs-tr"></div>
+		</div>
+		<span>tl</span>
+		<div class="wrap">
+			<div class="item b-abs-tl"></div>
+		</div>
+		<span>br</span>
+		<div class="wrap">
+			<div class="item b-abs-br"></div>
+		</div>
+		<span>bl</span>
+		<div class="wrap">
+			<div class="item b-abs-bl"></div>
+		</div>
+	</section>
+</section>
