@@ -1,0 +1,32 @@
+<style>
+	.list {width: 100px; height: 200px; border: solid 1px #aaa; overflow: auto;}
+	.item {height: 500px; border: solid  5px black;}
+</style>
+<section>
+	<h1>scrollTop()</h1>
+	<div class="list list_1">
+		<div class="item">
+
+		</div>
+	</div>
+	<script>
+		$list = $('.list_1');
+		scroll_to = $list.children().outerHeight(true);
+		$list.scrollTop(scroll_to);
+	</script>
+</section>
+<section>
+	<h1>animate({scrollTop: i})</h1>
+	<div class="list list_2">
+		<div class="item">
+
+		</div>
+	</div>
+	<script>
+		$list = $('.list_2');
+		scroll_to = $list.children().outerHeight(true); 
+		$list.animate({
+			scrollTop: b-pos-abs,
+		}, 1000);
+	</script>
+</section>
