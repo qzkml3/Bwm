@@ -1,0 +1,19 @@
+<style>
+	/*a-로 시작*/
+	/*[class|=a] {background: #ccc;}*/
+	/*a로 시작*/
+	/*[class^=a] {background: #ccc;}*/
+	/*문자포함 단어 아님 b-btn을 찾으면 tab-btn도 찾는다.*/
+	[class*=a_] {background: #ccc;} 
+</style>
+
+<ul>
+	<li>
+		주석 참조
+	</li>
+</ul>
+
+<div>
+	<span class="a-b a_b_c a-b-c">aa</span>
+	<span class="a_b_c a-b-c">aa</span>
+</div>
