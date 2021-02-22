@@ -85,8 +85,9 @@ input {
 .b-abs-bl {bottom: 0; left: 0;}
 
 .b-fx {display: flex;}
-.b-fx-sb {justify-content: space-between;}
-.b-fx-aic {align-items: center;}
-.b-fx-jcc {justify-content: center;}
 .b-fx-column {flex-direction: column;}
 .b-fx-wrap {flex-wrap: wrap;}
+
+.b-ai-c {align-items: center;}
+.b-jc-c {justify-content: center;}
+.b-jc-c {justify-content: center;}
