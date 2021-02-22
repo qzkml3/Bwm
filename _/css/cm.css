@@ -79,7 +79,14 @@ input {
 .b-abs-b {bottom: 0 !important}
 .b-abs-l {left: 0 !important}
 
-.b-abs-tr {top: 0 !important; right: 0 !important;}
-.b-abs-tl {top: 0 !important; left: 0 !important;}
-.b-abs-br {bottom: 0 !important; right: 0 !important;}
-.b-abs-bl {bottom: 0 !important; left: 0 !important;}
+.b-abs-tr {top: 0; right: 0;}
+.b-abs-tl {top: 0; left: 0;}
+.b-abs-br {bottom: 0; right: 0;}
+.b-abs-bl {bottom: 0; left: 0;}
+
+.b-fx {display: flex;}
+.b-fx-sb {justify-content: space-between;}
+.b-fx-aic {align-items: center;}
+.b-fx-jcc {justify-content: center;}
+.b-fx-column {flex-direction: column;}
+.b-fx-wrap {flex-wrap: wrap;}
