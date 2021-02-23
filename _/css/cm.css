@@ -70,9 +70,16 @@ input {
 .b-rel {position: relative !important;}
 .b-fixed {position: fixed !important;}
 
-.b-abs-c, .b-abs-center {left: 50% !important; transform: translateX(-50%) !important;}
-.b-abs-m, .b-abs-middle {top: 50% !important; transform: translateY(-50%) !important;}
-.b-abs-c-m, .b-abs-m-c, .b-abs-center-middle, .b-pos-middle-center {left: 50%; top: 50%; transform: translate(-50%, -50%) !important;}
+.b-trans-c {left: 50% !important; -webkit-transform: translateX(-50%) !important; transform: translateX(-50%) !important;}
+.b-trans-m {top: 50% !important; -webkit-transform: translateY(-50%) !important; transform: translateY(-50%) !important;}
+.b-trans-cm {
+	left: 50% !important; top: 50% !important; 
+	-webkit-transform: translate(-50%, -50%) !important; transform: translate(-50%, -50%) !important;
+}
+
+.b-abs-c {left: 0; right: 0; margin-left: auto; margin-right: auto;}
+.b-abs-m {top: 0; bottom: 0; margin-top: auto; margin-bottom: auto;}
+.b-abs-cm {top: 0; right: 0; bottom: 0; left: 0; margin: auto;}
 
 .b-abs-t {top: 0 !important}
 .b-abs-r {right: 0 !important}
