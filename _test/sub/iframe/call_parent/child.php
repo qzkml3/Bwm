@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$b->setTitle('Iframe approach to parent.');
-$b->setLayout('');
+$B->setTitle('Iframe approach to parent.');
+$B->setLayout('');
 
-require_once $b->getPage();
+require_once $B->getPage();
 ?>
