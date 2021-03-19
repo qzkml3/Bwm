@@ -1,9 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$b->setTitle('랜덤');
-$b->setLayout('sub');
-$b->setTag('#랜덤 #random');
+$B->setTitle('랜덤');
+$B->setLayout('sub');
+$B->setTag('#랜덤 #random');
 
-require_once $b->getPage();
+require_once $B->getPage();
 ?>
