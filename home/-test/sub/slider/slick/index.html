@@ -1,0 +1,52 @@
+<ul>
+	<li>swiper의 freemode가 안되자나...</li>
+</ul>
+<style>
+	/*.slick .slick-list {overflow: hidden;}
+	.slick .slick-slide {margin-right: 30px; float: left;}*/
+	
+	.slick .slick-list {overflow: hidden;}
+	.slick .slick-track {display: flex;}
+	.slick .slick-slide {margin-right: 30px;}
+</style>
+
+<!--<link href="/_/js/slider/slick_1.8.1/slick.css" rel="stylesheet">-->
+<script src="/-/js/slider/slick_1.8.1/slick.min.js"></script>
+
+
+<ul class="slick">
+	<?php for ($i = 0; $i < 10; $i++) {
+		$r = rand(1, 10)
+		?>
+		<li>가나다
+			<?php for ($i2 = 0; $i2 < $r; $i2++) { ?>
+				<?=$i+1?>
+			<?php } ?>
+		</li>
+	<?php } ?>
+</ul>
+
+<div class="slick">
+	<?php for ($i = 0; $i < 10; $i++) {
+		$r = rand(1, 10)
+		?>
+	    <div>가나다
+		    <?php for ($i2 = 0; $i2 < $r; $i2++) { ?>
+		        <?=$i+1?>
+		    <?php } ?>
+	    </div>
+	<?php } ?>
+</div>
+
+<script>
+	$('.slick').slick({
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		variableWidth: true,
+		prevArrow: false,
+		nextArrow: false,
+		/*dots: true,*/
+		/*centerMode: true,*/
+	});
+</script>

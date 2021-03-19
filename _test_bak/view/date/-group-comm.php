@@ -1,3 +1,3 @@
 <?php
-$B->addTag('Date, 날짜, Calendar, 달력');
+$site->addTag('Date, 날짜, Calendar, 달력');
 ?>

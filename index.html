@@ -1,10 +1,9 @@
 <?php
-$a = 'aa';
+echo 'Folder List';
+$list = $file->getFolderList();
+$file->show($list);
 
-$A = 'bb';
-
-echo $a;
-echo $A;
+echo 'Class List';
+$list = $file->getRcsFileList('-bwm/class');
+$file->show($list);
 ?>
-
-ccc

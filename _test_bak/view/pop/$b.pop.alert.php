@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$B->setLayout('sub');
-$B->setTitle('#Alert #알럿창 $b.pop.alert');
+$site->setLayout('sub');
+$site->setTitle('#Alert #알럿창 $b.pop.alert');
 
-require_once $B->getPage();
+require_once $site->getPage();
 ?>

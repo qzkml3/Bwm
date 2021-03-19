@@ -1,3 +1,3 @@
 <?php
-$B->addTag('Ajax, 아작스');
+$site->addTag('Ajax, 아작스');
 ?>

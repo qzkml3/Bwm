@@ -1,3 +1,3 @@
 <?php
-$B->addTag('Box, 박스');
+$site->addTag('Box, 박스');
 ?>

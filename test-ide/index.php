@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="/css/abc.css">
-    <script src="/_/js/abc.js"></script>
+    <script src="/-/js/abc.js"></script>
 </head>
 <body>
     <div>ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㄴㅇㄻㄴㅇㄹㄴㅇㄹㄴㄹㅁㅁ

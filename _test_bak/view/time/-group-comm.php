@@ -1,3 +1,3 @@
 <?
-$B->addTag('time, 시간')
+$site->addTag('time, 시간')
 ?>

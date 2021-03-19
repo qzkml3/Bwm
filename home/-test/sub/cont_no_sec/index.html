@@ -1,0 +1,38 @@
+<style>
+	body {margin: 0;}
+	
+	* {vertical-align: middle;}
+</style>
+<style>
+	/*pc*/
+	.cont {overflow: hidden; min-width: 1000px;}
+	
+	.cont > img {
+		display: block;
+		position: relative; left: 50%;
+		width: 1900px; margin-left: -950px;
+	}
+	
+	/*mo*/
+	@media (max-width: 1000px) {
+		.cont {overflow: hidden; min-width: auto;}
+		.cont > img {
+			display: block;
+			position: static; left: 50%;
+			width: 100%; margin-left: 0;
+		}
+	}
+</style>
+
+<div class="cont">
+	<img src="/-/img/ex/img_h.jpg?<?=$res_ver?>" alt="" usemap="#map_1">
+	<map name="map_1">
+		<area coords=",,," href="" alt="">
+	</map>
+</div>
+<div class="cont"><img src="/-/img/ex/img_1000.jpg?<?=$res_ver?>" alt=""></div>
+<div class="cont"><img src="/-/img/ex/img_2000.jpg" alt=""></div>
+
+<ul>
+	<li>익스에서는 img d-b 을 주어야 제대로 움직인다.</li>
+</ul>

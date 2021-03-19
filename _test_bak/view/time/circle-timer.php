@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$B->setLayout('sub');
-$B->setTitle('circle-timer');
+$site->setLayout('sub');
+$site->setTitle('circle-timer');
 
-require_once $B->getPage();
+require_once $site->getPage();
 ?>

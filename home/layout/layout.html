@@ -1,0 +1,56 @@
+<?php if (file_exists('-group-comm.php')) {
+    require_once '-group-comm.php';
+} ?>
+<!doctype html>
+<html lang="ko" class="<?=$site->getLayout()?>">
+<head>
+	<title><?=$site->getTitle();?></title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link href="/b-js/jquery/jquery-ui-custom.min.css" rel="stylesheet">
+	<?php if ($site->getLayout() != '') { ?>
+		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/bwm.css?<?=time()?>" rel="stylesheet">
+	<?php } ?>
+	<link href="/-/css/cm.css?<?=time()?>" rel="stylesheet">
+	
+	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-3.5.1.min.js"></script>
+	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-ui-custom.min.js"></script>
+	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/img/imageMapResizer/imageMapResizer.min.js"></script>
+
+	<!--bwm-->
+	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/bwm.js?<?=time()?>"></script>
+	<!--private site-->
+	<link href="<?=$B->site_conf->getSiteRootUrl()?>/css/<?=$B->site_conf->getSiteId()?>.css?<?=time()?>" rel="stylesheet">
+	<script src="<?=$B->site_conf->getSiteRootUrl()?>/js/<?=$B->site_conf->getSiteId()?>.js?<?=time()?>"></script>
+</head>
+<body class="<?=$site->getLayout()?> b_init">
+<?php if ($site->getLayout() != '') { ?>
+<?php require_once 'gnb.html' ?>
+<section class="b_page">
+
+    <?php if ($site->getPageTitle()) { ?>
+		<h1 class="b_tit"><?=$site->getPageTitle()?></h1>
+    <?php } ?>
+    <?php } ?>
+    <?php
+
+    require_once $site->getView();
+
+    $site->postProc();
+    ?>
+
+    <?php if (sizeof($site->getTag(''))) { ?>
+		<div class="b_tag_w b_btn_w b_btn_w_s">
+            <?=$site->getTag('');?>
+		</div>
+    <?php } ?>
+
+    <?php if ($site->getLayout() != '') { ?>
+</section>
+	<!--/b_page-->
+<?php } ?>
+</body>
+</html>
