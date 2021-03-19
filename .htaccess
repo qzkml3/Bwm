@@ -2,6 +2,6 @@ RewriteEngine On
 
 # RedirectMatch 301 ^(.*)\.html$ $1.php
 # RewriteRule ^(.*)\.html$ $1.php
-# RewriteRule ^(.+)\.html$ $1.php
+RewriteRule ^(.+)\.html$ $1.php
 
 ErrorDocument 404 /404.php:w:
