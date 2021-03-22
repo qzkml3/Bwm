@@ -1,9 +1,9 @@
 <?php
 echo 'Folder List';
-$list = $file->getFolderList();
-$file->show($list);
+$list = $B->file->getFolderList();
+$B->file->show($list);
 
 echo 'Class List';
-$list = $file->getRcsFileList('-bwm/class');
-$file->show($list);
+$list = $B->file->getRcsFileList('-bwm/class');
+$B->file->show($list);
 ?>

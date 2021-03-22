@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$site->setLayout('sub');
-$site->setTitle('#border-radius #b_bdrs');
+$B->setLayout('sub');
+$B->setTitle('#border-radius #b_bdrs');
 
-require_once $site->getPage();
+require_once $B->getPage();
 ?>

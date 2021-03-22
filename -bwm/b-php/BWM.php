@@ -4,15 +4,16 @@ namespace Bwm;
 
 use Bwm\Conf\SiteConf;
 use Bwm\File\File;
+use Bwm\Page\Page;
 
 class Bwm {
-	public $site_conf;
 	public $file;
+	public $page;
+	public $site_conf;
 
 	private $layout;
 	private $layout_file;
 	private $title;
-	private $page;
 	private $view;
 	
 	private $tag;
@@ -34,7 +35,9 @@ class Bwm {
 	}
 
 	private function loadBwm() {
-
+		$this->site_conf = new SiteConf();
+		$this->page = new Page();
+		$this->file = new File();
 	}
 
 	# layout
@@ -103,7 +106,13 @@ class Bwm {
 		//$v = iconv('EUC-KR', 'UTF-8', $v);
 		$v = urldecode($v);
 		//echo $v; exit;
-		return $_SERVER['DOCUMENT_ROOT'] . $v;
+        $v = $_SERVER['DOCUMENT_ROOT'] . $v;
+        
+        if (!file_exists($v)) {
+            throw new \Exception(' [$B : view file not exists]' . $v);
+        }
+        
+		return $v;
 	}
 	
 	function addTag($tags) {

@@ -1,9 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$site->setTitle('스크롤 바');
-$site->setLayout('sub');
-$site->setTag('');
+$B->setTitle('스크롤 바');
+$B->setLayout('sub');
+$B->setTag('');
 
-require_once $site->getPage();
+require_once $B->getPage();
 ?>

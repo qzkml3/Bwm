@@ -3,6 +3,15 @@
 namespace Bwm\Page;
 
 class Page {
+	private $title;
+	
+	function setTitle($title) {
+		$this->title = $title;
+	}
+
+	function getTitle($title) {
+		return $this->title;
+	}
 
     /**
      * @property getFullDir
