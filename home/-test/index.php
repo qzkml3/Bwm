@@ -1,3 +1,3 @@
 <script>
-	location.replace('sitemap.php');
+	location.replace('test.php');
 </script>
