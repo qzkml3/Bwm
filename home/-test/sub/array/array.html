@@ -1,0 +1,20 @@
+<?php
+/*테스트 데이터*/
+$star_pict = [
+	['bp_photo_url' => 'https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'a' => 'a' ],
+	['bp_photo_url' => 'https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'b' => 'b' ],
+	['bp_photo_url' => 'https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'b' => 'b' ],
+];
+
+foreach($star_pict as $k)  {
+	$k = (object)$k;
+	echo '<br>' . $k->bp_photo_url;
+}
+
+echo '<hr>';
+
+foreach($star_pict as $k => $v)  {
+
+	$v = (object)$v;
+	echo '<br>' . $v->bp_photo_url;
+}
