@@ -1,0 +1,35 @@
+<span class="e">event</span>
+<script>
+	for (var i = 0; i < 10; i++) {
+		$('.e').on('click', function () {
+			console.log(1);
+		});
+	}
+	
+	$('.e').on('click', function() {
+		console.log(2);
+	});
+	
+	$('.e').on('mouseenter', function() {
+		console.log('enter');
+	});
+	
+	//$('.e').off('click');
+</script>
+
+<ul>
+	<li>click이벤트 여러개를 걸고 off를 하면 모든 click 이벤트 들이 다 제거 된다.</li>
+</ul>
+
+<style>
+	.e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+    .e {background: #ccc;}
+</style>
