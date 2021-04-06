@@ -1,0 +1,58 @@
+<style>
+	ul {padding: 0;}
+	li {list-style: none;}
+</style>
+
+<style>
+	.swiper > * {display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+	.swiper > * > * {flex-shrink: 0;
+		border: solid 1px #ddd; outline-offset: -3px;
+		box-sizing: border-box;
+		padding: 10px;
+	}
+</style>
+
+<h2>div</h2>
+<div class="all-list">
+	<div>1 asfd</div>
+	<div>2 asfd</div>
+	<div>3 asfd</div>
+	<div>4 asfd</div>
+	<div>5 asfd</div>
+</div>
+
+<h2>ul</h2>
+<ul class="all-list">
+	<li>1 asfd</li>
+	<li>2 asfd</li>
+	<li>3 asfd</li>
+	<li>4 asfd</li>
+	<li>5 asfd</li>
+</ul>
+
+
+<!--<script src="/-/js/slider/swiper_6.4.7/swiper-bundle.min.js"></script>-->
+<script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
+
+<script>
+	b_preSwiper('.all-list');
+
+	var swiper = new Swiper('.all-list', {
+		spaceBetween: 10,
+		slidesPerColumn: 2,
+		slidesPerView: 2,
+	});
+	
+	function b_preSwiper(swiper) {
+		var $swiper = $(swiper);
+		$swiper.each(function () {
+			var $swiper = $(this);
+			$swiper.addClass('swiper');
+			$swiper.children().addClass('swiper-slide');
+			$swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
+		})
+	}
+</script>
