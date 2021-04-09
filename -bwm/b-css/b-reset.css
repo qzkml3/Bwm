@@ -1,0 +1,21 @@
+html {font-size: 6.25%;}
+body {font-size: 1600%;}
+
+* {letter-spacing: -0.05em;}
+
+html {font-size: 6.25%;}
+
+body {font-size: 1600%;}
+
+a {color: inherit;}
+
+dt {margin-bottom: .5em;}
+
+dt label {color: #222;}
+
+label {display: inline-flex; align-items: center; cursor: pointer;
+    color: #888;
+    margin-right: 2em; min-width: 4em;
+}
+label > * {}
+label > *:first-child {margin-right: 5px;}

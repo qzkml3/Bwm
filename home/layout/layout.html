@@ -10,12 +10,12 @@
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link href="/-/css/reset.css?<?=time()?>" rel="stylesheet">
+	<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-reset.css?<?=time()?>" rel="stylesheet">
 	
 	<?php if ($B->getLayout() != '') { ?>
-		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/bwm.css?<?=time()?>" rel="stylesheet">
+		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-layout.min.css?<?=time()?>" rel="stylesheet">
+		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-layout.scss?<?=time()?>" rel="stylesheet">
 	<?php } ?>
-	<link href="/-/css/layout.css?<?=time()?>" rel="stylesheet">
 
 	<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-ui-custom.min.css" rel="stylesheet">
 	
@@ -35,7 +35,7 @@
 <section class="b_page">
 
     <?php if ($B->getPageTitle()) { ?>
-		<h1 class="b_tit"><?=$B->getPageTitle()?></h1>
+		<h1 class="b-tit"><?=$B->getPageTitle()?></h1>
     <?php } ?>
     <?php } ?>
     <?php
