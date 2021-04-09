@@ -1,0 +1,82 @@
+<div class="p">
+	<div class="c"></div>
+</div>
+
+<section>
+	<h2>single pop</h2>
+	<button id="btn-b-pop-single1" type="button">btn-b-pop-single1</button>
+	<button id="btn-b-pop-single2" type="button">btn-b-pop-single2</button>
+
+	<div id="b-pop-single1" class="b-pop b-pop-single b-pop-close">
+		<div class="b-pop-page">
+			가나다
+			<div class="b-pop-btn-wrap">
+				<button class="b-pop-close" type="button">닫기</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="b-pop-single2" class="b-pop b-pop-single b-pop-close">
+		<div class="b-pop-page">
+			가나다
+			<div class="b-pop-btn-wrap">
+				<button class="b-pop-close" type="button">닫기</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<h2>multy pop</h2>
+	<button id="btn-b-pop-multy1" type="button">btn-b-pop-multy1</button>
+	<button id="btn-b-pop-multy2" type="button">btn-b-pop-multy2</button>
+
+	<div id="b-pop-multy1" class="b-pop" style="left: 100px; top: 100px;">
+		<div class="b-pop-page">
+			가나다
+			<div class="b-pop-btn-wrap">
+				<button class="b-pop-close" type="button">닫기</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="b-pop-multy2" class="b-pop" style="left: 500px; top: 100px;">
+		<div class="b-pop-page">
+			가나다
+			<div class="b-pop-btn-wrap">
+				<button class="b-pop-close" type="button">닫기</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$('#btn-b-pop-single1').on('click', function() {
+		b_openPop('#b-pop-single1');
+	});
+	
+	$('#btn-b-pop-single2').on('click', function() {
+		b_openPop('#b-pop-single2');
+	});
+	
+	$('#btn-b-pop-multy1').on('click', function() {
+		b_openPop('#b-pop-multy1');
+	});
+
+	$('#btn-b-pop-multy2').on('click', function() {
+		b_openPop('#b-pop-multy2');
+	});
+
+	$('.b-pop').on('click', function(e) {
+		var $click = $(e.target);
+		console.log($click);
+		if ($click.hasClass('b-pop-close')) {
+			$(this).fadeOut('fast');
+		}
+	});
+	
+	function b_openPop(pop) {
+		$pop = $(pop);
+		$pop.fadeIn(100);
+	}
+</script>

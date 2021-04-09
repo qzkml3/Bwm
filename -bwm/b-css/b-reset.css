@@ -9,6 +9,8 @@ body {font-size: 1600%;}
 
 a {color: inherit;}
 
+button {margin: 5px 2px; border: solid 1px #aaa; border-radius: 4px;}
+
 dt {margin-bottom: .5em;}
 
 dt label {color: #222;}

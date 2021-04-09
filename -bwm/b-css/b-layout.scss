@@ -1,3 +1,7 @@
+a:hover, button:hover, input:hover, textarea:hover {box-shadow: 0px 0px 3px 3px #ccc;}
+a:focus, button:focus, input:focus, textarea:focus {box-shadow: 0px 0px 3px 3px skyblue;}
+
+
 html {overflow-y: scroll;}
 
 body {color: #555;}
@@ -494,7 +498,6 @@ script.on {display: block; white-space: pre;}
 .b_datepicker {text-align: center; width: 6em;}
 
 
-*:focus {box-shadow: 0px 0px 3px 3px skyblue;}
 
 input {
   height: 30px; box-sizing: border-box;
