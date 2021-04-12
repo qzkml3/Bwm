@@ -1,0 +1,80 @@
+<style>
+    .b-blur-wrap {position: relative; display: inline-flex; overflow: hidden;}
+    .b-blur-wrap::after {content: ''; position: absolute; left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0, .2);
+    }
+    
+    .b-blur {filter: blur(10px); width: 100%;}
+
+    img {width: 100%;}
+</style>
+
+<section>
+	<div>
+		<h2>가로 20px 이미지</h2>
+		<div>
+			<div class="b-blur-wrap" style="width: 400px;">
+				<img class="b-blur" src="img/20.jpg" alt="">
+			</div>
+			어둡고 블러 20px
+		</div>
+		<div>
+			<div class="b-blur-wrap" style="width: 400px;">
+				<img class="b-blur`" src="img/20.jpg" alt="">
+			</div>
+			어둡고 블러 20px
+		</div>
+	</div>
+	<div>
+		<h2>가로 15px 이미지</h2>
+		<div>
+			<div class="b-blur-wrap" style="width: 400px;">
+				<img class="b-blur" src="img/15.jpg" alt="">
+			</div>
+			어둡고 블러 15px
+		</div>
+		<div>
+			<div class="b-blur-wrap" style="width: 400px;">
+				<img class="b-blur`" src="img/15.jpg" alt="">
+			</div>
+			어둡고 블러 15px
+		</div>
+	</div>
+	<div>
+		<h2>가로 10px 이미지</h2>
+		<div>
+			<div class="b-blur-wrap" style="width: 400px;">
+				<img class="b-blur" src="img/10.jpg" alt="">
+			</div>
+			어둡고 블러 10px
+		</div>
+		<div>
+			<div class="b-blur-wrap" style="width: 400px;">
+				<img class="b-blur1" src="img/10.jpg" alt="">
+			</div>
+			어둡고 블러 10px
+		</div>
+	</div>
+</section>
+<section>
+	<h2>작게 10px</h2>
+	<div>
+		<div class="b-blur-wrap" style="width: 100px;">
+			<img class="b-blur" src="img/10.jpg" alt="">
+		</div>
+		어둡고 블러
+	</div>
+	<div>
+		<div class="b-blur-wrap" style="width: 100px;">
+			<img class="b-blur`" src="img/10.jpg" alt="">
+		</div>
+		어둡게
+	</div>
+	<div>
+		<div class="b-blur-wrap`" style="width: 100px; display: inline-flex;">
+			<img class="b-blur`" src="img/10.jpg" alt="">
+		</div>
+		원본
+	</div>
+</section>
