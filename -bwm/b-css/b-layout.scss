@@ -604,3 +604,9 @@ h2 {border: solid 1px #ddd; border-left: 0; border-right: 0; padding: 5px;
 }
 
 h2 span {font-size: 12rem; vertical-align: baseline;}
+
+.view-github {display: flex;
+  justify-content: flex-end;}
+
+.view-github a {background: #ccc; padding: 0 1em; color: white;
+  margin: 20px 0;}
