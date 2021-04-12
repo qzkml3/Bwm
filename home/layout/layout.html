@@ -33,6 +33,13 @@
 <?php if ($B->getLayout() != '') { ?>
 <?php require_once 'gnb.html' ?>
 <section class="b_page">
+	<?php
+	$v = str_replace($_SERVER['SERVER_NAME']
+		, 'https://github.com/qzkml3/BWM/tree/master'
+		, $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
+	);
+	?>
+	<a class="github_view" href="<?= $v ?>" target="_blank">view source this page in GiuHub</a>
 
     <?php if ($B->getPageTitle()) { ?>
 		<h1 class="b-tit"><?=$B->getPageTitle()?></h1>
