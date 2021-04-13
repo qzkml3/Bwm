@@ -548,19 +548,11 @@ input {
 
 .b-bg-silver {background: #eeeeee !important;}
 
-.b-img-contain {
-  width: 1em; height: 1em; display: inline-flex; justify-content: center; align-items: center; background: #eee;
-  position: relative; vertical-align: middle;
-}
-.b-img-contain img {max-height: 100%; max-width: 100%;
-  position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto;
-}
-
 .b-cut-str { white-space: nowrap; text-overflow: ellipsis; display: block; overflow: hidden;}
 
 .b-hide-abs {position: absolute; left: -9999999px; top: -9999999px; line-height: 0; width: 0; height: 0; overflow: hidden;}
 
-.b-svg {width: 1em; height: 1em; background: #ddd;}
+.b-svg {width: 100rem; height: 100rem; background: #ddd;}
 
 .b-svg-blur-10 {filter:url(#b-svg-blur-10);}
 .b-svg-blur-20 {filter:url(#b-svg-blur-20);}
