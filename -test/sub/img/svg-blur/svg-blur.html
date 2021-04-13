@@ -1,41 +1,43 @@
+<!--블러 정의-->
+<svg class="b-hide-abs">
+	<defs>
+		<filter id="b-svg-blur-10">
+			<feGaussianBlur stdDeviation="10"></feGaussianBlur>
+		</filter>
+		<filter id="b-svg-blur-20">
+			<feGaussianBlur stdDeviation="20"></feGaussianBlur>
+		</filter>
+		<filter id="b-svg-blur-30">
+			<feGaussianBlur stdDeviation="30"></feGaussianBlur>
+		</filter>
+	</defs>
+</svg>
 <section class="b-mg-v-c-15px">
-	<ul>
+	<ul><li>IE에서 블러가 안먹기 때문에 svg를 사용한다.</li>
 		<li>image태그에 style로 width를 주면 IE에서 안먹는다.</li>
 	</ul>
-	<svg class="b-hide-abs">
-		<defs>
-			<filter id="b-svg-blur-10">
-				<feGaussianBlur stdDeviation="10"></feGaussianBlur>
-			</filter>
-			<filter id="b-svg-blur-20">
-				<feGaussianBlur stdDeviation="20"></feGaussianBlur>
-			</filter>
-			<filter id="b-svg-blur-30">
-				<feGaussianBlur stdDeviation="30"></feGaussianBlur>
-			</filter>
-		</defs>
-	</svg>
 
 	<section>
-		<h1>blur 강도</h1>
+		<h2>blur 강도</h2>
 		<svg class="b-svg b-rad-6px" style="width: 100px; height: 100px;">
-			<image class="b-svg-blur-10" width="100%" height="100%" xlink:href="/_/img/ex/img_v.jpg"></image>
+			<image class="b-svg-blur-10" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
 		</svg>
 		<svg class="b-svg b-rad-6px" style="width: 100px; height: 100px;">
-			<image class="b-svg-blur-20" width="100%" height="100%" xlink:href="/_/img/ex/img_v.jpg"></image>
+			<image class="b-svg-blur-20" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
 		</svg>
 		<svg class="b-svg b-rad-6px" style="width: 100px; height: 100px;">
-			<image class="b-svg-blur-30" width="100%" height="100%" xlink:href="/_/img/ex/img_v.jpg"></image>
+			<image class="b-svg-blur-30" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
 		</svg>
 	</section>
 
 	<section>
-		<h1>contain cover</h1>
+		<h2>contain</h2>
 		<svg class="b-svg b-rad-6px" style="width: 100px; height: 100px;">
-			<image class="`b-svg-blur-10" width="100%" height="100%" xlink:href="/_/img/ex/img_v.jpg"></image>
+			<image class="`b-svg-blur-10" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
 		</svg>
+		<h2>cover</h2>
 		<svg class="b-svg b-rad-6px" style="width: 100px; height: 100px;">
-			<image class="`b-svg-blur-20" width="100%" height="100%" xlink:href="/_/img/ex/img_v.jpg" preserveAspectRatio="xMidYMid slice"></image>
+			<image class="`b-svg-blur-20" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg" preserveAspectRatio="xMidYMid slice"></image>
 		</svg>
 	</section>
 </section>

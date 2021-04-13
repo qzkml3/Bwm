@@ -600,8 +600,9 @@ input {
 .b-jc-c {justify-content: center;}
 .b-jc-sb {justify-content: space-between;}
 
-h2 {border: solid 1px #ddd; border-left: 0; border-right: 0; padding: 5px;
+h2 {border: solid 1px #ddd; border-left: 0; border-right: 0; padding: .5em;
   margin-top: 10%;
+  font-size: 18rem;
 }
 
 h2 span {font-size: 12rem; vertical-align: baseline;}
@@ -610,7 +611,7 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
   justify-content: flex-end; margin: 20px 0;
 }
 
-.external-github a {background: #ccc; padding: 0 1em; color: white;}
+.external-github div {background: #ccc; padding: 0 1em; color: white;}
 
 .b-page > * {
   margin: 10px 0;

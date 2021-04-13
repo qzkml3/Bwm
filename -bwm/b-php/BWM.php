@@ -53,7 +53,7 @@ class Bwm {
 	function setTitle($title) {
 		$this->title = $title;
 	}
-	function getTitFromUrl($title) {
+	function getTitFromUrl() {
 		return $_SERVER['PHP_SELF']; 
 	}
 	function setTitleByFileName() {
