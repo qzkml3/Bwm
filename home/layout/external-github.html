@@ -1,0 +1,11 @@
+<!--github-->
+<div class="external-github">
+	<?php
+	$v = str_replace($_SERVER['SERVER_NAME']
+		, 'https://github.com/qzkml3/BWM/tree/master'
+		, $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
+	);
+	$v2 = str_replace('.php', '.html', $v);
+	?>
+	<a href="<?= $v2 ?>" target="_blank">View source this page in GiuHub</a>
+</div>

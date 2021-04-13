@@ -33,17 +33,7 @@
 <?php if ($B->getLayout() != '') { ?>
 <?php require_once 'gnb.html' ?>
 <section class="b_page">
-	<!--github-->
-	<div class="external-github">
-	<?php
-	$v = str_replace($_SERVER['SERVER_NAME']
-		, 'https://github.com/qzkml3/BWM/tree/master'
-		, $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
-	);
-	$v = str_replace('.php', '.html', $v);
-	?>
-		<a href="<?= $v ?>" target="_blank">View source this page in GiuHub</a>
-	</div>
+	<?php require 'external-github.html' ?>
 
     <?php if ($B->getPageTitle()) { ?>
 		<h1 class="b-tit"><?=$B->getPageTitle()?></h1>
@@ -63,17 +53,7 @@
     <?php } ?>
 
     <?php if ($B->getLayout() != '') { ?>
-	<!--github-->
-	<div class="external-github">
-		<?php
-		$v = str_replace($_SERVER['SERVER_NAME']
-			, 'https://github.com/qzkml3/BWM/tree/master'
-			, $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
-		);
-		$v = str_replace('.php', '.html', $v);
-		?>
-		<a href="<?= $v ?>" target="_blank">View source this page in GiuHub</a>
-	</div>
+	<?php require 'external-github.html' ?>
 </section>
 	<!--/b_page-->
 <?php } ?>
