@@ -4,6 +4,7 @@ namespace Bwm;
 
 use Bwm\Conf\SiteConf;
 use Bwm\File\File;
+use Bwm\Inc\Inc;
 use Bwm\Page\Page;
 
 class Bwm {
@@ -38,6 +39,7 @@ class Bwm {
 		$this->site_conf = new SiteConf();
 		$this->page = new Page();
 		$this->file = new File();
+		$this->inc = new Inc();
 	}
 
 	# layout

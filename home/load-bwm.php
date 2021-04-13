@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/Bwm.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/file/File.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/inc/Inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/page/Page.php';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/conf/SiteConf.php';
