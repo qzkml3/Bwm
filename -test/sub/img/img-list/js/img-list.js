@@ -28,7 +28,7 @@ $(function () {
 
 		//console.log('tot: ' + cntChkImg);
 		//console.log('clickedText: ' + $clickedImg_chkImg.text());
-
+		$('.tot-img').text(cntChkImg);
 	});
 });
 

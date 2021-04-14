@@ -44,3 +44,5 @@
     left: 0; top: 0; position: absolute;
     background: rgba(0,0,0, .3);
 }
+
+.b-pad {padding: 8rem;}
