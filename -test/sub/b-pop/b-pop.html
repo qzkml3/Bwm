@@ -1,3 +1,7 @@
+<ul>
+	<li>transform으로 가운데 위치 잡으면 blur현상이 발생하여 flex로 가운데 정렬</li>
+</ul>
+
 <div class="p">
 	<div class="c"></div>
 </div>
@@ -78,6 +82,7 @@
 	
 	function b_openPop(pop) {
 		$pop = $(pop);
-		$pop.fadeIn(100);
+		$pop.css({'display': 'flex'});
+		//$pop.fadeIn(100);
 	}
 </script>
