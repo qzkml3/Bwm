@@ -6,6 +6,7 @@
 .b-pop-page {
     background: white; padding: 10px; position: fixed;
     box-sizing: border-box; min-width: 300px;
+    box-shadow: 0 0 2px 2px rgba(200,200,200, 0.2);
 }
 
 .b-pop-btn-wrap {text-align: center;}
@@ -20,12 +21,7 @@
     transform: translate(-50%, -50%);
 }
 
-/*.b-pop-style*/
-.b-pop-page {
-    box-shadow: 0 0 2px 2px rgba(200,200,200, 0.2);
-    border-radius: 4px
-}
-
+/*.b-img-wrap*/
 .b-img-wrap {position: relative; display: inline-flex;
     align-items: center; justify-content: center;
     background: #eee;
