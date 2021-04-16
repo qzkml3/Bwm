@@ -1,0 +1,23 @@
+<div class="target">
+	<div>d</div>
+	<div>d</div>
+</div>
+
+<ul class="target">
+	<li>d</li>
+	<li>d</li>
+</ul>
+
+<script>
+	b_preSwiper('.target');
+	
+	function b_preSwiper(swiper) {
+		var $swiper = $(swiper);
+		$swiper.each(function () {
+			var $swiper = $(this);
+			$swiper.addClass('swiper');
+			$swiper.children().addClass('swiper-slide');
+			$swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
+		})
+	}
+</script>

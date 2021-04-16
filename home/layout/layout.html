@@ -12,9 +12,12 @@
 	
 	<?php if ($B->getLayout() != '') { ?>
 		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-reset.css?<?=time()?>" rel="stylesheet">
-		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-util.css?<?=time()?>" rel="stylesheet">
-		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-layout.min.css?<?=time()?>" rel="stylesheet">
+		<!--<link href="<?/*=$B->site_conf->getBwmRootUrl()*/?>/b-css/b-util.css?<?/*=time()*/?>" rel="stylesheet">-->
+		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-util.scss?<?=time()?>" rel="stylesheet">
+		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-util.min.css?<?=time()?>" rel="stylesheet">
+		<!--<link href="<?/*=$B->site_conf->getBwmRootUrl()*/?>/b-css/b-layout.css?<?/*=time()*/?>" rel="stylesheet">-->
 		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-layout.scss?<?=time()?>" rel="stylesheet">
+		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-layout.min.css?<?=time()?>" rel="stylesheet">
 	<?php } ?>
 	
 	<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-ui-custom.min.css" rel="stylesheet">
@@ -26,7 +29,6 @@
 	<!--bwm-->
 	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/bwm.js?<?=time()?>"></script>
 	<!--private site-->
-	<link href="<?=$B->site_conf->getSiteRootUrl()?>/css/<?=$B->site_conf->getSiteId()?>.css?<?=time()?>" rel="stylesheet">
 	<script src="<?=$B->site_conf->getSiteRootUrl()?>/js/<?=$B->site_conf->getSiteId()?>.js?<?=time()?>"></script>
 </head>
 <body class="<?=$B->getLayout()?> b_init">

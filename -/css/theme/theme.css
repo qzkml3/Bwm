@@ -34,7 +34,7 @@ a:hover {text-decoration: underline;}
 #logo {float: left;}
 /*gnb*/
 #gnb {float: left; margin: 30px 0 30px 30px;}
-#gnb a {margin-left: 30px; display: inline-block;}
+#gnb a {margin-left: 30px; display: inline-block; padding: .5rem .8rem;}
 #gnb_btnn {display: none;}
 /*mnb*/
 #mnb {float: right; padding: 10px 0; font-size: 14px;}
