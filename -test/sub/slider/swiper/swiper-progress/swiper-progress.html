@@ -1,0 +1,53 @@
+<script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
+
+<style>
+	.swiper {overflow: hidden;;}
+	.swiper-wrapper {display: flex;}
+	.swiper-slide {flex-shrink: 0;}
+	
+	.swiper-pagination-progressbar {background: #eee;}
+	.swiper-pagination-progressbar-fill {height: 3px; background: gold; display: block;
+		transform-origin: left;
+	}
+</style>
+
+<div class="target">
+	<?php for ($i = 0; $i < 10; $i++) { ?>
+	    <div>d</div>
+	<?php } ?>
+</div>
+
+<script>
+	b_preSwiper('.target');
+
+	function b_preSwiper(swiper) {
+		var $swiper = $(swiper);
+		$swiper.each(function () {
+			var $swiper = $(this);
+			var $swiper_wrapper;
+			var $swiper_slide;
+
+			$swiper.addClass('swiper');
+			
+			$swiper_slide = $swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
+			$swiper_wrapper = $swiper.children('.swiper-wrapper');
+			
+			$swiper_slide.addClass('swiper-slide');
+
+			$swiper.append('<div class="swiper-pagination"></div>');
+		})
+	}
+</script>
+
+<script>
+	var swiper = new Swiper('.swiper', {
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+</script>
