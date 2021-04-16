@@ -1,5 +1,14 @@
+상황
 <ul>
-	<li>transform으로 가운데 위치 잡으면 blur현상이 발생하여 flex로 가운데 정렬</li>
+	<li>transform으로 가로 중앙 위치 잡으면 blur현상이 발생</li>
+	<li>세로만 잡고 margin 중앙하면 내용에 따른 자동크기가 안됨.</li>
+</ul>
+
+결론
+<ul>
+	<li>flex로 가운데 정렬하면 display: block이랑 충돌이 난다.</li>
+	<li>display: flex로 show를 하는건 너무 한정적인거 같다.</li>
+	<li>flex용 div하나 더 만들어야 겠다.</li>
 </ul>
 
 <div class="p">
@@ -82,6 +91,9 @@
 	
 	function b_openPop(pop) {
 		$pop = $(pop);
-		$pop.fadeIn(100);
+		$pop.fadeIn(5000);
+		/*$pop.css({
+			'display': 'flex',
+		});*/
 	}
 </script>
