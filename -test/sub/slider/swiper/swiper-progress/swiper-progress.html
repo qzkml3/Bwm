@@ -1,25 +1,92 @@
 <script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
 
 <style>
-	.swiper {overflow: hidden;;}
-	.swiper-wrapper {display: flex;}
-	.swiper-slide {flex-shrink: 0;}
-	
-	.swiper-pagination-progressbar {background: #eee;}
-	.swiper-pagination-progressbar-fill {height: 3px; background: gold; display: block;
+	.swiper-wrap {position: relative;}
+	.swiper-wrap .swiper {width: 80%; overflow: hidden; margin: 0 auto; padding-right: 1px;}
+	.swiper-wrap .swiper-wrapper {display: flex;}
+
+	.swiper-wrap .swiper-slide {flex-shrink: 0; box-sizing: border-box; border: solid 2px #ccc; height: 100px; border-radius: 7rem;}
+
+	.swiper-wrap .swiper-pagination-progressbar {background: #eee; margin-top: 5px;}
+	.swiper-wrap .swiper-pagination-progressbar-fill {height: 3px; background: gold; display: block;
 		transform-origin: left;
 	}
+
+	.swiper-wrap .swiper-button-prev, .swiper-wrap .swiper-button-next {width: 30px; height: 30px; border-radius: 30px;
+		position: absolute; top: 0; bottom: 0; margin: auto;
+		background: url(/-/img/icon/prev.png) #ccc no-repeat center / 80%;
+		opacity: .5; cursor: pointer;
+	}
+	.swiper-wrap .swiper-button-prev {left: 0;}
+	.swiper-wrap .swiper-button-next {right: 0; transform: rotate(180deg)}
 </style>
 
-<div class="target">
-	<?php for ($i = 0; $i < 10; $i++) { ?>
-	    <div>d</div>
-	<?php } ?>
-</div>
+
+<section class="b-mg">
+
+	<div class="swiper-wrap swiper-wrap1">
+		<div class="swiper">
+			<?php for ($i = 0; $i < 3; $i++) { ?>
+				<div>d</div>
+			<?php } ?>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			b_preSwiper('.swiper-wrap1 .swiper');
+
+			new Swiper('.swiper-wrap1 .swiper', {
+				spaceBetween: 20,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'progressbar',
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		});
+	</script>
+
+	<div class="swiper-wrap swiper-wrap2">
+		<div class="swiper">
+			<?php for ($i = 0; $i < 3; $i++) { ?>
+				<div>d</div>
+			<?php } ?>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			b_preSwiper('.swiper-wrap2 .swiper');
+
+			new Swiper('.swiper-wrap2 .swiper', {
+				spaceBetween: 20,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'progressbar',
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		});
+	</script>
+</section>
+
+<h2>swiper</h2>
+<ul>
+	<li>nextEl: '.swiper-button-next' 이런 하위속성에 wrapper 안써줘도 잘 먹음.</li>
+</ul>
+
+<ul>
+	<li>swiper-slide가 짤릴때가 있어서 .swiper-slide {padding-right: 1px;}</li>
+	<li>기존 swiper와 충돌 가능성 때문에 b-로 바꿀지 고려</li>
+</ul>
+
 
 <script>
-	b_preSwiper('.target');
-
 	function b_preSwiper(swiper) {
 		var $swiper = $(swiper);
 		$swiper.each(function () {
@@ -27,27 +94,17 @@
 			var $swiper_wrapper;
 			var $swiper_slide;
 
+			$swiper.wrap('<div class="swiper-wrap"></div>');
 			$swiper.addClass('swiper');
-			
+
 			$swiper_slide = $swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
 			$swiper_wrapper = $swiper.children('.swiper-wrapper');
-			
+
 			$swiper_slide.addClass('swiper-slide');
 
 			$swiper.append('<div class="swiper-pagination"></div>');
+			$swiper.append('<div class="swiper-button-prev"></div>');
+			$swiper.append('<div class="swiper-button-next"></div>');
 		})
 	}
-</script>
-
-<script>
-	var swiper = new Swiper('.swiper', {
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'progressbar',
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
 </script>
