@@ -541,6 +541,7 @@ input {
 .b-rad-8px {border-radius: 8px !important;}
 .b-rad-10px {border-radius: 10px !important;}
 
+.b-mg > * {margin: 3% 0;}
 .b-mg-v-c > * { margin-top: 40px !important; margin-bottom: 40px !important; }
 .b-mg-v-c > *:first-child { margin-top: 0px !important; }
 .b-mg-v-c > *:last-child { margin-bottom: 0px !important; }
@@ -629,10 +630,10 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
     margin: 0 auto;
     text-align: center;
     line-height: 50px;
-    > * {
-        margin: 0 10px;
-        @include b-pad();
-    }
+> * {
+    margin: 0 10px;
+    @include b-pad();
+}
 }
 
 .b-link-pad {padding: 5rem 8rem;border-radius:  3rem;}

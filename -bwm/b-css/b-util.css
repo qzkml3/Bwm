@@ -1,7 +1,7 @@
 @mixin b-pad {
     padding: 5rem 8rem;
 }
-@mixin b-rad { 
+@mixin b-rad {
 
 }
 
@@ -24,7 +24,7 @@
 
 .b-pop-btn-wrap {text-align: center;}
 
-.b-pop-btn-wrap > * {border: solid 1px #888;    
+.b-pop-btn-wrap > * {border: solid 1px #888;
     color: #555;}
 
 /*.b-img-wrap*/
