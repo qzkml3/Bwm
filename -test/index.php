@@ -1,3 +1,3 @@
 <script>
-	location.replace('test.php');
+	location.replace('test-list.html');
 </script>
