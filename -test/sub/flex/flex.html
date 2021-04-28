@@ -1,14 +1,32 @@
 <style>
-	div {border: solid 1px #ddd;}
-	
-	.p { display: flex;}
-	
-	.c {flex: 1;}
-	
-	.c:nth-child(1) {flex:1 50px;}
+	.list {
+		border: solid 2px gold;
+		display: flex;	
+		height: 200px;
+	}
+
+	.list > * {
+		border: solid 1px #ddd;
+	}
 </style>
-<div class="p">
-	<div class="c">1</div>
-	<div class="c">2</div>
-	<div class="c">2</div>
-</div>
+
+<ul>
+	<li>
+		item 높이가 부모 높이많큼 벌어지는데 align-items를 넣으면 줄어든다.
+	</li>
+	<li>
+		align-items 와 align-content 차이는 align-content 는 flex-wrap 이 있을 때만 작동한다.
+	</li>
+</ul>
+
+<h1>list height auto</h1>
+<section class="b_mg_c">
+	<section class="list">
+		<input type="text">
+		<button type="button"></button>
+	</section>
+	<section class="list">
+		<div>aa</div>
+		<div>bb</div>
+	</section>
+</section>

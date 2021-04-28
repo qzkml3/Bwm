@@ -32,3 +32,5 @@
 .b-pad {
     @include b-pad();
 }
+
+.b_mg_c > * {margin: 50px 0;}
