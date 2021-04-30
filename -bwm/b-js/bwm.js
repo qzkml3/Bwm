@@ -29,12 +29,12 @@ $b.ajax.charset = function (charset) {
  * */
 $b.cook = {};
 
-$b.cook.del = function (name) {
+$b.cook.delCook = function (name) {
 	var today = new Date();
 	document.cookie = name + "=; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.get = function (name) {
+$b.cook.getCook = function (name) {
 	var arg = name + "=";
 	var alen = arg.length;
 	var clen = document.cookie.length;
@@ -56,7 +56,7 @@ $b.cook.get = function (name) {
 	}
 }
 
-$b.cook.setOnlyToday = function (name, value) {
+$b.cook.setCookOnlyToday = function (name, value) {
 	var today = new Date();
 
 	var nowHour = today.getHours();
@@ -74,31 +74,31 @@ $b.cook.setOnlyToday = function (name, value) {
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setByDate = function (name, value, date) {
+$b.cook.setCookByDate = function (name, value, date) {
 	var today = new Date();
 	today.setDate(today.getDate() + date);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setByHour = function (name, value, hour) {
+$b.cook.setCookByHour = function (name, value, hour) {
 	var today = new Date();
 	today.setHours(today.getHours() + hour);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setByMinute = function (name, value, min) {
+$b.cook.setCookByMinute = function (name, value, min) {
 	var today = new Date();
 	today.setMinutes(today.getMinutes() + min);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setBySecond = function (name, value, sec) {
+$b.cook.setCookBySecond = function (name, value, sec) {
 	var today = new Date();
 	today.setSeconds(today.getSeconds() + sec);
 	document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
 }
 
-$b.cook.setBySess = function (name, value) {
+$b.cook.setCookBySess = function (name, value) {
 	document.cookie = name + "=" + escape(value) + "; path=/;"
 }
 

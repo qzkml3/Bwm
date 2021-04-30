@@ -9,26 +9,26 @@
 
 <script>
 	$('#set_cook').on('click', function () {
-		$b.cook.setBySess('a', 'av');
+		$b.cook.setCookBySess('a', 'av');
 	});
 	
 	$('#del_cook').on('click', function () {
-		$b.cook.del('a');
+		$b.cook.delCook('a');
 	});
 
 	$('#view_cook').on('click', function () {
-		var v = $b.cook.get('a')
+		var v = $b.cook.getCook('a')
 		$b.log(v);
 		
-		var v = $b.cook.get('b')
+		var v = $b.cook.getCook('b')
 		$b.log(v);
 	});
 	
-	$('#set_cook_2s').on('click', function () {
-		$b.cook.setBySecond('a', 'av', 2);
+	$('#set_cook_2s').on('click', function () {		
+		$b.cook.setCookBySecond('a', 'av', 2);
 	});
 	
 	$('#set_cook_only_today').on('click', function () {
-		$b.cook.setOnlyToday('a', 'av');
+		$b.cook.setCookOnlyToday('a', 'av');
 	});
 </script>
