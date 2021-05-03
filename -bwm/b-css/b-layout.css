@@ -518,16 +518,21 @@ input {
 .b-pad-h-16px {padding-left: 16px !important; padding-right: 16px !important;}
 .b-pad-h-20px {padding-left: 20px !important; padding-right: 20px !important;}
 
-.b-btn {
-    color: white; border: solid 1px transparent; box-sizing: border-box;
+.b_form button, .b_btn {
+    box-sizing: border-box;
     display: inline-flex; align-items: center; justify-content: center;
     cursor: pointer; border-radius: 3px;
     padding: 0 5px;
     height: 30px; line-height: 30px; font-size: 12px;
-    background: #3db0e4;
+    color: #222; border: solid 1px #ccc;
+    background: linear-gradient(0deg, #ddd 0%, #eee 50%, #fff 100%);
 }
 
-.b-btn > i, .b-btn > img {margin-right: 5px;}
+.b_btn__col_1 {
+    color: white; border: solid 1px transparent;background: #3db0e4;
+}
+
+.b_btn > i, .b_btn > img {margin-right: 5px;}
 
 .b-rad-small {border-radius: 3rem !important;}
 .b_rad {border-radius: 5rem !important;}
@@ -635,3 +640,7 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
 }
 
 .b-link-pad {padding: 5rem 8rem;border-radius:  3rem;}
+
+.b_sec {
+    display: inline-block; width: 100%;
+}
