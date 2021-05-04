@@ -1,30 +1,45 @@
 <style>
-	.b_tbl {width: 100%; border-collapse: collapse;}
-	.b_tbl td {border: solid 1px #ddd;}
+	.b_tbl_wrap {border-radius: 10px; overflow: hidden; border: solid 1px #ddd;}
+
+	.b_tbl {border-collapse: collapse; width: 100%;}
+
+	.b_tbl th {background: whitesmoke; padding: 10rem; border: solid 1px #ddd; border-top: 0;
+		font-weight: normal;
+	}
+	.b_tbl th:first-child {border-left: none;}
+	.b_tbl th:last-child {border-right: none;}
+
+	.b_tbl td {border: solid 1px #ddd; padding: 10rem; border-bottom: none;}
+	.b_tbl td:first-child {border-left: none;}
+	.b_tbl td:last-child {border-right: none;}
 </style>
 
-<table class="b_tbl">
-	<colgroup>
-		<col style="width: auto;">
-		<col style="width: auto;">
-		<col style="width: auto;">
-		<col style="width: auto;">
-		<col style="width: auto;">
-		<col style="width: 50px;">
-	</colgroup>
-	<tr>
-		<td>aasdf asdfa sf</td>
-		<td>a</td>
-		<td>a</td>
-		<td>a</td>
-		<td>a</td>
-		<td></td>
-	</tr>
-</table>
+<div class="b_tbl_wrap">
+	<table class="b_tbl">
+		<tr>
+			<th>가나다</th>
+			<th>가나다</th>
+			<th>가나다</th>
+			<th>가나다</th>
+			<th style="width: 50px;">가나다</th>
+		</tr>
+		<tr>
+			<td>aasdf asdfa sf</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+	</table>
+</div>
 
 <ul>
 	<li>col이나 td에 width를 주면 넓이가 고정 됨
 		<br>안주면 유동적 사이즈
 	</li>
-	<li>그렇다면 필요한 곳에만 준다. 나머지는 auto;</li>
+	<li>그렇다면 필요한 곳에만 준다.</li>
+	<li>굳이 colgroup 보다 th에 줘도 되겠다.</li>
+	<li>
+		border-radius를 하기 위해선 wrap을 하나 씌어야 한당.
+	</li>
 </ul>
