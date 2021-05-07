@@ -1,5 +1,7 @@
 <style>
-	.b_tbl_wrap {border-radius: 10px; overflow: hidden; border: solid 1px #ddd;}
+	.b_tbl_wrap {border-radius: 10px; overflow: hidden; border: solid 1px #ddd;
+		margin: 20rem 0;
+	}
 
 	.b_tbl {border-collapse: collapse; width: 100%;}
 
@@ -8,10 +10,13 @@
 	}
 	.b_tbl th:first-child {border-left: none;}
 	.b_tbl th:last-child {border-right: none;}
+	.b_tbl tr:last-child th {border-bottom: none;}
+	.b_tbl tbody th {text-align: left;}
 
 	.b_tbl td {border: solid 1px #ddd; padding: 10rem; border-bottom: none;}
 	.b_tbl td:first-child {border-left: none;}
 	.b_tbl td:last-child {border-right: none;}
+	.b_tbl tr:first-child td {border-top: none;}
 </style>
 
 <div class="b_tbl_wrap">
@@ -24,6 +29,36 @@
 			<th style="width: 50px;">가나다</th>
 		</tr>
 		<tr>
+			<td>aasdf asdfa sf</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+	</table>
+</div>
+
+
+<div class="b_tbl_wrap">
+	<table class="b_tbl">
+		<tr>
+			<th>가나다</th>
+			<td>aasdf asdfa sf</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<th>가나다</th>
+			<td>aasdf asdfa sf</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<th>가나다</th>
 			<td>aasdf asdfa sf</td>
 			<td>a</td>
 			<td>a</td>
