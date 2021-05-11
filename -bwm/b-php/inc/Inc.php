@@ -3,21 +3,23 @@
 namespace Bwm\Inc;
 
 class Inc {
-	function getRes($res)
-	{
-		$file =  $_SERVER['DOCUMENT_ROOT'] . $res;
+	private function getRes($res) {
+		$file = $_SERVER['DOCUMENT_ROOT'] . $res;
 		$v = filemtime($file);
-		
-		return $res . '?v=' . $v;
+		$res = $res . '?v=' . $v;
+
+		return $res;
 	}
 
-	function getCss($res)
-	{
-		return '<link href="' . $this->getRes($res) . '" rel="stylesheet" />';
+	function getResAbs($res) {
+		return $this->getRes($res);
 	}
 
-	function getJs($res)
-	{
-		return '<script src="' . $this->getRes($res) . '"></script>';
+	function getResRel($res) {
+		$path = $_SERVER['SCRIPT_NAME'];
+		$path = substr($path, 0, strrpos($path, '/') + 1);
+		$res = $path . $res;
+
+		return $this->getRes($res);
 	}
 }
