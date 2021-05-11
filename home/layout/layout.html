@@ -10,10 +10,13 @@
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
-	<?php if ($B->getLayout() != '') { ?>
-		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-reset.css?<?=time()?>" rel="stylesheet">
-		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-util.css?<?=time()?>" rel="stylesheet">
-		<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-css/b-layout.css?<?=time()?>" rel="stylesheet">
+	<?php if ($B->getLayout() != '') { ?>		
+		<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-reset.css'); ?>
+		<link href="<?=$v?>" rel="stylesheet">
+		<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-util.css'); ?>
+		<link href="<?=$v?>" rel="stylesheet">
+		<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-layout.css'); ?>
+		<link href="<?=$v?>" rel="stylesheet">
 	<?php } ?>
 	
 	<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-ui-custom.min.css" rel="stylesheet">
@@ -23,9 +26,12 @@
 	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/img/imageMapResizer/imageMapResizer.min.js"></script>
 
 	<!--bwm-->
-	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/bwm.js?<?=time()?>"></script>
+	<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-js/bwm.js'); ?>
+	<script src="<?=$v?>"></script>
+	
 	<!--private site-->
-	<script src="<?=$B->site_conf->getSiteRootUrl()?>/js/<?=$B->site_conf->getSiteId()?>.js?<?=time()?>"></script>
+	<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/js/' . $B->site_conf->getSiteId() . '.js'); ?>
+	<script src="<?=$v?>"></script>
 </head>
 <body class="<?=$B->getLayout()?> b_init">
 <?php if ($B->getLayout() != '') { ?>
