@@ -10,6 +10,7 @@ use Bwm\Page\Page;
 class Bwm {
 	public $file;
 	public $page;
+	public $inc;
 	public $site_conf;
 
 	private $layout;
