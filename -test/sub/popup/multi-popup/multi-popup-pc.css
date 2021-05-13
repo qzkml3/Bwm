@@ -1,0 +1,82 @@
+.b_list_off_css {padding: 0; margin: 0;}
+.b_list_off_css li {list-style: none;}
+
+.b_mpop {position: fixed; width: 100%; height: 100%; left: 0; top: 0;
+	background: rgba(0,0,0,.3);
+	display: none; align-items: center; justify-content: center;
+}
+
+.b_mpop_page {
+	position: relative;
+	border: solid 1px #777;
+	display: flex;
+	width: 1315px;
+}
+
+.b_mpop_main {
+	width: 447px; height: 569px;
+	border-radius: 10px; overflow: hidden;
+}
+
+.b_mpop_main img {width: 100%; height: 100%;}
+/**/
+.b_mpop_list {
+	display: flex; flex-wrap: wrap;
+	width: 868px;
+}
+
+.b_mpop_list > li {width: 281px; height: 281px; margin: 0 0 8px 8px;
+	border-radius: 10px; overflow: hidden;
+}
+.b_mpop_list img {width: 100%; height: 100%; vertical-align: middle;}
+/**/
+.b_mpop_btn_wrap {position: absolute; bottom: -2em; right: 0px; padding: 0; margin: 0;
+	display: flex;
+}
+
+.b_mpop_btn_wrap > * {
+	display: flex; align-items: center;
+}
+
+.b_mpop_btn_wrap > *:before {content: '';
+	width: 1px; height: 10px; background: #fff;
+	margin: 0 10px;
+}
+
+.b_mpop_btn_wrap > *:first-child::before {display: none;}
+
+.b_mpop_btn_wrap button {color: #ddd; font-size: 18px; font-weight: bold; font-family: "Malgun Gothic";}
+
+.b_mpop__close {color: white !important;}
+
+/**/
+.b_mpop_brd {}
+
+.b_mpop_brd_tit {background: #313131; color: #fff;
+	font-size: 21px; padding: 5px 15px;
+	display: flex; justify-content: space-between; align-items: baseline;
+}
+
+.b_mpop_more {
+	font-size: 11px; border: solid 1px #19e4ff; color: #19e4ff;
+	border-radius: 3px;
+	padding: 1px 3px;
+	display: inline-flex; align-items: center;
+}
+
+.b_mpop_brd_cont {padding: 15px; background: #fff;}
+
+.b_mpop_brd_cont_item {color: #222; display: flex; background: #f6f6f6; margin: 11px 0;
+	height: 44px; overflow: hidden;
+}
+.b_mpop_brd_cont li:first-child .b_mpop_brd_cont_item {margin-top: 0;}
+
+.b_mpop_brd_cont_item > div {padding: 5px;}
+
+.b_mpop_brd_cont_item img {
+	width: 44px; height: 44px;
+	border: solid 1px #ddd; border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.b_mpop_brd_cont_item > div > div {font-size: 13px;}
