@@ -1,4 +1,4 @@
-<script src="MultiClamp.min.js"></script>
+
 
 <style>
 	.p {width: 300px;}
@@ -17,7 +17,6 @@
 	<?php } ?>
 </div>
 
-
 <script>
 	function b_MultiClamp(parent, target, line) {
 		$(parent).find(target).each(function() {
@@ -27,7 +26,11 @@
 			});
 		});
 	}
-	
+</script>
+
+<script src="MultiClamp.min.js"></script>
+
+<script>	
 	$(document).ready(function() {
 		b_MultiClamp('.p', '.b_multi_clamp', 3);
 	});
