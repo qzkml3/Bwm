@@ -328,13 +328,15 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .m_v_10px {margin-top: 10px; margin-bottom: 10px;}
 
 /*b_box*/
-.b_box {padding: 5px; border: solid 1px #dfdfdf; box-sizing: border-box;}
+.b_box {padding: 5px; border: solid 1px #dfdfdf; background: #fff; box-sizing: border-box;}
+
+.b_box__info {background: #fff9e2;}
 
 .b_box_white {background: white;}
 
 .b_box_silver {background: #f5f5f5;}
 
-.b_box_rad {border-radius: 7px;}
+.b_box__rad {border-radius: 7rem;}
 
 .b_box_shadow {box-shadow: 1px 1px 3px #ccc;}
 
@@ -534,8 +536,9 @@ input {
 
 .b_btn > i, .b_btn > img {margin-right: 5px;}
 
-.b-rad-small {border-radius: 3rem !important;}
 .b_rad {border-radius: 5rem !important;}
+.b_rad_large {border-radius: 10rem !important;}
+.b-rad-small {border-radius: 3rem !important;}
 .b-rad-10rem {border-radius: 10rem !important;}
 .b-rad-round {border-radius: 1000px !important;}
 .b-rad-2px {border-radius: 2px !important;}
