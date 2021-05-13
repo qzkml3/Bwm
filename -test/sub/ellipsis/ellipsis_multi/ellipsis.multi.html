@@ -1,4 +1,4 @@
-
+<script src="MultiClamp.min.js"></script>
 
 <style>
 	.p {width: 300px;}
@@ -7,31 +7,27 @@
 
 <div class="p">
 	<?php for ($i = 0; $i < 5; $i++) { ?>
-	    <div class="item">
-		    <div class="b_multi_clamp">
-			    asdf asf asdfasdf afsdasdf asf asdfasdf aaajs adkfljsa dsdlfk jsldkfjlsad kfjlas dflkasjd fjfsd alfa sdjfja sldkfj asldfjsd l kfasdfff
-			    ffffff fkljsaf;dsdf
-			    asdf sasdfas dfsdsdf dfasdfs dfsdf sdfsdfsdaf sadfasd fsadfsdfs adfsdfsadfds fasdfs ad fasdfas dfsdfs dfsadddd
-		    </div>
-    	</div>
+		<div class="item">
+			<div class="b_multi_clamp">
+				asdf asf asdfasdf afsdasdf asf asdfasdf aaajs adkfljsa dsdlfk jsldkfjlsad kfjlas dflkasjd fjfsd alfa sdjfja sldkfj asldfjsd l kfasdfff
+				ffffff fkljsaf;dsdf
+				asdf sasdfas dfsdsdf dfasdfs dfsdf sdfsdfsdaf sadfasd fsadfsdfs adfsdfsadfds fasdfs ad fasdfas dfsdfs dfsadddd
+			</div>
+		</div>
 	<?php } ?>
 </div>
 
 <script>
 	function b_MultiClamp(parent, target, line) {
-		$(parent).find(target).each(function() {
+		$(parent).find(target).each(function () {
 			new MultiClamp($(this).get(0), {
 				ellipsis: '...',
 				clamp: line,
 			});
 		});
 	}
-</script>
-
-<script src="MultiClamp.min.js"></script>
-
-<script>	
-	$(document).ready(function() {
+	
+	$(document).ready(function () {
 		b_MultiClamp('.p', '.b_multi_clamp', 3);
 	});
 </script>
