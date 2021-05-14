@@ -1,0 +1,15 @@
+<?php
+
+echo b_isLocalhost();
+
+function b_isLocalhost() {
+	if ($_SERVER['SERVER_ADDR'] == '127.0.0.1' || strstr($_SERVER['SERVER_ADDR'], '192.168.')) {
+		return true;
+	}
+}
+
+?>
+
+<ul>
+	<li>SERVER_ADDR나 REMOTE_ADDR 둘중에 어떤걸 사용해도 상관 없을것 같다.</li>
+</ul>
