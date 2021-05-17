@@ -2,13 +2,13 @@
 .b_list_off_css li {list-style: none;}
 
 .b_mpop {position: fixed; width: 100%; height: 100%; left: 0; top: 0;
-	background: rgba(0,0,0,.3);
+	margin: 0;
+	background: rgba(0,0,0,.7);
 	display: none; align-items: center; justify-content: center;
 }
 
 .b_mpop_page {
 	position: relative;
-	border: solid 1px #777;
 	display: flex;
 	width: 1315px;
 }
@@ -45,7 +45,11 @@
 
 .b_mpop_btn_wrap > *:first-child::before {display: none;}
 
-.b_mpop_btn_wrap button {color: #ddd; font-size: 18px; font-weight: bold; font-family: "Malgun Gothic";}
+.b_mpop_btn_wrap button {color: #ddd; font-size: 18px; font-weight: bold; font-family: "Malgun Gothic";
+	background: transparent; border: 0; border-radius: 4px;
+}
+
+.b_mpop_btn_wrap button:hover {box-shadow: 0 0 3px 3px #ddd;}
 
 .b_mpop__close {color: white !important;}
 
@@ -53,7 +57,7 @@
 .b_mpop_brd {}
 
 .b_mpop_brd_tit {background: #313131; color: #fff;
-	font-size: 21px; padding: 5px 15px;
+	font-size: 19px; padding: 5px 15px;
 	display: flex; justify-content: space-between; align-items: baseline;
 }
 
@@ -71,7 +75,8 @@
 }
 .b_mpop_brd_cont li:first-child .b_mpop_brd_cont_item {margin-top: 0;}
 
-.b_mpop_brd_cont_item > div {padding: 5px;}
+.b_mpop_brd_cont_item > div:nth-child(1) {padding: 0;}
+.b_mpop_brd_cont_item > div:nth-child(2) {padding: 5px;}
 
 .b_mpop_brd_cont_item img {
 	width: 44px; height: 44px;
@@ -80,3 +85,5 @@
 }
 
 .b_mpop_brd_cont_item > div > div {font-size: 13px;}
+
+.b_mpop_24 {color: #aaa !important;}

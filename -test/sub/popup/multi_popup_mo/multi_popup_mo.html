@@ -1,14 +1,11 @@
-<link href="multi-popup-pc.css" rel="stylesheet">
+<link href="<?=$B->inc->getResRel('multi_popup_mo.css')?>" rel="stylesheet">
 
 <script src="/-/js/ellipsis/MultiClamp/MultiClamp.min.js"></script>
 
 <div class="b_mpop b_mpop__close">
 	<div class="b_mpop_page">
-		<div class="b_mpop_main">
-			<a href=""><img src="/-/img/ex/clear_text.jpg" alt=""></a>
-		</div>
 		<ul class="b_mpop_list b_list_off_css">
-			<?php for ($i = 0; $i < 5; $i++) { ?>
+			<?php for ($i = 0; $i < 4; $i++) { ?>
 			    <li style="order: <?=$i+1?>;">
 				    <a href=""> <img src="/-/img/ex/clear_text.jpg" alt=""></a>
     			</li>
@@ -23,11 +20,11 @@
 					</div>
 					<div class="b_mpop_brd_cont">
 						<ul class="b_list_off_css">
-							<?php for ($ii = 0; $ii < 4; $ii++) { ?>
+							<?php for ($ii = 0; $ii < 2; $ii++) { ?>
 								<li>
 									<a href="">
 										<div class="b_mpop_brd_cont_item">
-											<img src="/-/img/ex/clear_text.jpg" alt="">
+											<div><img src="/-/img/ex/clear_text.jpg" alt=""></div>
 											<div>
 												<div class="b_multi_clamp">
 													가나다라 가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라
@@ -95,16 +92,34 @@
 			openFlexPop('.b_mpop');
 		}
 		
-		b_MultiClamp('.b_mpop', '.b_multi_clamp', 2);
+		b_MultiClamp('.b_mpop', '.b_multi_clamp', 1);
 
 		b_mpop_closeEvent();
 		b_mpop_24_clickEvent();
 	});
 </script>
 
-<ul>
-	<li>목표: width나 height를 주지 않더라도 가운데 정렬을 한다.</li>
-	<li>translate로 가운데 정렬하면 흐림현상을 일으킨다.</li>
-	<li>flex로 가운데 정렬을 한다.</li>
-	<li>b_mpop_page에 absolute나 fixed를 주면 le에서 센터 정렬이 안됨</li>
-</ul>
+<div class="b_box b_box__rad b_box__goal">
+	<ul>
+		<li>width나 height를 주지 않더라도 가운데 정렬을 할 수 있나?</li>
+	</ul>
+</div>
+<div class="b_box b_box__rad b_box__info">
+	<h3>흐림현상</h3>
+	<dl>
+		<dt>translate로 가운데 정렬하면 흐림현상을 일으킨다.</dt>
+		<dd>flex로 가운데 정렬을 한다.</dd>
+	</dl>
+	
+	<h3>중앙정렬</h3>
+	<dl>
+		<dt>b_mpop_page에 absolute나 fixed를 주면 ie에서 센터 정렬이 안됨.</dt>
+		<dd>static을 준다.</dd>
+	</dl>
+	
+	<h3>세로 중앙정렬</h3>
+	<ul>
+		<li>landscape에서는 position: asboslute에 top 값을 준다.</li>
+		<li>potrait에서는 static 가운데 정렬.</li>
+	</ul>
+</div>
