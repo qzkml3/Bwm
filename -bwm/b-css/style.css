@@ -662,5 +662,6 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
 .b-link-pad {padding: 5rem 8rem;border-radius:  3rem;}
 
 .b_sec {
+    position: relative;
     display: inline-block; width: 100%; box-sizing: border-box; vertical-align: middle;
 }
