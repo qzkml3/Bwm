@@ -8,12 +8,14 @@
 	.b_tbl th {background: whitesmoke; padding: 10rem; border: solid 1px #ddd; border-top: 0;
 		font-weight: normal;
 	}
+	.b_tbl tbody th {}
 	.b_tbl th:first-child {border-left: none;}
 	.b_tbl th:last-child {border-right: none;}
-	.b_tbl tr:last-child th {border-bottom: none;}
+	
+	.b_tbl tbody tr:last-child th {border-bottom: none;}
 	.b_tbl tbody th {text-align: left;}
 
-	.b_tbl td {border: solid 1px #ddd; padding: 10rem; border-bottom: none;}
+	.b_tbl td {border: solid 1px #ddd; padding: 10rem; border-bottom: none; border-left: none;}
 	.b_tbl td:first-child {border-left: none;}
 	.b_tbl td:last-child {border-right: none;}
 	.b_tbl tr:first-child td {border-top: none;}
@@ -21,6 +23,7 @@
 
 <div class="b_tbl_wrap">
 	<table class="b_tbl">
+		<thead>
 		<tr>
 			<th>가나다</th>
 			<th>가나다</th>
@@ -28,6 +31,7 @@
 			<th>가나다</th>
 			<th style="width: 50px;">가나다</th>
 		</tr>
+		</thead>
 		<tr>
 			<td>aasdf asdfa sf</td>
 			<td>a</td>
@@ -69,6 +73,7 @@
 </div>
 
 <ul>
+	<li>thead는 반드시 넣어 주자</li>
 	<li>col이나 td에 width를 주면 넓이가 고정 됨
 		<br>안주면 유동적 사이즈
 	</li>
