@@ -15,7 +15,8 @@
 	}
 	
 	.b_fx_item_grow {flex-grow: 1;}
-	
+
+	.wrap_outer {border: solid 2px darkorange;}
 	.wrap {border: solid 2px gold; height: 100px;}
 	.wrap > * {border: solid 1px #ddd;}
 </style>
@@ -81,32 +82,36 @@
 	</section>
 
 	<section>
-		<div class="wrap b_fx b_fx__column" style="min-height: 150px; height: auto;">
+		<div class="wrap b_fx b_fx__column" style= "height: auto; min-height: 150px;">
 			<script></script>
 			<div>aa</div>
 			<script></script>
 			<div class="b_fx_item_grow">
-				bb<br>bb<br>bb
+				bb
 			</div>
 			<script></script>
 			<div>
 				footer
 			</div>
 		</div>
-		<p>min-height로 본문의 높이값을 잡아주면 ie에서 flex-grow가 안되는 현상이 있다.</p></section>
+		<p>min-height로 본문의 높이값을 잡아주면 ie에서 flex-grow가 안되는 현상이 있다.</p>
+	</section>
 
 	<section>
-		<div class="wrap b_fx b_fx__column" style="height: 150px;">
-			<script></script>
-			<div>aa</div>
-			<script></script>
-			<div class="b_fx_item_grow">
-				bb<br>bb<br>bb
-			</div>
-			<script></script>
-			<div>
-				footer
+		<div class="wrap_outer b_fx b_fx__grow">
+			<div class="wrap b_fx b_fx__column" style="height: auto; min-height: 150px;">
+				<script></script>
+				<div>aa</div>
+				<script></script>
+				<div class="b_fx_item_grow">
+					bb
+				</div>
+				<script></script>
+				<div>
+					footer
+				</div>
 			</div>
 		</div>
-		<p>height로 높이값을 잡아주면 grow가 먹지만 height 잡을 경우가 별로 없을듯</p></section>
+		<p>wrap_outer를 flex로 잡아주면 본문을 늘릴 수 있다.</p>
+	</section>
 </div>
