@@ -1,32 +1,112 @@
 <style>
-	.list {
-		border: solid 2px gold;
-		display: flex;	
-		height: 200px;
-	}
+	input {height: auto;}
+	
+	.b_fx {display: flex;}
+	
+	.b_ai_c {align-items: center;}
+	.b_jc_c {justify-content: center;}
 
-	.list > * {
-		border: solid 1px #ddd;
+	.b_fx__column {flex-direction: column;}
+
+	.b_fx__grow > * {flex-grow: 1;}
+
+	.b_fx > * {
+		
 	}
+	
+	.b_fx_item_grow {flex-grow: 1;}
+	
+	.wrap {border: solid 2px gold; height: 100px;}
+	.wrap > * {border: solid 1px #ddd;}
 </style>
 
-<ul>
-	<li>
-		item 높이가 부모 높이많큼 벌어지는데 align-items를 넣으면 줄어든다.
-	</li>
-	<li>
-		align-items 와 align-content 차이는 align-content 는 flex-wrap 이 있을 때만 작동한다.
-	</li>
-</ul>
 
-<h1>list height auto</h1>
-<section class="b_mg_c">
-	<section class="list">
-		<input type="text">
-		<button type="button"></button>
+<div class="b_mg_c">
+	<div class="b_box b_box__rad">
+		<ul>
+			<li>
+				align-items 와 align-content 차이는 align-content 는 flex-wrap 이 있을 때만 작동한다.
+			</li>
+		</ul>
+	</div>
+	
+	<section>
+		<div class="wrap b_fx">
+			<input type="text" value="ipt">
+			<button type="button">btn</button>
+			<div>div</div>
+		</div>
+		<p>flex를 주면 item 높이가 늘어난다</p>
 	</section>
-	<section class="list">
-		<div>aa</div>
-		<div>bb</div>
+
+	<section>
+		<div class="wrap b_fx b_ai_c">
+			<input type="text">
+			<button type="button"></button>
+			<div>div</div>
+		</div>
+		<p>align-items를 주면 높이가 줄어든다.</p>
 	</section>
-</section>
+
+	<section>
+		<h2>b_fx</h2>
+		<div class="wrap b_fx">
+			<div>aa</div>
+			<div>bb</div>
+		</div>
+	</section>
+
+	<section>
+		<h2>b_fx__column</h2>
+		<div class="wrap b_fx b_fx__column">
+			<div>aa</div>
+			<div>bb</div>
+		</div>
+	</section>
+
+	<section>
+		<h2>b_fx__grow</h2>
+		<div class="wrap b_fx b_fx__column b_fx__grow">
+			<div>aa</div>
+			<div>bb</div>
+		</div>
+	</section>
+
+	<section>
+		<h2>b_fx_item_grow</h2>
+		<div class="wrap b_fx b_fx__column">
+			<div>aa</div>
+			<div class="b_fx_item_grow">bb</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap b_fx b_fx__column" style="min-height: 150px; height: auto;">
+			<script></script>
+			<div>aa</div>
+			<script></script>
+			<div class="b_fx_item_grow">
+				bb<br>bb<br>bb
+			</div>
+			<script></script>
+			<div>
+				footer
+			</div>
+		</div>
+		<p>min-height로 본문의 높이값을 잡아주면 ie에서 flex-grow가 안되는 현상이 있다.</p></section>
+
+	<section>
+		<div class="wrap b_fx b_fx__column" style="height: 150px;">
+			<script></script>
+			<div>aa</div>
+			<script></script>
+			<div class="b_fx_item_grow">
+				bb<br>bb<br>bb
+			</div>
+			<script></script>
+			<div>
+				footer
+			</div>
+		</div>
+		<p>height로 높이값을 잡아주면 grow가 먹지만 height 잡을 경우가 별로 없을듯</p></section>
+</div>
