@@ -662,6 +662,6 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
     display: inline-block; width: 100%; box-sizing: border-box; vertical-align: middle;
 }
 
-.b_page > * {margin: 20px 0;}
-.b_page > *:first-child {margin-top: 0;}
-.b_page > *:last-child {margin-bottom: 0;}
+.b_mg_c > * {margin: 20px 0;}
+.b_mg_c > *:first-child {margin-top: 0;}
+.b_mg_c > *:last-child {margin-bottom: 0;}
