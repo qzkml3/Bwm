@@ -2,15 +2,44 @@
 
 namespace Bwm\Page;
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/conf/SiteConf.php';
+
+use Bwm\Conf\SiteConf;
+
 class Page {
-	private $title;
+	private $site_conf;
 	
+	private $title;
+	private $layout;
+	
+	public function __construct($site_conf)
+	{
+		$this->site_conf = $site_conf;
+	}
+
 	function setTitle($title) {
 		$this->title = $title;
 	}
-
 	function getTitle($title) {
 		return $this->title;
+	}
+
+	function setLayout($layout) {
+		$this->layout = $layout;
+	}
+	function getLayout() {
+		$v = $this->layout;
+		return $v;
+	}
+
+	# Page that with layout
+	function getPage() {
+		if ($this->layout_file) {
+			$layout = $this->layout_file;
+		} else {
+			$layout = 'layout.html';
+		}
+		return $this->site_conf->getLayoutDir() . '/' . $layout;
 	}
 
     /**

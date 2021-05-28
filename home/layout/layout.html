@@ -2,7 +2,7 @@
     require_once '-group-comm.php';
 } ?>
 <!doctype html>
-<html lang="ko" class="<?=$B->getLayout()?>">
+<html lang="ko" class="<?=$B->page->getLayout()?>">
 <head>
 	<title><?=$B->getTitle();?></title>
 
@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
-	<?php if ($B->getLayout() != '') { ?>		
+	<?php if ($B->page->getLayout() != '') { ?>		
 		<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-reset.css'); ?>
 		<link href="<?=$v?>" rel="stylesheet">
 		<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-util.css'); ?>
@@ -34,8 +34,8 @@
 	<?php /*$v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/js/' . $B->site_conf->getSiteId() . '.js'); */?><!--
 	<script src="<?/*=$v*/?>"></script>-->
 </head>
-<body class="<?=$B->getLayout()?> b_init">
-<?php if ($B->getLayout() != '') { ?>
+<body class="<?=$B->page->getLayout()?> b_init">
+<?php if ($B->page->getLayout() != '') { ?>
 <?php require_once 'gnb.html' ?>
 <section id="page">
 	<?php require 'external-github.html' ?>
@@ -57,7 +57,7 @@
 		</div>
     <?php } ?>
 
-    <?php if ($B->getLayout() != '') { ?>
+    <?php if ($B->page->getLayout() != '') { ?>
 	<?php require 'external-github.html' ?>
 </section>
 	<!--/b_page-->

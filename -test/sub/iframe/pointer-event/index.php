@@ -1,9 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$B->setTitle('pointer-event iframe');
-$B->setLayout('sub');
+$B->page->setTitle('pointer-event iframe');
+$B->page->setLayout('sub');
 $B->setTag('');
 
-require_once $B->getPage();
+require_once $B->page->getPage();
 ?>

@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
-$B->setLayout('');
-$B->setTitle('float');
+$B->page->setLayout('');
+$B->page->setTitle('float');
 
-require_once $B->getPage();
+require_once $B->page->getPage();
 ?>

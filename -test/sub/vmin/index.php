@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
-$B->setLayout('');
-$B->setTitle('vmin');
+$B->page->setLayout('');
+$B->page->setTitle('vmin');
 
-require_once $B->getPage();
+require_once $B->page->getPage();
 ?>

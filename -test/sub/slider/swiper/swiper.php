@@ -1,9 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$B->setTitle('swiper');
-$B->setLayout('sub');
+$B->page->setTitle('swiper');
+$B->page->setLayout('sub');
 $B->setTag('#스와이퍼 #swiper');
 
-require_once $B->getPage();
+require_once $B->page->getPage();
 ?>

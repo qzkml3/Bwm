@@ -1,9 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$b->setTitle('');
-$b->setLayout('sub');
+$B->page->setTitle('');
+$B->page->setLayout('sub');
 $b->setTag('');
 
-require_once $b->getPage();
+require_once $B->page->getPage();
 ?>

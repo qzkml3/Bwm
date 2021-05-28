@@ -1,17 +1,21 @@
 <?php
-
 namespace Bwm;
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/conf/SiteConf.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/page/Page.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/inc/Inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/file/File.php';
+
 use Bwm\Conf\SiteConf;
-use Bwm\File\File;
-use Bwm\Inc\Inc;
 use Bwm\Page\Page;
+use Bwm\Inc\Inc;
+use Bwm\File\File;
 
 class Bwm {
-	public $file;
+	public $site_conf;
 	public $page;
 	public $inc;
-	public $site_conf;
+	public $file;
 
 	private $layout;
 	private $layout_file;
@@ -21,7 +25,11 @@ class Bwm {
 	private $tag;
 
 	function __construct() {
-		$this->loadBwm();
+		$this->site_conf = new SiteConf();
+		$this->page = new Page($this->site_conf);
+		$this->inc = new Inc();
+		$this->file = new File();
+		
 		$this->setErrConf();
 	}
 	
@@ -35,15 +43,7 @@ class Bwm {
 		ini_set('display_errors', 1);
 		error_reporting(E_ERROR | E_COMPILE_ERROR | E_PARSE);	
 	}
-
-	private function loadBwm() {
-		$this->site_conf = new SiteConf();
-		$this->page = new Page();
-		$this->file = new File();
-		$this->inc = new Inc();
-	}
-
-	# layout
+	
 	function setLayout($layout) {
 		$this->layout = $layout;
 	}

@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/load-bwm.php';
 
-$B->setLayout('');
-$B->setTitle('temp');
+$B->page->setLayout('');
+$B->page->setTitle('temp');
 
-require_once $B->getPage();
+require_once $B->page->getPage();
 ?>

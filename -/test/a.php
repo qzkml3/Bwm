@@ -7,7 +7,7 @@ $B->$page->setTag('');
 
 $B->$page->setTitle('');
 
-require_once $B->getPage();
+require_once $B->page->getPage();
 ?>
 <!doctype html>
 <html lang="ko">
