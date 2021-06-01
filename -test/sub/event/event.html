@@ -1,35 +1,52 @@
-<span class="e">event</span>
-<script>
-	for (var i = 0; i < 10; i++) {
+<section>
+	<h2>이벤트 여러개 걸고 off</h2>
+	<span class="e">event</span>
+	<script>
+		for (var i = 0; i < 10; i++) {
+			$('.e').on('click', function () {
+				console.log(1);
+			});
+		}
+
 		$('.e').on('click', function () {
-			console.log(1);
+			console.log(2);
 		});
-	}
-	
-	$('.e').on('click', function() {
-		console.log(2);
-	});
-	
-	$('.e').on('mouseenter', function() {
-		console.log('enter');
-	});
-	
-	//$('.e').off('click');
-</script>
 
-<ul>
-	<li>click이벤트 여러개를 걸고 off를 하면 모든 click 이벤트 들이 다 제거 된다.</li>
-</ul>
+		$('.e').on('mouseenter', function () {
+			console.log('enter');
+		});
 
-<style>
-	.e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-    .e {background: #ccc;}
-</style>
+		$('.e').off('click mouseenter');
+	</script>
+
+	<ul>
+		<li>click이벤트 여러개를 걸고 off를 하면 모든 click 이벤트 들이 다 제거 된다.</li>
+	</ul>
+
+	<style>
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+		.e {background: #ccc;}
+	</style>
+</section>
+
+
+<section>
+	<h2>Live 이벤트 걸기 파라미터 순서가 항상 헷갈린다.</h2>
+
+	<button type="button" class="target">target</button>
+
+
+	<script>
+		$(document).on('click', '.target', function () {
+			alert(1);
+		});
+	</script>
+</section>
