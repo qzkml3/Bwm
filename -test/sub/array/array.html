@@ -1,9 +1,10 @@
+<h2>Array 문자열</h2>
 <?php
 /*테스트 데이터*/
 $star_pict = [
-	['bp_photo_url' => 'https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'a' => 'a' ],
-	['bp_photo_url' => 'https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'b' => 'b' ],
-	['bp_photo_url' => 'https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'b' => 'b' ],
+	['bp_photo_url' => '1https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'a' => 'a' ],
+	['bp_photo_url' => '2https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'b' => 'b' ],
+	['bp_photo_url' => '3https://mfile.livek.tv/webfile/rose/profile/admin/admin_1617157105.png', 'b' => 'b' ],
 ];
 
 foreach($star_pict as $k)  {
@@ -18,3 +19,23 @@ foreach($star_pict as $k => $v)  {
 	$v = (object)$v;
 	echo '<br>' . $v->bp_photo_url;
 }
+?>
+
+
+<h2>array_pop</h2>
+<ul>
+	<li>마지막 데이터를 리턴한다.</li>
+	<li>기존 데이터는 마지막 뺀 데이터로 변경된다.</li>
+</ul>
+<pre>
+<?php
+$star_pict_poped = array_pop($star_pict);
+
+
+
+print_r($star_pict);
+
+print_r($star_pict_poped);
+?>
+	</pre>
+	
