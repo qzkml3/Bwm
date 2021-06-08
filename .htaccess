@@ -8,7 +8,7 @@ RewriteEngine On
 #RewriteRule ^(.*)\.html$ $1.php [L]
 #RewriteRule ^(.*)\.html$ $1.php [QSA,L]
 
-RewriteRule ^(.*)\.html$ $1.php
+#RewriteRule ^(.*)\.html$ $1.php
 
 
 #ErrorDocument 404 /error/404
