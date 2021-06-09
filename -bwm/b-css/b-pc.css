@@ -1,3 +1,34 @@
+/*.b-pop-single*/
+.b-pop-single {position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
+/*.b-pop*/
+.b-pop {
+    display: none; align-items: center; justify-content: center;
+}
+
+.b-pop-page {
+    background: white; padding: 10px;
+    box-sizing: border-box; min-width: 300px; max-width: 800px;
+    box-shadow: 0 0 2px 2px rgba(200,200,200, 0.2);
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.b-pop-btn-wrap {text-align: center;}
+
+.b-pop-btn-wrap > * {border: solid 1px #888;
+    color: #555;}
+
+
+
+.b-pad {
+    padding: 5rem 8rem;
+}
+
+.b_mg_c > * {margin: 50px 0;}
+
 html {overflow-y: scroll;}
 
 body {color: #555;}
@@ -334,7 +365,7 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 
 /*b_box*/
 .b_box {padding: 1.5vmin 2vmin; border: solid 1px #dfdfdf; background: #fff; box-sizing: border-box;
-    
+
 }
 
 .b_box > * {margin: 20px 0;}
