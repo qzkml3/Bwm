@@ -9,8 +9,6 @@ body {font-size: 1600%;}
 
 a {color: inherit;}
 
-button {margin: 5px 2px; border-radius: 4px; background: none; border: none; cursor: pointer; color: inherit;}
-
 dt {margin-bottom: .5em;}
 
 dt label {color: #222;}
@@ -21,6 +19,17 @@ label {display: inline-flex; align-items: center; cursor: pointer;
 }
 label > * {}
 label > *:first-child {margin-right: 5px;}
+
+.b_btn, .b_field_sec button {
+    box-sizing: border-box;
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer; border-radius: 5px;
+    padding: 0 1em; margin: 5px;
+    height: 30px; line-height: 30px; font-size: 12px;
+    color: #222; border: solid 1px #b6b6b6;
+    background: linear-gradient(0deg, #ddd 0%, #eee 50%, #fff 100%);
+    box-shadow: 0px 1px 0px 0px #aaa;
+}
 
 /*.b-pop-single*/
 .b-pop-single {position: fixed; left: 0; top: 0; width: 100%; height: 100%;
@@ -182,27 +191,6 @@ a {color: #3baae3; text-decoration: none;}
 
 
 
-
-
-
-
-.b_btn_rad, .b_btn_rad_w button, .b_btn_rad_w a, .b_btn_rad_w input[type=button],  {border-radius: 200px !important;}
-
-/*b_btn_size*/
-$v: .9em;
-body .b_btn_s_2, .b_btn_w_s2 button, .b_btn_w_s2 a, .b_btn_w_s2 input[type=button] {
-    height: 20px; line-height: 20px; font-size: 10px;
-    padding-left: $v; padding-right: $v;
-}
-$v: 1.2em;
-body .b_btn_s, .b_btn_w_s button, .b_btn_w_s a, .b_btn_w_s input[type=button] {
-    height: 25px; line-height: 25px; font-size: 11px;
-    padding-left: $v; padding-right: $v;
-}
-body .b_btn_l, .b_btn_w_l button, .b_btn_w_l a, .b_btn_w_l input[type=button] {height: 35px; line-height: 35px; font-size: 13px;}
-body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button] {height: 40px; line-height: 40px; font-size: 14px;}
-
-
 .b_btn_w_safe, .b_btn_green {background: #25b177 !important;}
 .b_btn_black, .b_btn_alt {background: #333 !important;}
 .b_btn_red, .b_btn_fire {background: #ef4a4a !important;}
@@ -298,10 +286,6 @@ body .b_btn_l2, .b_btn_w_l2 button, .b_btn_w_l2 a, .b_btn_w_l2 input[type=button
 @media (max-width: 500px) {
     .b_ls ul li::before {width: 5px; height: 5px;}
 }
-
-.b_form > * {display: flex;}
-.b_form > * > * {align-items: center; padding: .5em;}
-.b_form > * > label {display: flex; padding: .5em;}
 
 .b_radio_hide {display: flex; flex-wrap: wrap;}
 .b_radio_hide label {border: solid 2px #ddd; padding: 2px 8px; border-radius: 5px; margin: 4px 2px; transition: all 0.3s;}
@@ -580,19 +564,7 @@ input {
 .b_pad_h__16px {padding-left: 16px !important; padding-right: 16px !important;}
 .b_pad_h__20px {padding-left: 20px !important; padding-right: 20px !important;}
 
-.b_form button, .b_btn {
-    box-sizing: border-box;
-    display: inline-flex; align-items: center; justify-content: center;
-    cursor: pointer; border-radius: 3px;
-    padding: 0 5px;
-    height: 30px; line-height: 30px; font-size: 12px;
-    color: #222; border: solid 1px #ccc;
-    background: linear-gradient(0deg, #ddd 0%, #eee 50%, #fff 100%);
-}
 
-.b_btn__col_1 {
-    color: white; border: solid 1px transparent;background: #3db0e4;
-}
 
 .b_btn > i, .b_btn > img {margin-right: 5px;}
 
@@ -712,3 +684,15 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
 .b_mg_c > * {margin: 50px 0;}
 .b_mg_c > *:first-child {margin-top: 0;}
 .b_mg_c > *:last-child {margin-bottom: 0;}
+
+.b_rad__round {border-radius: 200px !important;}
+.b_btn__round {border-radius: 200px !important; padding: 0 1.5em !important;}
+
+.b_btn__white {background: white; border: solid 1px silver; color: #000;}
+.b_btn__black {background: #333; border: solid 1px #333; color: #fff;}
+.b_btn__silver {background: silver; border: solid 1px silver; color: #fff;}
+.b_btn__gray {background: gray; border: solid 1px gray; color: #fff;}
+.b_btn__color1 { border: solid 1px #3db0e4; background: #3db0e4; color: white;}
+.b_btn__color2 { border: solid 1px #dc6c62; background: #dc6c62; color: white;}
+
+.b_btn_sec {display: flex; align-items: center; justify-content: center; flex-wrap: wrap;}
