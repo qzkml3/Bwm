@@ -110,18 +110,8 @@ a {color: #3baae3; text-decoration: none;}
     border-top: none; border-bottom: none; position: relative; box-shadow: 4px 4px 8px #bbb;
 }
 
-#page_m {max-width: 500px;}
-
-@media (max-width: 500px) {
-    #page {border-radius: 7px;}
-}
-
-.b-tit {font-size: 22px; padding-bottom: .2em; margin: 30px 0 30px;
+.b_tit {font-size: 22px; padding-bottom: .2em; margin: 30px 0 30px;
     text-align: center;
-}
-
-@media (max-width: 500px) {
-    .b-tit {font-size: 18px;}
 }
 
 .b_cont {padding: 1px 0; margin-left: auto; margin-right: auto;}
@@ -582,11 +572,13 @@ input {
 
 .b-f-10px {font-size: 10px !important;}
 
-.b-pad-10px {padding: 10px !important;}
+.b_pad {}
+.b_pad__10px {padding: 10px !important;}
 
-.b-pad-h-12px {padding-left: 12px !important; padding-right: 12px !important;}
-.b-pad-h-16px {padding-left: 16px !important; padding-right: 16px !important;}
-.b-pad-h-20px {padding-left: 20px !important; padding-right: 20px !important;}
+.b_pad_h {}
+.b_pad_h__12px {padding-left: 12px !important; padding-right: 12px !important;}
+.b_pad_h__16px {padding-left: 16px !important; padding-right: 16px !important;}
+.b_pad_h__20px {padding-left: 20px !important; padding-right: 20px !important;}
 
 .b_form button, .b_btn {
     box-sizing: border-box;
