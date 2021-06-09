@@ -12,7 +12,8 @@
 
 	<?php if ($B->page->getLayout() != '') { ?>
 		<link href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-comm-pre.css');?>" rel="stylesheet">
-		<link href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-pc.css');?>" rel="stylesheet">
+		<link media="(min-width: 1000px)" href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-pc.css');?>" rel="stylesheet">
+		<link media="(max-width: 1000px)" href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/b-css/b-mo.css');?>" rel="stylesheet">
 	<?php } ?>
 
 	<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-ui-custom.min.css" rel="stylesheet">
