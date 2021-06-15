@@ -13,6 +13,10 @@ class SiteConf {
 	function getSiteId() {
 		return self::SITE_ID;
 	}
+
+	function getSiteName() {
+		return self::SITE_NAME;
+	}
 	
 	function getBwmRootUrl() {
 		return self::BWM_ROOT_URL;

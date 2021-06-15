@@ -20,6 +20,10 @@ label {display: inline-flex; align-items: center; cursor: pointer;
 label > * {}
 label > *:first-child {margin-right: 5px;}
 
+/*b_btn_sec*/
+.b_btn_sec {display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin: 20px 0; position: relative;}
+.b_btn_sec > button, .b_btn_sec > a {margin: 5px;}
+
 .b_btn, .b_field_sec button {
     box-sizing: border-box;
     display: inline-flex; align-items: center; justify-content: center;
@@ -30,11 +34,15 @@ label > *:first-child {margin-right: 5px;}
     background: linear-gradient(0deg, #ddd 0%, #eee 50%, #fff 100%);
     box-shadow: 0px 1px 0px 0px #aaa;
 }
-
+.b_btn__round {border-radius: 200px !important; padding: 0 1.5em;}
+.b_btn__white, .b_btn__link {background: white; border: solid 1px silver; color: #000;}
+.b_btn__black, .b_btn__save {background: #333; border: solid 1px #333; color: #fff;}
+.b_btn__silver, .b_btn__disable {background: silver; border: solid 1px silver; color: #fff;}
+.b_btn__gray, .b_btn__cancel {background: gray; border: solid 1px gray; color: #fff;}
+.b_btn__color1 { border: solid 1px #3db0e4; background: #3db0e4; color: white;}
+.b_btn__red, .b_btn__color2, .b_btn__del { border: solid 1px #dc6c62; background: #dc6c62; color: white;}
 .b_btn__35 {height: 35px; padding: 0 20px; font-size: 15px;}
-
 .b_btn__40 {height: 40px; padding: 0 20px; font-size: 15px;}
-
 .b_btn__45 {height: 45px; padding: 0 23px; font-size: 16px;}
 
 /*.b-pop-single*/
@@ -668,17 +676,8 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
 .b_mg_c > *:last-child {margin-bottom: 0;}
 
 .b_rad__round {border-radius: 200px !important;}
-.b_btn__round {border-radius: 200px !important; padding: 0 1.5em;}
 
-.b_btn__white {background: white; border: solid 1px silver; color: #000;}
-.b_btn__black {background: #333; border: solid 1px #333; color: #fff;}
-.b_btn__silver, .b_btn__disable {background: silver; border: solid 1px silver; color: #fff;}
-.b_btn__gray, .b_btn__cancel {background: gray; border: solid 1px gray; color: #fff;} 
-.b_btn__color1 { border: solid 1px #3db0e4; background: #3db0e4; color: white;}
-.b_btn__red, .b_btn__color2, .b_btn__del { border: solid 1px #dc6c62; background: #dc6c62; color: white;}
 
-.b_btn_sec {display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin: 20px 0;}
-.b_btn_sec > button, .b_btn_sec > a {margin: 5px;}
 
 .b_ifx {display: inline-flex;}
 

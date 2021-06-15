@@ -21,7 +21,12 @@ class Page {
 		$this->title = $title;
 	}
 	function getTitle($title) {
-		return $this->title;
+		if ($this->title == '') {
+			$title = $this->site_conf->getSiteName(); 
+		} else {
+			$title = $this->title . ' : ' . $this->site_conf->getSiteName();
+		}
+		return $title;
 	}
 
 	function setLayout($layout) {
