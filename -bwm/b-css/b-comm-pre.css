@@ -694,5 +694,23 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
 .b_btn > i, .b_btn > img {margin-right: 6px;}
 
 .b_mg_c_h__5px {}
-.b_mg_c_h__5px > * {margin-left: 5px;}
-.b_mg_c_h__5px > *:first-child {margin-left: 0;}
+.b_mg_c_h__5px > * {margin-right: 5px !important;}
+.b_mg_c_h__5px > *:last-child {margin-right: 0 !important;}
+
+.b_mg_c_h__10px {}
+.b_mg_c_h__10px > * {margin-right: 10px !important;}
+.b_mg_c_h__10px > *:last-child {margin-right: 0 !important;}
+
+.b_mg_c_h__20px {}
+.b_mg_c_h__20px > * {margin-right: 20px !important;}
+.b_mg_c_h__20px > *:last-child {margin-right: 0 !important;}
+
+.b_btn_sec_right {margin-right: auto;}
+
+.b_block { margin: 10px 0; display: flex; align-items: center;}
+.b_block > * {margin-right: 10px;}
+.b_block > *:last-child {margin-right: 0;}
+
+.b_inline { margin: 5px 0; display: inline-flex; align-items: center;}
+.b_inline > * {margin-right: 10px;}
+.b_inline > *:last-child {margin-right: 0;}
