@@ -1,10 +1,23 @@
-<ul>
-	<?php for ($i = 0; $i < 10; $i++) { ?>
-	    <li>
-    		<a href="board-view.php">게시글</a>
-    	</li>
-	<?php } ?>
-</ul>
+<div class="b_tbl_wrap">
+	<table class="b_tbl">
+		<thead>
+		<tr>
+			<th>Group</th>
+			<th>Cont</th>
+			<th>Date</th>
+		</tr>
+		<?php for ($i = 0; $i < 10; $i++) { ?>
+		<tr>
+			<td style="text-align: center; width: 180px;">group</td>
+			<td>
+				<a href="board-view.php">col2</a>
+			</td>
+			<td style="text-align: center; width: 180px;">1111.11.11 11:11:11</td>
+		</tr>
+		<?php } ?>
+		</thead>
+	</table>	
+</div>
 
 <div class="b_btn_sec">
 	<a class="b_btn" href="board-form.php">등록</a>

@@ -2,9 +2,9 @@
 namespace Bwm;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/conf/SiteConf.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/page/Page.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/inc/Inc.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/b-php/file/File.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/page/Page.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/inc/Inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/file/File.php';
 
 use Bwm\Conf\SiteConf;
 use Bwm\Page\Page;
@@ -41,7 +41,8 @@ class Bwm {
 	
 	private function setErrConf() {
 		ini_set('display_errors', 1);
-		error_reporting(E_ERROR | E_COMPILE_ERROR | E_PARSE);	
+		error_reporting(E_ERROR | E_COMPILE_ERROR | E_PARSE);
+		//error_reporting(E_ALL);
 	}
 	
 	function setLayout($layout) {

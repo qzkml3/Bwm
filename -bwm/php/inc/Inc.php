@@ -22,4 +22,8 @@ class Inc {
 
 		return $this->getRes($res);
 	}
+	
+	static function getStatic() {
+		echo 'get Static is Writed';
+	}
 }
