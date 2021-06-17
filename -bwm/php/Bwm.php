@@ -1,11 +1,13 @@
 <?php
 namespace Bwm;
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Str/Str.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/conf/SiteConf.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/page/Page.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/inc/Inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Inc/Inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/file/File.php';
 
+use Bwm\Str\Str;
 use Bwm\Conf\SiteConf;
 use Bwm\Page\Page;
 use Bwm\Inc\Inc;
@@ -29,6 +31,7 @@ class Bwm {
 		$this->page = new Page($this->site_conf);
 		$this->inc = new Inc();
 		$this->file = new File();
+		$this->str = new Str();
 		
 		$this->setErrConf();
 	}

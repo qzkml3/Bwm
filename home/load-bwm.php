@@ -4,8 +4,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Bwm.php';
 use Bwm\Bwm;
 $B = new Bwm();
 
-$B->inc::getStatic();
-
 //spl_autoload_register('b_autoload');
 
 /*spl_autoload_register('b_loadConf');

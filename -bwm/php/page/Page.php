@@ -20,7 +20,7 @@ class Page {
 	function setTitle($title) {
 		$this->title = $title;
 	}
-	function getTitle($title) {
+	function getTitle($title = '') {
 		if ($this->title == '') {
 			$title = $this->site_conf->getSiteName(); 
 		} else {

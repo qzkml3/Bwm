@@ -81,7 +81,7 @@ html {overflow-y: scroll;}
 body {color: #555;}
 
 a {
-    @include b-pad();
+    padding: 10px;
 }
 a:hover, button:hover, input:hover, textarea:hover {box-shadow: 0px 0px 3px 3px #ccc;}
 a:focus, button:focus, input:focus, textarea:focus {box-shadow: 0px 0px 3px 3px skyblue;}
@@ -287,15 +287,7 @@ a {color: #3baae3; text-decoration: none;}
 .b_radio_hide label.on {border-color: #ea4c89; box-shadow: 2px 2px #ecc1d1;}
 .b_radio_hide input[type=radio] {display: none;}
 
-.ml_1px {margin-left: 1px !important;}
-.ml_2px {margin-left: 2px !important;}
 
-
-@for $i from 10 through 30 {
-    .fs_#{$i}px, .fs_#{$i}px * {font-size: #{$i}px}
-}
-
-.fs_s {font-size: smaller;}
 
 .c_deep_pink {color: #ea4c89 !important;}
 .under_line {border-bottom : solid 1px;}
@@ -384,10 +376,6 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 
 .b_c_black, .b_c_black_d * {color: #222;}
 
-@for $i from 1 through 20 {
-    .b_mv_c_#{$i}px > * {margin-top: #{$i}px; margin-bottom: #{$i}px;}
-}
-
 .b_flex_space_between {justify-content: space-between;}
 
 .b_fl {display: flex;}
@@ -401,8 +389,6 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_fl_ai_c {align-items: center;}
 
 .b_fl_fs {align-items: flex-start;}
-
-.b_ml_a {margin-left: auto;}
 
 .b_p_h_10px {padding-left: 10px; padding-right: 10px;}
 
@@ -438,10 +424,6 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_c_blue {color: #0000ff;}
 
 .b_pos_r {position: relative !important;}
-
-@for $i from 1 through 30 {
-    .b_ml_#{$i}px {margin-left: #{$i}px}
-}
 
 .b_source {
     position: relative;
@@ -494,19 +476,9 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_tab_ct > * {position: absolute; opacity: 0; transition: all .3s; left: -99999px; top: -99999px;}
 .b_tab_ct > *.on {position: static; opacity: 1; left: 0; top: 0;}
 
-@for $i from 1 through 10 {
-    .b_mh_c_#{$i}px > * {margin-right: #{$i}px !important; margin-left: #{$i}px !important;}
-    .b_mh_c_#{$i}px > *:first-child {margin-left: 0 !important;}
-    .b_mh_c_#{$i}px > *:last-child {margin-right: 0 !important;}
-}
-
 .b_w_full {width: 100%;}
 
 .b_w_10em {width: 10em;}
-
-@for $i from 1 through 10 {
-    .b_w_#{$i}em {width: #{$i}em}
-}
 
 .b_show {display: block;}
 
@@ -651,17 +623,15 @@ h2 span {font-size: 12rem; vertical-align: baseline;}
     padding: 0 1.8%;
 }
 
-
-
 #gnb {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
     line-height: 50px;
-> * {
-    margin: 0 10px;
-    @include b-pad();
 }
+
+#gnb > * { 
+    margin: 0 10px;    
 }
 
 .b-link-pad {padding: 5rem 8rem;border-radius:  3rem;}
