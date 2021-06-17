@@ -77,4 +77,26 @@ class Page {
 
         return $r;
     }
+
+	function setTag($tag) {
+		if ($tag != null) {
+			$this->$tag = $tag;
+		}
+	}
+
+	function addTag($tags) {
+		$v = str_replace(' ', '', $tags);
+		$v = explode(',', $v);
+
+		$rtn = '';
+		foreach($v as $v2) {
+			$rtn .= '<a class="b_btn_green">#'. $v2 . '</a> ';
+		}
+
+		$this->tag .= $rtn;
+	}
+
+	function getTag($tags) {
+		return $this->tag;
+	}
 }

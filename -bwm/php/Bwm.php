@@ -21,7 +21,6 @@ class Bwm {
 
 	private $layout;
 	private $layout_file;
-	private $title;
 	private $view;
 	
 	private $tag;
@@ -34,12 +33,6 @@ class Bwm {
 		$this->str = new Str();
 		
 		$this->setErrConf();
-	}
-	
-	function setTag($tag) {
-		if ($tag != null) {
-			$this->$tag = $tag;
-		}
 	}
 	
 	private function setErrConf() {
@@ -56,10 +49,6 @@ class Bwm {
 		return $v;
 	}
 
-	# title
-	function setTitle($title) {
-		$this->title = $title;
-	}
 	function getTitFromUrl() {
 		return $_SERVER['PHP_SELF']; 
 	}
@@ -68,15 +57,6 @@ class Bwm {
 	}
 	function setTitleByFolderName() {
 		$this->title = $this->file->getFileName();
-	}
-	
-	function getTitle() {
-		if ($this->title) {
-			$title = $this->title . ' : ' . $this->getSiteName();
-		} else {
-			$title = $this->getSiteName();
-		}
-		return $title;
 	}
 
 	function getPageTitle() {
@@ -123,21 +103,5 @@ class Bwm {
         }
         
 		return $v;
-	}
-	
-	function addTag($tags) {
-		$v = str_replace(' ', '', $tags);
-		$v = explode(',', $v);
-		
-		$rtn = '';
-		foreach($v as $v2) {
-			$rtn .= '<a class="b_btn_green">#'. $v2 . '</a> ';
-		}
-		
-		$this->tag .= $rtn;
-	}
-
-	function getTag($tags) {
-		return $this->tag;
 	}
 }
