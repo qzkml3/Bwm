@@ -5,3 +5,22 @@ echo $B->inc::getRes('/-bwm/css/comm-pre.css');
 echo '<h2>커스텀</h2>';
 use Bwm\Inc\Inc as Inc;
 echo Inc::getRes('/-bwm/css/comm-pre.css');
+
+
+echo '<h2>현재 절대</h2>';
+echo Inc::getRes('/-test/sub/include/index.php');
+
+echo '<h2>현재 상대</h2>';
+echo Inc::getRes('./index.php');
+
+echo '<h2>현재 상대</h2>';
+echo Inc::getRes('index.php');
+
+echo '<h2>서브 상대</h2>';
+echo Inc::getRes('sub/index.php');
+
+echo '<h2>서브 상대</h2>';
+echo Inc::getRes('./sub/index.php');
+
+echo '<h2>부모 상대 todo</h2>';
+echo Inc::getRes('../index.php');
