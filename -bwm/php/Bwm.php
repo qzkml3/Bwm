@@ -17,9 +17,9 @@ use Bwm\Inc\Inc;
 use Bwm\File\File;
 
 class Bwm {
+	public $inc;
 	public $site_conf;
 	public $page;
-	public $inc;
 	public $file;
 
 	private $layout;
@@ -29,12 +29,12 @@ class Bwm {
 	private $tag;
 
 	function __construct() {
+		$this->str = new Str();
+		$this->inc = new Inc;
 		$this->site_conf = new SiteConf();
 		$this->site = new Site();
 		$this->page = new Page($this->site_conf);
-		$this->inc = new Inc;
 		$this->file = new File();
-		$this->str = new Str();
 		
 		$this->setErrConf();
 	}
