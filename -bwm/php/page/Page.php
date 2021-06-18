@@ -9,7 +9,7 @@ use Bwm\Conf\SiteConf;
 class Page {
 	private $site_conf;
 	
-	private $title;
+	static public $title;
 	private $layout;
 	
 	public function __construct($site_conf)

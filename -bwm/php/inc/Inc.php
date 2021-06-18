@@ -5,7 +5,7 @@ namespace Bwm\Inc;
 class Inc
 {
 
-	function getRes($res)
+	static function getRes($res)
 	{
 		$file = $_SERVER['DOCUMENT_ROOT'] . $res;
 		$v = filemtime($file);
@@ -14,17 +14,21 @@ class Inc
 		return $res;
 	}
 
-	function getResAbs($res)
+	static function getResAbs($res)
 	{
-		return $this->getRes($res);
+		return self::getRes($res);
 	}
 
-	function getResRel($res)
+	static function getResRel($res)
 	{
 		$path = $_SERVER['SCRIPT_NAME'];
 		$path = substr($path, 0, strrpos($path, '/') + 1);
 		$res = $path . $res;
 
-		return $this->getRes($res);
+		return self::getRes($res);
+	}
+	
+	static function test() {
+		
 	}
 }

@@ -1,14 +1,17 @@
 <?php
 namespace Bwm;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Str/Str.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/home/class/conf/SiteConf.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/page/Page.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Inc/Inc.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/file/File.php';
 
-use Bwm\Str\Str;
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Str/Str.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Site/Site.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Page/Page.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Inc/Inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/File/File.php';
+
 use Bwm\Conf\SiteConf;
+use Bwm\Str\Str;
+use Bwm\Site\Site;
 use Bwm\Page\Page;
 use Bwm\Inc\Inc;
 use Bwm\File\File;
@@ -27,8 +30,9 @@ class Bwm {
 
 	function __construct() {
 		$this->site_conf = new SiteConf();
+		$this->site = new Site();
 		$this->page = new Page($this->site_conf);
-		$this->inc = new Inc();
+		$this->inc = new Inc;
 		$this->file = new File();
 		$this->str = new Str();
 		

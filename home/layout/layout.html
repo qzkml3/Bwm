@@ -4,16 +4,16 @@
 <!doctype html>
 <html lang="ko" class="<?=$B->page->getLayout()?>">
 <head>
-	<title><?=$B->page->getTitle();?></title>
+	<title><?=$B->site->getTitle();?></title>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<?php if ($B->page->getLayout() != '') { ?>
-		<link href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/css/b-comm-pre.css');?>" rel="stylesheet">
-		<link media="(min-width: 1000px)" href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/css/b-pc.css');?>" rel="stylesheet">
-		<link media="(max-width: 1000px)" href="<?=$B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/css/b-mo.css');?>" rel="stylesheet">
+		<link href="<?=$B->inc::getResAbs($B->site_conf->getBwmRootUrl() . '/css/b-comm-pre.css');?>" rel="stylesheet">
+		<link media="(min-width: 1000px)" href="<?=$B->inc::getResAbs($B->site_conf->getBwmRootUrl() . '/css/b-pc.css');?>" rel="stylesheet">
+		<link media="(max-width: 1000px)" href="<?=$B->inc::getResAbs($B->site_conf->getBwmRootUrl() . '/css/b-mo.css');?>" rel="stylesheet">
 	<?php } ?>
 
 	<link href="<?=$B->site_conf->getBwmRootUrl()?>/b-js/jquery/jquery-ui-custom.min.css" rel="stylesheet">
@@ -24,11 +24,11 @@
 	<script src="<?=$B->site_conf->getBwmRootUrl()?>/b-js/img/imageMapResizer/imageMapResizer.min.js"></script>
 
 	<!--bwm-->
-	<?php $v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/js/bwm.js'); ?>
+	<?php $v = $B->inc::getResAbs($B->site_conf->getBwmRootUrl() . '/js/bwm.js'); ?>
 	<script src="<?=$v?>"></script>
 
 	<!--private site-->
-	<?php /*$v = $B->inc->getResAbs($B->site_conf->getBwmRootUrl() . '/js/' . $B->site_conf->getSiteId() . '.js'); */ ?><!--
+	<?php /*$v = $B->inc::getResAbs($B->site_conf->getBwmRootUrl() . '/js/' . $B->site_conf->getSiteId() . '.js'); */ ?><!--
 	<script src="<? /*=$v*/ ?>"></script>-->
 </head>
 <body class="<?=$B->page->getLayout()?> b_init">
