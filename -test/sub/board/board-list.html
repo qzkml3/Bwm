@@ -7,18 +7,32 @@
 			<th>Date</th>
 		</tr>
 		<?php for ($i = 0; $i < 10; $i++) { ?>
-		<tr>
-			<td style="text-align: center; width: 180px;">group</td>
-			<td>
-				<a href="board-view.php">col2</a>
-			</td>
-			<td style="text-align: center; width: 180px;">1111.11.11 11:11:11</td>
-		</tr>
+			<tr>
+				<td style="text-align: center;">group</td>
+				<td style="width: 60%;">
+					<a href="board-view.php">col2</a>
+				</td>
+				<td style="text-align: center;">1111.11.11 11:11:11</td>
+			</tr>
 		<?php } ?>
 		</thead>
-	</table>	
+	</table>
 </div>
 
+<nav class="b_paging">
+	<a href="" title="처음">&lt;&lt;</a>
+	<a href="" title="이전">&lt;</a>
+	<?php for ($i = 0; $i < 5; $i++) { ?>
+		<?php if ($i == 3) { ?>
+			<a href="" class="on"><?=$i + 1?></a>
+		<?php } else { ?>
+			<a href=""><?=$i + 1?></a>
+		<?php } ?>
+	<?php } ?>
+	<a href="" title="다음">&gt;</a>
+	<a href="" title="마지막">&gt;&gt;</a>
+</nav>
+
 <div class="b_btn_sec">
-	<a class="b_btn" href="board-form.php">등록</a>
+	<a class="b_btn b_btn__color1 b_btn__round" href="board-form.php">등록</a>
 </div>

@@ -9,6 +9,8 @@ body {font-size: 1600%;}
 
 a {color: inherit;}
 
+a, button { transition: all .5s;}
+
 dt {margin-bottom: .5em;}
 
 dt label {color: #222;}
@@ -37,7 +39,7 @@ label > *:first-child {margin-right: 5px;}
 
 
 
-.b_btn__round {border-radius: 200px !important; padding: 0 1.5em;}
+.b_btn__round {border-radius: 200px !important; padding: 0 1.5em; min-width: 80px;}
 
 .b_btn__black, .b_btn__save {background: #333; border: solid 1px #333; color: #fff;}
 
@@ -110,10 +112,7 @@ html {overflow-y: scroll;}
 
 body {color: #555;}
 
-a {
-    padding: 10px;
-}
-a:hover, button:hover, input:hover, textarea:hover {box-shadow: 0px 0px 3px 3px #ccc;}
+a:hover, button:hover, input:hover, textarea:hover {box-shadow: 0px 0px 3px 3px #ddd; border-radius: 100px;}
 a:focus, button:focus, input:focus, textarea:focus {box-shadow: 0px 0px 3px 3px skyblue;}
 
 ul {padding-left: 1.2em;}
@@ -552,9 +551,11 @@ script.on {display: block; white-space: pre;}
 .b_field_sec input[type='text'], .b_input {
     height: 30px; box-sizing: border-box;
     border: solid 1px #bbb;
-    padding: 0 8px;
+    padding: 8px 8px;
     border-radius: 5px;
 }
+
+textarea.b_input {width: 100%; min-height: 100px; resize: none;}
 
 .b-f-10px {font-size: 10px !important;}
 
@@ -719,7 +720,7 @@ script.on {display: block; white-space: pre;}
 .b_block > *:last-child {margin-right: 0;}
 
 /**/
- .b_tbl_wrap {border-radius: 10px; overflow: hidden; border: solid 1px #ddd;
+ .b_tbl_wrap {border-radius: 7px; overflow: hidden; border: solid 1px #ddd;
      margin: 20rem 0;
  }
 
@@ -733,7 +734,7 @@ script.on {display: block; white-space: pre;}
 .b_tbl th:last-child {border-right: none;}
 
 .b_tbl tbody tr:last-child th {border-bottom: none;}
-.b_tbl tbody th {text-align: left;}
+.b_tbl tbody th {text-align: left; vertical-align: top;}
 
 .b_tbl td {border: solid 1px #ddd; padding: 10rem; border-bottom: none; border-left: none; box-sizing: border-box;}
 .b_tbl td:first-child {border-left: none;}
@@ -751,4 +752,7 @@ script.on {display: block; white-space: pre;}
 .sprite_fav_magic {background-position: 0em 0em;}
 .sprite_fav_quiz {background-position: -2.55em 0em;}
 
-
+.b_paging {text-align: center;}
+.b_paging a {border: solid 1px #ccc; padding: 5px 10px; border-radius: 200px; }
+.b_paging a.on {background: #fce48b; color: black;}
+.b_paging a.on {background: #ffbf55; color: white;}

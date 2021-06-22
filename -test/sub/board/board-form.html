@@ -1,10 +1,28 @@
-<ul>
-	<?php for ($i = 0; $i < 10; $i++) { ?>
-		<li><input class="b_input" type="text"></li>
-	<?php } ?>
-</ul>
+<div class="b_tbl_wrap">
+	<table class="b_tbl">
+		<colgroup>
+			<col style="width: 20%;">
+		</colgroup>
+		<tr>
+			<th>제목</th>
+			<td><input class="b_input" type="text" style="width: 100%;"></td>
+		</tr>
+		<tr>
+			<th>내용</th>
+			<td>
+				<textarea style="height: 100px;" class="b_input"></textarea>
+			</td>
+		</tr>
+	</table>
+</div>
 
 <div class="b_btn_sec">
 	<a class="b_btn" href="board-list.php">목록</a>
-	<button type="button" class="b_btn b_btn__save">저장</button>
+	<button type="button" class="b_btn b_btn__color1" onclick="save();">저장</button>
 </div>
+
+<script>
+	function save() {
+		location.href = 'board-view.php';
+	}	
+</script>
