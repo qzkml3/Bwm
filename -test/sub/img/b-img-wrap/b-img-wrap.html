@@ -1,39 +1,15 @@
-<style>	
-	.b_img_wrap {position: relative; display: inline-flex;
-		align-items: center; justify-content: center;
-		background: #eee;
-		overflow: hidden; width: 100rem; height: 100rem;
-	}
-
-	.b_img {position: absolute;
-		left: 0; right: 0; top: 0; bottom: 0; margin: auto;
-		max-width: 100%; max-height: 100%;
-	}
-	.b_img_div {width: 100%; height: 100%;
-		background: center / cover;
-	}
-
-	.b_img_cover {width: 100%; height: 100%;
-		left: 0; top: 0; position: absolute;
-		background: rgba(0, 0, 0, .3);
-	}
-</style>
 <section>
 	<h2>contain
 		<span>with &lt;img for radius</span>
 	</h2>
-	<div class="b_img_wrap b_rad">
-		<img class="b_img b_rad" src="/-bwm/img/ex/img-h.jpg" alt="">
-		<div>
-			<div class="b_img_cover"></div>
-		</div>
+	<div class="b_img_wrap">
+		<div class="b_img_cover"></div>
+		<img class="b_img" src="/-bwm/img/ex/img-h.jpg" alt="">
 	</div>
 
-	<div class="b_img_wrap b_rad">
-		<img class="b_img b_rad" src="/-/img/ex/img_v.jpg" alt="">
-		<div>
-			<div class="b_img_cover"></div>
-		</div>
+	<div class="b_img_wrap">
+		<div class="b_img_cover"></div>
+		<img class="b_img" src="/-/img/ex/img_v.jpg" alt="">
 	</div>
 </section>
 
@@ -41,17 +17,13 @@
 	<h2>cover
 		<span>with &lt;div for ie cover</span>
 	</h2>
-	<div class="b_img_wrap b_rad">
-		<div class="b_img_div" style="background-image:url(/-bwm/img/ex/img-h.jpg);"></div>
-		<div>
-			<div class="b_img_cover"></div>
-		</div>
+	<div class="b_img_wrap">
+		<div class="b_img_cover"></div>
+		<div class="b_div_img" style="background-image:url(/-bwm/img/ex/img-h.jpg);"></div>
 	</div>
 
-	<div class="b_img_wrap b_rad">
-		<div class="b_img_div" style="background-image:url(/-/img/ex/img_v.jpg);"></div>
-		<div>
-			<div class="b_img_cover"></div>
-		</div>
+	<div class="b_img_wrap">
+		<div class="b_img_cover"></div>
+		<div class="b_div_img" style="background-image:url(/-/img/ex/img_v.jpg);"></div>
 	</div>
 </section>
