@@ -575,9 +575,6 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 .b-rad-10rem {border-radius: 10rem !important;}
 .b-rad-round {border-radius: 1000px !important;}
 
-
-
-.b-mg > * {margin: 3% 0;}
 .b-mg-v-c > * { margin-top: 40px !important; margin-bottom: 40px !important; }
 .b-mg-v-c > *:first-child { margin-top: 0px !important; }
 .b-mg-v-c > *:last-child { margin-bottom: 0px !important; }
@@ -777,3 +774,9 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 
 /**/
 .b-hr {background: #eee; height: 5px; margin: 30px 0; border: solid 1px #ddd;}
+
+/**/
+.b-mg {margin-top: 20px;}
+.b-mg-l {margin-top: 30px;}
+.b-mg-xl {margin-top: 40px;}
+.b-mg-2xl {margin-top: 50px;}
