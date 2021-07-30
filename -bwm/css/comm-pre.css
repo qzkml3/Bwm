@@ -401,6 +401,8 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b-box > *:first-child {margin-top: 0;}
 .b-box > *:last-child {margin-bottom: 0;}
 
+.b-box--warn {background: #fff9e2;}
+
 .b_box__info {background: #fff9e2;}
 .b_box__goal {background: #f0f5ea;}
 .b_box__caution {background: #fff7f7;}
@@ -796,3 +798,14 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 * > *:first-child > .b-tit {margin-top: 0; border: 0;}
 
 .b-mg-0 {margin: 0 !important;}
+
+.b-f-2xs {font-size: 0.7em;}
+.b-f-xs {font-size: 0.8em;}
+.b-f-s {font-size: 0.9em;}
+.b-f-l {font-size: 1.11em;}
+.b-f-xl {font-size: 1.12em;}
+.b-f-2xl {font-size: 1.13em;}
+
+
+.b-mg-c-v-5px > * {margin: 5px 0 !important;}
+.b-mg-c-v-10px > * {margin: 10px 0 !important;}
