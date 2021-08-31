@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 .img-list > *:nth-child(3n + 1) {margin-left: 0;}
-.img-list .b_img_cover {opacity: 0; border: solid 2px #ee574a; box-sizing: border-box;}
+.img-list .b-img-cover {opacity: 0; border: solid 2px #ee574a; box-sizing: border-box;}
 
 
 .chk-img {position: absolute; top: 5%; right: 5%;
@@ -25,7 +25,7 @@
 }
 
 .img-list > *.on {}
-.img-list > *.on  .b_img_cover {opacity: 1;}
+.img-list > *.on  .b-img-cover {opacity: 1;}
 
 .img-list > *.on .chk-img {border: 0; background: #ee574a; color: #fff; font-size: 10px;
     text-indent: 0px;

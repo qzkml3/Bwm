@@ -1,34 +1,53 @@
-<div class="b-box">
-	<ul>
-		<li>img로 넣어야 contain시 radius를 넣을 수 있다.</li>
-		<li>cover는 div로</li>
-		<li>ie에서 objectfit이 안먹으므로</li>
-	</ul>
-</div>
-<section>
-	<h2>contain by img
-	</h2>
-	<div class="b_img_wrap">
-		<div class="b_img_cover"></div>
-		<img class="b_img" src="/-bwm/img/ex/img-h.jpg" alt="">
-	</div>
+<main id="main">
+	<article class="b-art">
+		<header>
+			<h2>img</h2>
+			<p>가나다라</p>
+		</header>
+		<img src="/-/img/ex/img_v.jpg" alt="" style="height: 100px;">
+		<img src="/-/img/ex/img_h.jpg" alt="" style="height: 100px;">
+	</article>
+	<article>
+		<h2 class="tit">b-img-wrap</h2>
+		<div class="b-img-wrap" style="width: 100px;">
+			<img src="/-/img/ex/img_v.jpg" alt="" class="b-w-full">
+		</div>
+		<div class="b-img-wrap" style="width: 100px;">
+			<img src="/-/img/ex/img_h.jpg" alt="" class="b-w-full">
+		</div>
+	</article>
+	<article>
+		<h2 class="tit">contain by img</h2>
+		<div class="b-img-wrap">
+			<div class="b-img-cover"></div>
+			<img class="b-img" src="/-bwm/img/ex/img-h.jpg" alt="">
+		</div>
 
-	<div class="b_img_wrap">
-		<div class="b_img_cover"></div>
-		<img class="b_img" src="/-/img/ex/img_v.jpg" alt="">
-	</div>
-</section>
+		<div class="b-img-wrap">
+			<div class="b-img-cover"></div>
+			<img class="b-img" src="/-/img/ex/img_v.jpg" alt="">
+		</div>
+	</article>
 
-<section>
-	<h2>cover by div		
-	</h2>
-	<div class="b_img_wrap">
-		<div class="b_img_cover"></div>
-		<div class="b_div_img" style="background-image:url(/-bwm/img/ex/img-h.jpg);"></div>
-	</div>
+	<article>
+		<h2 class="tit">cover by div
+		</h2>
+		<div class="b-img-wrap">
+			<div class="b-img-cover"></div>
+			<div class="b_div_img" style="background-image:url(/-bwm/img/ex/img-h.jpg);"></div>
+		</div>
 
-	<div class="b_img_wrap">
-		<div class="b_img_cover"></div>
-		<div class="b_div_img" style="background-image:url(/-/img/ex/img_v.jpg);"></div>
+		<div class="b-img-wrap">
+			<div class="b-img-cover"></div>
+			<div class="b_div_img" style="background-image:url(/-/img/ex/img_v.jpg);"></div>
+		</div>
+	</article>
+
+	<div class="b-box b-box--silver">
+		<ul>
+			<li>img로 넣어야 contain시 radius를 넣을 수 있다.</li>
+			<li>cover는 div로</li>
+			<li>ie에서 objectfit이 안먹으므로</li>
+		</ul>
 	</div>
-</section>
+</main>

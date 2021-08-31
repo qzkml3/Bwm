@@ -7,9 +7,9 @@ html {font-size: 6.25%;}
 
 body {font-size: 1600%;}
 
-a {color: inherit;}
 
-a, button { transition: all .5s;}
+
+* { transition: all .4s;}
 
 dt {margin-bottom: .5em;}
 
@@ -118,8 +118,8 @@ html {overflow-y: scroll;}
 
 body {color: #555;}
 
-a:hover, button:hover, input:hover, textarea:hover {box-shadow: 0px 0px 3px 3px #ddd;}
-a:focus, button:focus, input:focus, textarea:focus {box-shadow: 0px 0px 3px 3px skyblue;}
+.b-box:hover, button:hover, input:hover, textarea:hover {box-shadow: 0px 0px 3px 3px #ddd;}
+.b-box:focus, button:focus, input:focus, textarea:focus {box-shadow: 0px 0px 3px 3px skyblue;}
 
 ul {padding-left: 1.2em;}
 
@@ -139,13 +139,13 @@ input:not([type=checkbox]):not([type=radio]), textarea {-webkit-appearance: none
 main {display: block;}
 
 /*.b_init*/
-.b_init * {font-family: Ubuntu Mono, D2Coding, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.4;
-    vertical-align: middle;
-}
+/*.b_init * {font-family:Fira Mono, Ubuntu Mono, D2Coding, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.4;}*/
+.b_init * {font-family:Fira Mono, Ubuntu Mono, D2Coding, Malgun Gothic; letter-spacing: -0.02em; line-height: 1.4;}
 
 /**/
 a {color: #3baae3; text-decoration: none;}
-a[href^='#'] {color: #61b138; text-decoration: underline;}
+a:hover {color: #1a84ba; /*text-decoration: underline;*/ text-shadow: 1px 1px 1px skyblue;}
+a[href^='#'] {color: #61b138;}
 
 /*.b_init a:hover, .b_init a:focus, .b_init tr:focus {box-shadow: 0px 0px 3px 3px skyblue; border-radius: 2px;
   transition: all .3s; !* padding: 2px;*!
@@ -168,7 +168,7 @@ a[href^='#'] {color: #61b138; text-decoration: underline;}
 }
 
 #page {
-    padding: 15px 3% 50px; max-width: 800px; margin: 0 auto 5%; background: white; box-sizing: border-box;
+    padding: 25px 3% 50px; max-width: 800px; margin: 0 auto 5%; background: white; box-sizing: border-box;
     border-top: none; border-bottom: none; position: relative; box-shadow: 4px 4px 8px #bbb;
 }
 
@@ -395,7 +395,12 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .m_v_10px {margin-top: 10px; margin-bottom: 10px;}
 
 /*b_box*/
-.b-box {padding: 10px 10px; border: solid 1px #dfdfdf; background: #fff; box-sizing: border-box; border-radius: 6px; margin: 15px 0; display: block;}
+.b-box {padding: 10px 10px; background: #fff; box-sizing: border-box; border-radius: 6px; margin: 15px 0; display: block;
+    /*border: solid 1px #dfdfdf;*/
+    box-shadow: 3px 3px 5px #bbb, -3px -3px 5px #eee;
+    /*box-shadow: 3px 3px #ccc;*/
+    /*border: solid 3px #eee; border-right: 0; border-bottom: 0;*/
+}
 
 .b-box > * {margin: 15px 0;}
 .b-box > *:first-child {margin-top: 0;}
@@ -522,7 +527,7 @@ dl.b_dl, .b_dl dl {display: inline-flex;}
 .b_tab_ct > * {position: absolute; opacity: 0; transition: all .3s; left: -99999px; top: -99999px;}
 .b_tab_ct > *.on {position: static; opacity: 1; left: 0; top: 0;}
 
-.b_w_full {width: 100%;}
+.b-w-full {width: 100%;}
 
 .b_w_10em {width: 10em;}
 
@@ -601,13 +606,13 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 
 .b_hide_abs {position: absolute; left: -9999999px; top: -9999999px; line-height: 0; width: 0; height: 0; overflow: hidden;}
 
-.b_img_wrap {width: 100px; height: 100px; background: #ddd; overflow: hidden; border: solid 1px #ddd; border-radius: 8px; position: relative;
-    display: inline-block;
+.b-img-wrap {width: 50px; background: #ddd; overflow: hidden; border: solid 1px #ddd; border-radius: 8px; position: relative;
+    display: inline-flex;
 }
 
-.b_img_cover {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3)}
+.b-img-cover {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3)}
 
-.b_img {position: absolute;
+.b-img {position: absolute;
     left: 0; right: 0; top: 0; bottom: 0; margin: auto;
     max-width: 100%; max-height: 100%; border-radius: 6px;
 }
@@ -616,7 +621,7 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
     background: center / cover;
 }
 
-.b_img_wrap svg  { overflow: hidden; width: 100%; height: 100%;}
+.b-img-wrap svg  { overflow: hidden; width: 100%; height: 100%;}
 
 .b_image_blur_2 {filter:url(#b_image_blur_2);}
 .b_image_blur_5 {filter:url(#b_image_blur_5);}
@@ -660,6 +665,7 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 
 .external-github {display: flex;
     justify-content: flex-end; margin: 20px 0;
+    position: absolute; bottom: -50px; right: 0;
 }
 
 .external-github div {background: #ccc; padding: 0 1em; color: white;}
@@ -809,3 +815,16 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 
 .b-mg-c-v-5px > * {margin: 5px 0 !important;}
 .b-mg-c-v-10px > * {margin: 10px 0 !important;}
+
+
+.b-highlight {background: #dff4ff}
+
+.tit {margin: 50px 0 10px;}
+.tit-s {font-size: .5em;}
+
+#main {}
+#main > *:first-child {margin-top: 0;}
+#main > *:first-child > *:first-child {margin-top: 0;}
+#main > *:last-child > *:last-child {margin-bottom: 0;}
+
+.b-art header h2 {}

@@ -1,0 +1,15 @@
+<form name="f">
+	<input type="text" name="a[]" value="1">
+	<input type="text" name="a[]" value="2">
+	<input type="text" name="a[]" value="3">
+	<input type="text" name="b" value="3">
+
+	<input type="checkbox" name="c[]">
+	<input type="checkbox" name="d">
+	<input type="checkbox" name="d">
+</form>
+
+<script>
+	alert(f['c[]']);
+	//alert(f.d);
+</script>

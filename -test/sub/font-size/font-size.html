@@ -1,66 +1,106 @@
-<?php $text = '가나 다라 asd fsd f'; ?>
-
-<div class="vw">
-	가나다
-</div>
-<div class="vmax">
-	가나다
-</div>
-<div class="vmin">
-	가나다
-</div>
-<?php $size = 3; ?>
-<style>
-	.vw {font-size: <?=$size?>vw;}
-	.vmax {font-size: <?=$size?>vmax;}
-	.vmin {font-size: <?=$size?>vmin;}
-</style>
-
-
-
 <main id="main">
+	<section>
+		<style>
+			body {font-size: 4vmin;}
+			@media (min-width: 800px) {
+				body {font-size: 16px;}
+			}
+			<?php $size = 3; ?>
+			.vmin {font-size: <?=$size?>vmin;}
+			.vw {font-size: <?=$size?>vw;}
+			.vmax {font-size: <?=$size?>vmax;}
+		</style>
+
+		<article>
+			<h2>vmin</h2>
+			<div class="vmin">
+				가나다
+			</div>
+		</article>
+
+		<article>
+			<h2>vw</h2>
+			<div class="vw">
+				가나다
+			</div>
+		</article>
+
+		<article>
+			<h2>vmax</h2>
+			<div class="vmax">
+				가나다
+			</div>
+		</article>
+
+		<ul>
+			<li>vw는 계속 커지는데</li>
+			<li>vmin은 container size에 비례해서만 커진다.</li>
+			<li>vmax는 쓸일이 없을거 같고 ie에서 안됨</li>
+		</ul>
+	</section>
+
+	<hr class="b-hr">
+
+	<?php $text = '가나다라 마바사 아 asdlfkj asdfsd'; ?>
+
 	<article class="b-mg-c-v-5px">
-		<h2 class="">b-f-2xs</h2>
-		<div class="b-box b-f-2xs">
+		<h2 class="">b-f-2xs: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size b-f-2xs">
 			<?=$text?>
 		</div>
 	</article>
+
 	<article class="b-mg-c-v-5px">
-		<h2 class="">b-f-2xs</h2>
-		<div class="b-box b-f-xs">
+		<h2 class="">b-f-xs: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size b-f-xs">
 			<?=$text?>
 		</div>
 	</article>
+
 	<article class="b-mg-c-v-5px">
-		<h2 class="">b-f-2xs</h2>
-		<div class="b-box b-f-s">
+		<h2 class="">b-f-s: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size b-f-s">
 			<?=$text?>
 		</div>
 	</article>
+
 	<article class="b-mg-c-v-5px">
-		<h2 class="">default font-size: <span class="js-set-default-font"></span></h2>
-		<div class="b-box js-get-default-font">
+		<h2 class="b-highlight">default font-size: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size">
 			<?=$text?>
 		</div>
 	</article>
+
 	<article class="b-mg-c-v-5px">
-		<div class="b-box b-f-l">
+		<h2 class="">b-f-l: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size b-f-l">
 			<?=$text?>
 		</div>
 	</article>
+
 	<article class="b-mg-c-v-5px">
-		<div class="b-box b-f-xl">
+		<h2 class="">b-f-xl: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size b-f-xl">
 			<?=$text?>
 		</div>
 	</article>
+
 	<article class="b-mg-c-v-5px">
-		<div class="b-box b-f-2xl">
+		<h2 class="">b-f-2xl: <span class="js-set-font-size"></span></h2>
+		<div class="b-box js-get-font-size b-f-2xl">
 			<?=$text?>
 		</div>
 	</article>
 </main>
 
 <script>
-	var v = $('.js-get-default-font').css('font-size');
-	$('.js-set-default-font').text(v);
+	$(window).on('load resize', function () {
+		$('.js-get-font-size').each(function() {
+			var $getFontSize = $(this);
+			var fontSize = $getFontSize.css('font-size');
+			var $setFontSize = $getFontSize.closest('article').find('.js-set-font-size');
+			
+			$setFontSize.text(fontSize);
+		});
+	});
 </script>
