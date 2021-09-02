@@ -9,6 +9,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<link href="<?=$B->inc::getRes('/-/css/b-.css');?>" rel="stylesheet">
 
 	<?php if ($B->page->getLayout() != '') { ?>
 		<link href="<?=$B->inc::getRes($B->site_conf->getBwmRootUrl() . '/css/comm-pre.css');?>" rel="stylesheet">
@@ -58,7 +60,7 @@
 	<?php } ?>
 
 	<?php if ($B->page->getLayout() != '') { ?>
-	<?php require 'external-github.html' ?>
+	<?php require_once $B->site_conf->getSiteRootDir() . '/inc/github/external-github.html' ?>
 </section>
 	<!--//#b_page-->
 <?php } ?>
