@@ -1,0 +1,19 @@
+<section>
+	<h2>after</h2>
+	<div class="a">a</div>
+	<p>뒤에 놓고 a를 리턴</p>
+</section>
+
+<section>
+	<h2>insertAfter</h2>
+	<div class="a2">a2</div>
+	<p>뒤에 놓고 b를 리턴</p>
+</section>
+
+<script>
+	var v = $('.a2').after('<div class="b">b</div>');
+	console.log(v);
+	
+	var v = $('<div class="b">b</div>').insertAfter('.a');
+	console.log(v);
+</script>
