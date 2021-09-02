@@ -8,7 +8,7 @@ class SiteConf {
 
 	const BWM_ROOT_URL = '/-bwm';
 	const VIEW_URL = '/sub';
-	const LAYOUT_URL = '/layout';
+	const LAYOUT_URL = '/inc/comm';
 
 	function getSiteId() {
 		return self::SITE_ID;
