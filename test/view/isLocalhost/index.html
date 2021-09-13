@@ -1,0 +1,22 @@
+<?php
+
+
+echo 'SERVER_ADDR = ' . $_SERVER['SERVER_ADDR'];
+echo '<br>';
+echo 'REMOTE_ADDR = ' . $_SERVER['REMOTE_ADDR'];
+echo '<br>';
+echo 'HTTP_X_FORWARDED_FOR = ' . $_SERVER['HTTP_X_FORWARDED_FOR'];
+
+
+
+function b_isLocalhost() {
+	if ($_SERVER['SERVER_ADDR'] == '127.0.0.1' || strstr($_SERVER['SERVER_ADDR'], '192.168.')) {
+		return true;
+	}
+}
+
+?>
+
+<ul>
+	<li>REMOTE_ADDR을 사용하면 프록시 서버에 안걸려서 HTTP_X_FORWARDED_FOR 하게 될 수도 있으므로 SERVER_ADDR 사용</li>
+</ul>

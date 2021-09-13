@@ -13,3 +13,9 @@ RewriteEngine On
 
 #ErrorDocument 404 /error/404
 
+
+<IfModule mod_url.c>
+	CheckURL On
+	ClientEncoding UTF-8
+	ServerEncoding EUC-KR
+</IfModule>

@@ -1,0 +1,90 @@
+.b-tl {text-align: left !important;}
+.b-tc {text-align: center !important;}
+.b-tr {text-align: right !important;}
+
+.b-fx {display: flex !important;}
+
+.b-ifx {display: inline-flex !important;}
+
+.b-ac {align-items: center !important;}
+
+.b-jc {justify-content: center !important;}
+
+.b-nowrap {white-space: nowrap;}
+
+.b-ul-init { padding: 0;}
+.b-ul-init li { list-style: none;}
+
+.b-tag { color: silver}
+
+/**/
+.b-mgc-v-4px > * { margin: 4px 0;}
+.b-mgc-v-4px > *:first-child { margin-top: 0px;}
+.b-mgc-v-4px > *:last-child { margin-bottom: 0px;}
+
+.b-mgc-v-8px > * { margin: 8px 0;}
+.b-mgc-v-8px > *:first-child { margin-top: 0px;}
+.b-mgc-v-8px > *:last-child { margin-bottom: 0px;}
+
+.b-mgc-v-12px > * { margin: 12px 0;}
+.b-mgc-v-12px > *:first-child { margin-top: 0px;}
+.b-mgc-v-12px > *:last-child { margin-bottom: 0px;}
+/**/
+
+/**/
+.b-mgc-h-4px > * {margin-right: 4px;}
+.b-mgc-h-4px > *:last-child {margin-right: 0px;}
+
+.b-mgc-h-8px > * {margin-right: 8px;}
+.b-mgc-h-8px > *:last-child {margin-right: 0px;}
+
+.b-mgc-h-12px > * {margin-right: 12px;}
+.b-mgc-h-12px > *:last-child {margin-right: 0px;}
+/**/
+
+/**/
+.b-box {padding: 10px 10px; background: #fff; box-sizing: border-box; border-radius: 6px; margin: 15px 0; display: block;
+    /*border: solid 1px #dfdfdf;*/
+    box-shadow: 3px 3px 5px #bbb, -3px -3px 5px #eee;
+    /*box-shadow: 3px 3px #ccc;*/
+    /*border: solid 3px #eee; border-right: 0; border-bottom: 0;*/
+}
+
+.b-box:first-child {margin-top: 0;}
+.b-box:last-child {margin-bottom: 0;}
+
+.b-box > * {margin: 15px 0;}
+.b-box > *:first-child {margin-top: 0;}
+.b-box > *:last-child {margin-bottom: 0;}
+
+.b-box--yellow, .b-box--warn {background: #fff9e2;}
+.b-box--blue, .b-box--goal {background: #f0f5ea;}
+.b-box--red, .b-box--caution {background: #fff7f7;}
+.b-box--silver, .b-box--info {background: #f5f5f5;}
+
+.b-box-shadow {box-shadow: 1px 1px 3px #ccc;}
+/**/
+
+/**/
+.b-img-chk {display: none;}
+
+.b-img-chk-btn {
+    background: url(/home/img/comm/form/b-img-chk.png) center / cover; width: 1.5em; height: 1.5em;
+    -webkit-appearance: none;  border: 0;
+    vertical-align: middle; transition: all .2s; pointer-events: none;
+}
+
+.b-img-chk:checked + .b-img-chk-btn {background-image: url(/home/img/comm/form/b-img-chk-on.png);}
+/**/
+
+/**/
+.b-nav {display: flex; flex-wrap: wrap;}
+
+.b-nav > a { border-bottom: solid 1px #444; margin-right: 1em; position: relative;}
+.b-nav > a:last-child { margin-right: 0;}
+
+.b-nav > a::after { content: ''; position: absolute; right: -.5em; height: 50%; width: 1px; background: #888;
+    top: 0; bottom: 0; margin: auto;
+}
+.b-nav > a:last-child::after {display: none;}
+/**/
