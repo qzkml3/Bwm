@@ -1,0 +1,56 @@
+<main>
+	<div class="b-mgc-v-12px">
+		<div>
+			<button class="b-btn" type="button" onclick="b_openBPop({
+					'cont': '내용이지롱<br> aaa',
+					'btnCloseText': '닫기',
+				});">
+				Dynamic pop
+			</button>
+		</div>
+		<div>
+			<button class="b-btn" type="button" onclick="b_openBPop({
+					'cont': '내용이지롱<br> aaa',
+					'btnCloseText': '확인',
+				});">
+				Dynamic pop
+			</button>
+		</div>
+		<hr class="b-hr">
+		<div>
+			<button class="b-btn" type="button" onclick="b_openBPop('#pop-cont')">Static pop-cont</button>
+		</div>
+		<div>
+			<button class="b-btn" type="button" onclick="b_openBPop('#pop-tit')">Static pop-tit</button>
+		</div>
+		<div>
+			<button class="b-btn" type="button" onclick="b_openBPop('#pop-foot')">Static pop-foot</button>
+		</div>
+	</div>
+	<section class="b-box b-box--silver">
+		<ul>
+			<li>multi, single 서로 간섭될 테니 따로 빼자</li>
+			<li>multi 사용할 일이 있을까?</li>
+		</ul>
+	</section>
+</main>
+
+<div class="etc">
+	<?php require_once 'inc/b-pop-cont.html' ?>
+	<?php require_once 'inc/b-pop-tit.html' ?>
+	<?php require_once 'inc/b-pop-foot.html' ?>
+</div>
+
+<script type="text/html" id="tpl-b-pop">
+<article class="b-pop b-pop--dynamic">
+	<section class="b-pop-page">
+		<div class="b-pop-tit" style="display: none;">제목</div>
+		<div class="b-pop-cont">
+			<div class="b-pop-cont-html">내용</div>
+			<div class="b-pop-btn-area">
+				<button type="button" class="b-pop-btn-close b-pop--close b-btn"></button>
+			</div>
+		</div>
+	</section>
+</article>
+</script>

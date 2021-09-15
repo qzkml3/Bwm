@@ -9,12 +9,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="<?=$B->inc::getRes('/home/css/bcss.css');?>" rel="stylesheet">
-	
-	<link href="<?=$B->inc::getRes('/-/css/b-.css');?>" rel="stylesheet">
 
 	<?php if ($B->page->getLayout() != '') { ?>
-		<link href="<?=$B->inc::getRes($B->site_conf->getBwmRootUrl() . '/css/comm-pre.css');?>" rel="stylesheet">
+		<link href="<?=$B->inc::getRes('/-/css/b-.css');?>" rel="stylesheet">
+
+
+
+		<link href="<?=$B->inc::getRes('/home/css/b-g-reset.css');?>" rel="stylesheet">
+		<link href="<?=$B->inc::getRes('/home/css/b-g-util.css');?>" rel="stylesheet">
+		<link href="<?=$B->inc::getRes('/home/css/comm-pre.css');?>" rel="stylesheet">
 		<link media="(min-width: 1000px)" href="<?=$B->inc::getRes($B->site_conf->getBwmRootUrl() . '/css/pc.css');?>" rel="stylesheet">
 		<link media="(max-width: 1000px)" href="<?=$B->inc::getRes($B->site_conf->getBwmRootUrl() . '/css/mo.css');?>" rel="stylesheet">
 	<?php } ?>
@@ -31,7 +34,7 @@
 	<script src="<?=$v?>"></script>
 	
 	
-	<?php $v = $B->inc::getRes('/home/js/bjs.js'); ?>
+	<?php $v = $B->inc::getRes('/home/js/b-g-util.js'); ?>
 	<script src="<?=$v?>"></script>
 
 	<!--private site-->

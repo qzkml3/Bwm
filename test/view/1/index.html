@@ -1,9 +1,16 @@
-<main id="main">
-	<label>sadfsdfsdf</label>
+<style>
+	.c {}
+	.i {}
+</style>
+
+<main>
+	<div class="c">
+		<div class="i a b">11</div>
+		<div class="i">22</div>
+	</div>
 </main>
 
 <script>
-	$('label').on('click', function () {
-		alert(1);
-	});
+	$('.i').switchClass('a b', 'd e f');
 </script>
+
