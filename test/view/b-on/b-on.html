@@ -1,0 +1,57 @@
+<form>
+
+	<article class="b-art">
+		<section class="b-mgc-v-12px">
+			<h1>No label</h1>
+			<div>
+
+				<input type="checkbox" class="b-on" name="no_label">
+			</div>
+		</section>
+		<section class="b-mgc-v-12px">
+			<h1>Separate label</h1>
+			<div>
+				<label for="separ_label">
+					<span>c</span>
+				</label>
+				<input type="checkbox" class="b-on" name="separ_label" id="separ_label">
+			</div>
+		</section>
+		<section class="b-mgc-v-12px">
+			<h1>Inline label</h1>
+			<div>
+				<label>
+					<span>a</span>
+					<input type="checkbox" class="b-on" name="a">
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>b</span>
+					<input type="checkbox" class="b-on" name="b">
+				</label>
+			</div>
+		</section>
+		<section>
+			<button class="b-btn b-btn--35px b-btn--cor1">Submit</button>
+		</section>
+	</article>
+</form>
+
+<div class="b-box b-box--info">
+	<ul>
+		<li>pointer-events: none; 은 사용하지 않는다.(클릭방지 사용안함)</li>
+		<li>css: checkbox:checked + button 으로 작동한다.</li>
+		<li>js: btn click prev() 원리로 동작</li>
+	</ul>
+</div>
+
+<div class="b-box b-box--warn">
+	<ul>
+		<li>반드시 label 태그를 사용해야 한다.</li>
+		<li>ie transition 안먹음</li>
+		<li>뒤로가기시에도 유지되는지 확인</li>
+	</ul>
+</div>
+
+

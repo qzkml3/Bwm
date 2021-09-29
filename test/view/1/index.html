@@ -1,16 +1,25 @@
+[] . 우선순위
+
 <style>
-	.c {}
-	.i {}
+	input[type] {background: green;}
+	.bbb[] {background: yellowgreen;}
+	
+	.aaa .bbb                  {}
+	.bbb:first-child                  {}
+	.yyy .bbb {}
 </style>
 
 <main>
+	<input type="text" class="bbb">
 	<div class="c">
-		<div class="i a b">11</div>
-		<div class="i">22</div>
+		<div class="i a">a</div>
+		<div class="i b">b</div>
 	</div>
 </main>
 
 <script>
-	$('.i').switchClass('a b', 'd e f');
+	$('.a').css('display', 'flex');
+	$('.a').show();
 </script>
+
 

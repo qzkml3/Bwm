@@ -1,0 +1,30 @@
+/**/
+.b-on { display: none;}
+
+.b-on-btn { 
+    display: inline-flex; align-items: center; justify-content: space-between; 
+    width: 4em; height: 1.8em; padding: 0 0 0 0.8em;
+    background: #aaa; border: solid 1px #aaa;
+    border-radius: 200px; overflow: hidden; font-size: inherit;
+    cursor: pointer; position: relative; /*pointer-events: none;*/
+    vertical-align: middle;
+}
+
+/*on*/.b-on:checked + .b-on-btn {background: #4c5b95; border: solid 1px #4c5b95;}
+
+.b-on-btn * { transition: all .2s;}
+
+.b-on-txt { color: white; font-size: 1em; position: absolute; top: 0; bottom: 0; margin: auto; left: calc(100% - 1.9em); line-height: 1.6}
+/*on*/.b-on:checked + .b-on-btn .b-on-txt { left: .8em; margin-bottom: .2em;}
+
+.b-on-txt::after { content: 'off';}
+/*on*/.b-on:checked + .b-on-btn .b-on-txt::after { content: 'on';}
+
+.b-on-toggle { background: #fff; width: 1.5em; height: 1.5em; border-radius: 200px;
+    display: block; flex-shrink: 0; position: absolute; right: calc(100% - 1.5em); top: 0; bottom: 0; margin: auto;
+}
+/*on*/.b-on:checked + .b-on-btn .b-on-toggle { right: 0;}
+/**/
+
+.b-art > section { margin: 40px 0 0 0;}
+.b-art > section:first-child { margin-top: 0;}
