@@ -1,29 +1,29 @@
 <style>
-	.a_a, .a-a {}
+    .a_a, .a-a {}
 </style>
 
 <div class="a_a"></div>
 
 <script>
-//alert(document.forms[0].a_b);
+	//alert(document.forms[0].a_b);
 </script>
 <style>
-	.b_ai_fs {align-items: flex-start;}
-	
-	img {width: 49%; height: auto;}
-	img:nth-child(2n + 1) {margin-right: 1%;}
-	
-	.wrap {overflow: hidden;}
-	.swiper-wrapper {display: flex; width: 100%;}
-	
-	.container {width: 100% !important; flex-shrink: 0;}
-	
-	
-	
-	.grid-item {width: 49%;}
-	.grid-item img {width: 100%;}
-	
-	.gutter_sizer {width: 2%;}
+    .b_ai_fs {align-items: flex-start;}
+
+    img {width: 49%; height: auto;}
+    img:nth-child(2n + 1) {margin-right: 1%;}
+
+    .wrap {overflow: hidden;}
+    .swiper-wrapper {display: flex; width: 100%;}
+
+    .container {width: 100% !important; flex-shrink: 0;}
+
+
+
+    .grid-item {width: 49%;}
+    .grid-item img {width: 100%;}
+
+    .gutter_sizer {width: 2%;}
 </style>
 
 <div class="wrap">
@@ -59,13 +59,13 @@
 			$swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
 		})
 	}
-	
+
 	b_preSwiper('.wrap');
 	swiper = new Swiper('.wrap', {
 		autoHeight: true,
 		slidePerView: 'auto'
 	});
-	
+
 	$('.container').masonry({
 		//percentPosition: true,
 		itemSelector: '.grid-item',
