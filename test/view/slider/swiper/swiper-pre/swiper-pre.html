@@ -1,23 +1,69 @@
+<style>
+	.swiper-container { overflow: hidden; background: #eee;}
+	.swiper-wrapper {display: flex;}
+	.swiper-slide { width: 100% !important; flex-shrink: 0; border: solid #aaa 1px; box-sizing: border-box; background: #ddd;
+	}
+	
+	ul.swiper-container { list-style: none; padding: 0; }
+	ul.swiper-container li { }
+</style>
 <div class="target">
+	<div>d</div>
+	<div>d</div>
 	<div>d</div>
 	<div>d</div>
 </div>
 
-<ul class="target">
-	<li>d</li>
-	<li>d</li>
-</ul>
+<div class="wrap">
+	<ul class="target">
+		<li>d</li>
+		<li>d</li>
+	</ul>
+</div>
 
 <script>
-	b_preSwiper('.target');
 	
 	function b_preSwiper(swiper) {
 		var $swiper = $(swiper);
 		$swiper.each(function () {
 			var $swiper = $(this);
-			$swiper.addClass('swiper');
+			$swiper.addClass('swiper-container');
 			$swiper.children().addClass('swiper-slide');
 			$swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
 		})
 	}
+</script>
+
+
+
+<div class="b-box b-box--warn">
+	<ul>
+		<li>width 의 subpixel 버그가 있다. (1px 차이날 수 있음)</li>
+		<li>기본적으로 ul은 동작은 하지만 지원 안한다.</li>
+	</ul>
+</div>
+
+<script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
+<script>
+	function loadSwiper() {
+		var swiper = new Swiper('.target', {
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				0:0
+			},
+			slidesPerView: '1',
+			spaceBetween: 30,
+			/*slidesPerGroup: 1,*/
+			/*slidesPerView: 2,*/
+		});
+	}
+</script>
+<script>
+	b_preSwiper('.target');
+	loadSwiper();
 </script>
