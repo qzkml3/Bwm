@@ -1,11 +1,11 @@
 <style>
-	.swiper-container { overflow: hidden; background: #eee;}
+	.swiper-containerkkkkkkkk { overflow: hidden; background: #eee;}
 	.swiper-wrapper {display: flex;}
 	.swiper-slide { width: 100% !important; flex-shrink: 0; border: solid #aaa 1px; box-sizing: border-box; background: #ddd;
 	}
 	
-	ul.swiper-container { list-style: none; padding: 0; }
-	ul.swiper-container li { }
+	ul.swiper-containerkkkk { list-style: none; padding: 0; }
+	ul.swiper-containerkkkk li { }
 </style>
 <div class="target">
 	<div>d</div>
@@ -27,7 +27,7 @@
 		var $swiper = $(swiper);
 		$swiper.each(function () {
 			var $swiper = $(this);
-			$swiper.addClass('swiper-container');
+			$swiper.addClass('swiper-containerkkkk');
 			$swiper.children().addClass('swiper-slide');
 			$swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
 		})
@@ -40,6 +40,11 @@
 	<ul>
 		<li>width 의 subpixel 버그가 있다. (1px 차이날 수 있음)</li>
 		<li>기본적으로 ul은 동작은 하지만 지원 안한다.</li>
+	</ul>
+</div>
+<div class="b-box b-box--tip">
+	<ul>
+		<li>옛버전은 .swiper-container 신버전은 .swiper</li>
 	</ul>
 </div>
 
