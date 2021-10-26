@@ -1,33 +1,32 @@
 <style>
-	.swiper-containerkkkkkkkk { overflow: hidden; background: #eee;}
+	.slide { overflow: hidden; background: #eee;}
 	.swiper-wrapper {display: flex;}
 	.swiper-slide { width: 100% !important; flex-shrink: 0; border: solid #aaa 1px; box-sizing: border-box; background: #ddd;
 	}
-	
-	ul.swiper-containerkkkk { list-style: none; padding: 0; }
-	ul.swiper-containerkkkk li { }
+
+	.ul-init { list-style: none; padding: 0; }
+	.ul-init li { }
 </style>
-<div class="target">
-	<div>d</div>
-	<div>d</div>
-	<div>d</div>
-	<div>d</div>
+
+<div class="slide">
+	<?php $tot = 3;?>
+	<?php for ($i = 0; $i < $tot; $i++) { ?>
+	    <div><?=$i+1?> / <?=$tot?></div>
+	<?php } ?>
 </div>
 
-<div class="wrap">
-	<ul class="target">
-		<li>d</li>
-		<li>d</li>
-	</ul>
-</div>
+<ul class="slide ul-init">
+	<?php $tot = 3;?>
+	<?php for ($i = 0; $i < $tot; $i++) { ?>
+		<li><?=$i+1?> / <?=$tot?></li>
+	<?php } ?>
+</ul>
 
 <script>
-	
 	function b_preSwiper(swiper) {
 		var $swiper = $(swiper);
 		$swiper.each(function () {
 			var $swiper = $(this);
-			$swiper.addClass('swiper-containerkkkk');
 			$swiper.children().addClass('swiper-slide');
 			$swiper.children().wrapAll('<div class="swiper-wrapper"></div>')
 		})
@@ -51,7 +50,7 @@
 <script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
 <script>
 	function loadSwiper() {
-		var swiper = new Swiper('.target', {
+		var swiper = new Swiper('.slide', {
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -69,6 +68,6 @@
 	}
 </script>
 <script>
-	b_preSwiper('.target');
+	b_preSwiper('.slide');
 	loadSwiper();
 </script>
