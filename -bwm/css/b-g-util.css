@@ -235,4 +235,4 @@
     display: inline-flex;
 }
 
-.b-div-img { width: 100%; height: 100%; background: center / cover;}
+.b-div-img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: center / cover;}
