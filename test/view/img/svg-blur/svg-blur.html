@@ -1,108 +1,123 @@
-<div class="b-box">
-	<ul>
-		<li>svg 필터의 정의가 필요하다</li>
-		<li>IE에서 블러가 안먹기 때문에 svg를 사용한다.</li>
-		<li>image 에 style로 width를 주면 IE에서 안먹는다.</li>
-		<li>image 에 blur를 주면 잔상이 남는다.</li>
-		<li>svg, div 에 blur를 주면 IE에서 안먹는다.</li>
-	</ul>
-</div>
+<style>
+	.b-img-wrap { width: 100px; height: 100px;}
+</style>
 
+<div class="b-mg-v-c-15px">
 
-
-<section class="b-mg-v-c-15px">
-
-	<h2>blur 강도</h2>
-	<section class="b_fx b_fx_wrap ">
-		<div class="b-img-wrap">
-			<div class="b-img-cover"></div>
-			<svg class="b_svg">
-				<image class="b_image_blur_2" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
-			</svg>
-		</div>
-		<div class="b-img-wrap">
-			<svg class="b_svg">
-				<image class="b_image_blur_5" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
-			</svg>
-			<div>
-				<div class="b-img-cover"></div>
-			</div>
-		</div>
-		<div class="b-img-wrap">
-			<svg class="b_svg">
-				<image class="b_image_blur_10" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
-			</svg>
-			<div>
-				<div class="b-img-cover"></div>
-			</div>
-		</div>
-	</section>
-
-	<h2>contain</h2>
-	<section>
-		<div class="b-img-wrap">
-			<div class="b-img-cover"></div>
-			<svg class="b_svg">
-				<image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
-			</svg>
-		</div>
+	<div class="b-box">
 		<ul>
-			<li>svg는 bg와 마찬가지로 contain일 때 radius를 적용할 수 없다.</li>
+			<li>svg 필터의 정의가 필요하다</li>
+			<li>IE에서 블러가 안먹기 때문에 svg를 사용한다.</li>
+			<li>image 에 style로 width를 주면 IE에서 안먹는다.</li>
+			<li>image 에 blur를 주면 잔상이 남는다.</li>
+			<li>svg, div 에 blur를 주면 IE에서 안먹는다.</li>
 		</ul>
-	</section>
+	</div>
 	
-	<h2>cover</h2>
-	<section>	
-		<div class="b-img-wrap">
-			<svg class="b_svg">
-				<image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg" preserveAspectRatio="xMidYMid slice"></image>
-			</svg>
-			<div>
-				<div class="b-img-cover"></div>
+	<article>
+		<h2>blur + filter</h1>
+		<div>
+			<div class="b-img-wrap">
+				<svg><image class="b-svg-cont-blur-2" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<div class="b-img-filter"></div>
+			</div>
+			<div class="b-img-wrap">
+				<svg><image class="b-svg-cont-blur-5" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<div class="b-img-filter"></div>
+			</div>
+			<div class="b-img-wrap">
+				<svg><image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<div class="b-img-filter"></div>
 			</div>
 		</div>
-	</section>
-</section>
+		<div class="b-box">
+			<ul>
+				<li>svg 자체에 주면 blur가 익스에서 안먹는다.</li>
+			</ul>
+		</div>
+	</article>
 
-<?php $blur = 'b_image_blur_10';?>
+	<article>
+		<section>
+			<h1>contain (default)</h1>
+			<div class="b-img-wrap">
+				<svg><image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+			</div>
+		</section>
 
-<h2>ori image</h2>
-<div class="b-img-wrap" style="width: 300px; height: 300px;">
-	<div class="b-img-cover"></div>
-	<svg>
-		<image class="" width="100%" height="100%" xlink:href="/-/img/blur/ori.jpg"></image>
-	</svg>
+		<section>
+			<h1>cover</h1>
+			<div class="b-img-wrap">
+				<svg><image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg" preserveAspectRatio="xMidYMid slice"></image></svg>
+			</div>
+		</section>
+	</article>
+	<article>
+		<h1>svg blur</h1>
+		<section>
+			<h2>ori image</h2>
+			<div class="b-img-wrap" style="width: 200px; height: 200px;">
+				<svg>
+					<image class="" width="100%" height="100%" xlink:href="/-/img/blur/ori.jpg"></image>
+				</svg>
+			</div>
+		</section>
+
+		<section>
+			<h2>.b-svg-cont-blur-10 (ori image)</h2>
+			<div class="b-img-wrap" style="width: 200px; height: 200px;">
+				<svg>
+					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/ori.jpg"></image>
+				</svg>
+			</div>
+		</section>
+
+		<section>
+			<h2>.b-svg-cont-blur-10 (width 30px image)</h2>
+			<div class="b-img-wrap" style="width: 200px; height: 200px;">
+				<svg>
+					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/30.jpg"></image>
+				</svg>
+			</div>
+		</section>
+
+		<section>
+			<h2>.b-svg-cont-blur-10 (width 20px image)</h2>
+			<div class="b-img-wrap" style="width: 200px; height: 200px;">
+				<svg>
+					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/20.jpg"></image>
+				</svg>
+			</div>
+		</section>
+
+		<section>
+			<h2>.b-svg-cont-blur-10 (width 10px image)</h2>
+			<div class="b-img-wrap" style="width: 200px; height: 200px;">
+				<svg>
+					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/10.jpg"></image>
+				</svg>
+			</div>
+		</section>
+	</article>
 </div>
 
-<h2>ori image (<?=$blur?> blured)</h2>
-<div class="b-img-wrap" style="width: 300px; height: 300px;">
-	<div class="b-img-cover"></div>
-	<svg>
-		<image class="<?=$blur?>" width="100%" height="100%" xlink:href="/-/img/blur/ori.jpg"></image>
-	</svg>
-</div>
-
-<h2>width 30px image (<?=$blur?> blured)</h2>
-<div class="b-img-wrap" style="width: 300px; height: 300px;">
-	<div class="b-img-cover"></div>
-	<svg>
-		<image class="<?=$blur?>" width="100%" height="100%" xlink:href="/-/img/blur/30.jpg"></image>
-	</svg>
-</div>
-
-<h2>width 20px image (<?=$blur?> blured)</h2>
-<div class="b-img-wrap" style="width: 300px; height: 300px;">
-	<div class="b-img-cover"></div>
-	<svg>
-		<image class="<?=$blur?>" width="100%" height="100%" xlink:href="/-/img/blur/20.jpg"></image>
-	</svg>
-</div>
-
-<h2>width 10px image (<?=$blur?> blured)</h2>
-<div class="b-img-wrap" style="width: 300px; height: 300px;">
-	<div class="b-img-cover"></div>
-	<svg>
-		<image class="<?=$blur?>" width="100%" height="100%" xlink:href="/-/img/blur/10.jpg"></image>
-	</svg>
-</div>
-
+<!--블러 정의-->
+<svg style="display: none;">
+	<defs>
+		<filter id="b-svg-cont-blur-2">
+			<feGaussianBlur stdDeviation="2"></feGaussianBlur>
+		</filter>
+		<filter id="b-svg-cont-blur-5">
+			<feGaussianBlur stdDeviation="5"></feGaussianBlur>
+		</filter>
+		<filter id="b-svg-cont-blur-10">
+			<feGaussianBlur stdDeviation="10"></feGaussianBlur>
+		</filter>
+		<filter id="b-svg-cont-blur-20">
+			<feGaussianBlur stdDeviation="20"></feGaussianBlur>
+		</filter>
+		<filter id="b-svg-cont-blur-30">
+			<feGaussianBlur stdDeviation="30"></feGaussianBlur>
+		</filter>
+	</defs>
+</svg>
