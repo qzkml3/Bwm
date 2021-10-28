@@ -228,3 +228,11 @@
 .b-btn--fn, .b-btn--color1, .b-theme-yellow-glow .b-btn--color1 {background: linear-gradient(0deg, #fab957 0%, #ff9e0e 50%, #f3cf98 100%); color: white; border: solid 1px #ec9c47;}
 
 .b-cont { position: relative; background: 100% 100%; min-height: 30px;}
+
+
+
+.b-img-wrap {width: 100%; height: 100%; background: #ddd; overflow: hidden; border: solid 1px #ddd; border-radius: 8px; position: relative;
+    display: inline-flex;
+}
+
+.b-div-img { width: 100%; height: 100%; background: center / cover;}
