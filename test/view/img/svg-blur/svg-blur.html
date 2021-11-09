@@ -18,15 +18,15 @@
 		<h2>blur + filter</h2>
 		<div>
 			<div class="b-img-wrap">
-				<svg><image class="b-svg-cont-blur-2" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<svg><image class="b-image-blur-2" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
 				<div class="b-img-filter"></div>
 			</div>
 			<div class="b-img-wrap">
-				<svg><image class="b-svg-cont-blur-5" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<svg><image class="b-image-blur-5" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
 				<div class="b-img-filter"></div>
 			</div>
 			<div class="b-img-wrap">
-				<svg><image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<svg><image class="b-image-blur-10" width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
 				<div class="b-img-filter"></div>
 			</div>
 		</div>
@@ -41,14 +41,18 @@
 		<section>
 			<h1>contain (default)</h1>
 			<div class="b-img-wrap">
-				<svg><image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image></svg>
+				<svg>
+					<image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg"></image>
+				</svg>
 			</div>
 		</section>
 
 		<section>
 			<h1>cover</h1>
 			<div class="b-img-wrap">
-				<svg><image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg" preserveAspectRatio="xMidYMid slice"></image></svg>
+				<svg>
+					<image width="100%" height="100%" xlink:href="/-/img/ex/img_v.jpg" preserveAspectRatio="xMidYMid slice"></image>
+				</svg>
 			</div>
 		</section>
 	</article>
@@ -64,37 +68,37 @@
 		</section>
 
 		<section>
-			<h2>.b-svg-cont-blur-10 (ori image)</h2>
+			<h2>.b-image-blur-10 (ori image)</h2>
 			<div class="b-img-wrap" style="width: 200px; height: 200px;">
 				<svg>
-					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/ori.jpg"></image>
+					<image class="b-image-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/ori.jpg"></image>
 				</svg>
 			</div>
 		</section>
 
 		<section>
-			<h2>.b-svg-cont-blur-10 (width 30px image)</h2>
+			<h2>.b-image-blur-10 (width 30px image)</h2>
 			<div class="b-img-wrap" style="width: 200px; height: 200px;">
 				<svg>
-					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/30.jpg"></image>
+					<image class="b-image-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/30.jpg"></image>
 				</svg>
 			</div>
 		</section>
 
 		<section>
-			<h2>.b-svg-cont-blur-10 (width 20px image)</h2>
+			<h2>.b-image-blur-10 (width 20px image)</h2>
 			<div class="b-img-wrap" style="width: 200px; height: 200px;">
 				<svg>
-					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/20.jpg"></image>
+					<image class="b-image-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/20.jpg"></image>
 				</svg>
 			</div>
 		</section>
 
 		<section>
-			<h2>.b-svg-cont-blur-10 (width 10px image)</h2>
+			<h2>.b-image-blur-10 (width 10px image)</h2>
 			<div class="b-img-wrap" style="width: 200px; height: 200px;">
 				<svg>
-					<image class="b-svg-cont-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/10.jpg"></image>
+					<image class="b-image-blur-10" width="100%" height="100%" xlink:href="/-/img/blur/10.jpg"></image>
 				</svg>
 			</div>
 		</section>
@@ -104,19 +108,19 @@
 <!--블러 정의-->
 <svg style="display: none;">
 	<defs>
-		<filter id="b-svg-cont-blur-2">
+		<filter id="b-image-blur-2">
 			<feGaussianBlur stdDeviation="2"></feGaussianBlur>
 		</filter>
-		<filter id="b-svg-cont-blur-5">
+		<filter id="b-image-blur-5">
 			<feGaussianBlur stdDeviation="5"></feGaussianBlur>
 		</filter>
-		<filter id="b-svg-cont-blur-10">
+		<filter id="b-image-blur-10">
 			<feGaussianBlur stdDeviation="10"></feGaussianBlur>
 		</filter>
-		<filter id="b-svg-cont-blur-20">
+		<filter id="b-image-blur-20">
 			<feGaussianBlur stdDeviation="20"></feGaussianBlur>
 		</filter>
-		<filter id="b-svg-cont-blur-30">
+		<filter id="b-image-blur-30">
 			<feGaussianBlur stdDeviation="30"></feGaussianBlur>
 		</filter>
 	</defs>
