@@ -610,28 +610,6 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 .b_block > * {margin-right: 15px;}
 .b_block > *:last-child {margin-right: 0;}
 
-/**/
- .b_tbl_wrap {border-radius: 7px; overflow: hidden; border: solid 1px #ddd;
-     margin: 20rem 0;
- }
-
-.b_tbl {border-collapse: collapse; width: 100%;}
-
-.b_tbl th {background: whitesmoke; padding: 10rem; border: solid 1px #ddd; border-top: 0;
-    font-weight: normal;  box-sizing: border-box;
-}
-
-.b_tbl th:first-child {border-left: none;}
-.b_tbl th:last-child {border-right: none;}
-
-.b_tbl tbody tr:last-child th {border-bottom: none;}
-.b_tbl tbody th {text-align: left; vertical-align: top;}
-
-.b_tbl td {border: solid 1px #ddd; padding: 10rem; border-bottom: none; border-left: none; box-sizing: border-box;}
-.b_tbl td:first-child {border-left: none;}
-.b_tbl td:last-child {border-right: none;}
-.b_tbl tr:first-child td {border-top: none;}
-
 .b_sprite {width: 1.3em; height: 1.3em; background: red; display: inline-block;}
 
 .b_mg_c_v__20px > * {margin: 20px 0 !important;}

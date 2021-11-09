@@ -240,3 +240,40 @@
 
 .b-art {margin: 80px 0 0;}
 .b-art:first-child {margin-top: 0;}
+
+/*table that has wrap*/
+.b-tbl-wrap {border-radius: 7px; overflow: hidden; border: solid 1px #ddd;
+    margin: 2% 0;
+}
+
+.b-tbl {border-collapse: collapse; width: 100%;}
+
+.b-tbl th {background: whitesmoke; padding: 1%; border: solid 1px #ddd; border-top: 0;
+    font-weight: normal;  box-sizing: border-box;
+}
+
+.b-tbl th:first-child {border-left: none;}
+.b-tbl th:last-child {border-right: none;}
+
+.b-tbl tbody tr:last-child th {border-bottom: none;}
+.b-tbl tbody th {text-align: left; vertical-align: top;}
+
+.b-tbl td {border: solid 1px #ddd; padding: 1%; border-bottom: none; border-left: none; box-sizing: border-box;}
+.b-tbl td:first-child {border-left: none;}
+.b-tbl td:last-child {border-right: none;}
+.b-tbl tr:first-child td {border-top: none;}
+/**/
+
+.b-tbl2 {border-top: solid 2px #555; border-bottom: solid 1px #555; width: 100%; border-spacing: 0;}
+
+.b-tbl2 th, .b-tbl2 td { border-bottom: solid 1px #ccc; padding: 1.5% 2.5%;}
+.b-tbl2 th {}
+.b-tbl2 td {}
+
+.b-tbl2 tbody th { width: 20%; position: relative;}
+.b-tbl2 tbody th:after { content: ''; width: 1px; height: 50%; background: #ddd; 
+    position: absolute; top: 0; bottom: 0; right: 0; margin: auto;
+}
+
+/**/
+.b-form input[type=text] { border: solid 1px #ccc; border-radius: .2em; height: 2em;}
