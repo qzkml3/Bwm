@@ -235,7 +235,7 @@
     display: inline-flex;
 }
 
-.b-div-img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: center / cover;}
+.b-img-div { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: center / cover;}
 
 
 .b-art {margin: 80px 0 0;}
