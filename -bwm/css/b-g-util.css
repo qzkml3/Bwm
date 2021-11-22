@@ -1,4 +1,9 @@
 
+/*section*/
+.b-sec { position: relative; background: #eee center / 100% 100%; min-height: 20px; display: table; width: 100%;}
+.b-sec-inner { width: 95%; max-width: 888px; margin: 0 auto;}
+.b-sec > img { width: 100%;}
+
 
 /**/
 .b-on { display: none;}
