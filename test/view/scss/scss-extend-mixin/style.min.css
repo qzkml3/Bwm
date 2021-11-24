@@ -1,0 +1,19 @@
+.--- {sp: "sp"}
+.aa-3, .aa-2, .aa-1 {background: green}
+.aa-1 {background: blue}
+.aa-2 {background: blue}
+.aa-3 {background: blue}
+.--- {sp: "sp"}
+.bb-1 {background: green;background: blue}
+.bb-2 {background: green;background: blue}
+.bb-3 {background: green;background: blue}
+.--- {sp: "sp"}
+.cc-3, .cc-2, .cc-1 {background: green}
+.cc-1 {background: blue}
+.cc-2 {background: blue}
+.cc-3 {background: blue}
+.--- {sp: "sp"}
+.dd-1 {background: blue;background: green}
+.dd-2 {background: blue;background: green}
+.dd-3 {background: blue;background: green}
+/*# sourceMappingURL=style.min.css.map */

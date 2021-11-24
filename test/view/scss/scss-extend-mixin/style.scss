@@ -1,0 +1,30 @@
+.--- {sp: 'sp';}
+%aa { background: green;}
+
+.aa-1 { @extend %aa; background: blue;}
+.aa-2 { @extend %aa; background: blue;}
+.aa-3 { @extend %aa; background: blue;}
+
+
+.--- {sp: 'sp';}
+@mixin bb { background: green;}
+
+.bb-1 { @include bb; background: blue;}
+.bb-2 { @include bb; background: blue;}
+.bb-3 { @include bb; background: blue;}
+
+
+.--- {sp: 'sp';}
+%cc { background: green;}
+
+.cc-1 { background: blue; @extend %cc;}
+.cc-2 { background: blue; @extend %cc;}
+.cc-3 { background: blue; @extend %cc;}
+
+
+.--- {sp: 'sp';}
+@mixin dd { background: green;}
+
+.dd-1 { background: blue; @include dd;}
+.dd-2 { background: blue; @include dd;}
+.dd-3 { background: blue; @include dd;}
