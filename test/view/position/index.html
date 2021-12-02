@@ -1,100 +1,50 @@
 <style>
-	.sec {display: inline-block; margin-right: 20px;}
-	.wrap {width: 100px; height: 100px; border: solid 1px #ccc; position: relative; display: inline-block;}
+	.cont { position: relative; display: inline-block;
+		width: 30px; height: 30px; padding-bottom: 0%; border: solid 1px #ccc;
+	}
 	
-	.item {width: 10px; height: 10px; background: #aaa;}
+	.item {background: #aaa;}
 </style>
-<section>
-	<section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-trans-c"></div>
+<main id="main">
+	<article>
+		<h1>Center Position</h1>
+		<section>
+			<h2>Center by Transform</h2>
+			<div class="cont">
+				<div class="item b-trans-c">가</div>
 			</div>
-			<div>b-trans-c</div>
 		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-trans-m"></div>
+		<section>
+			<h2>Middle by Transform</h2>
+			<div class="cont">
+				<div class="item b-trans-m">가</div>
 			</div>
-			<div>b-trans-m</div>
 		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-trans-cm"></div>
+		<section>
+			<h2>Center Middle by Transform</h2>
+			<div class="cont">
+				<div class="item b-trans-c-m">가</div>
 			</div>
-			<div>b-trans-cm</div>
 		</section>
-	</section>
-	<section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-c"></div>
+		<section class="b-box b-box--silver">
+			<ul>
+				<li>
+					absolute로 하면 center정렬시 width값 height값이 필요하다 
+				</li>
+				<li>
+					tranform으로 하면 흐려지는 버그가 있으니 참고
+				</li>
+			</ul>
+		</section>
+	</article>
+	
+	<article>
+		<h1>Custom Position</h1>
+		<section>
+			<h2>.b-pos-abs</h2>
+			<div class="cont">
+				<div class="item b-pos-abs" style="bottom: 0; right: 0;">가</div>
 			</div>
-			<div>b-abs-c</div>
 		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-m"></div>
-			</div>
-			<div>b-abs-m</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-cm"></div>
-			</div>
-			<div>b-abs-cm</div>
-		</section>
-	</section>
-	<section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-t"></div>
-			</div>
-			<div>b-abs-t</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-r"></div>
-			</div>
-			<div>b-abs-r</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-b"></div>
-			</div>
-			<div>b-abs-b</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-l"></div>
-			</div>
-			<div>b-abs-l</div>
-		</section>
-	</section>
-	<section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-tr"></div>
-			</div>
-			<div>b-abs-tr</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-tl"></div>
-			</div>
-			<div>b-abs-tl</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-br"></div>
-			</div>
-			<div>b-abs-br</div>
-		</section>
-		<section class="sec">
-			<div class="wrap">
-				<div class="item b-abs b-abs-bl"></div>
-			</div>
-			<div>b-abs-bl</div>
-		</section>
-	</section>
-</section>
+	</article>
+</main>

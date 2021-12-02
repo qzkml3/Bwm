@@ -1,20 +1,34 @@
 /*section*/
 .b-sec {
+  display: table;
   position: relative;
   background: #eee center/100% 100%;
   min-height: 20px;
-  display: table;
   width: 100%;
-}
-
-.b-sec-inner {
-  width: 95%;
-  max-width: 888px;
-  margin: 0 auto;
 }
 
 .b-sec > img {
   width: 100%;
+}
+
+/*Transform*/
+.b-trans-c {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.b-trans-m {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.b-trans-c-m, .b-trans-m-c {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /**/
@@ -732,4 +746,9 @@
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=b-g-util.css.map */
+/*Position*/
+.b-pos-abs {
+  position: absolute;
+}
+
+/*# sourceMappingURL=main.min.css.map */
