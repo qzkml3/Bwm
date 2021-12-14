@@ -1,4 +1,4 @@
-/*section*/
+/*b-sec*/
 .b-sec {
   display: table;
   position: relative;
@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-/*Transform*/
+/*b-trans*/
 .b-trans-c {
   position: absolute;
   left: 50%;
@@ -29,6 +29,25 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/*b-ul*/
+.b-ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.b-ul > * {
+  position: relative;
+  padding-left: 1em;
+  margin: 0.3em 0;
+  line-height: 1.4;
+}
+
+.b-ul > * > i:first-child {
+  position: absolute;
+  left: 0;
 }
 
 /**/
