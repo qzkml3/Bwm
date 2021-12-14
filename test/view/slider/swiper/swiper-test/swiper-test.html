@@ -1,0 +1,41 @@
+<style>
+	.slider-wrap { position: relative;}
+	
+	.slider { overflow: hidden;}
+	.slider .swiper-wrapper { padding: 0; list-style: none; display: flex; flex-direction: column;
+		height: 50px;
+	}
+	.slider .swiper-slide { flex-shrink: 0; background: #eee; width: 100%; height: 100%;}
+
+	.slider-outer-btn { position: absolute; right: 0; top: -50px;
+		width: 20px; height: 20px; background: pink;
+	}
+</style>
+
+<div class="slider-wrap">
+	<div class="slider-outer-btn">prev or next</div>
+	<h2>가나다 우랄라</h2>
+	<div class="slider">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide">1</li>
+			<li class="swiper-slide">2</li>
+			<li class="swiper-slide">3</li>
+		</ul>
+	</div>
+</div>
+
+<script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
+<script>
+	var swiper = new Swiper('.slider', {
+		direction: 'vertical',
+		spaceBetween: 20,
+	});
+</script>
+
+<div class="b-box">
+	<ul>
+		<li>
+			swiper-wrapper 는swiper의 자식이어야지 그안에 뭐가 들어가면 족보가 꼬인다. 
+		</li>
+	</ul>
+</div>

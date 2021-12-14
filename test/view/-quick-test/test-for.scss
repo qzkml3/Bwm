@@ -1,0 +1,5 @@
+@for $i from 1 through 10 {
+  .b-mgc-h-p#{$i}em {}
+  .b-mgc-h-p#{$i}em > * { margin-right: #{$i/10}em !important;}
+  .b-mgc-h-p#{$i}em > *:last-child { margin-right: 0 !important;}
+}

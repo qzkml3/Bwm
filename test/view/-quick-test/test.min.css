@@ -1,0 +1,14 @@
+.a {
+  /*> a { display: block;}
+  >a { display: block;}
+  &> a { display: block;}
+  &>a { display: block;}*/
+}
+.aa {
+  display: block;
+}
+.a a {
+  display: block;
+}
+
+/*# sourceMappingURL=test.min.css.map */

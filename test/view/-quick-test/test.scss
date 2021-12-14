@@ -1,0 +1,9 @@
+.a {
+  &a { display: block;}
+  a { display: block;}
+  
+  /*> a { display: block;}
+  >a { display: block;}
+  &> a { display: block;}
+  &>a { display: block;}*/
+}
