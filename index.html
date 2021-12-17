@@ -1,24 +1,23 @@
 <h1>Boulder Website Maker</h1>
-<p>BWM is simple css, js, php lib.</p>
+<p>Bwm is simple css, js, php lib.</p>
 <dl>
-	<dt>css</dt>
-	
+	<dt>css (b-css)</dt>
+	<dd style="white-space: pre-line;">
+		Simpel css component;
+	</dd>
 </dl>
 <dl>
-	<dt>js</dt>
-	
+	<dt>js (b-js)</dt>
+	<dd style="white-space: pre-line;">
+		...
+	</dd>
 </dl>
 <dl>
-	<dt>php</dt>
-	
+	<dt>php (bwm)</dt>
+	<dd style="white-space: pre-line;">
+		Simple php framework.
+		no router;
+		no rest-api;
+		no data controll to view;
+	</dd>
 </dl>
-
-<?php
-echo 'Folder List';
-$list = $B->file->getFolderList();
-$B->file->show($list);
-
-echo 'Class List';
-$list = $B->file->getRcsFileList('-bwm/class');
-$B->file->show($list);
-?>
