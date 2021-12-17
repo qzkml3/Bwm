@@ -1,0 +1,24 @@
+<?php
+
+use Bwm\D\D;
+use Bwm\Str\Str;
+
+$s = 'aa/bb/cc';
+
+D::echo($s);
+
+$v = Str::getPreStr($s, '/');
+D::echoTit('aa');
+D::echo($v);
+
+$v = Str::getPreStrRev($s, '/');
+D::echoTit('~bb');
+D::echo($v);
+
+$v = Str::getPostStr($s, '/');
+D::echoTit('bb~');
+D::echo($v);
+
+$v = Str::getPostStrRev($s, '/');
+D::echoTit('cc');
+D::echo($v);
