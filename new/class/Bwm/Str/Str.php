@@ -3,20 +3,23 @@ namespace Bwm\Str;
 
 class Str
 {
-	static function getPreStr($all, $part) {
-		$v = substr($all, 0, strpos($all, $part));
+	static function getPreStr($all, $srch) {
+		$v = substr($all, 0, strpos($all, $srch));
 		return $v;
 	}
-	static function getPreStrRev($all, $part) {
-		$v = substr($all, 0, strrpos($all, $part));
+	static function getPreStrRev($all, $srch) {
+		$v = substr($all, 0, strrpos($all, $srch));
 		return $v;
 	}
-	static function getPostStr($all, $part) {
-		$v = substr($all, strpos($all, $part) + 1);
+	static function getPostStr($all, $srch) {
+		$v = substr($all, strpos($all, $srch) + 1);
 		return $v;
 	}
-	static function getPostStrRev($all, $part) {
-		$v = substr($all, strrpos($all, $part) + 1);
+	static function getPostStrRev($all, $srch) {
+		$v = substr($all, strrpos($all, $srch) + 1);
 		return $v;
+	}
+	static function hasStr($all, $srch) {
+		return strrpos($all, $srch);
 	}
 }

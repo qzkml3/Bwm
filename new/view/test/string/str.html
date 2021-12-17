@@ -5,20 +5,25 @@ use Bwm\Str\Str;
 
 $s = 'aa/bb/cc';
 
+$v = Str::hasStr($s, 'a');
+D::echoTit('Str::hasStr');
+D::echo($v);
+
+D::echoTit('All Str');
 D::echo($s);
 
 $v = Str::getPreStr($s, '/');
-D::echoTit('aa');
+D::echoTit('Str::getPreStr: aa');
 D::echo($v);
 
 $v = Str::getPreStrRev($s, '/');
-D::echoTit('~bb');
+D::echoTit('Str::getPreStrRev: ~bb');
 D::echo($v);
 
 $v = Str::getPostStr($s, '/');
-D::echoTit('bb~');
+D::echoTit('Str::getPostStr: bb~');
 D::echo($v);
 
 $v = Str::getPostStrRev($s, '/');
-D::echoTit('cc');
+D::echoTit('Str::getPostStrRev: cc');
 D::echo($v);

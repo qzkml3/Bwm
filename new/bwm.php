@@ -1,5 +1,7 @@
 <?php
+
 use Bwm\Doc\Doc;
+use Bwm\Str\Str;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/new/class/Conf/Conf.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/new/class/Bwm/Doc/Doc.php';
@@ -10,9 +12,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/new/class/Bwm/Url/Url.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/new/class/Bwm/Auth/Auth.php';
 
 $uri = $_SERVER['REQUEST_URI'];
-$view = explode('?', $uri);
-$view = $view[0];
-if ((!strpos($view, '.html')) && (!strpos($view, '.php'))) {
+
+if (Str::hasStr($uri, '?')) {
+	$view = Str::getPreStr($uri, '?'); 
+} else {
+	$view = $uri;
+}
+
+if ((!Str::hasStr($view, '.html')) && (!Str::hasStr($view, '.php'))) {
 	$view = $view . '/index.html';
 }
 
