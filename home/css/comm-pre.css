@@ -474,8 +474,9 @@ textarea.b-input {width: 100%; min-height: 100px; resize: none;}
 
 .b_hide_abs {position: absolute; left: -9999999px; top: -9999999px; line-height: 0; width: 0; height: 0; overflow: hidden;}
 
-.b-img-filter {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3);}
-.b-img-filter--white { background: rgba(255,255,255,.3);}
+.b-img-filter-black, .b-img-filter-white { position: absolute; left: 0; top: 0; width: 100%; height: 100%;} 
+.b-img-filter-black { background: rgba(0,0,0,0.3);}
+.b-img-filter-white { background: rgba(255,255,255,0.3);}
 
 .b-img {position: absolute;
     left: 0; right: 0; top: 0; bottom: 0; margin: auto;
