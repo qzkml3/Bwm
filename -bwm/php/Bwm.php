@@ -10,11 +10,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/Inc/Inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/-bwm/php/File/File.php';
 
 use Bwm\Conf\SiteConf;
-use Bwm\Str\Str;
-use Bwm\Site\Site;
-use Bwm\Page\Page;
 use Bwm\Inc\Inc;
+use Bwm\Page\Page;
+use Bwm\Site\Site;
 use Bwm\File\File;
+use Bwm\Str\Str;
 
 class Bwm {
 	public $inc;

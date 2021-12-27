@@ -1,3 +1,3 @@
 <script>
-	location.replace('sitemap/sitemap-test.php');
+	location.href = 'sitemap/sitemap-test.php';
 </script>
