@@ -1,0 +1,15 @@
+<script>
+	var ua = navigator.userAgent;
+	b_dw(ua);
+	
+	var v = b_testDevice();
+		
+	if (v == 'i') {
+		b_dw('iPhone');
+	} else if (v == 'a') {
+		b_dw('android')
+	} else {
+		b_dw('other');
+	}
+	
+</script>

@@ -1,0 +1,93 @@
+
+<script>
+	$(window).on('load', function () {
+		setTimeout(function () {
+			if ($b.cook.getCook('pop_sec') == null && $('.sys_pop').length) {
+				var $body = $('body');
+				var $pop_sec = $body.append('<section class="pop_sec"></section>').find('.pop_sec');
+				var $pop_list = $pop_sec.append('<div class="pop_list"></div>').find('.pop_list');
+				$pop_list.append(
+					'<div class="pop_btn_area">' +
+					'<span>오늘 하루 보이지 않음</span>' +
+					'<img src="/asset/popup/img/btn_close.png" alt="">' +
+					'</div>'
+				);
+
+				$('.sys_pop').each(function (i) {
+					var v = $pop_list.append('<div class="pop"></div>');
+					var $pop = $(this);
+					var $img = $pop.find('.view img');
+					var $a = $img.parent();
+
+					$pop = $pop_list.find('.pop').eq(i);
+					console.log($a.data('order'));
+					$pop.attr('style', 'order: ' + $img.data('order') + ';');
+
+					$pop.append('<a target="' + $a.attr('target') + '" href="' + $a.attr('href') + '"><img src="' + $img.attr('src') + '" alt=""></a>');
+				});
+			}
+		}, 300);
+
+		//단순 닫기 버튼
+		$(document).on('click', '.pop_btn_area img', function () {
+			$('.pop_sec').fadeOut('fast');
+		});
+
+		//뒷배경 클릭시
+		$(document).on('click', '.pop_sec', function (e) {
+			if ($(e.target).hasClass('pop_sec')) {
+				$('.pop_sec').fadeOut('fast');
+			}
+		});
+
+		//오늘하루
+		$(document).on('click', '.pop_btn_area span', function () {
+			$('.pop_sec').fadeOut('fast');
+			$b.cook.setCookOnlyToday('pop_sec', 1);
+		});
+	});
+
+	$b = {};
+	$b.cook = {};
+
+	$b.cook.setCookOnlyToday = function (name, value) {
+		var today = new Date();
+
+		var nowHour = today.getHours();
+		var nowMin = today.getMinutes()
+		var nowSec = today.getSeconds()
+
+		var addHour = (23 - nowHour);
+		var addMin = (59 - nowMin);
+		var addSec = (60 - nowSec);
+
+		today.setHours(nowHour + addHour);
+		today.setMinutes(nowMin + addMin);
+		today.setSeconds(nowSec + addSec);
+
+		document.cookie = name + "=" + escape(value) + "; path=/; expires=" + today.toUTCString() + ";"
+	}
+
+	$b.cook.getCook = function (name) {
+		var arg = name + "=";
+		var alen = arg.length;
+		var clen = document.cookie.length;
+		var i = 0;
+		while (i < clen) {
+			var j = i + alen;
+			if (document.cookie.substring(i, j) == arg)
+				return getCookieVal(j);
+			i = document.cookie.indexOf(" ", i) + 1;
+			if (i == 0) break;
+		}
+		return null;
+
+		function getCookieVal(offset) {
+			var endstr = document.cookie.indexOf(";", offset);
+			if (endstr == -1)
+				endstr = document.cookie.length;
+			return unescape(document.cookie.substring(offset, endstr));
+		}
+	}
+
+</script>
