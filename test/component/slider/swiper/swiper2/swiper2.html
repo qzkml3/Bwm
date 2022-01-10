@@ -1,0 +1,48 @@
+<style>
+	/*slider*/
+	.slider { overflow: hidden;}
+	.slider .swiper-wrapper { display: flex;}
+	.slider .swiper-slide { flex-shrink: 0; background: #eee; height: 50px;}
+
+	/*slider paging*/
+	.slider .slider-paging { text-align: center;}
+
+	/*slider paging bullet*/
+	.slider .slider-paging .swiper-pagination-bullet { width: 15px; height: 15px; background: #eee; display: inline-block; border-radius: 100px;
+		margin: 5px; cursor: pointer;
+	}
+	.slider .slider-paging .swiper-pagination-bullet-active { background: gold;}
+</style>
+
+<section>
+	<article class="slider">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				a
+			</div>
+			<div class="swiper-slide" style="height: 100px;">
+				b
+			</div>
+		</div>
+		<div class="slider-paging"></div>
+	</article>
+</section>
+
+<script src="/-/js/slider/swiper_4.4.1/swiper.min.js"></script>
+
+<script>
+	var swiper = new Swiper('.slider', {
+		/*basic*/
+		spaceBetween: 20,
+		loop: true,
+		
+		/*special*/
+		autoHeight: true,
+
+		/*page*/
+		pagination: {
+			el: '.slider .slider-paging',
+			clickable: true,
+		},
+	});
+</script>
