@@ -1,11 +1,9 @@
 function b_dw(o) {
-	document.write('<br><br>');
-	document.write(o);
+	document.write('<br><br>' + o);
 }
 
 function b_cl(o) {
-	console.log('\n\n');
-	console.log(o);	
+	console.log('\n\n' + o);	
 }
 
 /**

@@ -1,7 +1,7 @@
 export default function aa() {
-	alert('aav');
+	b_cl('aa');
 }
 export function bb() {
-	alert('bbv');
+	b_cl('bb');
 }
 
