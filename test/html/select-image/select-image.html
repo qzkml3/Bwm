@@ -1,0 +1,26 @@
+<style>
+	.select {width: 100px; height: 30px;
+		border: solid 1px #ccc; border-radius: 4px;
+		background: #eee url(/-bwm/img/ex/img-h.jpg) right 5px center / 10px 10px no-repeat;
+		-webkit-appearance: none;
+		text-overflow: ellipsis;
+		padding: 0 20px 0 10px;
+	}
+	option { border: solid 1px red;}
+</style>
+
+<main id="main">
+	<form>
+		<select class="select" title="test" name="test">
+			<option>123451234512345</option>
+			<option>a</option>
+		</select>
+
+		<button>전송</button>
+	</form>
+</main>
+
+<script>
+	var v = $('.select').children('option').eq(0).val();
+	console.log(v);
+</script>
