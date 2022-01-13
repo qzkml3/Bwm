@@ -1,0 +1,35 @@
+<style>
+	.editor-cont {
+		word-break: keep-all; /*Every letter*/
+		overflow-wrap: break-word; /*En Only letter*/
+	}
+</style>
+
+<div class="editor-cont">
+	<div>"http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com"</div>
+	<table style="display: block;">
+		<tbody style="display: block;">
+		<tr style="display: block;">
+			<td style="display: block;">
+				<div>"http://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com"</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<div>aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa</div>
+	<div>가가가가가가가가 가가가가가가가가 가가가가가가가가 가가가가가가가가 가가가가가가가가</div>
+
+	<div class="b-box">
+		<ol>
+			<li>
+				word-break: keep-all; 로 단어 단위로 묶어준다.
+			</li>
+			<li>
+				overflow-wrap: break-word; 를 줘서 url같은 긴 영어를 줄바꿈 시켜준다.
+			</li>
+		</ol>
+
+		<p>overflow-wrap, word-wrap은 동의어 </p>
+		<p>overflow-wrap 이 table안에 있으면 안먹는데 table+를 display: block; 으로 주면 먹는다.</p>
+	</div>
+</div>
