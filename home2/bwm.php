@@ -3,7 +3,7 @@
 use Bwm\Str\Str;
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/home2/-class/App/Conf/Conf.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/home2/-class/Bwm/D/D.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/home2/-class/Bwm/Test/B.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/home2/-class/Bwm/Inc/Inc.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/home2/-class/Bwm/Doc/Doc.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/home2/-class/Bwm/Auth/Auth.php";

@@ -1,29 +1,29 @@
 <?php
 
-use Bwm\D\D;
+use Bwm\Test\B;
 use Bwm\Str\Str;
 
 $s = 'aa/bb/cc';
 
 $v = Str::hasStr($s, 'a');
-D::echoTit('Str::hasStr');
-D::echo($v);
+B::dwTit('Str::hasStr');
+B::dw($v);
 
-D::echoTit('All Str');
-D::echo($s);
+B::dwTit('All Str');
+B::dw($s);
 
 $v = Str::getPreStr($s, '/');
-D::echoTit('Str::getPreStr: aa');
-D::echo($v);
+B::dwTit('Str::getPreStr: aa');
+B::dw($v);
 
 $v = Str::getPreStrRev($s, '/');
-D::echoTit('Str::getPreStrRev: ~bb');
-D::echo($v);
+B::dwTit('Str::getPreStrRev: ~bb');
+B::dw($v);
 
 $v = Str::getPostStr($s, '/');
-D::echoTit('Str::getPostStr: bb~');
-D::echo($v);
+B::dwTit('Str::getPostStr: bb~');
+B::dw($v);
 
 $v = Str::getPostStrRev($s, '/');
-D::echoTit('Str::getPostStrRev: cc');
-D::echo($v);
+B::dwTit('Str::getPostStrRev: cc');
+B::dw($v);

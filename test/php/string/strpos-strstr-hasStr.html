@@ -1,0 +1,20 @@
+<?php
+
+use Bwm\Test\B;
+
+$t = "192.168.0.0";
+$s = "192.168.";
+
+B::dwt('strstr');
+B::dw(strstr($t, $s));
+
+B::dwt('strpos');
+B::dw(strrpos($t, $s));
+?>
+
+<div class="b-box">
+	<div>strpos는 0(false)이 나올 수 있으므로 > -1을 해주어야 한다.</div>
+	<div>그래서 strstr사용 str_contains는 8버전에서나 나옴</div>
+</div> 
+
+ 

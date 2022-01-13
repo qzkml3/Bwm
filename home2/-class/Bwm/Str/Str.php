@@ -20,6 +20,6 @@ class Str
 		return $v;
 	}
 	static function hasStr($all, $srch) {
-		return strrpos($all, $srch);
+		return strstr($all, $srch);
 	}
 }
