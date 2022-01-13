@@ -34,6 +34,23 @@ use App\Conf\Conf;
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . $view; ?>
 	</section>
 
+	<article id="github" class="b-box b-box--silver">
+		<?php
+		$github = "https://github.com/qzkml3/BWM/blob/master";
+		$github1s = "https://github1s.com/qzkml3/BWM/blob/master";
+		$uri = $_SERVER['REQUEST_URI'];
+		
+		$github = $github . $uri;
+		$github1s = $github1s . $uri;
+		?>
+		<section>
+			<a href="<?=$github?>" target="_blank">Show this source in Github.com (fast)</a>
+		</section>
+		<section>
+			<a href="<?=$github1s?>" target="_blank">Show this source in Github1s.com (slow)</a>
+		</section>
+	</article>
+
 	<footer id="footer">
 		footer
 	</footer>
