@@ -25,7 +25,8 @@ class File
 			B::dw($target_dir);
 		}
 		closedir($opened_dir);
-
+		
+		natcasesort($dir_list); 
 		return $dir_list;
 	}
 	
@@ -48,6 +49,7 @@ class File
 		}
 		closedir($opened_dir);
 
+		natcasesort($dir_list);
 		return $dir_list;
 	}
 	
