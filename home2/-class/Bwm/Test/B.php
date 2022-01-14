@@ -6,25 +6,21 @@ namespace Bwm\Test;
  */
 class B {
 	/**
-	 * motive document.writeTit();
 	 * @param $s
+	 * motive document.writeTit();
 	 */
 	static function dwt($s) {
-		echo "<br><br><hr> $s";
+		echo "<br><br><hr>$s<br>";
 	}
 	
 	/**
+	 * @param $o
 	 * motive document.write();
-	 * @param $s
 	 */
-	static function dw($s) {
-		echo "<br> $s";
-	}
-	
-	static function showObj($array) {
+	static function dw($o) {
 		echo "<pre>";
-		echo print_r($array);
-		echo "</pre>";
+		print_r($o); 
+		echo "<pre>";
 	}
 }
 

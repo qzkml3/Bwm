@@ -1,0 +1,19 @@
+<?php
+
+use Bwm\File\File;
+use Bwm\Test\B;
+
+$target_dir = "D:/project/boulder.iwinv.net/test";
+
+B::dwt("Folder");
+$v = File::getFolderList($target_dir);
+B::dw($v);
+
+B::dwt("File");
+$v = File::getFileList($target_dir);
+B::dw($v);
+
+B::dwt("File by Ext");
+$v = File::getOnlyExtList($target_dir, 'html');
+B::dw($v);
+
