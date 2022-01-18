@@ -22,6 +22,8 @@ class Doc
 			$v = Url::getFileName() . ' : ' . Conf::SITE_NAME;
 			self::$title = $v;
 		}
+		
+		self::$title = urldecode(self::$title);
 		return self::$title;
 	}
 }

@@ -35,7 +35,13 @@ use App\Conf\Conf;
 	<section id="page">
 		<?php } ?>
 
-		<?php require_once $_SERVER['DOCUMENT_ROOT'] . $view; ?>
+		<?php
+		$view = urldecode($view);
+		$view = iconv('UTF-8', 'EUC-KR', $view);
+		//todo 함수화 해서 에러 처리 필요
+		
+		require_once $_SERVER['DOCUMENT_ROOT'] . $view; 
+		?>
 
 		<?php if (Doc::$layout != "empty") { ?>
 	</section>

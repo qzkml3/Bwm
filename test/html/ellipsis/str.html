@@ -6,24 +6,24 @@ use Bwm\Str\Str;
 $s = 'aa/bb/cc';
 
 $v = Str::hasStr($s, 'a');
-B::dwTit('Str::hasStr');
+B::dwt('Str::hasStr');
 B::dw($v);
 
-B::dwTit('All Str');
+B::dwt('All Str');
 B::dw($s);
 
 $v = Str::getPreStr($s, '/');
-B::dwTit('Str::getPreStr: aa');
+B::dwt('Str::getPreStr: aa');
 B::dw($v);
 
 $v = Str::getPreStrRev($s, '/');
-B::dwTit('Str::getPreStrRev: ~bb');
+B::dwt('Str::getPreStrRev: ~bb');
 B::dw($v);
 
 $v = Str::getPostStr($s, '/');
-B::dwTit('Str::getPostStr: bb~');
+B::dwt('Str::getPostStr: bb~');
 B::dw($v);
 
 $v = Str::getPostStrRev($s, '/');
-B::dwTit('Str::getPostStrRev: cc');
+B::dwt('Str::getPostStrRev: cc');
 B::dw($v);
