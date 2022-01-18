@@ -2,6 +2,7 @@
 
 namespace Bwm\Doc;
 
+use Bwm\Test\B;
 use Bwm\Url\Url;
 use App\Conf\Conf;
 
