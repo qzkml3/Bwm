@@ -27,7 +27,7 @@ class Doc
 		self::$title = urldecode(self::$title);
 		
 		if (! B::isLocalhost()) {
-			self::$title = iconv('UTF-8', 'EUC-KR', self::$title);
+			self::$title = iconv('EUC-KR', 'UTF-8', self::$title);
 		}
 		return self::$title;
 	}
