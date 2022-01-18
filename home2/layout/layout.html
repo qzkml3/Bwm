@@ -6,7 +6,7 @@ use App\Conf\Conf;
 
 ?>
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="<?=Doc::$layout?>">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
@@ -17,11 +17,13 @@ use App\Conf\Conf;
 	<?=Inc::css(Conf::ROOT_URL . "/-/css/b-g-reset.css")?>
 	<?=Inc::css(Conf::ROOT_URL . "/-/css/b-g-util.css")?>
 	<?=Inc::css(Conf::ROOT_URL . "/-/css/b-theme.css")?>
-	
+
 	<?=Inc::js(Conf::ROOT_URL . "/-/js/b-js/b-js.js")?>
 	<?=Inc::js(Conf::ROOT_URL . "/-/js/jquery/jquery-3.6.0.min.js")?>
 </head>
 <body>
+
+<?php if (Doc::$layout != "empty") { ?>
 <section id="wrap">
 	<header id="header">
 		<nav id="gnb">
@@ -31,7 +33,11 @@ use App\Conf\Conf;
 	</header>
 
 	<section id="page">
+		<?php } ?>
+
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . $view; ?>
+
+		<?php if (Doc::$layout != "empty") { ?>
 	</section>
 
 	<article id="github" class="b-box b-box--silver">
@@ -39,7 +45,7 @@ use App\Conf\Conf;
 		$github = "https://github.com/qzkml3/BWM/blob/master";
 		$github1s = "https://github1s.com/qzkml3/BWM/blob/master";
 		$uri = $_SERVER['REQUEST_URI'];
-		
+
 		$github = $github . $uri;
 		$github1s = $github1s . $uri;
 		?>
@@ -55,5 +61,6 @@ use App\Conf\Conf;
 		footer
 	</footer>
 </section>
+<?php } ?>
 </body>
 </html>
