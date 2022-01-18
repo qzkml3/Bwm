@@ -24,7 +24,7 @@ class Doc
 			self::$title = $v;
 		}
 		
-		if (B::isLocalhost()) {
+		if (! B::isLocalhost()) {
 			self::$title = urldecode(self::$title);
 		}
 		return self::$title;
