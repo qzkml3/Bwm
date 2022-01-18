@@ -40,7 +40,7 @@ use Bwm\Test\B;
 		$view = urldecode($view);
 		
 		if (B::isLocalhost()) {
-			$view = iconv('UTF-8', 'EUC-KR', $view); //isLocalhost
+			$view = iconv('UTF-8', 'EUC-KR', $view);
 		}
 		
 		require_once $_SERVER['DOCUMENT_ROOT'] . $view;

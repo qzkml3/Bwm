@@ -23,9 +23,11 @@ class Doc
 			$v = Url::getFileName() . ' : ' . Conf::SITE_NAME;
 			self::$title = $v;
 		}
+
+		self::$title = urldecode(self::$title);
 		
 		if (! B::isLocalhost()) {
-			self::$title = urldecode(self::$title);
+			$view = iconv('UTF-8', 'EUC-KR', $view);
 		}
 		return self::$title;
 	}
