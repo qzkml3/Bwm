@@ -3,6 +3,7 @@
 use Bwm\Doc\Doc;
 use Bwm\Inc\Inc;
 use App\Conf\Conf;
+use Bwm\Test\B;
 
 ?>
 <!doctype html>
@@ -37,11 +38,14 @@ use App\Conf\Conf;
 
 		<?php
 		$view = urldecode($view);
-		//$view = iconv('UTF-8', 'EUC-KR', $view);
-		//$view = iconv('EUC-KR', 'UTF-8', $view);
-		//todo 함수화 해서 에러 처리 필요
 		
-		require_once $_SERVER['DOCUMENT_ROOT'] . $view; 
+		if (B::isLocalhost()) {
+			$view = iconv('UTF-8', 'EUC-KR', $view); //isLocalhost
+		}
+		
+		require_once $_SERVER['DOCUMENT_ROOT'] . $view;
+
+		//todo incView(); 함수화 해서 에러 처리 필요
 		?>
 
 		<?php if (Doc::$layout != "empty") { ?>

@@ -22,6 +22,13 @@ class B {
 		print_r($o); 
 		echo "<pre>";
 	}
+	
+	static function isLocalhost() {
+		$compare = $_SERVER["REMOTE_ADDR"];
+		if ($compare == "127.0.0.1" || strstr($_SERVER["REMOTE_ADDR"], "192.168.")) {
+			return true;
+		}
+	}
 }
 
 

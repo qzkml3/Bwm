@@ -23,7 +23,9 @@ class Doc
 			self::$title = $v;
 		}
 		
-		self::$title = urldecode(self::$title);
+		if (B::isLocalhost()) {
+			self::$title = urldecode(self::$title);
+		}
 		return self::$title;
 	}
 }
