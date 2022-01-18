@@ -38,7 +38,7 @@ use App\Conf\Conf;
 		<?php
 		$view = urldecode($view);
 		//$view = iconv('UTF-8', 'EUC-KR', $view);
-		$view = iconv('EUC-KR', 'UTF-8', $view);
+		//$view = iconv('EUC-KR', 'UTF-8', $view);
 		//todo 함수화 해서 에러 처리 필요
 		
 		require_once $_SERVER['DOCUMENT_ROOT'] . $view; 
